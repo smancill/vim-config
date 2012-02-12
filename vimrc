@@ -85,6 +85,9 @@ nnoremap            L             :bnext<CR>
 cnoremap            <C-P>         <Up>
 cnoremap            <C-N>         <Down>
 
+" Write as sudo
+cnoremap            w!!           w !sudo tee % >/dev/null
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUTOCOMMANDS                          {{{1
