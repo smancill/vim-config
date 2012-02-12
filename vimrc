@@ -1,8 +1,24 @@
 " ~/.vimrc: executed by Vim at startup
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PLUGINS                               {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Use NeoBundle
+filetype off
 set nocompatible
+
+if has('vim_starting')
+set runtimepath+=~/.vim/bundle/neobundle.vim
+call neobundle#rc()
+endif
+
+" Required
+NeoBundle 'smancill/neobundle.vim'
+
 syntax on
 filetype plugin indent on
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPTIONS                               {{{1
