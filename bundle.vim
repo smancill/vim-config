@@ -18,6 +18,9 @@ NeoBundle 'smancill/syntastic'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'majutsushi/tagbar'
 
+" Python
+NeoBundle 'vim-scripts/python_match.vim'
+
 " Colorsquemes
 NeoBundle 'smancill/darkglass'
 NeoBundle 'vim-scripts/desert256.vim'
