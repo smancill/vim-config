@@ -117,6 +117,9 @@ nnoremap            L             :bnext<CR>
 cnoremap            <C-P>         <Up>
 cnoremap            <C-N>         <Down>
 
+" Toggle paste
+nnoremap            <F12>         :set invpaste<CR>:set paste?<CR>
+
 " Write as sudo
 cnoremap            w!!           w !sudo tee % >/dev/null
 
