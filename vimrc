@@ -113,6 +113,11 @@ nnoremap <silent>   K             <C-^>
 nnoremap            H             :bprevious<CR>
 nnoremap            L             :bnext<CR>
 
+" Omnicompletion popup menu like IDE
+inoremap <expr>     <CR>          pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr>     <Down>        pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr>     <Up>          pumvisible() ? "\<C-p>" : "\<Up>"
+
 " Command line history
 cnoremap            <C-P>         <Up>
 cnoremap            <C-N>         <Down>
@@ -132,6 +137,12 @@ cnoremap            w!!           w !sudo tee % >/dev/null
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
+    \ endif
+
+" Automatically close popup menu and preview window for omnicompletion
+autocmd CursorMovedI,InsertLeave *
+    \ if pumvisible() == 0 |
+    \   silent! pclose |
     \ endif
 
 " If last windows is quickfix window, exit Vim
@@ -166,6 +177,10 @@ elseif $COLORTERM == 'gnome-terminal' || $TERM =~ '256color'
     set t_Co=256
     colorscheme solarized
 endif
+
+" Change color of completion menu according to the terminal and current
+" colorsqueme
+highlight PmenuSel ctermfg=white
 
 
 "}}}
