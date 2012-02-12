@@ -33,6 +33,11 @@ let g:local_vimrc='.project.vim'
 " Ack                                       {{{2
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
+" Tagbar                                    {{{2
+nnoremap <silent> <F8> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
+let g:tagbar_compact = 1
+
 " QuickBuf                                  {{{2
 let g:qb_hotkey="M"
 

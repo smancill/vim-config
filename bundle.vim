@@ -15,6 +15,7 @@ NeoBundle 'mattn/gist-vim'
 
 " Programming
 NeoBundle 'smancill/syntastic'
+NeoBundle 'majutsushi/tagbar'
 
 " Colorsquemes
 NeoBundle 'smancill/darkglass'
