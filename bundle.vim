@@ -1,8 +1,9 @@
 NeoBundle 'vim-scripts/QuickBuf'
 
-" Git
+" Git and GitHub
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
+NeoBundle 'mattn/gist-vim'
 
 " Colorsquemes
 NeoBundle 'smancill/darkglass'
