@@ -118,6 +118,9 @@ autocmd BufReadPost *
     \   exe "normal! g`\"" |
     \ endif
 
+" If last windows is quickfix window, exit Vim
+autocmd BufEnter * silent! call utils#CloseLast()
+
 " Move to the parent directory in any fugitive tree or blob
 autocmd User Fugitive
     \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
