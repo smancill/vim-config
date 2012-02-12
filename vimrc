@@ -16,6 +16,9 @@ endif
 " Required
 NeoBundle 'smancill/neobundle.vim'
 
+" Add your bundles in bundle.vim
+source ~/.vim/bundle.vim
+
 syntax on
 filetype plugin indent on
 
@@ -114,6 +117,15 @@ autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
+
+" Move to the parent directory in any fugitive tree or blob
+autocmd User Fugitive
+    \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+    \   nnoremap <silent> <buffer> .. :edit %:h<CR> |
+    \ endif
+
+" Autoclean fugitive buffers
+autocmd BufReadPost fugitive://* set bufhidden=delete
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
