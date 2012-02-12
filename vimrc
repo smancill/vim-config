@@ -36,6 +36,9 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 " QuickBuf                                  {{{2
 let g:qb_hotkey="M"
 
+" NERDTree                                  {{{2
+nnoremap <silent>  <F3>              :NERDTreeToggle<CR>
+
 " }}}
 
 

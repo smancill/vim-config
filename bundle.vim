@@ -1,6 +1,7 @@
 NeoBundle 'vim-scripts/QuickBuf'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'scrooloose/nerdtree'
 
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-surround'
