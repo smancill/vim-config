@@ -2,6 +2,10 @@ NeoBundle 'vim-scripts/QuickBuf'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mileszs/ack.vim'
 
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-repeat'
+
 " Git and GitHub
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
