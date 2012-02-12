@@ -67,6 +67,10 @@ set listchars=tab:▸\ ,eol:¬                 " Better unprintable characters
 nnoremap ' `
 nnoremap ` '
 
+" Better navigation in long lines
+nnoremap j  gj
+nnoremap k  gk
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUTOCOMMANDS                          {{{1
