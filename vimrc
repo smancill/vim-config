@@ -30,6 +30,9 @@ filetype plugin indent on
 " Local vimrc                               {{{2
 let g:local_vimrc='.project.vim'
 
+" Ack                                       {{{2
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
 " QuickBuf                                  {{{2
 let g:qb_hotkey="M"
 

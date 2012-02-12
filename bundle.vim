@@ -1,5 +1,6 @@
 NeoBundle 'vim-scripts/QuickBuf'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'mileszs/ack.vim'
 
 " Git and GitHub
 NeoBundle 'tpope/vim-fugitive'
