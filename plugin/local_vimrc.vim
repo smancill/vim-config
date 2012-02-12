@@ -110,6 +110,11 @@ let s:re_last_path = '^/\=$\|^[A-Za-z]:[/\\]\+$\|^//$\|^\\\\$'.
 
 " The main function                                                   {{{2
 function! s:SourceLocal(path)
+  " Fix for Fugitive
+  if expand(a:path) =~ "fugitive://"
+    return
+  endif
+
   let up_path = fnamemodify(a:path,':h')
   if up_path == '.' " likelly a non existant path
     if ! isdirectory(a:path)
