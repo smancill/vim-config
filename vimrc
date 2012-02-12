@@ -27,6 +27,9 @@ filetype plugin indent on
 " PLUGINS CONFIGURATION                 {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Local vimrc                               {{{2
+let g:local_vimrc='.project.vim'
+
 " QuickBuf                                  {{{2
 let g:qb_hotkey="M"
 
