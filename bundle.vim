@@ -20,6 +20,7 @@ NeoBundle 'majutsushi/tagbar'
 
 " Python
 NeoBundle 'vim-scripts/python_match.vim'
+NeoBundle 'vim-scripts/indentpython.vim'
 
 " Colorsquemes
 NeoBundle 'smancill/darkglass'
