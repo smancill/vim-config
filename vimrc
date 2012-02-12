@@ -149,6 +149,19 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 command! -nargs=+ CC :py print <args>
 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TERM AND COLORSCHEME                  {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if $TERM =~ 'rxvt'
+    set t_Co=256
+    colorscheme darkglass
+elseif $COLORTERM == 'gnome-terminal' || $TERM =~ '256color'
+    set t_Co=256
+    colorscheme solarized
+endif
+
+
 "}}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim: foldmethod=marker
