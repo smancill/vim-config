@@ -71,6 +71,16 @@ nnoremap ` '
 nnoremap j  gj
 nnoremap k  gk
 
+" Remap keys that will be used as normal mode mappings
+nnoremap <silent>   <space>h      H
+nnoremap <silent>   <space>m      M
+nnoremap <silent>   <space>l      L
+
+" Buffers
+nnoremap <silent>   K             <C-^>
+nnoremap            H             :bprevious<CR>
+nnoremap            L             :bnext<CR>
+
 " Command line history
 cnoremap            <C-P>         <Up>
 cnoremap            <C-N>         <Down>
