@@ -71,6 +71,10 @@ nnoremap ` '
 nnoremap j  gj
 nnoremap k  gk
 
+" Command line history
+cnoremap            <C-P>         <Up>
+cnoremap            <C-N>         <Down>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUTOCOMMANDS                          {{{1
