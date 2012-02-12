@@ -13,6 +13,9 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'mattn/gist-vim'
 
+" Programming
+NeoBundle 'smancill/syntastic'
+
 " Colorsquemes
 NeoBundle 'smancill/darkglass'
 NeoBundle 'vim-scripts/desert256.vim'
