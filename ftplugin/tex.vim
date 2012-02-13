@@ -1,0 +1,7 @@
+setlocal textwidth=78                       " Use 78 columns for text width
+setlocal tabstop=2                          " Tabs use 2 spaces
+setlocal softtabstop=2                      " Tabs use 2 spaces
+setlocal shiftwidth=2                       " Indent using 2 spaces
+setlocal formatoptions=tq                   " Format text
+setlocal linebreak                          " Smart breaking of long lines
+setlocal spell                              " Use spell
