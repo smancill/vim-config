@@ -23,6 +23,7 @@ NeoBundle 'vim-scripts/python_match.vim'
 NeoBundle 'vim-scripts/indentpython.vim'
 
 " Markup languages
+NeoBundle 'smancill/hammer.vim'
 NeoBundle 'hallison/vim-markdown'
 
 " Colorsquemes
