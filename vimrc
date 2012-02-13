@@ -77,7 +77,7 @@ set rulerformat=%25(%LL\ \ \ %l,%c%V%=%P%)  " Ruler string
 
 set wildmenu                                " Better command-line completion
 set wildmode=longest,full                   " Completion options
-set wildignore=*.bak,*.o,*.e,*~             " Ignore this files
+set wildignore=*.bak,*.o,*.e,*~,*.py[co]    " Ignore this files
 
 set tabstop=4                               " Four spaces for a tab
 set softtabstop=4                           " Four spaces for a tab
