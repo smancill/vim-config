@@ -187,12 +187,12 @@ command! -nargs=+ CC :py print <args>
 " TERM AND COLORSCHEME                  {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if $TERM =~ 'rxvt'
-    set t_Co=256
-    colorscheme darkglass
-elseif $COLORTERM == 'gnome-terminal' || $TERM =~ '256color'
+if $COLORTERM == 'gnome-terminal'
     set t_Co=256
     colorscheme solarized
+elseif $TERM =~ 'rxvt' || $TERM =~ '256color'
+    set t_Co=256
+    colorscheme darkglass
 endif
 
 " Change color of completion menu according to the terminal and current
