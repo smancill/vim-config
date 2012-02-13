@@ -38,6 +38,25 @@ nnoremap <silent> <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 
+" LaTeX Suite                               {{{2
+let g:tex_flavor="latex"              " filetype of *.tex, so LaTeXSuite works
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_IgnoreLevel=11
+let g:Tex_IgnoredWarnings="Underfull\n".
+                         \"Overfull\n".
+                         \"specifier changed to\n".
+                         \"You have requested\n".
+                         \"Missing number, treated as zero\n".
+                         \"There were undefined references\n".
+                         \"Citation %.%# undefined\n".
+                         \"Reference %.%# undefined\n".
+                         \"Label `' multiply defined\n".
+                         \"Label(s) may have changed\n".
+                         \"There were multiply-defined labels"
+
+" Fix e-acute problem in insert mode
+imap   <buffer>   <C-L>i  <Plug>Tex_InsertItemOnThisLine
+
 " QuickBuf                                  {{{2
 let g:qb_hotkey="M"
 
