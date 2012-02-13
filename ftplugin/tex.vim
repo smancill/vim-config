@@ -18,3 +18,17 @@ endfunction
 
 nnoremap <buffer> <silent>  ]]      :<C-U>call Jump2LaTeXSection(v:count1, '')<CR>
 nnoremap <buffer> <silent>  [[      :<C-U>call Jump2LaTeXSection(v:count1, 'b')<CR>
+
+
+let g:tagbar_type_tex = {
+    \ 'ctagstype' : 'latex',
+    \ 'kinds'     : [
+        \ 's:sections',
+        \ 'g:graphics',
+        \ 'l:labels',
+        \ 'r:refs:1',
+        \ 'p:pagerefs:1'
+    \ ],
+    \ 'sort'    : 0,
+    \ 'deffile' : expand('~/.vim/ftplugin/latex-suite/latex.cnf')
+\ }
