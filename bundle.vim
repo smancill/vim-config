@@ -26,6 +26,7 @@ NeoBundle 'majutsushi/tagbar'
 " Python
 NeoBundle 'vim-scripts/python_match.vim'
 NeoBundle 'vim-scripts/indentpython.vim'
+NeoBundle 'fs111/pydoc.vim'
 
 " Markup languages
 NeoBundle 'smancill/hammer.vim'
