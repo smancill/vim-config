@@ -8,6 +8,8 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'vim-scripts/matchit.zip'
 
+NeoBundle 'smancill/conky-syntax.vim'
+
 " Git and GitHub
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
