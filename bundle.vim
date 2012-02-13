@@ -22,6 +22,9 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'vim-scripts/python_match.vim'
 NeoBundle 'vim-scripts/indentpython.vim'
 
+" Markup languages
+NeoBundle 'hallison/vim-markdown'
+
 " Colorsquemes
 NeoBundle 'smancill/darkglass'
 NeoBundle 'vim-scripts/desert256.vim'
