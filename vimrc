@@ -75,6 +75,8 @@ set wildmode=longest,full                   " Completion options
 set wildignore=*.bak,*.o,*.e,*~             " Ignore this files
 
 set tabstop=4                               " Four spaces for a tab
+set softtabstop=4                           " Four spaces for a tab
+set smarttab                                " Smart tabs at beginning of line
 set expandtab                               " Use spaces instead of tabs
 set shiftround                              " Indent to multiple of shiftwidth
 set shiftwidth=4                            " Default indent of four spaces
