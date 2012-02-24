@@ -15,7 +15,7 @@ if [[ -d bundle/neobundle.vim ]]; then
 fi
 
 echo "Installing Package Manager..."
-git clone git://github.com/smancill/neobundle.vim.git bundle/neobundle.vim
+git clone -q git://github.com/smancill/neobundle.vim.git bundle/neobundle.vim
 
 if [[ $? -eq 0 ]]; then
     echo "Package Manager installed sucessfully"
@@ -29,5 +29,8 @@ fi
 ln -sf "${VIMDIR}"/vimrc  "${VIMRC}"
 ln -sf "${VIMDIR}"/gvimrc "${GVIMRC}"
 
-echo "Installing plugins..."
-vim +NeoBundleInstall +qa!
+# Install plugins
+echo "\nInstalling plugins..."
+sleep 2
+vim +NeoBundleInstall! +qa!
+echo "Done!"
