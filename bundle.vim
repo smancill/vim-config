@@ -9,6 +9,7 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'vim-scripts/matchit.zip'
 
 NeoBundle 'smancill/conky-syntax.vim'
+NeoBundle 'smancill/send_evernote.vim'
 
 " Git and GitHub
 NeoBundle 'tpope/vim-fugitive'
