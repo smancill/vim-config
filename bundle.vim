@@ -25,6 +25,7 @@ NeoBundle 'smancill/syntastic'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'majutsushi/tagbar'
+NeoBundle 'xolox/vim-easytags'
 
 " C/C++
 NeoBundle 'vim-scripts/a.vim'
