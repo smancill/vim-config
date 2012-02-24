@@ -247,6 +247,15 @@ endtry
 highlight PmenuSel ctermfg=white
 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PER USER CONFIGURATION                {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let s:user_vimrc = expand("~/.vim/vimrc_mine.vim")
+if filereadable(s:user_vimrc)
+  exe "source " . s:user_vimrc
+endif
+
 "}}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim: foldmethod=marker

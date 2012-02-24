@@ -128,6 +128,9 @@ The `.vimrc` file is well organized and folded by sections.  The options are:
 
 And several more, including configuration of used plugins.
 
+> If you want to override some features of my `vimrc`, create the file
+> `$HOME/.vim/vimrc_mine.vim` and put your settings there.
+
 ### Navigating buffers
 
 Vim use buffers (`:help buffers`) to edit multiple files.  Use the following
