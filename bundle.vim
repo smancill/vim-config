@@ -23,6 +23,9 @@ NeoBundle 'smancill/syntastic'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'majutsushi/tagbar'
 
+" C/C++
+NeoBundle 'Rip-Rip/clang_complete'
+
 " Python
 NeoBundle 'vim-scripts/python_match.vim'
 NeoBundle 'vim-scripts/indentpython.vim'
