@@ -33,6 +33,9 @@ let g:local_vimrc='.project.vim'
 " Ack                                       {{{2
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
+" Syntastic                                 {{{2
+let g:syntastic_cpp_compiler_options = ' -std=c++0x'
+
 " Tagbar                                    {{{2
 nnoremap <silent> <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
