@@ -24,6 +24,7 @@ NeoBundle 'tpope/vim-commentary'
 NeoBundle 'majutsushi/tagbar'
 
 " C/C++
+NeoBundle 'vim-scripts/a.vim'
 NeoBundle 'Rip-Rip/clang_complete'
 
 " Python
