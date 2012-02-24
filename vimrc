@@ -231,11 +231,16 @@ command! -nargs=+ CC :py print <args>
 
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
-    colorscheme solarized
+    let s:color_squeme = "solarized"
 elseif $TERM =~ 'rxvt' || $TERM =~ '256color'
     set t_Co=256
-    colorscheme darkglass
+    let s:color_squeme = "darkglass"
 endif
+
+try
+  exe "colorscheme " . s:color_squeme
+catch /^Vim\%((\a\+)\)\=:E185/
+endtry
 
 " Change color of completion menu according to the terminal and current
 " colorsqueme
