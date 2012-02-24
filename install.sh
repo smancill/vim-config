@@ -32,4 +32,20 @@ ln -sf ${VIMDIR}/gvimrc ${GVIMRC}
 echo -e "\nInstalling plugins..."
 sleep 2
 vim +NeoBundleInstall! +qa!
+
+# Spell files
+echo -e "\nGetting spell files..."
+sleep 1
+mkdir -p ${VIMDIR}/spell
+cd spell
+for idiom in es en; do
+    for enc in latin1 utf-8; do
+        for ver in spl sug; do
+            rm -f ${VIMDIR}/spell/${idiom}.${enc}.${ver}
+            wget -O${VIMDIR}/spell/${idiom}.${enc}.${ver} \
+                    http://ftp.vim.org/vim/runtime/spell/${idiom}.${enc}.${ver}
+        done
+    done
+done
+
 echo -e "\nDone!"
