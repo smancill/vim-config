@@ -27,6 +27,15 @@ filetype plugin indent on
 " PLUGINS CONFIGURATION                 {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Ultisnips                                 {{{2
+let g:UltiSnipsExpandTrigger = "<TAB>"
+let g:UltiSnipsListSnippets = "<C-TAB>"
+let g:UltiSnipsJumpForwardTrigger = "<TAB>"
+let g:UltiSnipsJumpBackwardTrigger = "<S-TAB>"
+let g:UltiSnipsSnippetDirectories = ["UltiSnips"]
+let g:UltiSnipsDontReverseSearchPath = 1
+let g:UltiSnipsRemoveSelectModeMappings = 0
+
 " Local vimrc                               {{{2
 let g:local_vimrc='.project.vim'
 
