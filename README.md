@@ -1,9 +1,13 @@
 # My configuration files for Vim 7.x
 
 This is a distribution of Vim plugins and configurations to use VIM for
-development.  It uses [NeoBundle][NeoBundle] to have a well organized Vim
-directory and to manage the plugins automatically.
+development. It is a replacement of my
+[old config](https://github.com/smancill/Vimfiles), and it uses
+[NeoBundle][NeoBundle] to have a well organized Vim directory and to manage
+the plugins automatically.  The plugins are listed in `bundle.vim`, which is
+sourced by `.vimrc`.
 
+> **This configuration has only been tested on Ubuntu 11.10**
 
 ## Installation
 
@@ -21,7 +25,7 @@ and installs the plugins, and creates the symbolic links `$HOME/.vimrc` and
 
 ### Prerequisites
 
-See below for a description of the mentioned plugins.
+Some plugins need external programs to work properly.
 
 #### Source code tags
 
@@ -29,9 +33,9 @@ You need the *Exuberant Ctags* program:
 
     $ sudo aptitude install ctags
 
-Pressing `<F8>` will [open a lateral
-window](http://majutsushi.github.com/tagbar) with the tags of the current file
-ordered by scope.
+Pressing `<F8>` will
+[open a lateral window](http://majutsushi.github.com/tagbar)
+with the tags of the current file ordered by scope.
 
 #### Better *grep*
 
@@ -48,7 +52,7 @@ See the [webpage](http://betterthangrep.com/) for more information.
 checking when saving the open file.
 
 To add support for Python files install *Pyflakes* (an alternative is
-*flake8*, but it also checks for [PEP8](www.python.org/dev/peps/pep-0008)):
+*flake8*, but it also checks for [PEP8](http://www.python.org/dev/peps/pep-0008)):
 
     sudo aptitude install pyflakes
 
@@ -152,13 +156,13 @@ The following plugins are used:
 * [QuickBuf](https://github.com/vim-scripts/QuickBuf) (small and powerful
   buffer manager)
 * [Ctrlp](http://kien.github.com/ctrlp.vim) (Full path fuzzy file, buffer, mru
+  and tag finder)
 * [NerdTree](https://github.com/scrooloose/nerdtree) (a tree explorer)
 * [UltiSnips]() (the ultimate snippet solution)
 * [Ack](https://github.com/mileszs/ack.vim) (front end for ack, a better grep)
 * [Fugitive](https://github.com/tpope/vim-fugitive) (an awesome Git wrapper)
 * [gitv](http://www.gregsexton.org/portfolio/gitv) (a gitk clone for Vim)
 * [Gist](https://github.com/mattn/gist-vim) (for creating Gists)
-  and tag finde)
 * [Unimpaired](https://github.com/tpope/vim-unimpaired) (pairs of handy
   bracket mappings)
 * [Surround](https://github.com/tpope/vim-surround) (delete/change/add
@@ -172,9 +176,8 @@ The following plugins are used:
 * [Commentary](https://github.com/tpope/vim-commentary) (comment stuff out)
 * [Hammer](https://github.com/smancill/hammer.vim) (process your markup
   language to HTML)
-  for C/C++)
 * [LaTeX-Suite](http://vim-latex.sourceforge.net/) (tools for editing LaTeX)
-* [clang_complete](https://github.com/Rip-Rip/clang_complete) (best completion
+* [clang_complete](https://github.com/Rip-Rip/clang_complete) (best omnicompletion
   for C/C++ files)
 * [alternate]() (alternate C source/header files quickly)
 * [PythonMatch](https://github.com/vim-scripts/python_match.vim) (extend the
