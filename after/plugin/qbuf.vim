@@ -1,3 +1,3 @@
-if hasmapto(g:qb_hotkey)
+if hasmapto("<Esc>", "c")
   exe "cunmap " . g:qb_hotkey
 endif
