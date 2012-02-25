@@ -74,10 +74,9 @@ let g:Tex_IgnoredWarnings="Underfull\n".
 " Fix e-acute problem in insert mode
 imap   <buffer>   <C-L>i  <Plug>Tex_InsertItemOnThisLine
 
-" Send notes to Evernote
-" let g:evernote_gmail_username = "smancill.m"
-" let g:evernote_email_address  = "smancill.d0477@m.evernote.com"
-
+" Send to Evernote                          {{{2
+let g:evernote_gmail_username = "smancill.m"
+let g:evernote_email_local_part  = "smancill.d0477"
 
 " QuickBuf                                  {{{2
 let g:qb_hotkey="M"
