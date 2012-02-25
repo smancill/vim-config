@@ -161,7 +161,8 @@ The following plugins are used:
 * [Ctrlp](http://kien.github.com/ctrlp.vim) (Full path fuzzy file, buffer, mru
   and tag finder)
 * [NerdTree](https://github.com/scrooloose/nerdtree) (a tree explorer)
-* [UltiSnips]() (the ultimate snippet solution)
+* [UltiSnips](https://github.com/sirver/ultisnips) (the ultimate snippet
+  solution)
 * [Ack](https://github.com/mileszs/ack.vim) (front end for ack, a better grep)
 * [Fugitive](https://github.com/tpope/vim-fugitive) (an awesome Git wrapper)
 * [gitv](http://www.gregsexton.org/portfolio/gitv) (a gitk clone for Vim)
@@ -182,7 +183,8 @@ The following plugins are used:
 * [LaTeX-Suite](http://vim-latex.sourceforge.net/) (tools for editing LaTeX)
 * [clang_complete](https://github.com/Rip-Rip/clang_complete) (best omnicompletion
   for C/C++ files)
-* [alternate]() (alternate C source/header files quickly)
+* [alternate](https://github.com/vim-scripts/a.vim) (alternate C source/header
+  files quickly)
 * [PythonMatch](https://github.com/vim-scripts/python_match.vim) (extend the
   `%` motion for python files)
 * [PyDoc](https://github.com/fs111/pydoc.vim) (integrates Python
