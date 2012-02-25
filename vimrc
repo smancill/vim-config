@@ -39,6 +39,13 @@ let g:UltiSnipsRemoveSelectModeMappings = 0
 " Local vimrc                               {{{2
 let g:local_vimrc='.project.vim'
 
+" ctrlp                                     {{{2
+nnoremap <silent> <C-M>     :CtrlPBuffer<CR>
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_by_filename = 1
+let g:ctrlp_mruf_max = 50
+let g:ctrlp_dotfiles = 1
+
 " Ack                                       {{{2
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
