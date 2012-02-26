@@ -214,7 +214,12 @@ autocmd CursorMovedI,InsertLeave *
     \ endif
 
 " If last windows is quickfix window, exit Vim
-autocmd BufEnter * silent! call utils#CloseLast()
+autocmd BufEnter *
+    \ if &buftype=="quickfix" || &buftype=="nofile" |
+    \   if winbufnr(2) == -1 |
+    \     quit! |
+    \   endif |
+    \ endif
 
 " Move to the parent directory in any fugitive tree or blob
 autocmd User Fugitive
