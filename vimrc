@@ -198,6 +198,9 @@ cnoremap            w!!           w !sudo tee % >/dev/null
 " AUTOCOMMANDS                          {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+augroup vimrc_autocommands
+autocmd!
+
 " Restore cursor position
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -227,6 +230,9 @@ autocmd BufEnter *
     \ if &filetype == 'gitcommit' |
     \   call setpos('.', [0, 1, 1]) |
     \ endif
+
+augroup END
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COMMANDS                              {{{1
