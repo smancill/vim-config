@@ -1,3 +1,23 @@
+function! utils#Bclose()
+    let curbufnr = bufnr("%")
+    let altbufnr = bufnr("#")
+
+    if buflisted(altbufnr)
+        buffer #
+    else
+        bnext
+    endif
+
+    if bufnr("%") == curbufnr
+        new
+    endif
+
+    if buflisted(curbufnr)
+        execute("bdelete! " . curbufnr)
+    endif
+endfunction
+
+
 function! utils#MoveToTab(direction, actual_state)
     let b:mode_state = a:actual_state
     if a:direction == "p"
