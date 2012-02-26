@@ -222,6 +222,11 @@ autocmd User Fugitive
 " Autoclean fugitive buffers
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
+" Always start on first line of Git commit message
+autocmd BufEnter *
+    \ if &filetype == 'gitcommit' |
+    \   call setpos('.', [0, 1, 1]) |
+    \ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COMMANDS                              {{{1
