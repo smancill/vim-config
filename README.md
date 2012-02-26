@@ -155,6 +155,8 @@ The following plugins are used:
 
 * [QuickBuf](https://github.com/vim-scripts/QuickBuf) (small and powerful
   buffer manager)
+* [Powerline](https://github.com/Lokaltog/vim-powerline) (the ultimate Vim
+  statusline utility)
 * [Ctrlp](http://kien.github.com/ctrlp.vim) (Full path fuzzy file, buffer, mru
   and tag finder)
 * [NerdTree](https://github.com/scrooloose/nerdtree) (a tree explorer)
