@@ -227,6 +227,11 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 " COMMANDS                              {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+command! -nargs=0 DiffOrig vert new | set bt=nofile | r # | 0d_ |
+  \ diffthis | wincmd p | diffthis
+
 " Python calculator on command line
 command! -nargs=+ CC :py print <args>
 
