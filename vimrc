@@ -266,7 +266,9 @@ elseif $TERM =~ 'rxvt' || $TERM =~ '256color'
 endif
 
 try
-  exe "colorscheme " . s:color_squeme
+  if exists("s:color_squeme")
+    exe "colorscheme " . s:color_squeme
+  endif
 catch /^Vim\%((\a\+)\)\=:E185/
 endtry
 
