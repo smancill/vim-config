@@ -274,7 +274,8 @@ endtry
 
 " Change color of completion menu according to the terminal and current
 " colorsqueme
-highlight PmenuSel ctermfg=white
+highlight PmenuSel ctermbg=white
+highlight PmenuSel ctermfg=black
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
