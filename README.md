@@ -65,15 +65,12 @@ C/C++ files have automatic support with *GCC*.
 #### C/C++ omnicompletion
 
 The [clang_complete](https://github.com/Rip-Rip/clang_complete) uses Clang for
-accurately completing C and C++ code. The version 3.0 is recommended.
+accurately completing C and C++ code:
 
-To install the Clang library, go to
-<http://www.llvm.org/releases/download.html#3.0> and download the binaries for
-your distribution. Then extract the files, rename the folder to `clang-3.0`
-and put it in `$HOME/.vim/src`.
+    sudo aptitude install clang
 
-If everything is correct, the Clang library should be in
-`$HOME/.vim/src/clang-3.0/lib/libclang.so`.
+The version 3.0 is recommended, but it is only on the repositories of *Ubuntu
+12.04*.
 
 #### Markup languages
 

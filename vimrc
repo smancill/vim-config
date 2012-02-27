@@ -58,8 +58,7 @@ let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 
 " Clang Complete                            {{{2
-let g:clang_use_library=1
-let g:clang_library_path=expand('~/.vim/src/clang-3.0/lib')
+" let g:clang_use_library=1
 let g:clang_periodic_quickfix=1
 
 " LaTeX Suite                               {{{2
