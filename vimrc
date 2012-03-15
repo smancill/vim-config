@@ -45,6 +45,10 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_by_filename = 1
 let g:ctrlp_mruf_max = 50
 let g:ctrlp_dotfiles = 1
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+  \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\'
+  \ }
 
 " Ack                                       {{{2
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
