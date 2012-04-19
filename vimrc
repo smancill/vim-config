@@ -67,6 +67,11 @@ nnoremap <silent> <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 
+" Alternate                                 {{{2
+let g:alternateExtensions_cc = "h,H,hh,HH,HPP,hpp"
+let g:alternateExtensions_cpp = "h,H,hh,HH,HPP,hpp"
+let g:alternateExtensions_hh = "cc,cpp,c++,cxx,CC,CPP,C++,CXX"
+
 " Clang Complete                            {{{2
 " let g:clang_use_library=1
 let g:clang_auto_select=1
