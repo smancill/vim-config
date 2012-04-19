@@ -1,21 +1,17 @@
+" python.vim: settings for Python files
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" OPTIONS                               {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 setlocal tabstop=4                          " Tabs use 4 spaces
 setlocal softtabstop=4                      " Tabs use 4 spaces
 setlocal shiftwidth=4                       " Indent using 4 spaces
 setlocal formatoptions=cqro                 " Format text
 setlocal nospell                            " Do not use spell
 setlocal nowrap                             " Do not wrap long lines
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" MAPPINGS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Use CTRL+SPACE for omnicompletion
-inoremap <buffer> <silent> <C-@>    <C-x><C-o>
-
-
-" Run the current buffer
-setlocal makeprg=python\ %
-setlocal errorformat=
+setlocal makeprg=python\ %                  " Use python as make program
+setlocal errorformat=                       " Read python errors
   \%A\ \ File\ \"%f\"\\\,\ line\ %l\\\,%m,
   \%C\ \ \ \ %.%#,
   \%+Z%.%#Error\:\ %.%#,
@@ -25,8 +21,10 @@ setlocal errorformat=
   \%Z%m,
   \%-G%.%#
 
-nnoremap <buffer> <silent>  <F9>    :make<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FUNCTIONS                             {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Execute a selection of code
 python << EOL
@@ -35,4 +33,20 @@ def EvaluateCurrentRange():
     eval(compile('\n'.join(vim.current.range),'','exec'),globals())
 EOL
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MAPPINGS                              {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Use CTRL+SPACE for omnicompletion
+inoremap <buffer> <silent> <C-@>    <C-x><C-o>
+
+" Run the current buffer
+nnoremap <buffer> <silent>  <F9>    :make<CR>
+
+" Run the selected range
 vnoremap <buffer> <silent>  <F9>    :py EvaluateCurrentRange()<CR>
+
+"}}}
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim: foldmethod=marker

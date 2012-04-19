@@ -1,5 +1,15 @@
+" help.vim: settings for Vim help files
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" OPTIONS                               {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 setlocal nospell                            " Do not use spell
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MAPPINGS                              {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Better navigation in help files
 nnoremap <buffer> <silent>  <CR>    <C-]>
@@ -10,3 +20,7 @@ nnoremap <buffer> <silent>  O       h?'[a-z]\{2,\}'<CR>l
 
 nnoremap <buffer> <silent>  s       /\|\S\+\|<CR>l
 nnoremap <buffer> <silent>  S       h?\|\S\+\|<CR>l
+
+"}}}
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim: foldmethod=marker
