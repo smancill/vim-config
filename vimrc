@@ -118,6 +118,7 @@ nnoremap <silent>  <F3>              :NERDTreeToggle<CR>
 
 set history=500                             " How many lines of history
 set vb t_vb=                                " Disable beep
+set synmaxcol=128                           " Prevent lag with long lines
 
 set autoread                                " Read files if changed outside
 set nobackup                                " Do not use backups (Git FTW)
