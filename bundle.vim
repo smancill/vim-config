@@ -15,6 +15,7 @@ NeoBundle 'smancill/send_evernote.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'mattn/gist-vim'
+NeoBundle 'mattn/webapi-vim'
 
 " LaTeX
 NeoBundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
