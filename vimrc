@@ -128,6 +128,10 @@ set fenc=utf-8                              " Default file encoding
 set ff=unix                                 " Default end of line
 
 set mouse=a                                 " Use mouse in all modes
+if has('unnamedplus')                       " Use system clipboard
+  set clipboard=unnamedplus,autoselect,exclude:cons\|linux
+endif
+
 set backspace=indent,eol,start              " Backspace works in Insert mode
 set whichwrap=b,s,<,>,[,]                   " Move cursor to other lines
 
