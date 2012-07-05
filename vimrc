@@ -68,8 +68,8 @@ let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 
 " Alternate                                 {{{2
-let g:alternateExtensions_cc = "h,H,hh,HH,HPP,hpp"
-let g:alternateExtensions_cpp = "h,H,hh,HH,HPP,hpp"
+let g:alternateExtensions_cc = "h,hh,hpp,H,HH,HPP"
+let g:alternateExtensions_cpp = "h,hh,hpp,H,HH,HPP"
 let g:alternateExtensions_hh = "cc,cpp,c++,cxx,CC,CPP,C++,CXX"
 
 " Clang Complete                            {{{2
