@@ -35,7 +35,6 @@ let g:UltiSnipsListSnippets = "<leader>ls"
 let g:UltiSnipsEditSplit='horizontal'
 let g:UltiSnipsSnippetDirectories = ["ultisnips"]
 let g:UltiSnipsDontReverseSearchPath = 1
-let g:UltiSnipsRemoveSelectModeMappings = 0
 
 " Local vimrc                               {{{2
 let g:local_vimrc='.project.vim'
