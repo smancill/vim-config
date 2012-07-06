@@ -33,7 +33,7 @@ let g:UltiSnipsJumpForwardTrigger = "<TAB>"
 let g:UltiSnipsJumpBackwardTrigger = "<S-TAB>"
 let g:UltiSnipsListSnippets = "<leader>ls"
 let g:UltiSnipsEditSplit='horizontal'
-let g:UltiSnipsSnippetDirectories = ["UltiSnips"]
+let g:UltiSnipsSnippetDirectories = ["ultisnips"]
 let g:UltiSnipsDontReverseSearchPath = 1
 let g:UltiSnipsRemoveSelectModeMappings = 0
 
