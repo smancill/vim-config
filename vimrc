@@ -29,9 +29,9 @@ filetype plugin indent on
 
 " Ultisnips                                 {{{2
 let g:UltiSnipsExpandTrigger = "<TAB>"
-let g:UltiSnipsListSnippets = "<C-TAB>"
 let g:UltiSnipsJumpForwardTrigger = "<TAB>"
 let g:UltiSnipsJumpBackwardTrigger = "<S-TAB>"
+let g:UltiSnipsListSnippets = "<leader>ls"
 let g:UltiSnipsSnippetDirectories = ["UltiSnips"]
 let g:UltiSnipsDontReverseSearchPath = 1
 let g:UltiSnipsRemoveSelectModeMappings = 0
