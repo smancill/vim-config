@@ -68,9 +68,12 @@ let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 
 " Alternate                                 {{{2
-let g:alternateExtensions_cc = "h,hh,hpp,H,HH,HPP"
-let g:alternateExtensions_cpp = "h,hh,hpp,H,HH,HPP"
-let g:alternateExtensions_hh = "cc,cpp,c++,cxx,CC,CPP,C++,CXX"
+let g:alternateExtensions_cc  = "hh,h,hpp"
+let g:alternateExtensions_cpp = "hpp,h,hh"
+let g:alternateExtensions_C   = "h,H"
+let g:alternateExtensions_hh  = "cc,cpp,cxx"
+let g:alternateExtensions_h   = "c,cpp,cxx,cc,C"
+let g:alternateExtensions_hpp = "cpp,cxx,C,cc"
 
 " Clang Complete                            {{{2
 " let g:clang_use_library=1
