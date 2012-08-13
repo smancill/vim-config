@@ -115,6 +115,19 @@ let g:qb_hotkey="M"
 
 " NERDTree                                  {{{2
 nnoremap <silent>  <F3>              :NERDTreeToggle<CR>
+let NERDTreeIgnore=[
+                   \'\.d$[[dir]]',
+                   \'\.git$[[dir]]',
+                   \'\.hg$[[dir]]',
+                   \'tags$[[file]]',
+                   \'\.class$[[file]]',
+                   \'\.o$[[file]]',
+                   \'\.os$[[file]]',
+                   \'\.so$[[file]]',
+                   \'\.gch$[[file]]',
+                   \'\.py[co]$[[file]]',
+                   \'\.rb[co]$[[file]]'
+                   \]
 
 " }}}
 
