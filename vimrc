@@ -46,8 +46,7 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_mruf_max = 50
 let g:ctrlp_dotfiles = 1
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-  \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\'
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$'
   \ }
 
 " Ack                                       {{{2
