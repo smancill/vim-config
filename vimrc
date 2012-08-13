@@ -85,7 +85,7 @@ let g:clang_snippets=1
 let g:clang_snippets_engine='ultisnips'
 let g:clang_conceal_snippets=1
 let g:clang_complete_copen=0
-let g:clang_user_options="-DCLANG"
+let g:clang_user_options="-DCLANG -fcxx-exceptions"
 
 " LaTeX Suite                               {{{2
 let g:tex_flavor="latex"              " filetype of *.tex, so LaTeXSuite works
