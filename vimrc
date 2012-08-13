@@ -190,7 +190,7 @@ set spelllang=es,en                         " Spelling languages
 set spellsuggest=10                         " Number of spelling suggestions
 set spellfile=~/.vim/spell/mine.utf-8.add   " Spell file for additions
 
-set tags+=.tags                             " Use a dot tags file
+set tags^=.tags                             " Use a dot tags file
 
 set listchars=tab:▸\ ,eol:¬                 " Better unprintable characters
 
