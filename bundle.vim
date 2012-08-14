@@ -34,8 +34,6 @@ NeoBundle 'Rip-Rip/clang_complete'
 " Python
 NeoBundle 'vim-scripts/python_match.vim'
 NeoBundle 'vim-scripts/indentpython.vim'
-NeoBundle 'fs111/pydoc.vim'
-NeoBundle 'vim-scripts/Python-2.x-Standard-Library-Reference'
 
 " Markup languages
 NeoBundle 'smancill/hammer.vim'
