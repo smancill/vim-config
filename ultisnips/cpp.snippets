@@ -3,7 +3,29 @@ extends c
 ###########################################################################
 #                            TextMate Snippets                            #
 ###########################################################################
-snippet beginend "$1.begin(), $1.end() (beginend)"
+
+snippet inc "#include local header (inc)" !
+#include "${1:`!p snip.rv = snip.basename + '.hpp'`}"
+endsnippet
+
+snippet Inc "#include <> (Inc)" !
+#include <${1:.hpp}>
+endsnippet
+
+snippet once "Include header once only guard" !
+#ifndef ${1:`!p
+if not snip.c:
+	snip.rv = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper() + "_"
+else:
+    snip.rv = snip.c`}
+#define $1
+
+${0}
+
+#endif // end of include guard: $1
+endsnippet
+
+snippet cbe "$1.begin(), $1.end() (beginend)"
 ${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(), $1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end()
 endsnippet
 
@@ -21,6 +43,10 @@ endsnippet
 
 snippet out "std::cout (cout)" i
 std::cout << $0
+endsnippet
+
+snippet err "std::cerr (cerr)" i
+std::cerr << $0
 endsnippet
 
 snippet end "std::endl (endl)" i
@@ -48,11 +74,19 @@ std::map<${1:key}, ${2:value}> ${3:map};$0
 endsnippet
 
 snippet vec "std::vector (v)"
-std::vector<${1:char}> ${2:v};$0
+std::vector<${1:int}> ${2:v};$0
+endsnippet
+
+snippet set "std::set (s)"
+std::set<${1:int}> ${2:s};$0
 endsnippet
 
 snippet tp "template <typename ..> (template)"
 template <typename ${1:_InputIter}>
+endsnippet
+
+snippet str "std::string .. (string)"
+std::string ${0}
 endsnippet
 
 # vim:ft=snippets:
