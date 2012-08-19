@@ -256,6 +256,9 @@ autocmd CursorMovedI,InsertLeave *
     \   silent! pclose |
     \ endif
 
+" Always put quickfix window in the bottom
+autocmd FileType qf wincmd J
+
 " If last windows is quickfix window, exit Vim
 autocmd BufEnter *
     \ if &buftype=="quickfix" || &buftype=="nofile" |
