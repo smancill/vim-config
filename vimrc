@@ -65,6 +65,7 @@ endif
 nnoremap <silent> <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
+let g:tagbar_singleclick = 1
 
 " EasyTags                                  {{{2
 let g:easytags_cmd = 'ctags'
