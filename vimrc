@@ -39,6 +39,10 @@ let g:UltiSnipsDontReverseSearchPath = 1
 " Local vimrc                               {{{2
 let g:local_vimrc='.project.vim'
 
+" Fugitive                                  {{{2
+nnoremap gs :Gstatus<CR>
+nnoremap gc :Gcommit<CR>
+
 " ctrlp                                     {{{2
 nnoremap <silent> <C-N>     :CtrlPBuffer<CR>
 let g:ctrlp_working_path_mode = 0
