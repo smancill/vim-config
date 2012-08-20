@@ -8,6 +8,7 @@ NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
+NeoBundle 'vim-scripts/Rename2'
 
 " Git and GitHub
 NeoBundle 'tpope/vim-fugitive'
