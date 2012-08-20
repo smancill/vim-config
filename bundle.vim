@@ -9,6 +9,7 @@ NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'vim-scripts/Rename2'
+NeoBundle 'vim-scripts/scratch.vim'
 
 " Git and GitHub
 NeoBundle 'tpope/vim-fugitive'
