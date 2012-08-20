@@ -1,15 +1,13 @@
+" Browsing/searching files/buffers
 NeoBundle 'vim-scripts/QuickBuf'
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'mileszs/ack.vim'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'mileszs/ack.vim'
 
+" General utilities
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
-NeoBundle 'vim-scripts/matchit.zip'
-
-NeoBundle 'smancill/conky-syntax.vim'
-NeoBundle 'smancill/send_evernote.vim'
 
 " Git and GitHub
 NeoBundle 'tpope/vim-fugitive'
@@ -24,6 +22,7 @@ NeoBundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 NeoBundle 'smancill/syntastic'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'tpope/vim-commentary'
+NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'xolox/vim-easytags'
 
@@ -46,3 +45,7 @@ NeoBundle 'ciaranm/inkpot'
 NeoBundle 'wgibbs/vim-irblack'
 NeoBundle 'jnurmine/Zenburn'
 NeoBundle 'altercation/vim-colors-solarized'
+
+" Others
+NeoBundle 'smancill/conky-syntax.vim'
+NeoBundle 'smancill/send_evernote.vim'
