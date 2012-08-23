@@ -242,7 +242,7 @@ inoremap <silent>   <C-F11>         <ESC>:!x-terminal-emulator<CR>
 nnoremap <silent>   <C-F11>         :!x-terminal-emulator<CR>
 
 " Write as sudo
-cnoremap            w!!           w !sudo tee % >/dev/null
+cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
