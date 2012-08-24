@@ -41,6 +41,22 @@ private:
 };
 endsnippet
 
+snippet cc "Copy constructor"
+${1:`!p snip.rv = snip.basename or "Name"`}(const $1&)${2: = ${3:default}};
+endsnippet
+
+snippet mc "Move constructor"
+${1:`!p snip.rv = snip.basename or "Name"`}($1&&)${2: = ${3:default}};
+endsnippet
+
+snippet ca "Copy assignment"
+${1:`!p snip.rv = snip.basename or "Name"`}& operator=(const $1&)${2: = ${3:default}};
+endsnippet
+
+snippet ma "Move assignment"
+${1:`!p snip.rv = snip.basename or "Name"`}& operator=($1&&)${2: = ${3:default}};
+endsnippet
+
 snippet out "std::cout (cout)" i
 std::cout << $0
 endsnippet
