@@ -1,15 +1,6 @@
 " markdown.vim: settings for Markdown markup files
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" OPTIONS                               {{{1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-setlocal textwidth=78                       " Use 78 columns for text width
-setlocal formatoptions=q                    " Change text format
-setlocal spell                              " Use spelling
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MAPPINGS                              {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
