@@ -45,6 +45,7 @@ nnoremap gc :Gcommit<CR>
 
 " ctrlp                                     {{{2
 nnoremap <silent> <C-M>     :CtrlPBuffer<CR>
+nnoremap <silent> <C-N>     :CtrlPMRU<CR>
 nnoremap <silent> g[        :CtrlPBufTag<CR>
 nnoremap <silent> g{        :CtrlPBufTagAll<CR>
 let g:ctrlp_working_path_mode = 0
