@@ -38,9 +38,6 @@ EOL
 " MAPPINGS                              {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Use CTRL+SPACE for omnicompletion
-inoremap <buffer> <silent> <C-@>    <C-x><C-o>
-
 " Run the current buffer
 nnoremap <buffer> <silent>  <F9>    :make<CR>
 
