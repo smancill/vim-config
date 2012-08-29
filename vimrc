@@ -247,6 +247,10 @@ cnoremap            <C-N>         <Down>
 " Toggle paste
 nnoremap            <F12>         :set invpaste<CR>:set paste?<CR>
 
+" Disable unwanted keys in normal mode
+nnoremap            <F1>          <nop>
+nnoremap            Q             <nop>
+
 " Write as sudo
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 
