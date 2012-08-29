@@ -170,7 +170,7 @@ set backspace=indent,eol,start              " Backspace works in Insert mode
 set whichwrap=b,s,<,>,[,]                   " Move cursor to other lines
 
 set hidden                                  " Change buffer whitout saving
-set switchbuf=usetab                        " Change to buffer in open tab
+set switchbuf=useopen                       " Change to buffer in open window
 
 set tabpagemax=15                           " Show 15 tabs
 set showmode                                " Always show the mode
