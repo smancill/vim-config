@@ -44,7 +44,11 @@ nnoremap gs :Gstatus<CR>
 nnoremap gc :Gcommit<CR>
 
 " ctrlp                                     {{{2
-nnoremap <silent> <C-M>     :CtrlPBuffer<CR>
+if has("gui_running")
+  nnoremap <silent> <C-Space> :CtrlPBuffer<CR>
+else
+  nnoremap <silent> <C-@>     :CtrlPBuffer<CR>
+endif
 nnoremap <silent> <C-N>     :CtrlPMRU<CR>
 nnoremap <silent> g[        :CtrlPBufTag<CR>
 nnoremap <silent> g{        :CtrlPBufTagAll<CR>
