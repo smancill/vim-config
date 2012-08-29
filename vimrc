@@ -28,7 +28,12 @@ filetype plugin indent on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Ultisnips                                 {{{2
-let g:UltiSnipsExpandTrigger = "<TAB>"
+inoremap <silent>   <C-@>         <nop>
+if has("gui_running")
+  let g:UltiSnipsExpandTrigger = "<C-Space>"
+else
+  let g:UltiSnipsExpandTrigger = "<C-@>"
+endif
 let g:UltiSnipsJumpForwardTrigger = "<TAB>"
 let g:UltiSnipsJumpBackwardTrigger = "<S-TAB>"
 let g:UltiSnipsListSnippets = "<leader>ls"
