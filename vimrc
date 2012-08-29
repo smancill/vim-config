@@ -238,10 +238,6 @@ cnoremap            <C-N>         <Down>
 " Toggle paste
 nnoremap            <F12>         :set invpaste<CR>:set paste?<CR>
 
-" Easily open a new terminal
-inoremap <silent>   <C-F11>         <ESC>:!x-terminal-emulator<CR>
-nnoremap <silent>   <C-F11>         :!x-terminal-emulator<CR>
-
 " Write as sudo
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 
