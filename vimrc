@@ -255,6 +255,11 @@ nnoremap            Q             <nop>
 " Write as sudo
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 
+" Better tags navigation
+nnoremap            <C-]>         g<C-]>
+vnoremap            <C-]>         g<C-]>
+nnoremap            g<C-]>        <C-]>
+vnoremap            g<C-]>        <C-]>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUTOCOMMANDS                          {{{1
