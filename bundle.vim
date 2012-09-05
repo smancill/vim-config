@@ -41,6 +41,9 @@ NeoBundle 'vim-scripts/indentpython.vim'
 NeoBundle 'smancill/hammer.vim'
 NeoBundle 'hallison/vim-markdown'
 
+" Completion
+NeoBundle 'ervandew/supertab'
+
 " Colorsquemes
 NeoBundle 'smancill/darkglass'
 NeoBundle 'vim-scripts/desert256.vim'

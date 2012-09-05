@@ -26,6 +26,8 @@ filetype plugin indent on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS CONFIGURATION                 {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SuperTab                                  {{{2
+let g:SuperTabDefaultCompletionType = "context"
 
 " Ultisnips                                 {{{2
 inoremap <silent>   <C-@>         <nop>
