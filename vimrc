@@ -27,6 +27,11 @@ filetype plugin indent on
 " PLUGINS CONFIGURATION                 {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SuperTab                                  {{{2
+if has("gui_running")
+  let g:SuperTabMappingForward = '<C-Space>'
+else
+  let g:SuperTabMappingForward = '<C-@>'
+endif
 let g:SuperTabDefaultCompletionType = "context"
 
 " Ultisnips                                 {{{2
