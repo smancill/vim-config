@@ -105,4 +105,12 @@ snippet str "std::string .. (string)" w
 std::string
 endsnippet
 
+snippet mv "std::move" w
+std::move(${1:${VISUAL:lvalue}})
+endsnippet
+
+snippet fw "std::forward" w
+std::forward(${1:${VISUAL:reference}})
+endsnippet
+
 # vim:ft=snippets:
