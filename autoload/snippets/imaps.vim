@@ -49,6 +49,13 @@ function! s:BeginSnips()
   if pumvisible() != 0
     return
   endif
+
+  " Do we need to search a placeholder?
+  let l:line = getline('.')
+  let l:pattern = '<#[^#]*#>'
+  if match(l:line, l:pattern) == -1
+    return
+  endif
   call feedkeys("\<esc>^\<c-j>")
 endfunction
 
