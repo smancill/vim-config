@@ -118,7 +118,7 @@ function! s:SourceLocal(path)
   let up_path = fnamemodify(a:path,':h')
   if up_path == '.' " likelly a non existant path
     if ! isdirectory(a:path)
-      call lh#common#warning_msg("[local_vimrc] The current file '".expand('%:p:')."' seems to be in a non-existant directory: '".a:path."'")
+      call common#warning_msg("[local_vimrc] The current file '".expand('%:p:')."' seems to be in a non-existant directory: '".a:path."'")
     endif
     let up_path = getcwd()
   endif
