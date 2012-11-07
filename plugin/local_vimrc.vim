@@ -110,8 +110,9 @@ let s:re_last_path = '^/\=$\|^[A-Za-z]:[/\\]\+$\|^//$\|^\\\\$'.
 
 " The main function                                                   {{{2
 function! s:SourceLocal(path)
-  " Fix for Fugitive
-  if expand(a:path) =~ "fugitive://"
+  " Fix for Fugitive and Gist
+  let exp_path = expand(a:path)
+  if exp_path =~ "fugitive://"  || exp_path =~ "gist:"
     return
   endif
 
