@@ -138,6 +138,9 @@ let g:evernote_email_local_part  = "smancill.d0477"
 " QuickBuf                                  {{{2
 let g:qb_hotkey="M"
 
+" Gist                                      {{{2
+let g:gist_clip_command = 'xclip -selection clipboard'
+
 " NERDTree                                  {{{2
 nnoremap <silent>  <F3>              :NERDTreeToggle<CR>
 let NERDTreeIgnore=[
