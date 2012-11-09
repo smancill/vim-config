@@ -77,6 +77,7 @@ let g:ctrlp_custom_ignore = {
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " Syntastic                                 {{{2
+let g:syntastic_mode_map = { 'passive_filetypes': ['java'] }
 let g:syntastic_c_check_header = 1
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_config_file = '.clang_complete'
