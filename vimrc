@@ -137,8 +137,8 @@ let g:evernote_gmail_username = "smancill.m"
 let g:evernote_email_local_part  = "smancill.d0477"
 
 " Buffergator                               {{{2
-nnoremap <silent>  M              :BuffergatorToggle<CR>
-nnoremap <silent>  <leader>M      :BuffergatorTabsToggle<CR>
+nnoremap <silent>  M              :BuffergatorOpen<CR>
+nnoremap <silent>  <leader>m      :BuffergatorTabsOpen<CR>
 let g:buffergator_suppress_keymaps=1
 let g:buffergator_viewport_split_policy="B"
 let g:buffergator_split_size=12
