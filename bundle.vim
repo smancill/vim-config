@@ -1,5 +1,5 @@
 " Browsing/searching files/buffers
-NeoBundle 'vim-scripts/QuickBuf'
+NeoBundle 'jeetsukumaran/vim-buffergator'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
