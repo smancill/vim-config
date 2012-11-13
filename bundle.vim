@@ -1,11 +1,11 @@
 " Browsing/searching files/buffers
 NeoBundle 'jeetsukumaran/vim-buffergator'
-NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'mileszs/ack.vim'
 
 " General utilities
+NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
