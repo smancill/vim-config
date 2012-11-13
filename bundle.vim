@@ -47,7 +47,6 @@ NeoBundle 'ervandew/supertab'
 NeoBundle 'smancill/darkglass'
 NeoBundle 'vim-scripts/desert256.vim'
 NeoBundle 'ciaranm/inkpot'
-NeoBundle 'wgibbs/vim-irblack'
 NeoBundle 'jnurmine/Zenburn'
 NeoBundle 'altercation/vim-colors-solarized'
 
