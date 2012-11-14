@@ -212,6 +212,7 @@ set wrap                                    " Softwrap long lines
 set virtualedit=block                       " Move freely in visual block
 set linebreak                               " Wrap at spaces characters
 let &showbreak='» '                         " Mark continuation of long lines
+set nojoinspaces                            " One space after sentences
 
 set incsearch                               " Search word while typing
 set ignorecase                              " Ignore case in search patterns
