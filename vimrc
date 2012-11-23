@@ -192,6 +192,7 @@ set showmode                                " Always show the mode
 set showcmd                                 " Always show the command
 set ruler                                   " Show position of the cursor
 set laststatus=2                            " Always show statusline
+set shortmess=a                             " Abbreviate status messages
 set rulerformat=%25(%LL\ \ \ %l,%c%V%=%P%)  " Ruler string
 
 set wildmenu                                " Better command-line completion
