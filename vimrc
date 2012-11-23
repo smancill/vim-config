@@ -350,6 +350,15 @@ if $COLORTERM == 'gnome-terminal'
 elseif $TERM =~ 'rxvt' || $TERM =~ '256color'
     set t_Co=256
     let s:color_squeme = "darkglass"
+    if &term == "screen-256color"
+        set t_k3=[13~
+        set t_k4=[14~
+        set t_k5=[15~
+        set t_k6=[17~
+        set t_k7=[18~
+        set t_k8=[19~
+        set t_k9=[20~
+    endif
 endif
 
 try
