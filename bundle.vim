@@ -9,6 +9,7 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
+NeoBundle 'sjl/clam.vim'
 
 " Git and GitHub
 NeoBundle 'tpope/vim-fugitive'
