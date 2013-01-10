@@ -181,6 +181,7 @@ set nobackup                                " Do not use backups (Git FTW)
 set directory=./.swp,~/.vim/.files,/tmp     " Change path to swap files
 set backupdir=./.bak,~/.vim/.files,/tmp     " Change path to backup files
 set fileencoding=utf-8                      " Default file encoding
+set fileformats=unix,dos,mac                " Support all EOLs by default
 set fileformat=unix                         " Default end of line
 
 set mouse=a                                 " Use mouse in all modes
