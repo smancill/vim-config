@@ -178,8 +178,6 @@ set synmaxcol=128                           " Prevent lag with long lines
 
 set autoread                                " Read files if changed outside
 set nobackup                                " Do not use backups (Git FTW)
-set directory=./.swp,~/.vim/.files,/tmp     " Change path to swap files
-set backupdir=./.bak,~/.vim/.files,/tmp     " Change path to backup files
 set fileencoding=utf-8                      " Default file encoding
 set fileformats=unix,dos,mac                " Support all EOLs by default
 set fileformat=unix                         " Default end of line
@@ -243,6 +241,15 @@ if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
   let &showbreak="\u00bb "
 endif
 
+" Where to put swap and backup files
+if isdirectory(expand('~/.cache/vim'))
+  if &directory =~# '^\.,'
+    set directory^=~/.cache/vim/swap
+  endif
+  if &backupdir =~# '^\.,'
+    set backupdir^=~/.cache/vim/backup
+  endif
+endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
