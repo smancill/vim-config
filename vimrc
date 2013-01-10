@@ -235,6 +235,8 @@ set spellfile=~/.vim/spell/mine.utf-8.add   " Spell file for additions
 
 set tags=./.tags,./tags                     " Use a dot tags file
 
+set viminfo^=!                              " Save uppercase variables
+
 set listchars=tab:▸\ ,eol:¬                 " Better unprintable characters
 
 
