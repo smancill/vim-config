@@ -259,6 +259,9 @@ nnoremap <silent>   K             <C-^>
 nnoremap            H             :bprevious<CR>
 nnoremap            L             :bnext<CR>
 
+" Make Y consistent with C and D.  See :help Y.
+nnoremap Y y$
+
 " Omnicompletion popup menu like IDE
 inoremap <expr>     <CR>          pumvisible() ? "\<C-y>" : "\<CR>"
 inoremap <expr>     <Down>        pumvisible() ? "\<C-n>" : "\<Down>"
