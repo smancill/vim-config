@@ -180,8 +180,8 @@ set autoread                                " Read files if changed outside
 set nobackup                                " Do not use backups (Git FTW)
 set directory=./.swp,~/.vim/.files,/tmp     " Change path to swap files
 set backupdir=./.bak,~/.vim/.files,/tmp     " Change path to backup files
-set fenc=utf-8                              " Default file encoding
-set ff=unix                                 " Default end of line
+set fileencoding=utf-8                      " Default file encoding
+set fileformat=unix                         " Default end of line
 
 set mouse=a                                 " Use mouse in all modes
 set backspace=indent,eol,start              " Backspace works in Insert mode
