@@ -224,6 +224,7 @@ set incsearch                               " Search word while typing
 set ignorecase                              " Ignore case in search patterns
 set smartcase                               " But override if uppercase used
 
+set complete-=i                             " Ignore include files
 set completeopt=menu,preview,longest        " Completion menu options
 set pumheight=10                            " Size of completion menu
 
