@@ -386,7 +386,7 @@ highlight PmenuSel ctermfg=black
 " PER USER CONFIGURATION                {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let s:user_vimrc = expand("~/.vim/vimrc_mine.vim")
+let s:user_vimrc = expand("~/.vim/local.vim")
 if filereadable(s:user_vimrc)
   exe "source " . s:user_vimrc
 endif
