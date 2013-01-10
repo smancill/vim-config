@@ -146,6 +146,9 @@ let g:buffergator_split_size=12
 " Gist                                      {{{2
 let g:gist_clip_command = 'xclip -selection clipboard'
 
+" netrw                                     {{{2
+let g:netrw_list_hide = '^\.,\~$,^tags$'
+
 " NERDTree                                  {{{2
 nnoremap <silent>  <F3>              :NERDTreeToggle<CR>
 let NERDTreeIgnore=[
