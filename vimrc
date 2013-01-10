@@ -218,7 +218,6 @@ set display+=lastline                       " If wrap set, display last line
 set number                                  " Show line numbers
 set virtualedit=block                       " Move freely in visual block
 set linebreak                               " Wrap at spaces characters
-let &showbreak='» '                         " Mark continuation of long lines
 set nojoinspaces                            " One space after sentences
 
 set incsearch                               " Search word while typing
@@ -237,7 +236,13 @@ set tags=./.tags,./tags                     " Use a dot tags file
 
 set viminfo^=!                              " Save uppercase variables
 
-set listchars=tab:▸\ ,eol:¬                 " Better unprintable characters
+" Better unprintable characters
+if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
+  let &listchars="tab:\u25b8 ,trail:\u2423,nbsp:\u26ad,eol:\u00ac,extends:\u21c9,precedes:\u21c7"
+  let &fillchars="vert:\u259a,fold:\u00b7"
+  let &showbreak="\u00bb "
+endif
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
