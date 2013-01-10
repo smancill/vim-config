@@ -241,7 +241,7 @@ if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
   let &showbreak="\u00bb "
 endif
 
-" Where to put swap and backup files
+" Where to put swap, backup and undo files
 if isdirectory(expand('~/.cache/vim'))
   if &directory =~# '^\.,'
     set directory^=~/.cache/vim/swap
@@ -249,6 +249,12 @@ if isdirectory(expand('~/.cache/vim'))
   if &backupdir =~# '^\.,'
     set backupdir^=~/.cache/vim/backup
   endif
+  if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
+    set undodir^=~/.cache/vim/undo
+  endif
+endif
+if exists('+undofile')
+  set undofile
 endif
 
 
