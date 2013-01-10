@@ -271,7 +271,7 @@ nnoremap            <F1>          <nop>
 nnoremap            Q             <nop>
 
 " Write as sudo
-cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
+cnoremap            w!!           w !sudo tee % >/dev/null
 
 " Better tags navigation
 nnoremap            <C-]>         g<C-]>
