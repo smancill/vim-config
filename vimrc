@@ -214,6 +214,7 @@ set shiftwidth=4                            " Default indent of four spaces
 set formatoptions=tq2                       " Set format options
 set autoindent                              " Indent new lines using previous
 set wrap                                    " Softwrap long lines
+set display+=lastline                       " If wrap set, display last line
 set number                                  " Show line numbers
 set virtualedit=block                       " Move freely in visual block
 set linebreak                               " Wrap at spaces characters
