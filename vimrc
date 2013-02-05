@@ -105,7 +105,7 @@ let g:alternateExtensions_h   = "c,cpp,cxx,cc,C"
 let g:alternateExtensions_hpp = "cpp,cxx,C,cc"
 
 " Clang Complete                            {{{2
-" let g:clang_use_library=1
+let g:clang_use_library=1
 let g:clang_auto_select=1
 let g:clang_snippets=1
 let g:clang_snippets_engine='imaps'
