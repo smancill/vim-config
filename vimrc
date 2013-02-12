@@ -237,7 +237,7 @@ set viminfo^=!                              " Save uppercase variables
 " Better unprintable characters
 if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
   let &listchars="tab:\u25b8 ,trail:\u2423,nbsp:\u26ad,eol:\u00ac,extends:\u21c9,precedes:\u21c7"
-  let &fillchars="vert:\u259a,fold:\u00b7"
+  let &fillchars="fold:\u00b7"
   let &showbreak="\u00bb "
 endif
 
