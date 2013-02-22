@@ -92,10 +92,6 @@ let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 let g:tagbar_singleclick = 1
 
-" EasyTags                                  {{{2
-let g:easytags_cmd = 'ctags'
-let g:easytags_dynamic_files = 2
-
 " Alternate                                 {{{2
 let g:alternateExtensions_cc  = "hh,h,hpp"
 let g:alternateExtensions_cpp = "hpp,h,hh"
