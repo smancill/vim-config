@@ -214,6 +214,7 @@ set number                                  " Show line numbers
 set virtualedit=block                       " Move freely in visual block
 set linebreak                               " Wrap at spaces characters
 set nojoinspaces                            " One space after sentences
+set splitright
 
 set incsearch                               " Search word while typing
 set ignorecase                              " Ignore case in search patterns
