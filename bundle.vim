@@ -40,6 +40,7 @@ NeoBundle 'vim-scripts/indentpython.vim'
 " Markup languages
 NeoBundle 'smancill/hammer.vim'
 NeoBundle 'hallison/vim-markdown'
+NeoBundle 'puppetlabs/puppet-syntax-vim'
 
 " Completion
 NeoBundle 'ervandew/supertab'
