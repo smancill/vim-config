@@ -104,8 +104,7 @@ let g:alternateExtensions_hxx = "cpp,cxx,C,cc"
 " Clang Complete                            {{{2
 let g:clang_auto_select=1
 let g:clang_snippets=1
-let g:clang_snippets_engine='imaps'
-let g:clang_conceal_snippets=1
+let g:clang_snippets_engine='ultisnips'
 let g:clang_complete_copen=0
 let g:clang_user_options="-DCLANG -fcxx-exceptions"
 
