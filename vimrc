@@ -29,8 +29,10 @@ filetype plugin indent on
 " SuperTab                                  {{{2
 if has("gui_running")
   let g:SuperTabMappingForward = '<C-Space>'
+  let g:SuperTabMappingBackward = '<S-C-space>'
 else
   let g:SuperTabMappingForward = '<C-@>'
+  let g:SuperTabMappingBackward = '<C-S-@>'
 endif
 let g:SuperTabDefaultCompletionType = "context"
 
