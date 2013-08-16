@@ -402,7 +402,7 @@ highlight PmenuSel ctermfg=black
 " PER USER CONFIGURATION                {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let s:user_vimrc = expand("~/.vim/local.vim")
+let s:user_vimrc = expand("~/.vim/vimrc.local")
 if filereadable(s:user_vimrc)
   exe "source " . s:user_vimrc
 endif
