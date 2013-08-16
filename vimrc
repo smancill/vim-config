@@ -18,6 +18,10 @@ NeoBundle 'smancill/neobundle.vim'
 
 " Add your bundles in bundle.vim
 source ~/.vim/bundle.vim
+let s:user_vimrc = expand("~/.vim/bundle.local")
+if filereadable(s:user_vimrc)
+  exe "source " . s:user_vimrc
+endif
 
 syntax on
 filetype plugin indent on
