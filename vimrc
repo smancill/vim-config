@@ -9,12 +9,9 @@ filetype off
 set nocompatible
 
 if has('vim_starting')
-set runtimepath+=~/.vim/bundle/neobundle.vim
+set runtimepath+=~/.vim/share/neobundle.vim
 call neobundle#rc()
 endif
-
-" Required
-NeoBundle 'smancill/neobundle.vim'
 
 " Add your bundles in bundle.vim
 source ~/.vim/bundle.vim
