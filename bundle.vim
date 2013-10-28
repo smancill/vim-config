@@ -27,7 +27,6 @@ NeoBundle 'SirVer/ultisnips'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'majutsushi/tagbar'
-NeoBundle 'mutewinter/vim-indent-guides'
 
 " C/C++
 NeoBundle 'vim-scripts/a.vim'
