@@ -15,9 +15,9 @@ endif
 
 " Add your bundles in bundle.vim
 source ~/.vim/bundle.vim
-let s:user_vimrc = expand("~/.vim/bundle.local")
-if filereadable(s:user_vimrc)
-  exe "source " . s:user_vimrc
+let s:user_bundle = expand("~/.vim/bundle.local")
+if filereadable(s:user_bundle)
+  exe "source " . s:user_bundle
 endif
 
 syntax on
