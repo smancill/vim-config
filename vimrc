@@ -9,8 +9,15 @@ filetype off
 set nocompatible
 
 if has('vim_starting')
-set runtimepath+=~/.vim/share/neobundle.vim
-call neobundle#rc()
+  let s:neobundle_dir = expand("~/.vim/share/neobundle.vim")
+  if isdirectory(s:neobundle_dir. "/plugin")
+    exe "set runtimepath+=" . s:neobundle_dir
+    call neobundle#rc()
+  else
+    echomsg 'Plugin manager "neobundle" not found.'
+    echomsg 'Run "git submodule update --init" in your $VIMHOME directory.'
+    exit
+  endif
 endif
 
 " Add your bundles in bundle.vim
