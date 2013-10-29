@@ -7,7 +7,7 @@ development. It is a replacement of my
 the plugins automatically.  The plugins are listed in `bundle.vim`, which is
 sourced by `.vimrc`.
 
-> **This configuration has only been tested on Ubuntu 11.10**
+> **TODO:** update this README with the latests plugins and config
 
 ## Installation
 
