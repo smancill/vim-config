@@ -13,7 +13,7 @@ if [[ -d ${VIMDIR}/bundle/neobundle.vim ]]; then
 fi
 
 echo -e "Installing Package Manager..."
-git submodule init && git submodule update
+git submodule update --init
 if [[ $? -eq 0 ]]; then
     echo -e "\nPackage Manager installed sucessfully"
     echo -e "See https://github.com/smancill/neobundle.vim#readme"
