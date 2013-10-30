@@ -21,7 +21,7 @@ NeoBundle 'mattn/webapi-vim'
 NeoBundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 
 " Programming
-NeoBundle 'smancill/syntastic'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'tpope/vim-commentary'
@@ -37,7 +37,7 @@ NeoBundle 'vim-scripts/python_match.vim'
 NeoBundle 'vim-scripts/indentpython.vim'
 
 " Markup languages
-NeoBundle 'smancill/hammer.vim'
+NeoBundle 'matthias-guenther/hammer.vim'
 NeoBundle 'hallison/vim-markdown'
 NeoBundle 'puppetlabs/puppet-syntax-vim'
 
