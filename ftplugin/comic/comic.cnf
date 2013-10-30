@@ -1,0 +1,4 @@
+--langdef=comic
+--langmap=comic:.comic
+--regex-comic=/^PÁGINA ([0-9]+)$/Página \1/p,p/
+#--regex-comic=/^([0-9]+)/\.\. Panel \1/h,h2/
