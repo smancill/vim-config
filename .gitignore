@@ -2,5 +2,6 @@ bundle
 spell
 src
 UltiSnips
-local.vim
+vimrc.local
+bundle.local
 .netrwhist
