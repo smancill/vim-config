@@ -5,6 +5,6 @@ set nowrap
 set vb t_vb=
 
 set gfn=Ubuntu\ Mono\ 10
-set guioptions=breTm
+set guioptions=irec
 set bg=light
 colo darkglass
