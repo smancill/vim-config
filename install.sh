@@ -1,11 +1,16 @@
 #!/bin/bash
 
+# Paths
 VIMDIR=${HOME}/.vim
 VIMRC=${HOME}/.vimrc
 GVIMRC=${HOME}/.gvimrc
+CACHEDIR=$HOME/.cache/vim
 
 # Create directory for bundles
 mkdir -p ${VIMDIR}/bundle
+
+# Create directory for swap/backup/undo files
+mkdir -p ${CACHEDIR}
 
 # Install package manager
 if [[ -d ${VIMDIR}/bundle/neobundle.vim ]]; then
@@ -30,9 +35,6 @@ ln -sf ${VIMDIR}/gvimrc ${GVIMRC}
 echo -e "\nInstalling plugins..."
 sleep 2
 vim +NeoBundleInstall! +qa!
-
-# Create directory for swap/backup/undo files
-mkdir -p ${HOME}/.cache/vim/{swap,backup,undo}
 
 # Spell files
 echo -e "\nGetting spell files..."

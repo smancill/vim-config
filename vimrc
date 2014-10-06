@@ -196,6 +196,13 @@ set fileencoding=utf-8                      " Default file encoding
 set fileformats=unix,dos,mac                " Support all EOLs by default
 set fileformat=unix                         " Default end of line
 
+set directory^=~/.cache/vim//               " Location of swap files
+set backupdir^=~/.cache/vim//               " Location of backup files
+if has('persistent_undo')
+  set undodir^=~/.cache/vim//               " Location of undo files
+  set undofile                              " Active persistent undo
+endif
+
 set mouse=a                                 " Use mouse in all modes
 set backspace=indent,eol,start              " Backspace works in Insert mode
 set whichwrap=b,s,<,>,[,]                   " Move cursor to other lines
@@ -255,22 +262,6 @@ if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
   let &listchars="tab:\u25b8 ,trail:\u2423,nbsp:\u26ad,eol:\u00ac,extends:\u21c9,precedes:\u21c7"
   let &fillchars="fold:\u00b7"
   let &showbreak="\u00bb "
-endif
-
-" Where to put swap, backup and undo files
-if isdirectory(expand('~/.cache/vim'))
-  if &directory =~# '^\.,'
-    set directory^=~/.cache/vim/swap
-  endif
-  if &backupdir =~# '^\.,'
-    set backupdir^=~/.cache/vim/backup
-  endif
-  if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
-    set undodir^=~/.cache/vim/undo
-  endif
-endif
-if exists('+undofile')
-  set undofile
 endif
 
 
