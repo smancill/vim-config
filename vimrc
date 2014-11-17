@@ -334,6 +334,15 @@ autocmd BufReadPost *
     \   exe "normal! g`\"" |
     \ endif
 
+" When switching buffers, preserve window view.
+if v:version >= 700
+  autocmd BufLeave * if !&diff | let b:winview = winsaveview() | endif
+  autocmd BufEnter *
+    \ if exists('b:winview') && !&diff |
+    \   call winrestview(b:winview) | unlet! b:winview |
+    \ endif
+endif
+
 " Automatically close popup menu and preview window for omnicompletion
 autocmd CursorMovedI,InsertLeave *
     \ if pumvisible() == 0 |
