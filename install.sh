@@ -6,10 +6,15 @@ VIMRC=${HOME}/.vimrc
 GVIMRC=${HOME}/.gvimrc
 CACHEDIR=$HOME/.cache/vim
 
+# Get user option
 FORCE=false
+SKIP=false
 if [ $# -eq 1 ]; then
     if [ "$1" = "-f" ]; then
         FORCE=true
+    fi
+    if [ "$1" = "-s" ]; then
+        SKIP=true
     fi
 fi
 
@@ -42,9 +47,11 @@ ln -sf ${VIMDIR}/vimrc  ${VIMRC}
 ln -sf ${VIMDIR}/gvimrc ${GVIMRC}
 
 # Install plugins
-echo -e "\nInstalling plugins..."
-sleep 2
-vim +NeoBundleInstall! +qa!
+if [ $SKIP = false ]; then
+    echo -e "\nInstalling plugins..."
+    sleep 2
+    vim +NeoBundleInstall! +qa!
+fi
 
 # Spell files
 echo -e "\nGetting spell files..."
