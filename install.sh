@@ -50,7 +50,10 @@ ln -sf ${VIMDIR}/gvimrc ${GVIMRC}
 if [ $SKIP = false ]; then
     echo -e "\nInstalling plugins..."
     sleep 2
-    vim +NeoBundleInstall! +qa!
+    vim -N -u ${VIMRC} -U NONE -i NONE \
+        -c "try | NeoBundleUpdate! | visual | finally | qall! | endtry" \
+        -V1 -e -s
+    echo
 fi
 
 # Spell files
