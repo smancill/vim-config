@@ -39,14 +39,17 @@ vim +NeoBundleInstall! +qa!
 # Spell files
 echo -e "\nGetting spell files..."
 sleep 1
-mkdir -p ${VIMDIR}/spell
-cd spell
+SPLURL=http://ftp.vim.org/vim/runtime/spell
+SPLDIR=${VIMDIR}/spell
+mkdir -p ${SPLDIR}
 for idiom in es en; do
     for enc in latin1 utf-8; do
         for ver in spl sug; do
-            rm -f ${VIMDIR}/spell/${idiom}.${enc}.${ver}
-            wget -O${VIMDIR}/spell/${idiom}.${enc}.${ver} \
-                    http://ftp.vim.org/vim/runtime/spell/${idiom}.${enc}.${ver}
+            SPLNAME=${idiom}.${enc}.${ver}
+            SPLFILE=${SPLDIR}/${SPLNAME}
+            if [ ! -f $SPLFILE ]; then
+                wget -O${SPLFILE} ${SPLURL}/${SPLNAME}
+            fi
         done
     done
 done
