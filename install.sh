@@ -6,7 +6,17 @@ VIMRC=${HOME}/.vimrc
 GVIMRC=${HOME}/.gvimrc
 CACHEDIR=$HOME/.cache/vim
 
+FORCE=false
+if [ $# -eq 1 ]; then
+    if [ "$1" = "-f" ]; then
+        FORCE=true
+    fi
+fi
+
 # Create directory for bundles
+if [ $FORCE = true ]; then
+    rm -rf ${VIMDIR}/bundle
+fi
 mkdir -p ${VIMDIR}/bundle
 
 # Create directory for swap/backup/undo files
@@ -41,6 +51,9 @@ echo -e "\nGetting spell files..."
 sleep 1
 SPLURL=http://ftp.vim.org/vim/runtime/spell
 SPLDIR=${VIMDIR}/spell
+if [ $FORCE = true ]; then
+    rm -rf ${SPLDIR}
+fi
 mkdir -p ${SPLDIR}
 for idiom in es en; do
     for enc in latin1 utf-8; do
