@@ -190,4 +190,4 @@ The following plugins are used:
   documentation)
 
 
-[NeoBundle]: https://github.com/smancill/neobundle.vim
+[NeoBundle]: https://github.com/Shougo/neobundle.vim

@@ -21,7 +21,7 @@ echo -e "Installing Package Manager..."
 git submodule update --init
 if [[ $? -eq 0 ]]; then
     echo -e "\nPackage Manager installed sucessfully"
-    echo -e "See https://github.com/smancill/neobundle.vim#readme"
+    echo -e "See https://github.com/Shougo/neobundle.vim#readme"
 else
     echo -e "\nCould not install package manager"
     exit
