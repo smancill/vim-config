@@ -153,8 +153,8 @@ let g:evernote_gmail_username = "smancill.m"
 let g:evernote_email_local_part  = "smancill.d0477"
 
 " Buffergator                               {{{2
-nnoremap <silent>  M              :BuffergatorOpen<CR>
-nnoremap <silent>  <leader>m      :BuffergatorTabsOpen<CR>
+nnoremap <silent>  <Space><Space> :BuffergatorOpen<CR>
+nnoremap <silent>  <C-_>          :BuffergatorTabsOpen<CR>
 let g:buffergator_suppress_keymaps=1
 let g:buffergator_viewport_split_policy="B"
 let g:buffergator_split_size=12
@@ -286,15 +286,8 @@ nnoremap ` '
 nnoremap j  gj
 nnoremap k  gk
 
-" Remap keys that will be used as normal mode mappings
-nnoremap <silent>   <space>h      H
-nnoremap <silent>   <space>m      M
-nnoremap <silent>   <space>l      L
-
 " Buffers
-nnoremap <silent>   K             <C-^>
-nnoremap            H             :bprevious<CR>
-nnoremap            L             :bnext<CR>
+nnoremap <silent>   <C-k>         <C-^>
 
 " Make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
