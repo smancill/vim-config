@@ -23,7 +23,6 @@ NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 " Programming
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'sjl/gundo.vim'
-NeoBundle 'SirVer/ultisnips'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'majutsushi/tagbar'
@@ -43,6 +42,8 @@ NeoBundle 'puppetlabs/puppet-syntax-vim'
 
 " Completion
 NeoBundle 'ervandew/supertab'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'smancill/vim-snippets'
 
 " Colorsquemes
 NeoBundle 'smancill/darkglass'
