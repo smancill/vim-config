@@ -13,15 +13,16 @@ sourced by `.vimrc`.
 
 Clone the repository:
 
-    git clone git://github.com/smancill/Vim_config.git $HOME/.vim
+    git clone git://github.com/smancill/Vim_config.git ~/.vim
 
 Execute the installation script:
 
-    source $HOME/.vim/install.sh
+    cd ~/.vim
+    ./install.sh
 
 This script installs the plugin manager ([NeoBundle][NeoBundle]), downloads
-and installs the plugins, and creates the symbolic links `$HOME/.vimrc` and
-`$HOME/.gvimrc`
+and installs the plugins, and creates the symbolic links `~/.vimrc` and
+`~/.gvimrc`
 
 ### Prerequisites
 
@@ -91,7 +92,7 @@ Check the project page to install dependencies for other markup languages.
 
 Get the last commits from my repository:
 
-    cd $HOME/.vim
+    cd ~/.vim
     git pull origin master
 
 Launch `vim` and run `:NeoBundleInstall!`.
@@ -102,7 +103,7 @@ You can do the same from the command line with:
     $ vim +NeoBundleInstall! +q
 ```
 
-To add or remove plugins, just edit the file `$HOME/.vim/bundle.vim`. See the
+To add or remove plugins, just edit the file `~/.vim/bundle.vim`. See the
 [NeoBundle][NeoBundle] documentation for more details.
 
 
@@ -126,7 +127,7 @@ The `.vimrc` file is well organized and folded by sections.  The options are:
 And several more, including configuration of used plugins.
 
 > If you want to override some features of my `vimrc`, create the file
-> `$HOME/.vim/vimrc_mine.vim` and put your settings there.
+> `~/.vim/vimrc_mine.vim` and put your settings there.
 
 ### Navigating buffers
 
