@@ -1,3 +1,6 @@
+" Local vimrc
+NeoBundle 'MarcWeber/vim-addon-local-vimrc'
+
 " Browsing/searching files/buffers
 NeoBundle 'jeetsukumaran/vim-buffergator'
 NeoBundle 'kien/ctrlp.vim'

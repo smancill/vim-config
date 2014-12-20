@@ -58,8 +58,12 @@ let g:UltiSnipsEditSplit='horizontal'
 let g:UltiSnipsSnippetDirectories = ["ulti-snippets"]
 let g:UltiSnipsDontReverseSearchPath = 1
 
-" Local vimrc                               {{{2
-let g:local_vimrc='.project.vim'
+" vim-addon-local-vimrc                     {{{2
+let g:local_vimrc = {
+        \ 'names': ['.project.vim'],
+        \ 'hash_fun': 'LVRHashOfFile',
+        \ 'cache_file': $HOME . '/.cache/vim_local_rc_cache',
+        \ }
 
 " Fugitive                                  {{{2
 nnoremap gs :Gstatus<CR>
