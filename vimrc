@@ -198,11 +198,13 @@ set whichwrap=b,s,<,>,[,]                   " Move cursor to other lines
 
 set hidden                                  " Change buffer whitout saving
 set switchbuf=useopen                       " Change to buffer in open window
+set splitright                              " New windows on the right
 
 set tabpagemax=15                           " Show 15 tabs
 set showmode                                " Always show the mode
 set showcmd                                 " Always show the command
 set ruler                                   " Show position of the cursor
+set number                                  " Show line numbers
 set laststatus=2                            " Always show statusline
 set shortmess=aI                            " Abbreviate status messages
 set rulerformat=%25(%LL\ \ \ %l,%c%V%=%P%)  " Ruler string
@@ -220,13 +222,11 @@ set shiftround                              " Indent to multiple of shiftwidth
 set shiftwidth=4                            " Default indent of four spaces
 
 set autoindent                              " Indent new lines using previous
-set wrap                                    " Softwrap long lines
-set display+=lastline                       " If wrap set, display last line
-set number                                  " Show line numbers
-set virtualedit=block                       " Move freely in visual block
-set linebreak                               " Wrap at spaces characters
 set nojoinspaces                            " One space after sentences
-set splitright
+set wrap                                    " Softwrap long lines
+set linebreak                               " Wrap at spaces characters
+set display+=lastline                       " If wrap set, display last line
+set virtualedit=block                       " Move freely in visual block
 
 set incsearch                               " Search word while typing
 set ignorecase                              " Ignore case in search patterns
