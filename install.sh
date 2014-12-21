@@ -18,6 +18,15 @@ if [ $# -eq 1 ]; then
     fi
 fi
 
+# Check ~/.vim directory
+DIR="$(dirname "$0")"
+cd "$DIR"
+DIR="$(pwd)"
+if [ "$DIR" != "$HOME/.vim" ]; then
+    echo "Clone the repository in $HOME/.vim, not in $DIR"
+    exit 1
+fi
+
 # Create directory for bundles
 if [ $FORCE = true ]; then
     rm -rf ${VIMDIR}/bundle
