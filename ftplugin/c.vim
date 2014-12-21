@@ -1,10 +1,6 @@
 " c.vim: settings for C/C++ files
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" MAPPINGS                             {{{1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" {<CR> always opens a block
+" always open a block
 inoremap  <buffer>  {<CR>    {<CR>}<Esc>O
 vnoremap  <buffer>  {<CR>   S{<CR>}<Esc>Pk=iB
 
@@ -20,7 +16,3 @@ nnoremap <buffer> <silent>  <LocalLeader>av         :AV<CR>
 
 inoremap <buffer> <silent>  <LocalLeader>as    <Esc>:AS<CR>
 nnoremap <buffer> <silent>  <LocalLeader>as         :AS<CR>
-
-"}}}
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim: foldmethod=marker

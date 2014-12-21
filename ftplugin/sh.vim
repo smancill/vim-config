@@ -1,11 +1,3 @@
 " sh.vim: settings for shell scripting files
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" OPTIONS                               {{{1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-setlocal formatoptions=cqro                 " Format text
-
-"}}}
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim: foldmethod=marker
+setlocal formatoptions=cqro
