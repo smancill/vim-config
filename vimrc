@@ -107,6 +107,10 @@ let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 let g:tagbar_singleclick = 1
 
+" Airline                                   {{{2
+let g:airline_theme='powerlineish'
+let g:airline#extensions#disable_rtp_load = 1
+
 " Alternate                                 {{{2
 let g:alternateExtensions_cc  = "hh,h,hpp,hxx"
 let g:alternateExtensions_cpp = "hpp,h,hh,hxx"
