@@ -1,10 +1,11 @@
 " comic.vim: settings for my custom comic scripts
 
 setlocal textwidth=78
-setlocal linebreak
 setlocal spell
-setlocal ts=8
-setlocal sw=8
+
+setlocal tabstop=8
+setlocal softtabstop=8
+setlocal shiftwidth=8
 
 
 iabbr pg PÁGINA

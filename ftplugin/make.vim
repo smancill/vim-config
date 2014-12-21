@@ -1,8 +1,8 @@
 " make.vim: settings for Makefiles
 
-setlocal tabstop=8
-setlocal shiftwidth=8
-setlocal noexpandtab
-
-setlocal nospell
 setlocal nowrap
+
+setlocal noexpandtab
+setlocal tabstop=8
+setlocal softtabstop=8
+setlocal shiftwidth=8

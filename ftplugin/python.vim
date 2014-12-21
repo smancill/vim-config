@@ -1,11 +1,8 @@
 " python.vim: settings for Python files
 
-setlocal tabstop=4
-setlocal softtabstop=4
-setlocal shiftwidth=4
 setlocal formatoptions=cqro
-setlocal nospell
 setlocal nowrap
+
 setlocal makeprg=python\ %
 setlocal errorformat=
   \%A\ \ File\ \"%f\"\\\,\ line\ %l\\\,%m,
