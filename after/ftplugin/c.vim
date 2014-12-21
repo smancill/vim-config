@@ -2,7 +2,6 @@
 
 setlocal textwidth=78
 setlocal cindent
-setlocal formatoptions=cqro
 setlocal nowrap
 
 setlocal tabstop=8

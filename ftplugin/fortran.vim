@@ -1,6 +1,5 @@
 " fortran.vim: settings for Fortran files
 
-setlocal formatoptions=cqro
 setlocal nowrap
 
 setlocal tabstop=3

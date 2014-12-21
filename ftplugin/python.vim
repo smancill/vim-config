@@ -1,6 +1,6 @@
 " python.vim: settings for Python files
 
-setlocal formatoptions=cqro
+setlocal formatoptions=croql
 setlocal nowrap
 
 setlocal makeprg=python\ %

@@ -1,7 +1,6 @@
 " tex.vim: settings for LaTeX files
 
 setlocal textwidth=78
-setlocal formatoptions=tq
 setlocal spell
 
 setlocal tabstop=2
