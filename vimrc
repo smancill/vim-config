@@ -164,9 +164,12 @@ let g:gist_clip_command = 'xclip -selection clipboard'
 
 " netrw                                     {{{2
 let g:netrw_list_hide = '^\.,\~$,^tags$'
+let g:netrw_altfile = 1
+let g:netrw_dirhistmax = 0
 
 " NERDTree                                  {{{2
 nnoremap <silent>  <F3>              :NERDTreeToggle<CR>
+let NERDTreeHijackNetrw=0
 let NERDTreeIgnore=[
                    \'\.d$[[dir]]',
                    \'\.git$[[dir]]',

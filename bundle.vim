@@ -5,6 +5,7 @@ NeoBundle 'MarcWeber/vim-addon-local-vimrc'
 NeoBundle 'jeetsukumaran/vim-buffergator'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'mileszs/ack.vim'
 
 " General utilities
