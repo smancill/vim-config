@@ -108,6 +108,8 @@ let g:tagbar_compact = 1
 let g:tagbar_singleclick = 1
 
 " Airline                                   {{{2
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 let g:airline_theme='powerlineish'
 let g:airline#extensions#disable_rtp_load = 1
 
