@@ -20,11 +20,17 @@ if has('vim_starting')
   endif
 endif
 
-" Add your bundles in bundle.vim
+" Load bundles
 source ~/.vim/bundle.vim
-let s:user_bundle = expand("~/.vim/bundle.local")
-if filereadable(s:user_bundle)
-  exe "source " . s:user_bundle
+
+" Load bundles of the fork
+if filereadable(expand("~/.vim/bundle.fork"))
+  source ~/.vim/bundle.fork
+endif
+
+" Load bundles of the local machine
+if filereadable(expand("~/.vim/bundle.local"))
+  source ~/.vim/bundle.local
 endif
 
 syntax on
@@ -437,12 +443,17 @@ highlight PmenuSel ctermfg=black
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PER USER CONFIGURATION                {{{1
+" EXTRA CONFIGURATION                   {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let s:user_vimrc = expand("~/.vim/vimrc.local")
-if filereadable(s:user_vimrc)
-  exe "source " . s:user_vimrc
+" Load vimrc of the fork
+if filereadable(expand("~/.vim/vimrc.fork"))
+  source ~/.vim/vimrc.fork
+endif
+
+" Load vimrc of the local machine
+if filereadable(expand("~/.vim/vimrc.local"))
+  source ~/.vim/vimrc.local
 endif
 
 "}}}
