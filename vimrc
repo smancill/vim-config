@@ -185,6 +185,10 @@ let NERDTreeIgnore=[
 set history=500                             " How many lines of history
 set vb t_vb=                                " Disable beep
 set synmaxcol=128                           " Prevent lag with long lines
+set nrformats-=octal                        " Don't detect octal numbers
+
+set ttimeout                                " Time out mappings and keycodes
+set ttimeoutlen=100                         " Shorter time out for keycodes
 
 set autoread                                " Read files if changed outside
 set nobackup                                " Do not use backups (Git FTW)
@@ -241,9 +245,10 @@ set spelllang=es,en                         " Spelling languages
 set spellsuggest=10                         " Number of spelling suggestions
 set spellfile=~/.vim/spell/mine.utf-8.add   " Spell file for additions
 
-set tags=./.tags,./tags                     " Use a dot tags file
+set tags=./.tags;,./tags;                   " Use a dot tags file
 
 set viminfo^=!                              " Save uppercase variables
+set sessionoptions-=options                 " Options can corrupt sessions
 
 " Better unprintable characters
 if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
