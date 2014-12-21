@@ -231,6 +231,7 @@ set virtualedit=block                       " Move freely in visual block
 set incsearch                               " Search word while typing
 set ignorecase                              " Ignore case in search patterns
 set smartcase                               " But override if uppercase used
+set hlsearch                                " Highlight search
 
 set complete-=i                             " Ignore include files
 set completeopt=menu,preview,longest        " Completion menu options
