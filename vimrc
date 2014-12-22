@@ -61,7 +61,6 @@ let g:UltiSnipsJumpForwardTrigger = "<TAB>"
 let g:UltiSnipsJumpBackwardTrigger = "<S-TAB>"
 let g:UltiSnipsListSnippets = "<leader>ls"
 let g:UltiSnipsEditSplit='horizontal'
-let g:UltiSnipsSnippetDirectories = ["ulti-snippets"]
 let g:UltiSnipsDontReverseSearchPath = 1
 
 " vim-addon-local-vimrc                     {{{2
