@@ -90,6 +90,7 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_mruf_max = 50
 let g:ctrlp_dotfiles = 1
 let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|javadoc$\|html$'
   \ }

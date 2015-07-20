@@ -4,6 +4,7 @@ NeoBundle 'MarcWeber/vim-addon-local-vimrc'
 " Browsing/searching files/buffers
 NeoBundle 'jeetsukumaran/vim-buffergator'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'FelikZ/ctrlp-py-matcher'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'mileszs/ack.vim'
