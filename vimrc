@@ -73,6 +73,8 @@ let g:local_vimrc = {
 " Fugitive                                  {{{2
 nnoremap gs :Gstatus<CR>
 nnoremap gc :Gcommit<CR>
+nnoremap gl :Git log -- %<CR>
+nnoremap gL :Git log -p -- %<CR>
 
 " ctrlp                                     {{{2
 if has("gui_running")
