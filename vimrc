@@ -92,7 +92,7 @@ let g:ctrlp_dotfiles = 1
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|javadoc$\|html$'
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.gradle\|javadoc$\|html$'
   \ }
 
 " Ack                                       {{{2
