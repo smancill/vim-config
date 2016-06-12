@@ -369,15 +369,6 @@ autocmd BufEnter *
     \   endif |
     \ endif
 
-" Move to the parent directory in any fugitive tree or blob
-autocmd User Fugitive
-    \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
-    \   nnoremap <silent> <buffer> .. :edit %:h<CR> |
-    \ endif
-
-" Autoclean fugitive buffers
-autocmd BufReadPost fugitive://* set bufhidden=delete
-
 " Always start on first line of Git commit message
 autocmd BufEnter *
     \ if &filetype == 'gitcommit' |
