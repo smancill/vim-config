@@ -71,20 +71,20 @@ let g:local_vimrc = {
         \ }
 
 " Fugitive                                  {{{2
-nnoremap gs :Gstatus<CR>
-nnoremap gc :Gcommit<CR>
-nnoremap gl :Git log -- %<CR>
-nnoremap gL :Git log -p -- %<CR>
+nnoremap gs :<C-U>Gstatus<CR>
+nnoremap gc :<C-U>Gcommit<CR>
+nnoremap gl :<C-U>Git log -- %<CR>
+nnoremap gL :<C-U>Git log -p -- %<CR>
 
 " ctrlp                                     {{{2
 if has("gui_running")
-  nnoremap <silent> <C-Space> :CtrlPBuffer<CR>
+  nnoremap <silent> <C-Space> :<C-U>CtrlPBuffer<CR>
 else
-  nnoremap <silent> <C-@>     :CtrlPBuffer<CR>
+  nnoremap <silent> <C-@>     :<C-U>CtrlPBuffer<CR>
 endif
-nnoremap <silent> <C-N>     :CtrlPMRU<CR>
-nnoremap <silent> g[        :CtrlPBufTag<CR>
-nnoremap <silent> g{        :CtrlPBufTagAll<CR>
+nnoremap <silent> <C-N>     :<C-U>CtrlPMRU<CR>
+nnoremap <silent> g[        :<C-U>CtrlPBufTag<CR>
+nnoremap <silent> g{        :<C-U>CtrlPBufTagAll<CR>
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_by_filename = 1
 let g:ctrlp_mruf_max = 50
@@ -110,7 +110,7 @@ if v:version == 700
 endif
 
 " Tagbar                                    {{{2
-nnoremap <silent> <F8> :TagbarToggle<CR>
+nnoremap <silent> <F8> :<C-U>TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 let g:tagbar_singleclick = 1
@@ -138,8 +138,8 @@ let g:clang_complete_copen=0
 let g:clang_user_options="-DCLANG -fcxx-exceptions"
 
 " Buffergator                               {{{2
-nnoremap <silent>  <Space><Space> :BuffergatorOpen<CR>
-nnoremap <silent>  <C-_>          :BuffergatorTabsOpen<CR>
+nnoremap <silent>  <Space><Space> :<C-U>BuffergatorOpen<CR>
+nnoremap <silent>  <C-_>          :<C-U>BuffergatorTabsOpen<CR>
 let g:buffergator_suppress_keymaps=1
 let g:buffergator_viewport_split_policy="B"
 let g:buffergator_split_size=12
@@ -153,7 +153,7 @@ let g:netrw_altfile = 1
 let g:netrw_dirhistmax = 0
 
 " NERDTree                                  {{{2
-nnoremap <silent>  <F3>              :NERDTreeToggle<CR>
+nnoremap <silent>  <F3>           :<C-U>NERDTreeToggle<CR>
 let NERDTreeHijackNetrw=0
 let NERDTreeIgnore=[
                    \'\.d$[[dir]]',
@@ -304,7 +304,7 @@ vnoremap            g<C-]>        <C-]>
 
 " Use <C-L> to clear the highlighting of :set hlsearch.
 if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent> <C-L> :nohlsearch<CR>:diffupdate<CR><C-L>
+  nnoremap <silent> <C-L> :<C-U>nohlsearch<CR>:diffupdate<CR><C-L>
 endif
 
 
