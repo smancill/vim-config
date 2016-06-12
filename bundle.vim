@@ -10,7 +10,8 @@ NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'mileszs/ack.vim'
 
 " General utilities
-NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
