@@ -21,9 +21,6 @@ NeoBundle 'gregsexton/gitv'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
 
-" LaTeX
-NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
-
 " Programming
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'sjl/gundo.vim'
@@ -38,6 +35,9 @@ NeoBundle 'Rip-Rip/clang_complete'
 " Python
 NeoBundle 'vim-scripts/python_match.vim'
 NeoBundle 'vim-scripts/indentpython.vim'
+
+" LaTeX
+NeoBundle 'lervag/vimtex'
 
 " Markup languages
 NeoBundle 'matthias-guenther/hammer.vim'
