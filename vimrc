@@ -137,10 +137,6 @@ let g:clang_snippets_engine='ultisnips'
 let g:clang_complete_copen=0
 let g:clang_user_options="-DCLANG -fcxx-exceptions"
 
-" Send to Evernote                          {{{2
-let g:evernote_gmail_username = "smancill.m"
-let g:evernote_email_local_part  = "smancill.d0477"
-
 " Buffergator                               {{{2
 nnoremap <silent>  <Space><Space> :BuffergatorOpen<CR>
 nnoremap <silent>  <C-_>          :BuffergatorTabsOpen<CR>
