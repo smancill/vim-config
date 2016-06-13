@@ -146,6 +146,7 @@ nnoremap <silent>  <C-_>          :<C-U>BuffergatorTabsOpen<CR>
 let g:buffergator_suppress_keymaps=1
 let g:buffergator_viewport_split_policy="B"
 let g:buffergator_split_size=12
+let g:buffergator_sort_regime="mru"
 
 " Gist                                      {{{2
 let g:gist_clip_command = 'xclip -selection clipboard'
