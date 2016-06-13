@@ -42,7 +42,7 @@ NeoBundle 'lervag/vimtex'
 
 " Markup languages
 NeoBundle 'matthias-guenther/hammer.vim'
-NeoBundle 'hallison/vim-markdown'
+NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'puppetlabs/puppet-syntax-vim'
 
 " Completion
