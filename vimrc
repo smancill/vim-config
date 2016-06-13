@@ -141,7 +141,7 @@ let g:clang_complete_copen=0
 let g:clang_user_options="-DCLANG -fcxx-exceptions"
 
 " Buffergator                               {{{2
-nnoremap <silent>  <Space><Space> :<C-U>BuffergatorOpen<CR>
+nnoremap <silent>  <C-J>          :<C-U>BuffergatorOpen<CR>
 nnoremap <silent>  <C-_>          :<C-U>BuffergatorTabsOpen<CR>
 let g:buffergator_suppress_keymaps=1
 let g:buffergator_viewport_split_policy="B"
