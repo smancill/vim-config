@@ -71,10 +71,13 @@ let g:local_vimrc = {
         \ }
 
 " Fugitive                                  {{{2
-nnoremap gs :<C-U>Gstatus<CR>
-nnoremap gc :<C-U>Gcommit<CR>
-nnoremap gl :<C-U>Git log -- %<CR>
-nnoremap gL :<C-U>Git log -p -- %<CR>
+nnoremap <leader>gs :<C-U>Gstatus<CR>gg<C-N>
+nnoremap <leader>gc :<C-U>Gcommit<CR>
+nnoremap <leader>gl :<C-U>Git log -- %<CR>
+nnoremap <leader>gL :<C-U>Git log -p -- %<CR>
+nnoremap <leader>gd :<C-U>Gdiff<CR>
+nnoremap <leader>gb :<C-U>Gblame<CR>
+nnoremap <leader>go :<C-U>Gbrowse<CR>
 
 " ctrlp                                     {{{2
 if has("gui_running")
