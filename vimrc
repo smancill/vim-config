@@ -143,6 +143,13 @@ let g:clang_user_options="-DCLANG -fcxx-exceptions"
 " Buffergator                               {{{2
 nnoremap <silent>  <C-J>          :<C-U>BuffergatorOpen<CR>
 nnoremap <silent>  <C-_>          :<C-U>BuffergatorTabsOpen<CR>
+augroup filetype_buffergator
+    autocmd!
+    autocmd FileType buffergator nnoremap <buffer> <C-j>   j
+    autocmd FileType buffergator nnoremap <buffer> <C-k>   k
+    autocmd FileType buffergator nnoremap <buffer> -       -
+    autocmd FileType buffergator silent! unmap ds
+augroup END
 let g:buffergator_suppress_keymaps=1
 let g:buffergator_viewport_split_policy="B"
 let g:buffergator_split_size=12
