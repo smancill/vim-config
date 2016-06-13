@@ -283,7 +283,7 @@ nnoremap j  gj
 nnoremap k  gk
 
 " Buffers
-nnoremap <silent>   <C-k>         <C-^>
+nnoremap <silent>   <C-k>         :<C-U>b#<CR>
 
 " Make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
