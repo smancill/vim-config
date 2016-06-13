@@ -18,7 +18,7 @@ NeoBundle 'tpope/vim-repeat'
 
 " Git and GitHub
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'gregsexton/gitv'
+NeoBundle 'junegunn/gv.vim'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
 
