@@ -28,6 +28,7 @@ NeoBundle 'sjl/gundo.vim'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'majutsushi/tagbar'
+NeoBundle 'AndrewRadev/sideways.vim'
 
 " C/C++
 NeoBundle 'vim-scripts/a.vim'

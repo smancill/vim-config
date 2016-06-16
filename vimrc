@@ -132,6 +132,10 @@ let g:alternateExtensions_h   = "c,cpp,cxx,cc,C"
 let g:alternateExtensions_hpp = "cpp,cxx,C,cc"
 let g:alternateExtensions_hxx = "cpp,cxx,C,cc"
 
+" Sideways                                  {{{2
+nnoremap <Leader>< :SidewaysLeft<CR>
+nnoremap <Leader>> :SidewaysRight<CR>
+
 " Clang Complete                            {{{2
 let g:clang_auto_select=1
 let g:clang_snippets=1
