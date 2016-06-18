@@ -4,21 +4,28 @@
 " PLUGINS                               {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Use NeoBundle
-filetype off
+" Use vim-plug
 set nocompatible
 
 if has('vim_starting')
-  let s:neobundle_dir = expand("~/.vim/share/neobundle.vim")
-  if isdirectory(s:neobundle_dir. "/plugin")
-    exe "set runtimepath+=" . s:neobundle_dir
-    call neobundle#rc()
-  else
-    echomsg 'Plugin manager "neobundle" not found.'
-    echomsg 'Run "git submodule update --init" in your $VIMHOME directory.'
+  if empty(glob('~/.vim/autoload/plug.vim'))
+    echomsg 'Plugin manager "vim-plug" not found.'
+    echomsg 'Run "./install.sh" in your $VIMHOME directory.'
     exit
   endif
 endif
+
+function! s:deregister(repo)
+  let repo = substitute(a:repo, '[\/]\+$', '', '')
+  let name = fnamemodify(repo, ':t:s?\.git$??')
+  call remove(g:plugs, name)
+  call remove(g:plugs_order, index(g:plugs_order, name))
+endfunction
+
+command! -nargs=1 -bar UnPlug call s:deregister(<args>)
+
+
+call plug#begin('~/.vim/bundle')
 
 " Load bundles
 source ~/.vim/bundle.vim
@@ -33,8 +40,9 @@ if filereadable(expand("~/.vim/bundle.local"))
   source ~/.vim/bundle.local
 endif
 
-syntax on
-filetype plugin indent on
+call plug#end()
+
+delcom UnPlug
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

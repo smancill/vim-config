@@ -32,20 +32,19 @@ if [ $FORCE = true ]; then
     rm -rf ${VIMDIR}/bundle
 fi
 mkdir -p ${VIMDIR}/bundle
+mkdir -p ${VIMDIR}/autoload
 
 # Create directory for swap/backup/undo files
 mkdir -p ${CACHEDIR}
 
 # Install package manager
-if [[ -d ${VIMDIR}/bundle/neobundle.vim ]]; then
-    rm -rf ${VIMDIR}/bundle/neobundle.vim
-fi
-
-echo -e "Installing Package Manager..."
-git submodule update --init
+echo -e "Installing vim-plug package manager..."
+sleep 1
+curl -fLo ${VIMDIR}/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 if [[ $? -eq 0 ]]; then
-    echo -e "\nPackage Manager installed sucessfully"
-    echo -e "See https://github.com/Shougo/neobundle.vim#readme"
+    echo -e "\nPackage manager installed sucessfully"
+    echo -e "https://github.com/junegunn/vim-plug#readme"
 else
     echo -e "\nCould not install package manager"
     exit
@@ -57,11 +56,17 @@ ln -sf ${VIMDIR}/gvimrc ${GVIMRC}
 
 # Install plugins
 if [ $SKIP = false ]; then
+    log_file=$(mktemp 2>/dev/null || mktemp -t 'tmp')
+    trap "rm -f $log_file" EXIT
     echo -e "\nInstalling plugins..."
-    sleep 2
+    sleep 1
     vim -N -u ${VIMRC} -U NONE -i NONE \
-        -c "try | NeoBundleUpdate! | visual | finally | qall! | endtry" \
-        -V1 -e -s
+        -c "try | PlugInstall | finally | w $log_file | qall! | endtry" \
+        -e
+    cat $log_file
+    if grep -q '^x ' $log_file; then
+        echo -e "\nCould not install all plugins. Check log."
+    fi
     echo
 fi
 

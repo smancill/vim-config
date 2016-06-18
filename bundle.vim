@@ -1,63 +1,63 @@
 " Local vimrc
-NeoBundle 'MarcWeber/vim-addon-local-vimrc'
+Plug 'MarcWeber/vim-addon-local-vimrc'
 
 " Browsing/searching files/buffers
-NeoBundle 'jeetsukumaran/vim-buffergator'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'FelikZ/ctrlp-py-matcher'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'tpope/vim-vinegar'
-NeoBundle 'mileszs/ack.vim'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'kien/ctrlp.vim'
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-vinegar'
+Plug 'mileszs/ack.vim'
 
 " General utilities
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-repeat'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
 " Git and GitHub
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'junegunn/gv.vim'
-NeoBundle 'mattn/gist-vim'
-NeoBundle 'mattn/webapi-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
 
 " Programming
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'sjl/gundo.vim'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'vim-scripts/matchit.zip'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'AndrewRadev/sideways.vim'
+Plug 'scrooloose/syntastic'
+Plug 'sjl/gundo.vim'
+Plug 'tpope/vim-commentary'
+Plug 'vim-scripts/matchit.zip'
+Plug 'majutsushi/tagbar'
+Plug 'AndrewRadev/sideways.vim'
 
 " C/C++
-NeoBundle 'vim-scripts/a.vim'
-NeoBundle 'Rip-Rip/clang_complete'
+Plug 'vim-scripts/a.vim'
+Plug 'Rip-Rip/clang_complete'
 
 " Python
-NeoBundle 'vim-scripts/python_match.vim'
-NeoBundle 'vim-scripts/indentpython.vim'
+Plug 'vim-scripts/python_match.vim'
+Plug 'vim-scripts/indentpython.vim'
 
 " LaTeX
-NeoBundle 'lervag/vimtex'
+Plug 'lervag/vimtex'
 
 " Markup languages
-NeoBundle 'matthias-guenther/hammer.vim'
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'puppetlabs/puppet-syntax-vim'
+Plug 'matthias-guenther/hammer.vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'puppetlabs/puppet-syntax-vim'
 
 " Completion
-NeoBundle 'ervandew/supertab'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'smancill/vim-snippets'
+Plug 'ervandew/supertab'
+Plug 'SirVer/ultisnips'
+Plug 'smancill/vim-snippets'
 
 " Colorsquemes
-NeoBundle 'smancill/darkglass'
-NeoBundle 'vim-scripts/desert256.vim'
-NeoBundle 'ciaranm/inkpot'
-NeoBundle 'jnurmine/Zenburn'
-NeoBundle 'altercation/vim-colors-solarized'
+Plug 'smancill/darkglass'
+Plug 'vim-scripts/desert256.vim'
+Plug 'ciaranm/inkpot'
+Plug 'jnurmine/Zenburn'
+Plug 'altercation/vim-colors-solarized'
 
 " Others
-NeoBundle 'smancill/conky-syntax.vim'
-NeoBundle 'smancill/send_evernote.vim'
+Plug 'smancill/conky-syntax.vim'
+Plug 'smancill/send_evernote.vim'

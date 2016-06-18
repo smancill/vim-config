@@ -3,7 +3,7 @@
 This is a distribution of Vim plugins and configurations to use VIM for
 development. It is a replacement of my
 [old config](https://github.com/smancill/Vimfiles), and it uses
-[NeoBundle][NeoBundle] to have a well organized Vim directory and to manage
+[vim-plug][vim-plug] to have a well organized Vim directory and to manage
 the plugins automatically.  The plugins are listed in `bundle.vim`, which is
 sourced by `.vimrc`.
 
@@ -20,7 +20,7 @@ Execute the installation script:
     cd ~/.vim
     ./install.sh
 
-This script installs the plugin manager ([NeoBundle][NeoBundle]), downloads
+This script installs the plugin manager ([vim-plug][vim-plug]), downloads
 and installs the plugins, and creates the symbolic links `~/.vimrc` and
 `~/.gvimrc`
 
@@ -95,16 +95,16 @@ Get the last commits from my repository:
     cd ~/.vim
     git pull origin master
 
-Launch `vim` and run `:NeoBundleInstall!`.
+Launch `vim` and run `:PlugInstall`.
 
 You can do the same from the command line with:
 
 ```
-    $ vim +NeoBundleInstall! +q
+    $ vim +PlugInstall +q
 ```
 
 To add or remove plugins, just edit the file `~/.vim/bundle.vim`. See the
-[NeoBundle][NeoBundle] documentation for more details.
+[vim-plugin][vim-plugin] documentation for more details.
 
 
 ## Features
@@ -191,4 +191,4 @@ The following plugins are used:
   documentation)
 
 
-[NeoBundle]: https://github.com/Shougo/neobundle.vim
+[vim-plug]: https://github.com/junegunn/vim-plug
