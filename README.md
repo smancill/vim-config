@@ -1,13 +1,9 @@
-# My configuration files for Vim 7.x
+# Configuration for Vim 7.x
 
-This is a distribution of Vim plugins and configurations to use VIM for
-development. It is a replacement of my
-[old config](https://github.com/smancill/Vimfiles), and it uses
-[vim-plug][vim-plug] to have a well organized Vim directory and to manage
-the plugins automatically.  The plugins are listed in `bundle.vim`, which is
-sourced by `.vimrc`.
-
-> **TODO:** update this README with the latests plugins and config
+This is a distribution of plugins and configurations to use Vim for development.
+It uses [vim-plug][vim-plug] to have a well organized Vim directory and to
+manage the plugins automatically.
+The plugins are listed in `bundle.vim`, which is sourced by `vimrc`.
 
 ## Installation
 
@@ -22,60 +18,56 @@ Execute the installation script:
 
 This script installs the plugin manager ([vim-plug][vim-plug]), downloads
 and installs the plugins, and creates the symbolic links `~/.vimrc` and
-`~/.gvimrc`
+`~/.gvimrc`.
 
 ### Prerequisites
 
 Some plugins need external programs to work properly.
 
-#### Source code tags
+##### Source code tags
 
 You need the *Exuberant Ctags* program:
 
-    $ sudo aptitude install ctags
+    $ sudo apt-get install ctags
 
-Pressing `<F8>` will
-[open a lateral window](http://majutsushi.github.com/tagbar)
+Pressing `<F8>` will [open a lateral window][tagbar]
 with the tags of the current file ordered by scope.
 
-#### Better *grep*
+##### Better *grep*
 
 Install *Ack* to use the `:Ack[!]` command inside Vim as a replacement for
 *grep*:
 
-    sudo aptitude install ack-grep
+    sudo apt-get install ack-grep
 
-See the [webpage](http://betterthangrep.com/) for more information.
+See the [webpage][ack-web] for more information.
 
-#### Syntax checking
+##### Syntax checking
 
-[Syntastic](https://github.com/scrooloose/syntastic) provides automatic syntax
+[Syntastic][syntastic] provides automatic syntax
 checking when saving the open file.
+
+C/C++ files have automatic support with *GCC*.
 
 To add support for Python files install *Pyflakes* (an alternative is
 *flake8*, but it also checks for [PEP8](http://www.python.org/dev/peps/pep-0008)):
 
-    sudo aptitude install pyflakes
+    sudo apt-get install pyflakes
 
 To add support for LaTeX files install *LaCheck*
 
-    sudo aptitude install lacheck
+    sudo apt-get install lacheck
 
-C/C++ files have automatic support with *GCC*.
+##### C/C++ omnicompletion
 
-#### C/C++ omnicompletion
-
-The [clang_complete](https://github.com/Rip-Rip/clang_complete) uses Clang for
+The [clang_complete][clang_complete] uses Clang for
 accurately completing C and C++ code:
 
-    sudo aptitude install clang
+    sudo apt-get install clang
 
-The version 3.0 is recommended, but it is only on the repositories of *Ubuntu
-12.04*.
+##### Markup languages
 
-#### Markup languages
-
-Install Ruby dependencies for [Hammer](https://github.com/smancill/hammer.vim):
+Install Ruby dependencies for [Hammer][hammer]:
 
     $ sudo apt-get install rubygems
     $ sudo gem install github-markup tilt coderay albino
@@ -92,28 +84,57 @@ Check the project page to install dependencies for other markup languages.
 
 Get the last commits from my repository:
 
-    cd ~/.vim
-    git pull origin master
+    $ cd ~/.vim
+    $ git pull origin master
 
-Launch `vim` and run `:PlugInstall`.
+Launch `vim` and run `:PlugInstall` to install new plugins, and `:PlugUpdate`
+to update all plugins. See [vim-plug][vim-plug] documentation for more
+details.
 
-You can do the same from the command line with:
+### Overwrite and extends this configuration
 
+To add or remove plugins, create a file named `~/.vim/bundle.fork`
+(if the repository is forked) or `~/.vim/bundle.local` (for a local-machine),
+and put extra plugins in there:
+
+```vim
+" bundle.local: extra plugins for dev machine
+
+" Remove ctrlp (UnPlug is defined in vimrc, not in vim-plug)
+UnPlug 'kien/ctrlp.vim'
+
+" Use fzf instead
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 ```
-    $ vim +PlugInstall +q
+
+To extend or change the configuration of `vimrc`,
+create a file named `~/.vim/vimrc.fork` (if the repository is forked)
+or `~/.vim/vimrc.local` (for a local-machine), and put extra settings in there:
+
+```vim
+" vimrc.local: extra settings for dev machine
+
+" Override settings for plugins
+let g:clang_user_options="-DCLANG -std=c++11 -fcxx-exceptions"
+let g:syntastic_cpp_compiler_options="-std=c++11"
+
+" Override Vim settings
+set nonumber
+set noexpandtab
+set tabstop=8
 ```
 
-To add or remove plugins, just edit the file `~/.vim/bundle.vim`. See the
-[vim-plugin][vim-plugin] documentation for more details.
-
+Or `vimrc` and `bundle.vim` can be simply modified with the preferred
+configuration, and then merged with any further updates to the repository.
 
 ## Features
-
-> **THE FOLLOWING SECTIONS ARE NOT COMPLETED YET**
 
 The `.vimrc` file is well organized and folded by sections.  The options are:
 
 * Restore position of cursor when opening files.
+* Put swap files and undo files in `~/.cache/vim`.
+* Set `hidden` to change between unsaved buffers.
 * Use indentation of four spaces, not tabs.
 * Backspace works in INSERT mode, and cursor moves to other lines.
 * Use Unix file format and UTF-8 encoding for new files.
@@ -126,69 +147,103 @@ The `.vimrc` file is well organized and folded by sections.  The options are:
 
 And several more, including configuration of used plugins.
 
-> If you want to override some features of my `vimrc`, create the file
-> `~/.vim/vimrc_mine.vim` and put your settings there.
-
 ### Navigating buffers
 
-Vim use buffers (`:help buffers`) to edit multiple files.  Use the following
-commands in normal mode to easily work with buffers.
+Vim uses buffers (`:help buffers`) to edit multiple files.
+Use the following key mappings in normal mode to easily work with buffers.
 
-* `K` to jump back to the previously edited buffer.
-* `M` to see the list of buffers.  Navigate with the arrow keys, press
-  `<Enter>` to open the buffer, or `d` to delete it.
-* `L` to go to the next buffer in buffer list.
-* `H` to go to the previous buffer in buffer list.
+* `<C-K>` is custom mapped to jump back to the previously edited file
+  (see `:help alternate-file`).
+* `<C-J>` is custom mapped to see the list of buffers.
+  Navigate with the `j`/`k` keys, press `<Enter>` to open the buffer,
+  or `d` to delete it (see [buffergator][buffergator]).
+* `]b` to go to the next buffer in buffer list (see [vim-unimpaired][unimpaired]).
+* `[b` to go to the previous buffer in buffer list (see [vim-unimpaired][unimpaired]).
 
-Use `<space>h`, `<space>m` and `<space>l` to get the original behaviour of the
-previous overwritten maps (go to the top, middle or bottom line of the window)
+See [Working with buffers](http://vimcasts.org/episodes/working-with-buffers/),
+[Working with windows](http://vimcasts.org/episodes/working-with-windows/)
+and [Working with tabs](http://vimcasts.org/episodes/working-with-tabs/)
+for a quick introduction to Vim features for editing multiple files.
 
-### Useful commands
+> Note that [using tabs in Vim](http://stackoverflow.com/a/26710166)
+> [is different than](http://stackoverflow.com/a/103590)
+> [opening tabs in other editors](https://sanctum.geek.nz/arabesque/buffers-windows-tabs/).
+
+### Useful mappings
 
 * ` ' ` and `` ` `` are exchanged for moving to marks.
-* `:CC` (command line) can be used as a quick python calculator.
-* `<F3>` toggle the NERDTree list of files.
-* `<F12>` toggle paste mode (`:help paste`)
+* ` - ` opens the Vim built in directory browser (see [vinegar][vinegar]).
+* `<F3>` toggles the NERDTree list of files (see [NERDtree][nerdtree]).
+* `<C-space>` on insert mode to start completion based on context.
+
 
 ## Plugins
 
-The following plugins are used:
+The following plugins are used (check `vimrc` for configuration details):
 
-* [QuickBuf](https://github.com/vim-scripts/QuickBuf) (small and powerful
-  buffer manager)
-* [Powerline](https://github.com/Lokaltog/vim-powerline) (the ultimate Vim
-  statusline utility)
-* [Ctrlp](http://kien.github.com/ctrlp.vim) (Full path fuzzy file, buffer, mru
-  and tag finder)
-* [NerdTree](https://github.com/scrooloose/nerdtree) (a tree explorer)
-* [UltiSnips](https://github.com/sirver/ultisnips) (the ultimate snippet
-  solution)
-* [Ack](https://github.com/mileszs/ack.vim) (front end for ack, a better grep)
-* [Fugitive](https://github.com/tpope/vim-fugitive) (an awesome Git wrapper)
-* [gitv](http://www.gregsexton.org/portfolio/gitv) (a gitk clone for Vim)
-* [Gist](https://github.com/mattn/gist-vim) (for creating Gists)
-* [Unimpaired](https://github.com/tpope/vim-unimpaired) (pairs of handy
-  bracket mappings)
-* [Surround](https://github.com/tpope/vim-surround) (delete/change/add
-  parentheses, quotes, tags, etc)
-* [Repeat](https://github.com/tpope/vim-repeat) (repeat supported plugin maps
-  with ".")
-* [Syntastic](https://github.com/scrooloose/syntastic) (automatic syntax
-  checking)
-* [TagBar](http://majutsushi.github.com/tagbar) (browsing the tags of source
-  code)
-* [Commentary](https://github.com/tpope/vim-commentary) (comment stuff out)
-* [Hammer](https://github.com/smancill/hammer.vim) (process your markup
-  language to HTML)
-* [LaTeX-Suite](http://vim-latex.sourceforge.net/) (tools for editing LaTeX)
-* [clang_complete](https://github.com/Rip-Rip/clang_complete) (best omnicompletion
-  for C/C++ files)
-* [alternate](https://github.com/vim-scripts/a.vim) (alternate C source/header
-  files quickly)
-* [PythonMatch](https://github.com/vim-scripts/python_match.vim) (extend the
-  `%` motion for python files)
-* [PyDoc](https://github.com/fs111/pydoc.vim) (integrates Python
-  documentation)
+* [local-vimrc](https://github.com/MarcWeber/vim-addon-local-vimrc):
+  simple local `vimrc` with hash protection (default filename changed to
+  `.project.vim`).
+* [Buffergator][buffergator]: list, select and switch between buffers
+  (custom mapped to `<C-J>`).
+* [ctrlp.vim][ctrlp]: full path fuzzy file, buffer, MRU and tag finder
+  (use `<C-P>` to search files and `<C-N>` to search MRU files).
+* [ctrlp-py-matcher](https://github.com/FelikZ/ctrlp-py-matcher):
+  Fast CtrlP matcher based on Python.
+* [The NERD Tree][nerdtree]: a tree explorer (toggle with `<F3>`).
+* [vinegar.vim][vinegar]: enhances the built in directory browser (open with `-`).
+* [ack.vim](https://github.com/mileszs/ack.vim): front end for [ack][ack-web],
+  a better grep.
+* [vim-airline][airline]: lean and mean status/tabline for Vim that's light as air.
+* [fugitive.vim][fugitive]: an awesome Git wrapper
+  (see custom mappings with `:map <leader>g`).
+* [gv.vim][gv]: a Git commit browser.
+* [Gist][gist]: for creating [Gists][gist-web].
+* [Syntastic][syntastic]: automatic syntax checking.
+* [Gundo][gundo]: visualize the Vim undo tree.
+* [Tagbar][tagbar]: a class outline viewer, displays tags in a window,
+  ordered by scope (toggle with `<F8>`).
+* [sideways.vim][sideways]: move function arguments left and right.
+* [commentary.vim][commentary]: comment stuff out.
+* [unimpaired.vim][unimpaired]: pairs of handy bracket mappings.
+* [surround.vim][surround]: delete/change/add parentheses, quotes, tags, etc.
+* [repeat.vim][repeat]: repeat supported plugin maps with "."
+* [Supertab][supertab]: perform all Vim insert mode completions with a single key
+  (custom mapped to `<C-space>` instead of `<Tab>`).
+* [UltiSnips][ultisnips]: the ultimate snippet solution
+  (custom mapped to trigger with `<C-space>` and jump forward with `<Tab>`).
+* [clang_complete][clang_complete]: omnicompletion for C/C++ files.
+* [alternate][alternate]: alternate C source/header files quickly
+* [vimtex][vimtex]: a modern plugin for editing LaTeX files.
+* [Hammer][hammer]: process your markup language to HTML
+  (preview with `<F9>`).
+* [vim-markdown][markdown_mode]: Markdown mode.
 
 
 [vim-plug]: https://github.com/junegunn/vim-plug
+[buffergator]: https://github.com/jeetsukumaran/vim-buffergator
+[CtrlP]: http://kien.github.com/ctrlp.vim
+[nerdtree]: https://github.com/scrooloose/nerdtree
+[vinegar]: https://github.com/tpope/vim-vinegar
+[airline]: https://github.com/vim-airline/vim-airline
+[fugitive]: https://github.com/tpope/vim-fugitive
+[gv]: https://github.com/junegunn/gv.vim
+[gist]: https://github.com/mattn/gist-vim
+[syntastic]: https://github.com/scrooloose/syntastic
+[gundo]: https://github.com/sjl/gundo.vim
+[tagbar]: https://github.com/majutsushi/tagbar
+[sideways]: https://github.com/AndrewRadev/sideways.vim
+[commentary]: https://github.com/tpope/vim-commentary
+[unimpaired]: https://github.com/tpope/vim-unimpaired
+[surround]: https://github.com/tpope/vim-surround
+[repeat]: https://github.com/tpope/vim-repeat
+[supertab]: https://github.com/ervandew/supertab
+[ultisnips]: https://github.com/sirver/ultisnips
+[clang_complete]: https://github.com/Rip-Rip/clang_complete
+[alternate]: https://github.com/vim-scripts/a.vim
+[vimtex]: https://github.com/lervag/vimtex
+[markdown_mode]: https://github.com/plasticboy/vim-markdown
+[hammer]: https://github.com/wikimatze/hammer.vim
+
+[ack-web]: http://betterthangrep.com
+[gist-web]: https://gist.github.com
