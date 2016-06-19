@@ -3,7 +3,7 @@ Plug 'MarcWeber/vim-addon-local-vimrc'
 
 " Browsing/searching files/buffers
 Plug 'jeetsukumaran/vim-buffergator'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-vinegar'
