@@ -1,46 +1,51 @@
 #!/bin/bash
 
+set -e
+set -u
+
 # Paths
-VIMDIR=${HOME}/.vim
-VIMRC=${HOME}/.vimrc
-GVIMRC=${HOME}/.gvimrc
-CACHEDIR=$HOME/.cache/vim
+vimdir=${HOME}/.vim
+vimrc=${HOME}/.vimrc
+gvimrc=${HOME}/.gvimrc
+cachedir=$HOME/.cache/vim
 
 # Get user option
-FORCE=false
-SKIP=false
+force=false
+skip=false
 if [ $# -eq 1 ]; then
     if [ "$1" = "-f" ]; then
-        FORCE=true
+        force=true
     fi
     if [ "$1" = "-s" ]; then
-        SKIP=true
+        skip=true
     fi
 fi
 
 # Check ~/.vim directory
-DIR="$(dirname "$0")"
-cd "$DIR"
-DIR="$(pwd)"
-if [ "$DIR" != "$HOME/.vim" ]; then
-    echo "Clone the repository in $HOME/.vim, not in $DIR"
+script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+if [ "${script_dir}" != "${vimdir}" ]; then
+    echo "Clone the repository in ${vimdir}, not in ${script_dir}"
     exit 1
 fi
 
+# Create symbolic links
+ln -sf "${vimdir}/vimrc"  "${vimrc}"
+ln -sf "${vimdir}/gvimrc" "${gvimrc}"
+
 # Create directory for bundles
-if [ $FORCE = true ]; then
-    rm -rf ${VIMDIR}/bundle
+if [ ${force} = true ]; then
+    rm -rf "${vimdir}/bundle"
 fi
-mkdir -p ${VIMDIR}/bundle
-mkdir -p ${VIMDIR}/autoload
+mkdir -p "${vimdir}/bundle"
+mkdir -p "${vimdir}/autoload"
 
 # Create directory for swap/backup/undo files
-mkdir -p ${CACHEDIR}
+mkdir -p "${cachedir}"
 
 # Install package manager
 echo -e "Installing vim-plug package manager..."
 sleep 1
-curl -fLo ${VIMDIR}/autoload/plug.vim --create-dirs \
+curl -fLo "${vimdir}/autoload/plug.vim" --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 if [[ $? -eq 0 ]]; then
     echo -e "\nPackage manager installed sucessfully"
@@ -50,21 +55,17 @@ else
     exit
 fi
 
-# Create symbolic links
-ln -sf ${VIMDIR}/vimrc  ${VIMRC}
-ln -sf ${VIMDIR}/gvimrc ${GVIMRC}
-
 # Install plugins
-if [ $SKIP = false ]; then
+if [ ${skip} = false ]; then
     log_file=$(mktemp 2>/dev/null || mktemp -t 'tmp')
-    trap "rm -f $log_file" EXIT
+    trap 'rm -f "$log_file"' EXIT
     echo -e "\nInstalling plugins..."
     sleep 1
-    vim -N -u ${VIMRC} -U NONE -i NONE \
-        -c "try | PlugInstall | finally | w $log_file | qall! | endtry" \
+    vim -N -u "${vimrc}" -U NONE -i NONE \
+        -c "try | PlugInstall | finally | w ${log_file} | qall! | endtry" \
         -e
-    cat $log_file
-    if grep -q '^x ' $log_file; then
+    cat "${log_file}"
+    if grep -q '^x ' "${log_file}"; then
         echo -e "\nCould not install all plugins. Check log."
     fi
     echo
@@ -73,19 +74,19 @@ fi
 # Spell files
 echo -e "\nGetting spell files..."
 sleep 1
-SPLURL=http://ftp.vim.org/vim/runtime/spell
-SPLDIR=${VIMDIR}/spell
-if [ $FORCE = true ]; then
-    rm -rf ${SPLDIR}
+spell_url=http://ftp.vim.org/vim/runtime/spell
+spell_dir=${vimdir}/spell
+if [ ${force} = true ]; then
+    rm -rf "${spell_dir}"
 fi
-mkdir -p ${SPLDIR}
+mkdir -p "${spell_dir}"
 for idiom in es en; do
     for enc in latin1 utf-8; do
         for ver in spl sug; do
-            SPLNAME=${idiom}.${enc}.${ver}
-            SPLFILE=${SPLDIR}/${SPLNAME}
-            if [ ! -f $SPLFILE ]; then
-                wget -O${SPLFILE} ${SPLURL}/${SPLNAME}
+            spell_name=${idiom}.${enc}.${ver}
+            spell_file=${spell_dir}/${spell_name}
+            if [ ! -f "${spell_file}" ]; then
+                wget -O"${spell_file}" "${spell_url}/${spell_name}"
             fi
         done
     done
