@@ -261,7 +261,11 @@ set smartcase                               " But override if uppercase used
 set hlsearch                                " Highlight search
 
 set complete-=i                             " Ignore include files
-set completeopt=menu,preview,longest        " Completion menu options
+if has('patch-7.4.775')                     " Completion menu options
+  set completeopt=menuone,preview,noinsert
+else
+  set completeopt=menuone,preview
+endif
 set pumheight=10                            " Size of completion menu
 
 set spelllang=es,en                         " Spelling languages
