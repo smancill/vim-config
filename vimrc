@@ -389,9 +389,9 @@ autocmd BufEnter *
     \ endif
 
 " Always start on first line of Git commit message
-autocmd BufEnter *
+autocmd BufRead *
     \ if &filetype == 'gitcommit' |
-    \   call setpos('.', [0, 1, 1]) |
+    \   call setpos('.', [0, 1, 1, 0]) |
     \ endif
 
 augroup END
