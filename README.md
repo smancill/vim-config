@@ -63,7 +63,12 @@ To add support for LaTeX files install *LaCheck*
 The [clang_complete][clang_complete] uses Clang for
 accurately completing C and C++ code:
 
-    sudo apt-get install clang
+    sudo apt-get install libclang-dev
+
+It may be necessary to point to the location of the library:
+```vim
+let g:clang_library_path="/usr/lib/llvm-3.8/lib"
+```
 
 ##### Markup languages
 
