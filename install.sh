@@ -21,7 +21,7 @@ if [ $# -eq 1 ]; then
 fi
 
 # Check ~/.vim directory
-script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 if [ "${script_dir}" != "${vimdir}" ]; then
     echo "Clone the repository in ${vimdir}, not in ${script_dir}"
     exit 1
@@ -42,11 +42,11 @@ mkdir -p "${vimdir}/autoload"
 mkdir -p "${cachedir}"
 
 # Install package manager
+vimplug_url=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vimplug_vim=${vimdir}/autoload/plug.vim
 echo -e "Installing vim-plug package manager..."
 sleep 1
-curl -fLo "${vimdir}/autoload/plug.vim" --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-if [[ $? -eq 0 ]]; then
+if curl -fLo "${vimplug_vim}" --create-dirs ${vimplug_url}; then
     echo -e "\nPackage manager installed sucessfully"
     echo -e "https://github.com/junegunn/vim-plug#readme"
 else
