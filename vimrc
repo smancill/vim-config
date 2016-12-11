@@ -176,6 +176,7 @@ let g:netrw_dirhistmax = 0
 
 " NERDTree                                  {{{2
 nnoremap <silent>  <F3>           :<C-U>NERDTreeToggle<CR>
+nnoremap <silent>  <leader><F3>   :<C-U>NERDTreeFind<CR>
 let NERDTreeHijackNetrw=0
 let NERDTreeCaseSensitiveSort=1
 let NERDTreeIgnore=[

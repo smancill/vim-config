@@ -4,7 +4,7 @@ Plug 'MarcWeber/vim-addon-local-vimrc'
 " Browsing/searching files/buffers
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on':  [ 'NERDTreeToggle', 'NERDTreeFind' ] }
 Plug 'tpope/vim-vinegar'
 Plug 'mileszs/ack.vim'
 
