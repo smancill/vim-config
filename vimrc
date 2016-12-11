@@ -177,6 +177,7 @@ let g:netrw_dirhistmax = 0
 " NERDTree                                  {{{2
 nnoremap <silent>  <F3>           :<C-U>NERDTreeToggle<CR>
 let NERDTreeHijackNetrw=0
+let NERDTreeCaseSensitiveSort=1
 let NERDTreeIgnore=[
                    \'\.d$[[dir]]',
                    \'\.git$[[dir]]',
