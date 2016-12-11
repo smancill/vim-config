@@ -96,7 +96,7 @@ nnoremap <silent> <C-N>     :<C-U>CtrlPMRU<CR>
 nnoremap <silent> g[        :<C-U>CtrlPBufTag<CR>
 nnoremap <silent> g{        :<C-U>CtrlPBufTagAll<CR>
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_by_filename = 1
+let g:ctrlp_by_filename = 0
 let g:ctrlp_match_window = 'results:40'
 let g:ctrlp_mruf_max = 50
 let g:ctrlp_dotfiles = 1
