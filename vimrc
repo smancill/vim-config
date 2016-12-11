@@ -151,6 +151,19 @@ let g:clang_snippets_engine='ultisnips'
 let g:clang_complete_copen=0
 let g:clang_user_options="-DCLANG -fcxx-exceptions"
 
+" vimtex                                    {{{2
+let g:tex_flavor="latex"              " filetype of *.tex
+let g:vimtex_echo_ignore_wait=1
+let g:vimtex_latexmk_continuous=0
+let g:vimtex_quickfix_ignore_all_warnings=0
+let g:vimtex_quickfix_ignored_warnings = [
+    \ 'Underfull',
+    \ 'Overfull',
+    \ 'specifier changed to',
+  \ ]
+
+
+
 " Buffergator                               {{{2
 nnoremap <silent>  <C-J>          :<C-U>BuffergatorOpen<CR>
 nnoremap <silent>  <C-_>          :<C-U>BuffergatorTabsOpen<CR>
