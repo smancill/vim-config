@@ -129,6 +129,7 @@ let g:tagbar_singleclick = 1
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_theme='powerlineish'
+let g:airline_detect_spell = 0
 let g:airline#extensions#disable_rtp_load = 1
 
 " Alternate                                 {{{2
