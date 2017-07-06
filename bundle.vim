@@ -59,4 +59,3 @@ Plug 'altercation/vim-colors-solarized'
 
 " Others
 Plug 'smancill/conky-syntax.vim'
-Plug 'smancill/send_evernote.vim'
