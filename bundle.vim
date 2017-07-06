@@ -34,6 +34,7 @@ Plug 'vim-scripts/a.vim'
 Plug 'Rip-Rip/clang_complete'
 
 " Python
+Plug 'davidhalter/jedi-vim'
 Plug 'vim-scripts/python_match.vim'
 Plug 'vim-scripts/indentpython.vim'
 

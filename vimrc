@@ -163,7 +163,9 @@ let g:vimtex_quickfix_ignored_warnings = [
     \ 'specifier changed to',
   \ ]
 
-
+" jedi                                      {{{2
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#completions_command = ""
 
 " Buffergator                               {{{2
 nnoremap <silent>  <C-J>          :<C-U>BuffergatorOpen<CR>
