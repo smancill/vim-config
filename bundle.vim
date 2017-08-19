@@ -29,6 +29,7 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'majutsushi/tagbar'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'AndrewRadev/sideways.vim'
+Plug 'editorconfig/editorconfig-vim'
 
 " C/C++
 Plug 'vim-scripts/a.vim'
