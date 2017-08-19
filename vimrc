@@ -119,6 +119,9 @@ if v:version == 700
   let g:syntastic_enable_highlighting = 0
 endif
 
+" Gutentangs                                {{{2
+let g:gutentags_ctags_tagfile = '.tags'
+
 " Tagbar                                    {{{2
 nnoremap <silent> <F8> :<C-U>TagbarToggle<CR>
 let g:tagbar_autofocus = 1

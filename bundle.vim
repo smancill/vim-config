@@ -27,6 +27,7 @@ Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/matchit.zip'
 Plug 'majutsushi/tagbar'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'AndrewRadev/sideways.vim'
 
 " C/C++
