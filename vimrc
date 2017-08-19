@@ -199,6 +199,7 @@ let NERDTreeIgnore=[
                    \'\.d$[[dir]]',
                    \'\.git$[[dir]]',
                    \'\.hg$[[dir]]',
+                   \'__pycache__[[dir]]',
                    \'tags$[[file]]',
                    \'\.class$[[file]]',
                    \'\.o$[[file]]',
