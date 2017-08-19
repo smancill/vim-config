@@ -206,6 +206,7 @@ let NERDTreeIgnore=[
                    \'\.os$[[file]]',
                    \'\.so$[[file]]',
                    \'\.gch$[[file]]',
+                   \'\.mod$[[file]]',
                    \'\.py[co]$[[file]]',
                    \'\.rb[co]$[[file]]'
                    \]
@@ -257,7 +258,7 @@ set rulerformat=%25(%LL\ \ \ %l,%c%V%=%P%)  " Ruler string
 
 set wildmenu                                " Better command-line completion
 set wildmode=longest,full                   " Completion options
-set wildignore=*.bak,*.o,*.os,*.so,*.gch,*.class,*~,*.py[co],*.rb[co]
+set wildignore=*.bak,*.o,*.os,*.so,*.gch,*.mod,*.class,*~,*.py[co],*.rb[co]
                                             " Ignore these files
 
 set tabstop=4                               " Four spaces for a tab
