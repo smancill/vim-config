@@ -282,6 +282,9 @@ set autoindent                              " Indent new lines using previous
 set nojoinspaces                            " One space after sentences
 set wrap                                    " Softwrap long lines
 set linebreak                               " Wrap at spaces characters
+if v:version > 703 || v:version == 703 && has("patch541")
+  set formatoptions+=j                      " Delete comment when joining lines
+endif
 set display+=lastline                       " If wrap set, display last line
 set virtualedit=block                       " Move freely in visual block
 
@@ -344,7 +347,7 @@ cnoremap            <C-N>         <Down>
 
 " Disable unwanted keys in normal mode
 nnoremap            <F1>          <nop>
-nnoremap            Q             <nop>
+nnoremap            Q             gq
 
 " Write as sudo
 cnoremap            w!!           w !sudo tee % >/dev/null
@@ -360,6 +363,9 @@ if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :<C-U>nohlsearch<CR>:diffupdate<CR><C-L>
 endif
 
+" Break undo after CTRL-U
+inoremap            <C-U>         <C-G>u<C-U>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUTOCOMMANDS                          {{{1
@@ -370,7 +376,7 @@ autocmd!
 
 " Restore cursor position
 autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit' |
     \   exe "normal! g`\"" |
     \ endif
 
@@ -416,12 +422,6 @@ autocmd BufEnter *
     \   if winbufnr(2) == -1 |
     \     quit! |
     \   endif |
-    \ endif
-
-" Always start on first line of Git commit message
-autocmd BufRead *
-    \ if &filetype == 'gitcommit' |
-    \   call setpos('.', [0, 1, 1, 0]) |
     \ endif
 
 augroup END
