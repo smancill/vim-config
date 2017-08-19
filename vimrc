@@ -49,7 +49,7 @@ delcom UnPlug
 " PLUGINS CONFIGURATION                 {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SuperTab                                  {{{2
-if has("gui_running")
+if has("gui_running") || has("nvim")
   let g:SuperTabMappingForward = '<C-Space>'
   let g:SuperTabMappingBackward = '<S-C-space>'
 else
@@ -60,7 +60,7 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " Ultisnips                                 {{{2
 inoremap <silent>   <C-@>         <nop>
-if has("gui_running")
+if has("gui_running") || has("nvim")
   let g:UltiSnipsExpandTrigger = "<C-Space>"
 else
   let g:UltiSnipsExpandTrigger = "<C-@>"
@@ -87,7 +87,7 @@ nnoremap <leader>gb :<C-U>Gblame<CR>
 nnoremap <leader>go :<C-U>Gbrowse<CR>
 
 " ctrlp                                     {{{2
-if has("gui_running")
+if has("gui_running") || has("nvim")
   nnoremap <silent> <C-Space> :<C-U>CtrlPBuffer<CR>
 else
   nnoremap <silent> <C-@>     :<C-U>CtrlPBuffer<CR>
@@ -233,8 +233,10 @@ set vb t_vb=                                " Disable beep
 set synmaxcol=128                           " Prevent lag with long lines
 set nrformats-=octal                        " Don't detect octal numbers
 
-set ttimeout                                " Time out mappings and keycodes
-set ttimeoutlen=100                         " Shorter time out for keycodes
+if !has('nvim')
+  set ttimeout                              " Time out mappings and keycodes
+  set ttimeoutlen=100                       " Shorter time out for keycodes
+endif
 
 set autoread                                " Read files if changed outside
 set nobackup                                " Do not use backups (Git FTW)
@@ -265,6 +267,9 @@ set number                                  " Show line numbers
 set laststatus=2                            " Always show statusline
 set shortmess=aI                            " Abbreviate status messages
 set rulerformat=%25(%LL\ \ \ %l,%c%V%=%P%)  " Ruler string
+if has("nvim")
+  set guicursor=
+endif
 
 set wildmenu                                " Better command-line completion
 set wildmode=longest,full                   " Completion options
