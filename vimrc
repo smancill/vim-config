@@ -175,7 +175,8 @@ augroup filetype_buffergator
     autocmd FileType buffergator nnoremap <buffer> <C-j>   j
     autocmd FileType buffergator nnoremap <buffer> <C-k>   k
     autocmd FileType buffergator nnoremap <buffer> -       -
-    autocmd FileType buffergator silent! unmap ds
+    autocmd BufEnter \[\[buffergator-buffers\]\]  unmap ds
+    autocmd BufLeave \[\[buffergator-buffers\]\]  nmap  ds  <Plug>Dsurround
 augroup END
 let g:buffergator_suppress_keymaps=1
 let g:buffergator_viewport_split_policy="B"
