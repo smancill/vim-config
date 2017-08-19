@@ -211,6 +211,12 @@ let NERDTreeIgnore=[
                    \'\.rb[co]$[[file]]'
                    \]
 
+" mundo                                     {{{2
+nnoremap <silent>  <F5>           :<C-U>silent MundoToggle<CR>
+
+let g:mundo_preview_bottom=1
+let g:mundo_verbose_graph=0
+
 " }}}
 
 

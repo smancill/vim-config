@@ -23,7 +23,7 @@ Plug 'mattn/webapi-vim'
 
 " Programming
 Plug 'scrooloose/syntastic'
-Plug 'sjl/gundo.vim'
+Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/matchit.zip'
 Plug 'majutsushi/tagbar'
