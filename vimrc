@@ -93,8 +93,8 @@ else
   nnoremap <silent> <C-@>     :<C-U>CtrlPBuffer<CR>
 endif
 nnoremap <silent> <C-N>     :<C-U>CtrlPMRU<CR>
+nnoremap <silent> g]        :<C-U>CtrlPTag<CR>
 nnoremap <silent> g[        :<C-U>CtrlPBufTag<CR>
-nnoremap <silent> g{        :<C-U>CtrlPBufTagAll<CR>
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_by_filename = 0
 let g:ctrlp_match_window = 'results:40'
