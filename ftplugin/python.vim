@@ -14,16 +14,5 @@ setlocal errorformat=
   \%Z%m,
   \%-G%.%#
 
-
-" Execute a selection of code
-python << EOL
-import vim
-def EvaluateCurrentRange():
-    eval(compile('\n'.join(vim.current.range),'','exec'),globals())
-EOL
-
 " run the current buffer
 nnoremap <buffer> <silent>  <F9>    :make<CR>
-
-" run the selected range
-vnoremap <buffer> <silent>  <F9>    :py EvaluateCurrentRange()<CR>
