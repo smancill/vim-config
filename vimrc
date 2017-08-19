@@ -113,8 +113,8 @@ let g:ack_wildignore=0
 let g:syntastic_mode_map = { 'passive_filetypes': ['java'] }
 let g:syntastic_c_check_header = 1
 let g:syntastic_cpp_check_header = 1
-let g:syntastic_cpp_config_file = '.clang-complete'
-let g:syntastic_c_config_file = '.clang-complete'
+let g:syntastic_cpp_config_file = '.clang_complete'
+let g:syntastic_c_config_file = '.clang_complete'
 if v:version == 700
   let g:syntastic_enable_highlighting = 0
 endif
