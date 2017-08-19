@@ -17,6 +17,8 @@ Plug 'tpope/vim-repeat'
 
 " Git and GitHub
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'junegunn/gv.vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
