@@ -108,7 +108,6 @@ let g:ctrlp_custom_ignore = {
 
 " Ack                                       {{{2
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-let g:ack_wildignore=0
 
 " Syntastic                                 {{{2
 let g:syntastic_mode_map = { 'passive_filetypes': ['java'] }
