@@ -265,7 +265,7 @@ set showcmd                                 " Always show the command
 set ruler                                   " Show position of the cursor
 set number                                  " Show line numbers
 set laststatus=2                            " Always show statusline
-set shortmess=aI                            " Abbreviate status messages
+set shortmess=aOtTI                         " Abbreviate status messages
 set rulerformat=%25(%LL\ \ \ %l,%c%V%=%P%)  " Ruler string
 if has("nvim")
   set guicursor=
