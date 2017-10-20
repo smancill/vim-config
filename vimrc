@@ -102,6 +102,7 @@ let g:ctrlp_mruf_max = 50
 let g:ctrlp_dotfiles = 1
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_custom_ignore = {
+  \ 'file': '\v\.?tags$',
   \ 'dir':  '\v\.(git|hg|svn|gradle)$|_site|build$'
   \ }
 
