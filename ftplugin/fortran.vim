@@ -7,5 +7,8 @@ setlocal softtabstop=3
 setlocal shiftwidth=3
 
 
-nnoremap <buffer> <silent> [[  ?^\s\+\(SUBROUTINE\<bar>FUNCTION\<bar>subroutine\<bar>function\)<CR>zt4<C-y>
-nnoremap <buffer> <silent> ]]  /^\s\+\(SUBROUTINE\<bar>FUNCTION\<bar>subroutine\<bar>function\)<CR>zt4<C-y>
+nnoremap <buffer> <silent> ]]  /\v\c^\s*%(<end)@!(subroutine<bar>((\w+<bar>\w+\s*\(\w+\))\s+)*function)\s+\zs\w+<CR>zt3<C-y>
+nnoremap <buffer> <silent> [[  ?\v\c^\s*%(<end)@!(subroutine<bar>((\w+<bar>\w+\s*\(\w+\))\s+)*function)\s+\zs\w+<CR>zt3<C-y>
+
+nnoremap <buffer> <silent> ][  /\v\c^\s*end\s*(subroutine<bar>function)\s+\zs\w+<CR>zt3<C-y>
+nnoremap <buffer> <silent> []  ?\v\c^\s*end\s*(subroutine<bar>function)\s+\zs\w+<CR>zt3<C-y>
