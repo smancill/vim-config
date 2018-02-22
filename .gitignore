@@ -1,9 +1,9 @@
-autoload/plug.vim
-autoload/plug.vim.old
-bundle
-spell
-src
-UltiSnips
-vimrc.local
-bundle.local
+/autoload/plug.vim
+/autoload/plug.vim.old
+/bundle/
+/spell/
+/tmp/
+/UltiSnips/
+/vimrc.local
+/bundle.local
 .netrwhist
