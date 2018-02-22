@@ -2,9 +2,9 @@
 
 setlocal nowrap
 
-setlocal tabstop=3
-setlocal softtabstop=3
-setlocal shiftwidth=3
+setlocal tabstop=4
+setlocal softtabstop=4
+setlocal shiftwidth=4
 
 
 nnoremap <buffer> <silent> ]]  /\v\c^\s*%(<end)@!(subroutine<bar>((\w+<bar>\w+\s*\(\w+\))\s+)*function)\s+\zs\w+<CR>zt3<C-y>
