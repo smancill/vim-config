@@ -68,7 +68,6 @@ endif
 let g:UltiSnipsJumpForwardTrigger = '<TAB>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
 let g:UltiSnipsEditSplit = 'horizontal'
-let g:UltiSnipsDontReverseSearchPath = 1
 
 " vim-addon-local-vimrc                     {{{2
 let g:local_vimrc = {
