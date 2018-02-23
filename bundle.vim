@@ -64,3 +64,4 @@ Plug 'altercation/vim-colors-solarized'
 
 " Others
 Plug 'smancill/conky-syntax.vim'
+Plug 'ledger/vim-ledger'

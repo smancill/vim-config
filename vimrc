@@ -220,6 +220,14 @@ nnoremap <silent>  <F5>           :<C-U>silent MundoToggle<CR>
 let g:mundo_preview_bottom = 1
 let g:mundo_verbose_graph = 0
 
+" Ledger                                    {{{2
+let g:ledger_maxwidth = 80
+let g:ledger_detailed_first = 1
+let g:ledger_fold_blanks = 1
+let g:ledger_decimal_sep = ','
+let g:ledger_align_at = 62
+let g:ledger_date_format = '%Y-%m-%d'
+
 " }}}
 
 
