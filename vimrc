@@ -67,7 +67,7 @@ else
 endif
 let g:UltiSnipsJumpForwardTrigger = '<TAB>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
-let g:UltiSnipsEditSplit='horizontal'
+let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsDontReverseSearchPath = 1
 
 " vim-addon-local-vimrc                     {{{2
@@ -107,7 +107,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 " Ack                                       {{{2
-let g:ackprg='ag --hidden --ignore .git --vimgrep'
+let g:ackprg = 'ag --hidden --ignore .git --vimgrep'
 
 " Syntastic                                 {{{2
 let g:syntastic_mode_map = { 'passive_filetypes': ['java'] }
@@ -129,9 +129,9 @@ let g:tagbar_compact = 1
 let g:tagbar_singleclick = 1
 
 " Airline                                   {{{2
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_theme='powerlineish'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_theme = 'powerlineish'
 let g:airline_detect_spell = 0
 let g:airline#extensions#disable_rtp_load = 1
 
@@ -149,17 +149,17 @@ nnoremap <Leader>< :SidewaysLeft<CR>
 nnoremap <Leader>> :SidewaysRight<CR>
 
 " Clang Complete                            {{{2
-let g:clang_auto_select=1
-let g:clang_snippets=1
-let g:clang_snippets_engine='ultisnips'
-let g:clang_complete_copen=0
-let g:clang_user_options='-DCLANG -fcxx-exceptions'
+let g:clang_auto_select = 1
+let g:clang_snippets = 1
+let g:clang_snippets_engine = 'ultisnips'
+let g:clang_complete_copen = 0
+let g:clang_user_options = '-DCLANG -fcxx-exceptions'
 
 " vimtex                                    {{{2
-let g:tex_flavor='latex'              " filetype of *.tex
-let g:vimtex_echo_ignore_wait=1
-let g:vimtex_latexmk_continuous=0
-let g:vimtex_quickfix_ignore_all_warnings=0
+let g:tex_flavor = 'latex'            " filetype of *.tex
+let g:vimtex_echo_ignore_wait = 1
+let g:vimtex_latexmk_continuous = 0
+let g:vimtex_quickfix_ignore_all_warnings = 0
 let g:vimtex_quickfix_ignored_warnings = [
     \ 'Underfull',
     \ 'Overfull',
@@ -181,10 +181,10 @@ augroup filetype_buffergator
     autocmd BufEnter \[\[buffergator-buffers\]\]  unmap ds
     autocmd BufLeave \[\[buffergator-buffers\]\]  nmap  ds  <Plug>Dsurround
 augroup END
-let g:buffergator_suppress_keymaps=1
-let g:buffergator_viewport_split_policy='B'
-let g:buffergator_split_size=12
-let g:buffergator_sort_regime='mru'
+let g:buffergator_suppress_keymaps = 1
+let g:buffergator_viewport_split_policy = 'B'
+let g:buffergator_split_size = 12
+let g:buffergator_sort_regime = 'mru'
 
 " Gist                                      {{{2
 let g:gist_clip_command = 'xclip -selection clipboard'
@@ -197,9 +197,9 @@ let g:netrw_dirhistmax = 0
 " NERDTree                                  {{{2
 nnoremap <silent>  <F3>           :<C-U>NERDTreeToggle<CR>
 nnoremap <silent>  <leader><F3>   :<C-U>NERDTreeFind<CR>
-let NERDTreeHijackNetrw=0
-let NERDTreeCaseSensitiveSort=1
-let NERDTreeIgnore=[
+let NERDTreeHijackNetrw = 0
+let NERDTreeCaseSensitiveSort = 1
+let NERDTreeIgnore = [
                    \'\.d$[[dir]]',
                    \'\.git$[[dir]]',
                    \'\.hg$[[dir]]',
@@ -217,9 +217,8 @@ let NERDTreeIgnore=[
 
 " mundo                                     {{{2
 nnoremap <silent>  <F5>           :<C-U>silent MundoToggle<CR>
-
-let g:mundo_preview_bottom=1
-let g:mundo_verbose_graph=0
+let g:mundo_preview_bottom = 1
+let g:mundo_verbose_graph = 0
 
 " }}}
 
@@ -317,9 +316,9 @@ set sessionoptions-=options                 " Options can corrupt sessions
 
 " Better unprintable characters
 if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
-  let &listchars="tab:\u25b8 ,trail:\u2423,nbsp:\u26ad,eol:\u00ac,extends:\u21c9,precedes:\u21c7"
-  let &fillchars="fold:\u00b7"
-  let &showbreak="\u00bb "
+  let &listchars = "tab:\u25b8 ,trail:\u2423,nbsp:\u26ad,eol:\u00ac,extends:\u21c9,precedes:\u21c7"
+  let &fillchars = "fold:\u00b7"
+  let &showbreak = "\u00bb "
 endif
 
 
