@@ -67,7 +67,8 @@ else
 endif
 let g:UltiSnipsJumpForwardTrigger = '<TAB>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
-let g:UltiSnipsEditSplit = 'horizontal'
+let g:UltiSnipsEditSplit = 'context'
+let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
 " vim-addon-local-vimrc                     {{{2
 let g:local_vimrc = {
