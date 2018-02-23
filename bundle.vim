@@ -32,6 +32,7 @@ Plug 'majutsushi/tagbar'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'nathanaelkane/vim-indent-guides'
 
 " C/C++
 Plug 'vim-scripts/a.vim'
