@@ -187,7 +187,11 @@ let g:buffergator_split_size = 12
 let g:buffergator_sort_regime = 'mru'
 
 " Gist                                      {{{2
-let g:gist_clip_command = 'xclip -selection clipboard'
+if has('macunix')
+  let g:gist_clip_command = 'pbcopy'
+else
+  let g:gist_clip_command = 'xclip -selection clipboard'
+endif
 
 " netrw                                     {{{2
 let g:netrw_list_hide = '^\.,\~$,^tags$'
