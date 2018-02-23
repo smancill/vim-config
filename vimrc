@@ -31,12 +31,12 @@ call plug#begin('~/.vim/bundle')
 source ~/.vim/bundle.vim
 
 " Load bundles of the fork
-if filereadable(expand("~/.vim/bundle.fork"))
+if filereadable(expand('~/.vim/bundle.fork'))
   source ~/.vim/bundle.fork
 endif
 
 " Load bundles of the local machine
-if filereadable(expand("~/.vim/bundle.local"))
+if filereadable(expand('~/.vim/bundle.local'))
   source ~/.vim/bundle.local
 endif
 
@@ -49,24 +49,24 @@ delcom UnPlug
 " PLUGINS CONFIGURATION                 {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SuperTab                                  {{{2
-if has("gui_running") || has("nvim")
+if has('gui_running') || has('nvim')
   let g:SuperTabMappingForward = '<C-Space>'
   let g:SuperTabMappingBackward = '<S-C-space>'
 else
   let g:SuperTabMappingForward = '<C-@>'
   let g:SuperTabMappingBackward = '<C-S-@>'
 endif
-let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = 'context'
 
 " Ultisnips                                 {{{2
 inoremap <silent>   <C-@>         <nop>
-if has("gui_running") || has("nvim")
-  let g:UltiSnipsExpandTrigger = "<C-Space>"
+if has('gui_running') || has('nvim')
+  let g:UltiSnipsExpandTrigger = '<C-Space>'
 else
-  let g:UltiSnipsExpandTrigger = "<C-@>"
+  let g:UltiSnipsExpandTrigger = '<C-@>'
 endif
-let g:UltiSnipsJumpForwardTrigger = "<TAB>"
-let g:UltiSnipsJumpBackwardTrigger = "<S-TAB>"
+let g:UltiSnipsJumpForwardTrigger = '<TAB>'
+let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
 let g:UltiSnipsEditSplit='horizontal'
 let g:UltiSnipsDontReverseSearchPath = 1
 
@@ -87,7 +87,7 @@ nnoremap <leader>gb :<C-U>Gblame<CR>
 nnoremap <leader>go :<C-U>Gbrowse<CR>
 
 " ctrlp                                     {{{2
-if has("gui_running") || has("nvim")
+if has('gui_running') || has('nvim')
   nnoremap <silent> <C-Space> :<C-U>CtrlPBuffer<CR>
 else
   nnoremap <silent> <C-@>     :<C-U>CtrlPBuffer<CR>
@@ -107,7 +107,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 " Ack                                       {{{2
-let g:ackprg="ag --hidden --ignore .git --vimgrep"
+let g:ackprg='ag --hidden --ignore .git --vimgrep'
 
 " Syntastic                                 {{{2
 let g:syntastic_mode_map = { 'passive_filetypes': ['java'] }
@@ -136,13 +136,13 @@ let g:airline_detect_spell = 0
 let g:airline#extensions#disable_rtp_load = 1
 
 " Alternate                                 {{{2
-let g:alternateExtensions_cc  = "hh,h,hpp,hxx"
-let g:alternateExtensions_cpp = "hpp,h,hh,hxx"
-let g:alternateExtensions_C   = "h,H"
-let g:alternateExtensions_hh  = "cc,cpp,cxx"
-let g:alternateExtensions_h   = "c,cpp,cxx,cc,C"
-let g:alternateExtensions_hpp = "cpp,cxx,C,cc"
-let g:alternateExtensions_hxx = "cpp,cxx,C,cc"
+let g:alternateExtensions_cc  = 'hh,h,hpp,hxx'
+let g:alternateExtensions_cpp = 'hpp,h,hh,hxx'
+let g:alternateExtensions_C   = 'h,H'
+let g:alternateExtensions_hh  = 'cc,cpp,cxx'
+let g:alternateExtensions_h   = 'c,cpp,cxx,cc,C'
+let g:alternateExtensions_hpp = 'cpp,cxx,C,cc'
+let g:alternateExtensions_hxx = 'cpp,cxx,C,cc'
 
 " Sideways                                  {{{2
 nnoremap <Leader>< :SidewaysLeft<CR>
@@ -153,10 +153,10 @@ let g:clang_auto_select=1
 let g:clang_snippets=1
 let g:clang_snippets_engine='ultisnips'
 let g:clang_complete_copen=0
-let g:clang_user_options="-DCLANG -fcxx-exceptions"
+let g:clang_user_options='-DCLANG -fcxx-exceptions'
 
 " vimtex                                    {{{2
-let g:tex_flavor="latex"              " filetype of *.tex
+let g:tex_flavor='latex'              " filetype of *.tex
 let g:vimtex_echo_ignore_wait=1
 let g:vimtex_latexmk_continuous=0
 let g:vimtex_quickfix_ignore_all_warnings=0
@@ -168,7 +168,7 @@ let g:vimtex_quickfix_ignored_warnings = [
 
 " jedi                                      {{{2
 let g:jedi#auto_vim_configuration = 0
-let g:jedi#completions_command = ""
+let g:jedi#completions_command = ''
 
 " Buffergator                               {{{2
 nnoremap <silent>  <C-J>          :<C-U>BuffergatorOpen<CR>
@@ -182,9 +182,9 @@ augroup filetype_buffergator
     autocmd BufLeave \[\[buffergator-buffers\]\]  nmap  ds  <Plug>Dsurround
 augroup END
 let g:buffergator_suppress_keymaps=1
-let g:buffergator_viewport_split_policy="B"
+let g:buffergator_viewport_split_policy='B'
 let g:buffergator_split_size=12
-let g:buffergator_sort_regime="mru"
+let g:buffergator_sort_regime='mru'
 
 " Gist                                      {{{2
 let g:gist_clip_command = 'xclip -selection clipboard'
@@ -267,7 +267,7 @@ set number                                  " Show line numbers
 set laststatus=2                            " Always show statusline
 set shortmess=aOtTI                         " Abbreviate status messages
 set rulerformat=%25(%LL\ \ \ %l,%c%V%=%P%)  " Ruler string
-if has("nvim")
+if has('nvim')
   set guicursor=
 endif
 
@@ -287,7 +287,7 @@ set autoindent                              " Indent new lines using previous
 set nojoinspaces                            " One space after sentences
 set wrap                                    " Softwrap long lines
 set linebreak                               " Wrap at spaces characters
-if v:version > 703 || v:version == 703 && has("patch541")
+if v:version > 703 || v:version == 703 && has('patch541')
   set formatoptions+=j                      " Delete comment when joining lines
 endif
 set display+=lastline                       " If wrap set, display last line
@@ -381,16 +381,16 @@ autocmd BufReadPost *
 
 " Save current view settings on a per-window, per-buffer basis.
 function! AutoSaveWinView()
-    if !exists("w:SavedBufView")
+    if !exists('w:SavedBufView')
         let w:SavedBufView = {}
     endif
-    let w:SavedBufView[bufnr("%")] = winsaveview()
+    let w:SavedBufView[bufnr('%')] = winsaveview()
 endfunction
 
 " Restore current view settings.
 function! AutoRestoreWinView()
-    let buf = bufnr("%")
-    if exists("w:SavedBufView") && has_key(w:SavedBufView, buf)
+    let buf = bufnr('%')
+    if exists('w:SavedBufView') && has_key(w:SavedBufView, buf)
         let v = winsaveview()
         let atStartOfFile = v.lnum == 1 && v.col == 0
         if atStartOfFile && !&diff
@@ -417,7 +417,7 @@ autocmd FileType qf wincmd J
 
 " If last windows is quickfix window, exit Vim
 autocmd BufEnter *
-    \ if &buftype=="quickfix" || &buftype=="nofile" |
+    \ if &buftype == 'quickfix' || &buftype == 'nofile' |
     \   if winbufnr(2) == -1 |
     \     quit! |
     \   endif |
@@ -432,15 +432,15 @@ augroup END
 
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
-  let s:color_squeme = "inkpot"
+  let s:color_squeme = 'inkpot'
 elseif $TERM =~ 'rxvt' || $TERM =~ '256color'
   set t_Co=256
-  let s:color_squeme = "darkglass"
+  let s:color_squeme = 'darkglass'
 endif
 
 try
-  if exists("s:color_squeme")
-    exe "colorscheme " . s:color_squeme
+  if exists('s:color_squeme')
+    exe 'colorscheme ' . s:color_squeme
   endif
 catch /^Vim\%((\a\+)\)\=:E185/
 endtry
@@ -456,12 +456,12 @@ highlight PmenuSel ctermfg=black
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Load vimrc of the fork
-if filereadable(expand("~/.vim/vimrc.fork"))
+if filereadable(expand('~/.vim/vimrc.fork'))
   source ~/.vim/vimrc.fork
 endif
 
 " Load vimrc of the local machine
-if filereadable(expand("~/.vim/vimrc.local"))
+if filereadable(expand('~/.vim/vimrc.local'))
   source ~/.vim/vimrc.local
 endif
 
