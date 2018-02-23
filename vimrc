@@ -105,6 +105,10 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.?tags$',
   \ 'dir':  '\v\.(git|hg|svn|gradle)$|(_site|build)$'
   \ }
+if executable('fd')
+  let g:ctrlp_user_command = "fd --hidden --exclude .git --type f '' %s"
+  let g:ctrlp_use_caching = 0
+endif
 
 " Ack                                       {{{2
 if executable('ag')
