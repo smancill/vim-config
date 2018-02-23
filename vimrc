@@ -107,7 +107,9 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 " Ack                                       {{{2
-let g:ackprg = 'ag --hidden --ignore .git --vimgrep'
+if executable('ag')
+  let g:ackprg = 'ag --hidden --ignore .git --vimgrep'
+endif
 
 " Syntastic                                 {{{2
 let g:syntastic_mode_map = { 'passive_filetypes': ['java'] }
