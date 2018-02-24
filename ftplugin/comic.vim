@@ -1,4 +1,4 @@
-" comic.vim: settings for my custom comic scripts
+" comic.vim: settings for comic scripts
 
 setlocal textwidth=78
 setlocal spell
