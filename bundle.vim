@@ -47,7 +47,7 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'lervag/vimtex'
 
 " Markup languages
-Plug 'smancill/hammer.vim'
+Plug 'kannokanno/previm'
 Plug 'plasticboy/vim-markdown'
 Plug 'puppetlabs/puppet-syntax-vim'
 

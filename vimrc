@@ -193,6 +193,13 @@ let g:buffergator_viewport_split_policy = 'B'
 let g:buffergator_split_size = 12
 let g:buffergator_sort_regime = 'mru'
 
+" Previm                                    {{{2
+if has('macunix')
+  let g:previm_open_cmd = 'open'
+else
+  let g:previm_open_cmd = 'xdg-open'
+endif
+
 " Gist                                      {{{2
 if has('macunix')
   let g:gist_clip_command = 'pbcopy'

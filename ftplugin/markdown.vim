@@ -1,7 +1,6 @@
 " markdown.vim: settings for Markdown markup files
 
-nnoremap <buffer> <silent>  <F9>         :Hammer<CR>
-inoremap <buffer> <silent>  <F9>    <Esc>:Hammer<CR>
+nnoremap <buffer> <silent>  <F9>         :<C-U>PrevimOpen<CR>
 
 let g:tagbar_type_markdown = {
 	\ 'ctagstype' : 'markdown',
