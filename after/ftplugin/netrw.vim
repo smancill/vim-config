@@ -2,6 +2,8 @@
 
 setlocal bufhidden=delete
 
+nnoremap <buffer> <silent> <nowait>   q   :<C-U>b#<CR>
+
 if !exists("*s:BDeleteNetrw")
   function! s:BDeleteNetrw()
     for i in range(bufnr('$'), 1, -1)
