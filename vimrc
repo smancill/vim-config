@@ -217,20 +217,13 @@ nnoremap <silent>  <F3>           :<C-U>NERDTreeToggle<CR>
 nnoremap <silent>  <leader><F3>   :<C-U>NERDTreeFind<CR>
 let NERDTreeHijackNetrw = 0
 let NERDTreeCaseSensitiveSort = 1
+let NERDTreeRespectWildIgnore = 1
 let NERDTreeIgnore = [
                    \'\.d$[[dir]]',
                    \'\.git$[[dir]]',
                    \'\.hg$[[dir]]',
-                   \'__pycache__[[dir]]',
-                   \'tags$[[file]]',
-                   \'\.class$[[file]]',
-                   \'\.o$[[file]]',
-                   \'\.os$[[file]]',
-                   \'\.so$[[file]]',
-                   \'\.gch$[[file]]',
-                   \'\.mod$[[file]]',
-                   \'\.py[co]$[[file]]',
-                   \'\.rb[co]$[[file]]'
+                   \'\.svn$[[dir]]',
+                   \'\.\?tags\(\.\w*\)\?$[[file]]',
                    \]
 
 " mundo                                     {{{2
