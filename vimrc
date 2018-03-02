@@ -209,7 +209,6 @@ else
 endif
 
 " netrw                                     {{{2
-let g:netrw_list_hide = '^\.,\~$,^tags$'
 let g:netrw_altfile = 1
 let g:netrw_dirhistmax = 0
 
