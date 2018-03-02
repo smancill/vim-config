@@ -298,8 +298,9 @@ endif
 
 set wildmenu                                " Better command-line completion
 set wildmode=longest:full,full              " Completion options
-set wildignore=*.bak,*.o,*.os,*.so,*.gch,*.mod,*.class,*~,*.py[co],*.rb[co]
-                                            " Ignore these files
+set wildignore+=*.bak,*~,*.swp,             " Ignore these files
+set wildignore+=*.o,*.os,*.so,*.dylib,*.gch,*.mod,*.class
+set wildignore+=*.py[co],*.rb[co],__pycache__
 
 set tabstop=4                               " Four spaces for a tab
 set softtabstop=4                           " Four spaces for a tab
