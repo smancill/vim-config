@@ -242,6 +242,9 @@ let g:ledger_fold_blanks = 1
 let g:ledger_decimal_sep = ','
 let g:ledger_align_at = 62
 let g:ledger_date_format = '%Y-%m-%d'
+let g:ledger_extra_options = '--explicit --pedantic --check-payees'
+let g:ledger_qf_register_format = '%(format_date(date))  %-36(payee) %-44(account) %15(scrub(amount)) %15(scrub(total))\n'
+let g:ledger_qf_reconcile_format = '%(format_date(date))  %-4(code) %-36(payee) %-44(account) %15(scrub(amount))\n'
 
 " }}}
 
