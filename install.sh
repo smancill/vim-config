@@ -4,8 +4,7 @@ set -u
 
 # Paths
 vimdir=${HOME}/.vim
-vimrc=${HOME}/.vimrc
-gvimrc=${HOME}/.gvimrc
+vimrc=${vimdir}/vimrc
 cachedir=$HOME/.cache/vim
 
 # Get user option
@@ -26,10 +25,6 @@ if [ "${script_dir}" != "${vimdir}" ]; then
     echo "Clone the repository in ${vimdir}, not in ${script_dir}"
     exit 1
 fi
-
-# Create symbolic links
-ln -sf "${vimdir}/vimrc"  "${vimrc}"
-ln -sf "${vimdir}/gvimrc" "${gvimrc}"
 
 # Create directory for bundles
 if [ ${force} = true ]; then
