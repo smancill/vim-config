@@ -174,8 +174,8 @@ Use the following key mappings in normal mode to easily work with buffers.
 * `<C-j>` is custom mapped to see the list of buffers.
   Navigate with the `j`/`k` keys, press `<Enter>` to open the buffer,
   or `d` to delete it (see [buffergator][buffergator]).
-* `]b` to go to the next buffer in buffer list (see [vim-unimpaired][unimpaired]).
-* `[b` to go to the previous buffer in buffer list (see [vim-unimpaired][unimpaired]).
+* `]b` to go to the next buffer in buffer list (see [vim-unimpaired-slim][unimpaired]).
+* `[b` to go to the previous buffer in buffer list (see [vim-unimpaired-slim][unimpaired]).
 
 See [Working with buffers](http://vimcasts.org/episodes/working-with-buffers/),
 [Working with windows](http://vimcasts.org/episodes/working-with-windows/)
@@ -227,7 +227,8 @@ The following plugins are used (check `vimrc` for configuration details):
   ordered by scope (toggle with `<F8>`).
 * [sideways.vim][sideways]: move function arguments left and right.
 * [commentary.vim][commentary]: comment stuff out.
-* [unimpaired.vim][unimpaired]: pairs of handy bracket mappings.
+* [unimpaired.vim][unimpaired]: pairs of handy bracket mappings
+  (custom slim version)
 * [surround.vim][surround]: delete/change/add parentheses, quotes, tags, etc.
 * [repeat.vim][repeat]: repeat supported plugin maps with "."
 * [clang_complete][clang_complete]: omnicompletion for C/C++ files.
@@ -257,7 +258,7 @@ The following plugins are used (check `vimrc` for configuration details):
 [tagbar]: https://github.com/majutsushi/tagbar
 [sideways]: https://github.com/AndrewRadev/sideways.vim
 [commentary]: https://github.com/tpope/vim-commentary
-[unimpaired]: https://github.com/tpope/vim-unimpaired
+[unimpaired]: https://github.com/smancill/vim-unimpaired-slim
 [surround]: https://github.com/tpope/vim-surround
 [repeat]: https://github.com/tpope/vim-repeat
 [clang_complete]: https://github.com/Rip-Rip/clang_complete

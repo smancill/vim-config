@@ -11,9 +11,9 @@ Plug 'https://github.com/mileszs/ack.vim'
 " General utilities
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
-Plug 'https://github.com/tpope/vim-unimpaired'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/tpope/vim-repeat'
+Plug 'https://github.com/smancill/vim-unimpaired-slim'
 
 " Completion
 Plug 'https://github.com/ervandew/supertab'
