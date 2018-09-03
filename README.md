@@ -219,7 +219,6 @@ The following plugins are used (check `vimrc` for configuration details):
   [EditorConfig](http://editorconfig.org) files.
 * [fugitive.vim][fugitive]: an awesome Git wrapper
   (see custom mappings with `:map <leader>g`).
-* [gv.vim][gv]: a Git commit browser.
 * [Gist][gist]: for creating [Gists][gist-web].
 * [Syntastic][syntastic]: automatic syntax checking.
 * [Mundo][mundo]: visualize the Vim undo tree (toggle with `<F5>`).
@@ -238,7 +237,6 @@ The following plugins are used (check `vimrc` for configuration details):
 * [Previm][previm]: realtime preview of markup languages
   (open HTML on browser with `<F9>`).
 * [vim-markdown][markdown_mode]: Markdown mode.
-* [Indent Guides][indent-guides]: visually displays indent levels.
 
 
 [vim-plug]: https://github.com/junegunn/vim-plug
