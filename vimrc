@@ -22,7 +22,18 @@ function! s:deregister(repo)
   call remove(g:plugs_order, index(g:plugs_order, name))
 endfunction
 
+function! s:plugins_update() abort
+  let snapshot_dir = expand('~/.vim/tmp/snapshot')
+  if !isdirectory(snapshot_dir)
+    call mkdir(snapshot_dir, 'p')
+  endif
+  exe 'PlugSnapshot! '.snapshot_dir.'/plug-'.strftime('%Y-%m-%dT%H:%M').'.vim'
+  close
+  PlugUpdate
+endfu
+
 command! -nargs=1 -bar UnPlug call s:deregister(<args>)
+command! -bar PlugSafeUpdate call s:plugins_update()
 
 
 call plug#begin('~/.vim/bundle')
