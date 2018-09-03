@@ -15,6 +15,11 @@ Plug 'https://github.com/tpope/vim-unimpaired'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/tpope/vim-repeat'
 
+" Completion
+Plug 'https://github.com/ervandew/supertab'
+Plug 'https://github.com/SirVer/ultisnips'
+Plug 'https://github.com/smancill/vim-snippets'
+
 " Git and GitHub
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/tpope/vim-rhubarb'
@@ -50,11 +55,6 @@ Plug 'https://github.com/lervag/vimtex'
 Plug 'https://github.com/kannokanno/previm'
 Plug 'https://github.com/plasticboy/vim-markdown'
 Plug 'https://github.com/puppetlabs/puppet-syntax-vim'
-
-" Completion
-Plug 'https://github.com/ervandew/supertab'
-Plug 'https://github.com/SirVer/ultisnips'
-Plug 'https://github.com/smancill/vim-snippets'
 
 " Colorsquemes
 Plug 'https://github.com/smancill/darkglass'
