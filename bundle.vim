@@ -50,7 +50,6 @@ Plug 'https://github.com/lervag/vimtex'
 
 " Markup languages
 Plug 'https://github.com/kannokanno/previm'
-Plug 'https://github.com/plasticboy/vim-markdown'
 
 " Colorsquemes
 Plug 'https://github.com/smancill/darkglass'
