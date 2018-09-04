@@ -166,8 +166,11 @@ let g:clang_user_options = '-DCLANG -fcxx-exceptions'
 
 " vimtex                                    {{{2
 let g:tex_flavor = 'latex'            " filetype of *.tex
+let g:vimtex_compiler_latexmk = {
+   \ 'callback': 0,
+   \ 'continous': 0,
+ \ }
 let g:vimtex_echo_ignore_wait = 1
-let g:vimtex_latexmk_continuous = 0
 let g:vimtex_quickfix_ignore_all_warnings = 0
 let g:vimtex_quickfix_ignored_warnings = [
     \ 'Underfull',
