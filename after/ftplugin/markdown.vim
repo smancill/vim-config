@@ -15,5 +15,5 @@ let g:tagbar_type_markdown = {
   \   'h:headings'
   \ ],
   \ 'sort'    : 0,
-  \ 'deffile' : expand('~/.vim/after/ftplugin/markdown/markdown.cnf')
+  \ 'deffile' : expand('<sfile>:p:h') . '/markdown/markdown.cnf'
   \ }

@@ -17,5 +17,5 @@ let g:tagbar_type_tex = {
   \   'p:pagerefs:1'
   \ ],
   \ 'sort'    : 0,
-  \ 'deffile' : expand('~/.vim/after/ftplugin/latex/latex.cnf')
+  \ 'deffile' : expand('<sfile>:p:h') . '/latex/latex.cnf'
   \ }
