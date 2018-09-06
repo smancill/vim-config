@@ -154,6 +154,8 @@ let g:airline_theme = 'powerlineish'
 let g:airline_detect_spell = 0
 let g:airline#extensions#disable_rtp_load = 1
 let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#vimtex#enabled = 0
+
 
 " Alternate                                 {{{2
 let g:alternateExtensions_cc  = 'hh,h,hpp,hxx'
