@@ -4,6 +4,7 @@
 /spell/
 /tmp/
 /UltiSnips/
+/private
 /vimrc_*
 /bundle_*
 /vimrc.local

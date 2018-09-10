@@ -15,6 +15,8 @@ if has('vim_starting')
   endif
 endif
 
+let s:has_private_dir = isdirectory(glob('~/.vim/private'))
+
 function! s:deregister(repo)
   let repo = substitute(a:repo, '[\/]\+$', '', '')
   let name = fnamemodify(repo, ':t:s?\.git$??')
@@ -42,6 +44,7 @@ call plug#begin('~/.vim/bundle')
 let s:bundle_patterns = [
   \ '~/.vim/bundle*.vim',
   \ '~/.vim/bundle.local',
+  \ '~/.vim/private/bundle*.vim'
   \ ]
 for s:bundle_pattern in s:bundle_patterns
   for s:bundle_file in split(glob(s:bundle_pattern, '\n'))
@@ -52,6 +55,17 @@ endfor
 call plug#end()
 
 delcom UnPlug
+
+
+" Support private directory
+if s:has_private_dir
+  set rtp-=~/.vim
+  set rtp^=~/.vim/private
+  set rtp^=~/.vim
+
+  " Allow overriding settings in ~/.vim/after
+  set rtp+=~/.vim/private/after
+endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -77,7 +91,11 @@ endif
 let g:UltiSnipsJumpForwardTrigger = '<TAB>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
 let g:UltiSnipsEditSplit = 'context'
-let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
+if s:has_private_dir
+  let g:UltiSnipsSnippetsDir = '~/.vim/private/UltiSnips'
+else
+  let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
+endif
 
 " vim-addon-local-vimrc                     {{{2
 let g:local_vimrc = {
@@ -502,6 +520,7 @@ highlight PmenuSel ctermfg=black
 let s:vimrc_patterns = [
   \ '~/.vim/vimrc_?*',
   \ '~/.vim/vimrc.local',
+  \ '~/.vim/private/vimrc*'
   \ ]
 for s:vimrc_pattern in s:vimrc_patterns
   for s:vimrc_file in split(glob(s:vimrc_pattern, '\n'))
