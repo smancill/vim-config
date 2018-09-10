@@ -83,7 +83,7 @@ let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
 " vim-addon-local-vimrc                     {{{2
 let g:local_vimrc = {
-        \ 'names': ['.project.vim'],
+        \ 'names': ['.project.vim', '.vimrc'],
         \ 'hash_fun': 'LVRHashOfFile',
         \ 'cache_file': $HOME . '/.cache/vim_local_rc_cache',
         \ }
