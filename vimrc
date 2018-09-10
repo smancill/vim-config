@@ -85,7 +85,7 @@ let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 let g:local_vimrc = {
         \ 'names': ['.project.vim', '.vimrc'],
         \ 'hash_fun': 'LVRHashOfFile',
-        \ 'cache_file': $HOME . '/.cache/vim_local_rc_cache',
+        \ 'cache_file': $HOME . '/.cache/vim/local_rc_cache',
         \ }
 
 " Fugitive                                  {{{2
