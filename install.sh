@@ -11,12 +11,11 @@ cachedir=$HOME/.cache/vim
 force=false
 skip=false
 if [ $# -eq 1 ]; then
-    if [ "$1" = "-f" ]; then
-        force=true
-    fi
-    if [ "$1" = "-s" ]; then
-        skip=true
-    fi
+    case "$1" in
+        -f) force=true ;;
+        -s) skip=true ;;
+        *) echo "Unknown option."; exit 2 ;;
+    esac
 fi
 
 # Check ~/.vim directory
