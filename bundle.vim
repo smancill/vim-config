@@ -18,7 +18,7 @@ Plug 'https://github.com/smancill/vim-unimpaired-slim'
 " Completion
 Plug 'https://github.com/ervandew/supertab'
 Plug 'https://github.com/SirVer/ultisnips'
-Plug 'https://github.com/smancill/vim-snippets'
+Plug 'https://github.com/honza/vim-snippets'
 
 " Git and GitHub
 Plug 'https://github.com/tpope/vim-fugitive'
