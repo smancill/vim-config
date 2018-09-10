@@ -9,10 +9,12 @@ cachedir=$HOME/.cache/vim
 
 # Get user option
 force=false
+dirs_only=false
 skip=false
 if [ $# -eq 1 ]; then
     case "$1" in
         -f) force=true ;;
+        -d) dirs_only=true ;;
         -s) skip=true ;;
         *) echo "Unknown option."; exit 2 ;;
     esac
@@ -34,6 +36,9 @@ mkdir -p "${vimdir}/autoload"
 
 # Create directory for swap/backup/undo files
 mkdir -p "${cachedir}"
+if [ ${dirs_only} = true ]; then
+    exit
+fi
 
 # Install package manager
 vimplug_url=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
