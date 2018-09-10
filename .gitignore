@@ -4,6 +4,8 @@
 /spell/
 /tmp/
 /UltiSnips/
+/vimrc_*
+/bundle_*
 /vimrc.local
 /bundle.local
 .netrwhist

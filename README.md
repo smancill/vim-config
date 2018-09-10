@@ -109,12 +109,12 @@ details.
 
 ### Overwrite and extends this configuration
 
-To add or remove plugins, create a file named `~/.vim/bundle.fork`
-(if the repository is forked) or `~/.vim/bundle.local` (for a local-machine),
+To add or remove plugins, create a file named `~/.vim/bundle_fork.vim`
+(if the repository is forked) or `~/.vim/bundle_local.vim` (for a local-machine),
 and put extra plugins in there:
 
 ```vim
-" bundle.local: extra plugins for dev machine
+" bundle_local.vim: extra plugins for dev machine
 
 " Remove ctrlp (UnPlug is defined in vimrc, not in vim-plug)
 UnPlug 'kien/ctrlp.vim'
@@ -125,11 +125,11 @@ Plug 'junegunn/fzf.vim'
 ```
 
 To extend or change the configuration of `vimrc`,
-create a file named `~/.vim/vimrc.fork` (if the repository is forked)
-or `~/.vim/vimrc.local` (for a local-machine), and put extra settings in there:
+create a file named `~/.vim/vimrc_fork` (if the repository is forked)
+or `~/.vim/vimrc_local` (for a local-machine), and put extra settings in there:
 
 ```vim
-" vimrc.local: extra settings for dev machine
+" vimrc_local: extra settings for dev machine
 
 " Override settings for plugins
 let g:clang_user_options = '-DCLANG -std=c++11 -fcxx-exceptions'

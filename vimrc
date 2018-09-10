@@ -39,17 +39,15 @@ command! -bar PlugSafeUpdate call s:plugins_update()
 call plug#begin('~/.vim/bundle')
 
 " Load bundles
-source ~/.vim/bundle.vim
-
-" Load bundles of the fork
-if filereadable(expand('~/.vim/bundle.fork'))
-  source ~/.vim/bundle.fork
-endif
-
-" Load bundles of the local machine
-if filereadable(expand('~/.vim/bundle.local'))
-  source ~/.vim/bundle.local
-endif
+let s:bundle_patterns = [
+  \ '~/.vim/bundle*.vim',
+  \ '~/.vim/bundle.local',
+  \ ]
+for s:bundle_pattern in s:bundle_patterns
+  for s:bundle_file in split(glob(s:bundle_pattern, '\n'))
+    execute 'source' s:bundle_file
+  endfor
+endfor
 
 call plug#end()
 
@@ -500,15 +498,16 @@ highlight PmenuSel ctermfg=black
 " EXTRA CONFIGURATION                   {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Load vimrc of the fork
-if filereadable(expand('~/.vim/vimrc.fork'))
-  source ~/.vim/vimrc.fork
-endif
-
-" Load vimrc of the local machine
-if filereadable(expand('~/.vim/vimrc.local'))
-  source ~/.vim/vimrc.local
-endif
+" Load extra vimrc
+let s:vimrc_patterns = [
+  \ '~/.vim/vimrc_?*',
+  \ '~/.vim/vimrc.local',
+  \ ]
+for s:vimrc_pattern in s:vimrc_patterns
+  for s:vimrc_file in split(glob(s:vimrc_pattern, '\n'))
+    execute 'source' s:vimrc_file
+  endfor
+endfor
 
 "}}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
