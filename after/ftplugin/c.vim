@@ -11,8 +11,8 @@ setlocal shiftwidth=8
 setlocal popt=left:8pc,right:3pc
 
 " always open a block
-inoremap  <buffer>  {<CR>    {<CR>}<Esc>O
-vnoremap  <buffer>  {<CR>   S{<CR>}<Esc>Pk=iB
+inoremap  <buffer>  {<CR>    {<CR>}<C-c>O
+vnoremap  <buffer>  {<CR>   S{<CR>}<C-c>Pk=iB
 
 " Alternate plugin
 inoremap <buffer> <silent>  <LocalLeader>aa    <Esc>:A<CR>
