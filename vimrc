@@ -465,6 +465,9 @@ autocmd BufEnter *
     \   endif |
     \ endif
 
+autocmd BufRead /private/var/folders/*,/var/folders/*,/tmp/*
+    \ setlocal noundofile
+
 augroup END
 
 
