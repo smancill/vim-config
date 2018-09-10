@@ -150,7 +150,7 @@ configuration, and then merged with any further updates to the repository.
 The `.vimrc` file is well organized and folded by sections.  The options are:
 
 * Restore position of cursor when opening files.
-* Put swap files and undo files in `~/.cache/vim`.
+* Put swap, backup and undo files in `~/.cache/vim/{swap,backup,undo}`.
 * Set `hidden` to change between unsaved buffers.
 * Use indentation of four spaces, not tabs.
 * Backspace works in INSERT mode, and cursor moves to other lines.

@@ -285,10 +285,10 @@ set fileencoding=utf-8                      " Default file encoding
 set fileformats=unix,dos,mac                " Support all EOLs by default
 set fileformat=unix                         " Default end of line
 
-set directory^=~/.cache/vim//               " Location of swap files
-set backupdir^=~/.cache/vim//               " Location of backup files
+set directory^=~/.cache/vim/swap//          " Location of swap files
+set backupdir^=~/.cache/vim/backup//        " Location of backup files
 if has('persistent_undo')
-  set undodir^=~/.cache/vim//               " Location of undo files
+  set undodir^=~/.cache/vim/undo//          " Location of undo files
   set undofile                              " Active persistent undo
 endif
 

@@ -35,7 +35,7 @@ mkdir -p "${vimdir}/bundle"
 mkdir -p "${vimdir}/autoload"
 
 # Create directory for swap/backup/undo files
-mkdir -p "${cachedir}"
+mkdir -p "${cachedir}"/{swap,backup,undo}
 if [ ${dirs_only} = true ]; then
     exit
 fi

@@ -1,9 +1,8 @@
 #!/bin/bash
 
-undo_dir=~/.cache/vim
+undo_dir=~/.cache/vim/undo
 for undo_file in "$undo_dir"/*
 do
-    [[ "$undo_file" == *.sw? || "$undo_file" == *~ ]] && continue
     [ -e "$undo_file" ] || continue
     real_file=${undo_file//%/\/}
     real_file=${real_file#$undo_dir/}
