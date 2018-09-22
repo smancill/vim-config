@@ -88,7 +88,8 @@ for idiom in es en; do
                 rm -f "${spell_file}"
             fi
             if [ ! -f "${spell_file}" ]; then
-                wget -O"${spell_file}" "${spell_url}/${spell_name}"
+                echo "- ${spell_name}..."
+                curl -fLo "${spell_file}" "${spell_url}/${spell_name}"
             fi
         done
     done
