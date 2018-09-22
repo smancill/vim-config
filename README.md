@@ -12,7 +12,7 @@ Clone the repository:
 
     git clone https://github.com/smancill/Vim_config.git ~/.vim
 
-Execute the installation script:
+Execute the installation script (curl is required):
 
     cd ~/.vim
     ./install.sh

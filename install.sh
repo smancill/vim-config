@@ -2,6 +2,16 @@
 
 set -u
 
+# Check curl
+if ! command -v curl > /dev/null 2>&1; then
+    cat << EOF >&2
+curl command not found.
+
+Install it with the package manager of your OS and then run this script again.
+EOF
+    exit 1;
+fi
+
 # Paths
 vimdir=${HOME}/.vim
 vimrc=${vimdir}/vimrc
