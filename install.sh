@@ -78,15 +78,15 @@ echo -e "\nGetting spell files..."
 sleep 1
 spell_url=http://ftp.vim.org/vim/runtime/spell
 spell_dir=${vimdir}/spell
-if [ ${force} = true ]; then
-    rm -rf "${spell_dir}"
-fi
 mkdir -p "${spell_dir}"
 for idiom in es en; do
     for enc in latin1 utf-8; do
         for ver in spl sug; do
             spell_name=${idiom}.${enc}.${ver}
             spell_file=${spell_dir}/${spell_name}
+            if [ ${force} = true ]; then
+                rm -f "${spell_file}"
+            fi
             if [ ! -f "${spell_file}" ]; then
                 wget -O"${spell_file}" "${spell_url}/${spell_name}"
             fi
