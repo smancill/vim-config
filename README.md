@@ -1,6 +1,7 @@
 # Configuration for Vim 8.x
 
-This is a distribution of plugins and configurations to use Vim for development.
+This is a distribution of plugins and configurations to use Vim for development,
+on Linux and macOS.
 It uses [vim-plug][vim-plug] to have a well organized Vim directory and to
 manage the plugins automatically.
 The plugins are listed in `bundle.vim`, which is sourced by `vimrc`.
@@ -18,8 +19,7 @@ Execute the installation script (curl is required):
     ./install.sh
 
 This script installs the plugin manager ([vim-plug][vim-plug]), downloads
-and installs the plugins, and creates the symbolic links `~/.vimrc` and
-`~/.gvimrc`.
+and installs the plugins, and downloads spell files for English and Spanish.
 
 ### Prerequisites
 
@@ -51,8 +51,8 @@ Install *Ack* to use the `:Ack[!]` command inside Vim as a replacement for
     brew install ack
 
 See the [webpage][ack-web] for more information.
-The [SilverSearcher](https://github.com/ggreer/the_silver_searcher) is also
-supported as a replacement for `ack` if installed.
+[The Silver Searcher](https://github.com/ggreer/the_silver_searcher) is also
+supported (and recommended) as a replacement for `ack` if installed.
 
 ##### Syntax checking
 
@@ -237,7 +237,6 @@ The following plugins are used (check `vimrc` for configuration details):
 * [vimtex][vimtex]: a modern plugin for editing LaTeX files.
 * [Previm][previm]: realtime preview of markup languages
   (open HTML on browser with `<F9>`).
-* [vim-markdown][markdown_mode]: Markdown mode.
 
 
 [vim-plug]: https://github.com/junegunn/vim-plug
@@ -266,8 +265,6 @@ The following plugins are used (check `vimrc` for configuration details):
 [jedi-vim]: https://github.com/davidhalter/jedi-vim
 [vimtex]: https://github.com/lervag/vimtex
 [previm]: https://github.com/kannokanno/previm
-[markdown_mode]: https://github.com/plasticboy/vim-markdown
-[indent-guides]: https://github.com/nathanaelkane/vim-indent-guides
 
 [ack-web]: http://betterthangrep.com
 [gist-web]: https://gist.github.com
