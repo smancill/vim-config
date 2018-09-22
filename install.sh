@@ -44,13 +44,17 @@ fi
 vimplug_url=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vimplug_vim=${vimdir}/autoload/plug.vim
 echo -e "Installing vim-plug package manager..."
-sleep 1
-if curl -fLo "${vimplug_vim}" --create-dirs ${vimplug_url}; then
-    echo -e "\nPackage manager installed sucessfully"
-    echo -e "https://github.com/junegunn/vim-plug#readme"
+if [ ! -f "${vimplug_vim}" ]; then
+    sleep 1
+    if curl -fLo "${vimplug_vim}" --create-dirs ${vimplug_url}; then
+        echo -e "\nPackage manager installed sucessfully"
+        echo -e "https://github.com/junegunn/vim-plug#readme"
+    else
+        echo -e "\nCould not install package manager"
+        exit
+    fi
 else
-    echo -e "\nCould not install package manager"
-    exit
+    echo -e "Package manager already installed"
 fi
 
 # Install plugins
