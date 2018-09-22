@@ -145,6 +145,7 @@ endif
 
 " Syntastic                                 {{{2
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'passive_filetypes': ['java'] }
 let g:syntastic_c_check_header = 1
 let g:syntastic_cpp_check_header = 1
