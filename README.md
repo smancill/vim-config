@@ -98,7 +98,7 @@ let g:clang_library_path = '/usr/lib/llvm-3.8/lib'
 
 ### Updating to the latest version
 
-Get the last commits from my repository:
+Fetch any changes from the repository:
 
     cd ~/.vim
     git pull origin master
@@ -199,8 +199,8 @@ for a quick introduction to Vim features for editing multiple files.
 The following plugins are used (check `vimrc` for configuration details):
 
 * [local-vimrc](https://github.com/MarcWeber/vim-addon-local-vimrc):
-  simple local `vimrc` with hash protection (default filename changed to
-  `.project.vim`).
+  simple local `vimrc` with hash protection (`.vimrc` and `.project.vim`
+  supported).
 * [Buffergator][buffergator]: list, select and switch between buffers
   (custom mapped to `<C-j>`).
 * [ctrlp.vim][ctrlp]: full path fuzzy file, buffer, MRU and tag finder
@@ -230,7 +230,7 @@ The following plugins are used (check `vimrc` for configuration details):
 * [unimpaired.vim][unimpaired]: pairs of handy bracket mappings
   (custom slim version)
 * [surround.vim][surround]: delete/change/add parentheses, quotes, tags, etc.
-* [repeat.vim][repeat]: repeat supported plugin maps with "."
+* [repeat.vim][repeat]: repeat supported plugin maps with `.`.
 * [clang_complete][clang_complete]: omnicompletion for C/C++ files.
 * [alternate][alternate]: alternate C source/header files quickly
 * [jedi-vim][jedi-vim]: Python autocompletion with the Jedi library.
