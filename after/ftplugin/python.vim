@@ -3,7 +3,7 @@
 setlocal formatoptions=croql
 setlocal nowrap
 
-setlocal makeprg=python\ %
+setlocal makeprg=python3\ %
 setlocal errorformat=
   \%A\ \ File\ \"%f\"\\\,\ line\ %l\\\,%m,
   \%C\ \ \ \ %.%#,
@@ -15,4 +15,4 @@ setlocal errorformat=
   \%-G%.%#
 
 " run the current buffer
-nnoremap <buffer> <silent>  <F9>    :make<CR>
+nnoremap <buffer> <silent>  <F9>    :<C-U>terminal python3 %<CR>
