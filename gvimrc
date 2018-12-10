@@ -1,4 +1,3 @@
-set nocompatible
 source $VIMRUNTIME/mswin.vim
 
 set nowrap
