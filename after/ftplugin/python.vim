@@ -15,4 +15,4 @@ setlocal errorformat=
   \%-G%.%#
 
 " run the current buffer
-nnoremap <buffer> <silent>  <F9>    :<C-U>terminal python3 %<CR>
+nnoremap <buffer> <silent>  <F9>          :<C-U>make<CR>
