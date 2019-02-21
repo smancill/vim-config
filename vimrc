@@ -335,6 +335,7 @@ set wildmode=longest:full,full              " Completion options
 set wildignore+=*.bak,*~,*.swp,             " Ignore these files
 set wildignore+=*.o,*.os,*.so,*.dylib,*.gch,*.mod,*.class
 set wildignore+=*.py[co],*.rb[co],__pycache__
+set wildignorecase                          " Ignore case in file completion
 
 set tabstop=4                               " Four spaces for a tab
 set softtabstop=4                           " Four spaces for a tab
