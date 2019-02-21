@@ -473,6 +473,9 @@ autocmd CursorMovedI,InsertLeave *
     \   silent! pclose |
     \ endif
 
+autocmd CmdlineEnter * set noignorecase
+autocmd CmdlineLeave * set ignorecase
+
 " Always put quickfix window in the bottom
 autocmd FileType qf wincmd J
 
