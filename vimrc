@@ -105,10 +105,12 @@ let g:local_vimrc = {
         \ }
 
 " Fugitive                                  {{{2
-nnoremap <silent> <leader>gs :<C-U>execute "Gstatus <bar> normal \<lt>C-n>"<CR>
+nnoremap <silent> <leader>gs :<C-U>Gstatus<CR>
 nnoremap <silent> <leader>gc :<C-U>Gcommit<CR>
 nnoremap <silent> <leader>gl :<C-U>terminal ++close tig -- %<CR>
+nnoremap <silent> <leader>ge :<C-U>Gedit<CR>
 nnoremap <silent> <leader>gd :<C-U>Gdiff<CR>
+nnoremap <silent> <leader>gu :<C-U>Gedit :%<bar>Gdiff! @<CR>
 nnoremap <silent> <leader>gb :<C-U>terminal ++close tig blame +<C-r>=line('.')<CR> -- %<CR>
 nnoremap <silent> <leader>go :<C-U>Gbrowse<CR>
 
