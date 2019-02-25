@@ -165,6 +165,11 @@ endif
 
 " Gutentangs                                {{{2
 let g:gutentags_ctags_tagfile = '.tags'
+let g:gutentags_file_list_command = {
+  \ 'markers': {
+  \   '.git': 'git ls-files --cached --others --exclude-standard',
+  \   },
+  \ }
 
 " Tagbar                                    {{{2
 nnoremap <silent> <F8> :<C-U>TagbarToggle<CR>
