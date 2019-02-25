@@ -494,7 +494,7 @@ autocmd BufRead /private/var/folders/*,/var/folders/*,/tmp/*
     \ setlocal noundofile
 
 " Terminal buffers
-autocmd TerminalOpen * if &buftype == 'terminal' | setlocal nonumber | endif
+silent! autocmd TerminalOpen * if &buftype == 'terminal' | setlocal nonumber | endif
 
 augroup END
 
