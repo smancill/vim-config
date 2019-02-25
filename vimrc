@@ -71,6 +71,10 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS CONFIGURATION                 {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Prerequisites                             {{{2
+let s:has_fd = executable('fd')
+let s:has_ag = executable('ag')
+
 " SuperTab                                  {{{2
 if has('gui_running') || has('nvim')
   let g:SuperTabMappingForward = '<C-Space>'
@@ -134,13 +138,13 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.?tags$',
   \ 'dir':  '\v\.(git|hg|svn|gradle)$|(_site|build)$'
   \ }
-if executable('fd')
+if s:has_fd
   let g:ctrlp_user_command = "fd --hidden --exclude .git --type f '' %s"
   let g:ctrlp_use_caching = 0
 endif
 
 " Ack                                       {{{2
-if executable('ag')
+if s:has_ag
   let g:ackprg = 'ag --hidden --ignore .git --vimgrep'
 endif
 
