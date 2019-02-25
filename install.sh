@@ -20,12 +20,12 @@ cachedir=$HOME/.cache/vim
 # Get user option
 force=false
 dirs_only=false
-skip=false
+update=false
 if [ $# -eq 1 ]; then
     case "$1" in
         -f) force=true ;;
         -d) dirs_only=true ;;
-        -s) skip=true ;;
+        -u) update=true ;;
         *) echo "Unknown option."; exit 2 ;;
     esac
 fi
@@ -53,8 +53,8 @@ fi
 # Install package manager
 vimplug_url=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vimplug_vim=${vimdir}/autoload/plug.vim
-echo -e "Installing vim-plug package manager..."
 if [ ! -f "${vimplug_vim}" ]; then
+    echo -e "Installing vim-plug package manager..."
     sleep 1
     if curl -fLo "${vimplug_vim}" --create-dirs ${vimplug_url}; then
         echo -e "\nPackage manager installed sucessfully"
@@ -63,12 +63,12 @@ if [ ! -f "${vimplug_vim}" ]; then
         echo -e "\nCould not install package manager"
         exit
     fi
-else
+elif [ ${update} = false ]; then
     echo -e "Package manager already installed"
 fi
 
 # Install plugins
-if [ ${skip} = false ]; then
+if [ ${update} = false ]; then
     log_file=$(mktemp 2>/dev/null || mktemp -t 'tmp')
     trap 'rm -f "$log_file"' EXIT
     echo -e "\nInstalling plugins..."
@@ -81,6 +81,10 @@ if [ ${skip} = false ]; then
         echo -e "\nCould not install all plugins. Check log."
     fi
     echo
+else
+    vim -N -u "${vimrc}" -U NONE -i NONE \
+        -c "PlugUpgrade | PlugSafeUpdate | echomsg 'Plugins updated. You can exit Vim.'"
+    exit $?
 fi
 
 # Spell files

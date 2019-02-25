@@ -102,9 +102,10 @@ Fetch any changes from the repository:
 
     cd ~/.vim
     git pull origin master
+    ./install -u
 
-Launch `vim` and run `:PlugInstall` to install new plugins, and `:PlugUpdate`
-to update all plugins. See [vim-plug][vim-plug] documentation for more
+The script will start `vim` and run `:PlugUpdate` to install new plugins
+to update the existing ones. See [vim-plug][vim-plug] documentation for more
 details.
 
 ### Overwrite and extends this configuration
