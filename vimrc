@@ -488,8 +488,10 @@ autocmd CursorMovedI,InsertLeave *
     \   silent! pclose |
     \ endif
 
-autocmd CmdlineEnter * if expand('<afile>') == ':' | set noignorecase | endif
-autocmd CmdlineLeave * if expand('<afile>') == ':' | set ignorecase | endif
+if v:version >= 801
+  autocmd CmdlineEnter * if expand('<afile>') == ':' | set noignorecase | endif
+  autocmd CmdlineLeave * if expand('<afile>') == ':' | set ignorecase | endif
+endif
 
 " Always put quickfix window in the bottom
 autocmd FileType qf wincmd J
@@ -506,7 +508,9 @@ autocmd BufRead /private/var/folders/*,/var/folders/*,/tmp/*
     \ setlocal noundofile
 
 " Terminal buffers
-silent! autocmd TerminalOpen * if &buftype == 'terminal' | setlocal nonumber | endif
+if v:version >= 801
+  autocmd TerminalOpen * if &buftype == 'terminal' | setlocal nonumber | endif
+endif
 
 augroup END
 
