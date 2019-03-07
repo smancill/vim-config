@@ -489,8 +489,8 @@ autocmd CursorMovedI,InsertLeave *
     \ endif
 
 if v:version >= 801
-  autocmd CmdlineEnter * if expand('<afile>') == ':' | set noignorecase | endif
-  autocmd CmdlineLeave * if expand('<afile>') == ':' | set ignorecase | endif
+  autocmd CmdlineEnter : set noignorecase
+  autocmd CmdlineLeave : set ignorecase
 endif
 
 " Always put quickfix window in the bottom
