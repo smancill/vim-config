@@ -347,7 +347,7 @@ endif
 
 set wildmenu                                " Better command-line completion
 set wildmode=longest:full,full              " Completion options
-set wildignore+=*.bak,*~,*.swp,             " Ignore these files
+set wildignore+=*.bak,*~,*.swp              " Ignore these files
 set wildignore+=*.o,*.os,*.so,*.dylib,*.gch,*.mod,*.class
 set wildignore+=*.py[co],*.rb[co],__pycache__
 set wildignorecase                          " Ignore case in file completion
