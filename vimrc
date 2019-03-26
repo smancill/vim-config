@@ -503,7 +503,7 @@ autocmd FileType qf wincmd J
 
 " If last windows is quickfix window, exit Vim
 autocmd BufEnter *
-    \ if &buftype == 'quickfix' || &buftype == 'nofile' |
+    \ if &buftype == 'quickfix' |
     \   if winbufnr(2) == -1 |
     \     quit! |
     \   endif |
