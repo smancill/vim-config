@@ -56,8 +56,8 @@ supported (and recommended) as a replacement for `ack` if installed.
 
 ##### Syntax checking
 
-[Syntastic][syntastic] provides automatic syntax
-checking when saving the open file.
+[ALE][ALE] provides automatic syntax checking
+when saving the file.
 
 C/C++ files have automatic support with *GCC*.
 
@@ -134,7 +134,7 @@ or `~/.vim/vimrc_local` (for a local-machine), and put extra settings in there:
 
 " Override settings for plugins
 let g:clang_user_options = '-DCLANG -std=c++11 -fcxx-exceptions'
-let g:syntastic_cpp_compiler_options = '-std=c++11'
+let g:ale_cpp_gcc_options = '-std=c++11'
 
 " Override Vim settings
 set nonumber
@@ -221,7 +221,7 @@ The following plugins are used (check `vimrc` for configuration details):
 * [fugitive.vim][fugitive]: an awesome Git wrapper
   (see custom mappings with `:map <leader>g`).
 * [Gist][gist]: for creating [Gists][gist-web].
-* [Syntastic][syntastic]: automatic syntax checking.
+* [ALE][ale]: Asynchronous linting/fixing.
 * [Mundo][mundo]: visualize the Vim undo tree (toggle with `<F5>`).
 * [Gutentags][gutentags]: automatically manage the tag files.
 * [Tagbar][tagbar]: a class outline viewer, displays tags in a window,
@@ -252,7 +252,7 @@ The following plugins are used (check `vimrc` for configuration details):
 [fugitive]: https://github.com/tpope/vim-fugitive
 [gv]: https://github.com/junegunn/gv.vim
 [gist]: https://github.com/mattn/gist-vim
-[syntastic]: https://github.com/scrooloose/syntastic
+[ale]: https://github.com/w0rp/ale
 [mundo]: https://github.com/simnalamburt/vim-mundo
 [gutentags]: https://github.com/ludovicchabant/vim-gutentags
 [tagbar]: https://github.com/majutsushi/tagbar

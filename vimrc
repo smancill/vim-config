@@ -151,17 +151,18 @@ if s:has_ag
   let g:ackprg = 'ag --hidden --ignore .git --vimgrep'
 endif
 
-" Syntastic                                 {{{2
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { 'passive_filetypes': ['java'] }
-let g:syntastic_c_check_header = 1
-let g:syntastic_cpp_check_header = 1
-let g:syntastic_cpp_config_file = '.clang_complete'
-let g:syntastic_c_config_file = '.clang_complete'
-if v:version == 700
-  let g:syntastic_enable_highlighting = 0
-endif
+" ALE                                       {{{2
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_open_list = 0
+let g:ale_linters = {
+  \   'c': ['gcc'],
+  \   'cpp': ['gcc'],
+  \   'java': [],
+  \   'python': ['flake8'],
+  \ }
+let g:ale_pattern_options = {}
 
 " Gutentangs                                {{{2
 let g:gutentags_ctags_tagfile = '.tags'
