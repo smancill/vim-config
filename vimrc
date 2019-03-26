@@ -163,6 +163,9 @@ let g:ale_linters = {
   \   'python': ['flake8'],
   \ }
 let g:ale_pattern_options = {}
+let g:ale_c_parse_compile_commands = 1
+let g:ale_cpp_gcc_options = ''
+let g:ale_cpp_clang_options = ''
 
 " Gutentangs                                {{{2
 let g:gutentags_ctags_tagfile = '.tags'
@@ -210,6 +213,7 @@ let g:clang_jumpto_declaration_key = '<leader><C-]>'
 let g:clang_jumpto_back_key = '<leader><C-T>'
 let g:clang_jumpto_declaration_in_preview_key = '<leader><C-W>}'
 let g:clang_user_options = '-DCLANG -fcxx-exceptions'
+let g:clang_auto_user_options = 'compile_commands.json, .clang_complete, path'
 
 " vimtex                                    {{{2
 let g:tex_flavor = 'latex'            " filetype of *.tex
