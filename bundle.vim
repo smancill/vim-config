@@ -28,7 +28,7 @@ Plug 'https://github.com/mattn/gist-vim'
 Plug 'https://github.com/mattn/webapi-vim'
 
 " Programming
-Plug 'https://github.com/w0rp/ale'
+Plug 'https://github.com/dense-analysis/ale'
 Plug 'https://github.com/simnalamburt/vim-mundo'
 Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/benjifisher/matchit.zip'
