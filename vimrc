@@ -160,6 +160,7 @@ let g:ale_linters = {
   \   'c': ['gcc'],
   \   'cpp': ['gcc'],
   \   'java': [],
+  \   'javascript': ['eslint'],
   \   'python': ['flake8'],
   \ }
 let g:ale_pattern_options = {}
