@@ -191,7 +191,6 @@ let g:airline#extensions#disable_rtp_load = 1
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#vimtex#enabled = 0
 
-
 " Alternate                                 {{{2
 let g:alternateExtensions_cc  = 'hh,h,hpp,hxx'
 let g:alternateExtensions_cpp = 'hpp,h,hh,hxx'
