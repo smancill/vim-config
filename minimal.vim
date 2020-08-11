@@ -2,6 +2,6 @@ set nocompatible
 
 call plug#begin('~/.vim/bundle')
 
-Plug 'tpope/vim-sensible'
+Plug 'https://github.com/tpope/vim-sensible'
 
 call plug#end()
