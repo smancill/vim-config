@@ -97,8 +97,6 @@ let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
 let g:UltiSnipsEditSplit = 'context'
 if s:has_private_dir
   let g:UltiSnipsSnippetsDir = '~/.vim/private/UltiSnips'
-else
-  let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 endif
 
 " vim-addon-local-vimrc                     {{{2
