@@ -1,3 +1,5 @@
+" bundle.vim: register and configure plugins
+
 " Local vimrc
 Plug 'https://github.com/MarcWeber/vim-addon-local-vimrc'
 

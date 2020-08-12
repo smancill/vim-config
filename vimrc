@@ -1,4 +1,4 @@
-" ~/.vimrc: executed by Vim at startup
+" vimrc: executed by Vim at startup
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS                               {{{1
@@ -29,7 +29,7 @@ function! s:plugins_update() abort
   if !isdirectory(snapshot_dir)
     call mkdir(snapshot_dir, 'p')
   endif
-  exe 'PlugSnapshot! '.snapshot_dir.'/plug-'.strftime('%Y-%m-%dT%H:%M').'.vim'
+  exe 'PlugSnapshot! '.snapshot_dir . '/plug-' . strftime('%Y-%m-%dT%H:%M') . '.vim'
   close
   PlugUpdate
 endfu
@@ -101,30 +101,30 @@ endif
 
 " vim-addon-local-vimrc                     {{{2
 let g:local_vimrc = {
-        \ 'names': ['.project.vim', '.vimrc'],
-        \ 'hash_fun': 'LVRHashOfFile',
-        \ 'cache_file': $HOME . '/.cache/vim/local_rc_cache',
-        \ }
+  \ 'names': ['.project.vim', '.vimrc'],
+  \ 'hash_fun': 'LVRHashOfFile',
+  \ 'cache_file': $HOME . '/.cache/vim/local_rc_cache',
+  \ }
 
 " Fugitive                                  {{{2
-nnoremap <silent> <leader>gs :<C-U>Gstatus<CR>
-nnoremap <silent> <leader>gc :<C-U>Gcommit<CR>
-nnoremap <silent> <leader>gl :<C-U>terminal ++close tig -- %<CR>
-nnoremap <silent> <leader>ge :<C-U>Gedit<CR>
-nnoremap <silent> <leader>gd :<C-U>Gdiff<CR>
-nnoremap <silent> <leader>gu :<C-U>Gedit :%<bar>Gdiff! @<CR>
-nnoremap <silent> <leader>gb :<C-U>terminal ++close tig blame +<C-r>=line('.')<CR> -- %<CR>
-nnoremap <silent> <leader>go :<C-U>Gbrowse<CR>
+nnoremap <silent>   <leader>gs    :<C-U>Gstatus<CR>
+nnoremap <silent>   <leader>gc    :<C-U>Gcommit<CR>
+nnoremap <silent>   <leader>gl    :<C-U>terminal ++close tig -- %<CR>
+nnoremap <silent>   <leader>ge    :<C-U>Gedit<CR>
+nnoremap <silent>   <leader>gd    :<C-U>Gdiff<CR>
+nnoremap <silent>   <leader>gu    :<C-U>Gedit :%<bar>Gdiff! @<CR>
+nnoremap <silent>   <leader>gb    :<C-U>terminal ++close tig blame +<C-r>=line('.')<CR> -- %<CR>
+nnoremap <silent>   <leader>go    :<C-U>Gbrowse<CR>
 
 " ctrlp                                     {{{2
 if has('gui_running') || has('nvim')
-  nnoremap <silent> <C-Space> :<C-U>CtrlPBuffer<CR>
+  nnoremap <silent>   <C-Space>     :<C-U>CtrlPBuffer<CR>
 else
-  nnoremap <silent> <C-@>     :<C-U>CtrlPBuffer<CR>
+  nnoremap <silent>   <C-@>         :<C-U>CtrlPBuffer<CR>
 endif
-nnoremap <silent> <C-N>     :<C-U>CtrlPMRU<CR>
-nnoremap <silent> g{        :<C-U>CtrlPTag<CR>
-nnoremap <silent> g[        :<C-U>CtrlPBufTag<CR>
+nnoremap <silent>   <C-N>         :<C-U>CtrlPMRU<CR>
+nnoremap <silent>   g{            :<C-U>CtrlPTag<CR>
+nnoremap <silent>   g[            :<C-U>CtrlPBufTag<CR>
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_by_filename = 0
 let g:ctrlp_match_window = 'results:40'
@@ -141,7 +141,7 @@ if s:has_fd
   let g:ctrlp_use_caching = 0
 endif
 let g:ctrlp_buftag_types = {
-  \ 'markdown' : '--language-force=markdown --md-types=csSt',
+  \ 'markdown': '--language-force=markdown --md-types=csSt',
   \ }
 
 " Ack                                       {{{2
@@ -155,11 +155,11 @@ let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_open_list = 0
 let g:ale_linters = {
-  \   'c': ['gcc'],
-  \   'cpp': ['gcc'],
-  \   'java': [],
-  \   'javascript': ['eslint'],
-  \   'python': ['flake8'],
+  \ 'c': ['gcc'],
+  \ 'cpp': ['gcc'],
+  \ 'java': [],
+  \ 'javascript': ['eslint'],
+  \ 'python': ['flake8'],
   \ }
 let g:ale_pattern_options = {}
 let g:ale_c_parse_compile_commands = 1
@@ -175,7 +175,7 @@ let g:gutentags_file_list_command = {
   \ }
 
 " Tagbar                                    {{{2
-nnoremap <silent> <F8> :<C-U>TagbarToggle<CR>
+nnoremap <silent>   <F8>          :<C-U>TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 let g:tagbar_singleclick = 1
@@ -200,8 +200,8 @@ let g:alternateExtensions_hpp = 'cpp,cxx,C,cc'
 let g:alternateExtensions_hxx = 'cpp,cxx,C,cc'
 
 " Sideways                                  {{{2
-nnoremap <Leader>< :SidewaysLeft<CR>
-nnoremap <Leader>> :SidewaysRight<CR>
+nnoremap  <Leader><     :SidewaysLeft<CR>
+nnoremap  <Leader>>     :SidewaysRight<CR>
 
 " Clang Complete                            {{{2
 let g:clang_auto_select = 1
@@ -217,15 +217,15 @@ let g:clang_auto_user_options = 'compile_commands.json, .clang_complete, path'
 " vimtex                                    {{{2
 let g:tex_flavor = 'latex'            " filetype of *.tex
 let g:vimtex_compiler_latexmk = {
-   \ 'callback': 0,
-   \ 'continous': 0,
- \ }
+  \ 'callback': 0,
+  \ 'continous': 0,
+  \ }
 let g:vimtex_echo_ignore_wait = 1
 let g:vimtex_quickfix_ignore_all_warnings = 0
 let g:vimtex_quickfix_ignored_warnings = [
-    \ 'Underfull',
-    \ 'Overfull',
-    \ 'specifier changed to',
+  \ 'Underfull',
+  \ 'Overfull',
+  \ 'specifier changed to',
   \ ]
 
 " jedi                                      {{{2
@@ -233,15 +233,15 @@ let g:jedi#auto_vim_configuration = 0
 let g:jedi#completions_command = ''
 
 " Buffergator                               {{{2
-nnoremap <silent>  <C-J>          :<C-U>BuffergatorOpen<CR>
-nnoremap <silent>  <C-_>          :<C-U>BuffergatorTabsOpen<CR>
+nnoremap <silent>   <C-J>         :<C-U>BuffergatorOpen<CR>
+nnoremap <silent>   <C-_>         :<C-U>BuffergatorTabsOpen<CR>
 augroup filetype_buffergator
-    autocmd!
-    autocmd FileType buffergator nnoremap <buffer> <C-j>   j
-    autocmd FileType buffergator nnoremap <buffer> <C-k>   k
-    autocmd FileType buffergator nnoremap <buffer> -       -
-    autocmd BufEnter \[\[buffergator-buffers\]\]  unmap ds
-    autocmd BufLeave \[\[buffergator-buffers\]\]  nmap  ds  <Plug>Dsurround
+  autocmd!
+  autocmd FileType buffergator  nnoremap <buffer>   <C-j>   j
+  autocmd FileType buffergator  nnoremap <buffer>   <C-k>   k
+  autocmd FileType buffergator  nnoremap <buffer>   -       -
+  autocmd BufEnter \[\[buffergator-buffers\]\]  unmap ds
+  autocmd BufLeave \[\[buffergator-buffers\]\]  nmap  ds  <Plug>Dsurround
 augroup END
 let g:buffergator_suppress_keymaps = 1
 let g:buffergator_viewport_split_policy = 'B'
@@ -267,21 +267,21 @@ let g:netrw_altfile = 1
 let g:netrw_dirhistmax = 0
 
 " NERDTree                                  {{{2
-nnoremap <silent>  <F3>           :<C-U>NERDTreeToggle<CR>
-nnoremap <silent>  <leader><F3>   :<C-U>NERDTreeFind<CR>
+nnoremap <silent>   <F3>          :<C-U>NERDTreeToggle<CR>
+nnoremap <silent>   <leader><F3>  :<C-U>NERDTreeFind<CR>
 let NERDTreeHijackNetrw = 0
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeRespectWildIgnore = 1
 let NERDTreeIgnore = [
-                   \'\.d$[[dir]]',
-                   \'\.git$[[dir]]',
-                   \'\.hg$[[dir]]',
-                   \'\.svn$[[dir]]',
-                   \'\.\?tags\(\.\w*\)\?$[[file]]',
-                   \]
+  \ '\.d$[[dir]]',
+  \ '\.git$[[dir]]',
+  \ '\.hg$[[dir]]',
+  \ '\.svn$[[dir]]',
+  \ '\.\?tags\(\.\w*\)\?$[[file]]',
+  \ ]
 
 " mundo                                     {{{2
-nnoremap <silent>  <F5>           :<C-U>silent MundoToggle<CR>
+nnoremap <silent>   <F5>          :<C-U>silent MundoToggle<CR>
 let g:mundo_preview_bottom = 1
 let g:mundo_verbose_graph = 0
 
@@ -418,7 +418,7 @@ nnoremap k  gk
 " Buffers
 nnoremap <silent>   <C-k>         :<C-U>b#<CR>
 
-" Make Y consistent with C and D.  See :help Y.
+" Make Y consistent with C and D (see :help Y)
 nnoremap Y y$
 
 " Omnicompletion popup menu like IDE
@@ -437,9 +437,9 @@ nnoremap            Q             gq
 " Write as sudo
 cnoremap            w!!           w !sudo tee % >/dev/null
 
-" Use <C-L> to clear the highlighting of :set hlsearch.
+" Use <C-L> to clear the highlighting of :set hlsearch
 if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent> <C-L> :<C-U>nohlsearch<CR>:diffupdate<CR><C-L>
+  nnoremap <silent>   <C-L>         :<C-U>nohlsearch<CR>:diffupdate<CR><C-L>
 endif
 
 " Break undo after CTRL-U
@@ -455,42 +455,42 @@ autocmd!
 
 " Restore cursor position
 autocmd BufReadPost *
-    \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit' |
-    \   exe "normal! g`\"" |
-    \ endif
+  \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit' |
+  \   exe "normal! g`\"" |
+  \ endif
 
-" Save current view settings on a per-window, per-buffer basis.
+" Save current view settings on a per-window, per-buffer basis
 function! AutoSaveWinView()
-    if !exists('w:SavedBufView')
-        let w:SavedBufView = {}
-    endif
-    let w:SavedBufView[bufnr('%')] = winsaveview()
+  if !exists('w:SavedBufView')
+    let w:SavedBufView = {}
+  endif
+  let w:SavedBufView[bufnr('%')] = winsaveview()
 endfunction
 
-" Restore current view settings.
+" Restore current view settings
 function! AutoRestoreWinView()
-    let buf = bufnr('%')
-    if exists('w:SavedBufView') && has_key(w:SavedBufView, buf)
-        let v = winsaveview()
-        let atStartOfFile = v.lnum == 1 && v.col == 0
-        if atStartOfFile && !&diff
-            call winrestview(w:SavedBufView[buf])
-        endif
-        unlet w:SavedBufView[buf]
+  let buf = bufnr('%')
+  if exists('w:SavedBufView') && has_key(w:SavedBufView, buf)
+    let v = winsaveview()
+    let atStartOfFile = v.lnum == 1 && v.col == 0
+    if atStartOfFile && !&diff
+      call winrestview(w:SavedBufView[buf])
     endif
+    unlet w:SavedBufView[buf]
+  endif
 endfunction
 
-" When switching buffers, preserve window view.
+" When switching buffers, preserve window view
 if v:version >= 700
-    autocmd BufLeave * call AutoSaveWinView()
-    autocmd BufEnter * call AutoRestoreWinView()
+  autocmd BufLeave * call AutoSaveWinView()
+  autocmd BufEnter * call AutoRestoreWinView()
 endif
 
 " Automatically close popup menu and preview window for omnicompletion
 autocmd CursorMovedI,InsertLeave *
-    \ if pumvisible() == 0 |
-    \   silent! pclose |
-    \ endif
+  \ if pumvisible() == 0 |
+  \   silent! pclose |
+  \ endif
 
 if v:version >= 801
   autocmd CmdlineEnter : set noignorecase
@@ -502,14 +502,14 @@ autocmd FileType qf wincmd J
 
 " If last windows is quickfix window, exit Vim
 autocmd BufEnter *
-    \ if &buftype == 'quickfix' |
-    \   if winbufnr(2) == -1 |
-    \     quit! |
-    \   endif |
-    \ endif
+  \ if &buftype == 'quickfix' |
+  \   if winbufnr(2) == -1 |
+  \     quit! |
+  \   endif |
+  \ endif
 
 autocmd BufRead /private/var/folders/*,/var/folders/*,/tmp/*
-    \ setlocal noundofile
+  \ setlocal noundofile
 
 " Terminal buffers
 if v:version >= 801

@@ -1,5 +1,5 @@
 let s:current_color = get(g:, 'colors_name', 'default')
-if s:current_color == "darkglass" || s:current_color == 'inkpot'
+if s:current_color == 'darkglass' || s:current_color == 'inkpot'
   " default
   hi! link  markdownLinkText              Identifier
   hi! link  markdownUrl                   Statement

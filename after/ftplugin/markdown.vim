@@ -13,10 +13,10 @@ nnoremap <buffer> <silent>  [[           :call search('\v^(#<bar>.+\n(\=+<bar>-+
 nnoremap <buffer> <silent>  ]]           :call search('\v^(#<bar>.+\n(\=+<bar>-+)$)', 'W')<CR>
 
 let g:tagbar_type_markdown = {
-  \ 'ctagstype' : 'markdown',
-  \ 'kinds' : [
+  \ 'ctagstype': 'markdown',
+  \ 'kinds': [
   \   'h:headings'
   \ ],
-  \ 'sort'    : 0,
-  \ 'deffile' : expand('<sfile>:p:h') . '/markdown/markdown.cnf'
+  \ 'sort': 0,
+  \ 'deffile': expand('<sfile>:p:h') . '/markdown/markdown.cnf'
   \ }
