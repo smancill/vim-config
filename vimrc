@@ -1,6 +1,23 @@
 " vimrc: executed by Vim at startup
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ENVIRONMENT                           {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if empty($XDG_CONFIG_HOME)
+  let $XDG_CONFIG_HOME = $HOME . '/.config'
+endif
+
+if empty($XDG_CACHE_HOME)
+  let $XDG_CACHE_HOME = $HOME . '/.cache'
+endif
+
+if empty($XDG_DATA_HOME)
+  let $XDG_DATA_HOME = $HOME . '/.local/share'
+endif
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS                               {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -103,7 +120,7 @@ endif
 let g:local_vimrc = {
   \ 'names': ['.project.vim', '.vimrc'],
   \ 'hash_fun': 'LVRHashOfFile',
-  \ 'cache_file': $HOME . '/.cache/vim/local_rc_cache',
+  \ 'cache_file': $XDG_CACHE_HOME . '/vim/local_rc_cache',
   \ }
 
 " Fugitive                                  {{{2
@@ -322,10 +339,10 @@ set fileencoding=utf-8                      " Default file encoding
 set fileformats=unix,dos,mac                " Support all EOLs by default
 set fileformat=unix                         " Default end of line
 
-set directory^=~/.cache/vim/swap//          " Location of swap files
-set backupdir^=~/.cache/vim/backup//        " Location of backup files
+set directory^=$XDG_CACHE_HOME/vim/swap//   " Location of swap files
+set backupdir^=$XDG_CACHE_HOME/vim/backup// " Location of backup files
 if has('persistent_undo')
-  set undodir^=~/.cache/vim/undo//          " Location of undo files
+  set undodir^=$XDG_CACHE_HOME/vim/undo//   " Location of undo files
   set undofile                              " Active persistent undo
 endif
 

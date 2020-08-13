@@ -15,7 +15,7 @@ fi
 # Paths
 vimdir=${HOME}/.vim
 vimrc=${vimdir}/vimrc
-cachedir=$HOME/.cache/vim
+cachedir=${XDG_CACHE_HOME:-$HOME/.cache}/vim
 
 # Get user option
 force=false

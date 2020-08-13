@@ -1,6 +1,6 @@
 #!/bin/bash
 
-undo_dir=~/.cache/vim/undo
+undo_dir=${XDG_CACHE_HOME:-$HOME/.cache}/vim/undo
 for undo_file in "$undo_dir"/*
 do
     [ -e "$undo_file" ] || continue
