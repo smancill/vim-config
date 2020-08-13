@@ -22,7 +22,7 @@ else
   let $VIM_CONFIG_HOME = $HOME . '/.vim'
 endif
 
-let s:has_private_dir = isdirectory($VIM_CONFIG_HOME . '/private')
+let g:vim_config_has_private_dir = isdirectory($VIM_CONFIG_HOME . '/private')
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -81,7 +81,7 @@ delcom UnPlug
 
 
 " Support private directory
-if s:has_private_dir
+if g:vim_config_has_private_dir
   set rtp-=$VIM_CONFIG_HOME
   set rtp^=$VIM_CONFIG_HOME/private
   set rtp^=$VIM_CONFIG_HOME
@@ -95,8 +95,8 @@ endif
 " PLUGINS CONFIGURATION                 {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Prerequisites                             {{{2
-let s:has_fd = executable('fd')
-let s:has_ag = executable('ag')
+let g:vim_config_has_fd = executable('fd')
+let g:vim_config_has_ag = executable('ag')
 
 " SuperTab                                  {{{2
 if has('gui_running') || has('nvim')
@@ -118,7 +118,7 @@ endif
 let g:UltiSnipsJumpForwardTrigger = '<TAB>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
 let g:UltiSnipsEditSplit = 'context'
-if s:has_private_dir
+if g:vim_config_has_private_dir
   let g:UltiSnipsSnippetsDir = $VIM_CONFIG_HOME . '/private/UltiSnips'
 endif
 
@@ -159,7 +159,7 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.?tags$',
   \ 'dir':  '\v\.(git|hg|svn|gradle)$|(_site|build)$'
   \ }
-if s:has_fd
+if g:vim_config_has_fd
   let g:ctrlp_user_command = "fd --hidden --exclude .git --type f '' %s"
   let g:ctrlp_use_caching = 0
 endif
@@ -168,7 +168,7 @@ let g:ctrlp_buftag_types = {
   \ }
 
 " Ack                                       {{{2
-if s:has_ag
+if g:vim_config_has_ag
   let g:ackprg = 'ag --hidden --ignore .git --vimgrep'
 endif
 
