@@ -10,9 +10,9 @@ colo darkglass
 
 " Load extra gvimrc
 let s:gvimrc_patterns = [
-  \ '~/.vim/gvimrc_?*',
-  \ '~/.vim/gvimrc.local',
-  \ '~/.vim/private/gvimrc*'
+  \ $VIM_CONFIG_HOME . '/gvimrc_?*',
+  \ $VIM_CONFIG_HOME . '/gvimrc.local',
+  \ $VIM_CONFIG_HOME . '/private/gvimrc*'
   \ ]
 for s:gvimrc_pattern in s:gvimrc_patterns
   for s:gvimrc_file in split(glob(s:gvimrc_pattern, '\n'))

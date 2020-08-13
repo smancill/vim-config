@@ -16,6 +16,14 @@ if empty($XDG_DATA_HOME)
   let $XDG_DATA_HOME = $HOME . '/.local/share'
 endif
 
+if has('nvim')
+  let $VIM_CONFIG_HOME = $XDG_CONFIG_HOME . '/nvim'
+else
+  let $VIM_CONFIG_HOME = $HOME . '/.vim'
+endif
+
+let s:has_private_dir = isdirectory($VIM_CONFIG_HOME . '/private')
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS                               {{{1
@@ -25,14 +33,12 @@ endif
 set nocompatible
 
 if has('vim_starting')
-  if empty(glob('~/.vim/autoload/plug.vim'))
+  if empty($VIM_CONFIG_HOME . '/autoload/plug.vim')
     echomsg 'Plugin manager "vim-plug" not found.'
     echomsg 'Run "./install.sh" in your $VIMHOME directory.'
     exit
   endif
 endif
-
-let s:has_private_dir = isdirectory(glob('~/.vim/private'))
 
 function! s:deregister(repo)
   let repo = substitute(a:repo, '[\/]\+$', '', '')
@@ -42,7 +48,7 @@ function! s:deregister(repo)
 endfunction
 
 function! s:plugins_update() abort
-  let snapshot_dir = expand('~/.vim/tmp/snapshot')
+  let snapshot_dir = $VIM_CONFIG_HOME . '/tmp/snapshot'
   if !isdirectory(snapshot_dir)
     call mkdir(snapshot_dir, 'p')
   endif
@@ -55,13 +61,13 @@ command! -nargs=1 -bar UnPlug call s:deregister(<args>)
 command! -bar PlugSafeUpdate call s:plugins_update()
 
 
-call plug#begin('~/.vim/bundle')
+call plug#begin($VIM_CONFIG_HOME . '/bundle')
 
 " Load bundles
 let s:bundle_patterns = [
-  \ '~/.vim/bundle*.vim',
-  \ '~/.vim/bundle.local',
-  \ '~/.vim/private/bundle*.vim'
+  \ $VIM_CONFIG_HOME . '/bundle*.vim',
+  \ $VIM_CONFIG_HOME . '/bundle.local',
+  \ $VIM_CONFIG_HOME . '/private/bundle*.vim'
   \ ]
 for s:bundle_pattern in s:bundle_patterns
   for s:bundle_file in split(glob(s:bundle_pattern, '\n'))
@@ -76,12 +82,12 @@ delcom UnPlug
 
 " Support private directory
 if s:has_private_dir
-  set rtp-=~/.vim
-  set rtp^=~/.vim/private
-  set rtp^=~/.vim
+  set rtp-=$VIM_CONFIG_HOME
+  set rtp^=$VIM_CONFIG_HOME/private
+  set rtp^=$VIM_CONFIG_HOME
 
-  " Allow overriding settings in ~/.vim/after
-  set rtp+=~/.vim/private/after
+  " Allow overriding settings in $VIM_CONFIG_HOME/after
+  set rtp+=$VIM_CONFIG_HOME/private/after
 endif
 
 
@@ -113,7 +119,7 @@ let g:UltiSnipsJumpForwardTrigger = '<TAB>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
 let g:UltiSnipsEditSplit = 'context'
 if s:has_private_dir
-  let g:UltiSnipsSnippetsDir = '~/.vim/private/UltiSnips'
+  let g:UltiSnipsSnippetsDir = $VIM_CONFIG_HOME . '/private/UltiSnips'
 endif
 
 " vim-addon-local-vimrc                     {{{2
@@ -405,7 +411,7 @@ set pumheight=10                            " Size of completion menu
 
 set spelllang=es,en                         " Spelling languages
 set spellsuggest=10                         " Number of spelling suggestions
-set spellfile=~/.vim/spell/mine.utf-8.add   " Spell file for additions
+set spellfile=$VIM_CONFIG_HOME/spell/mine.utf-8.add " Spell file for additions
 
 set tags=./.tags;,./tags;                   " Use a dot tags file
 
@@ -567,9 +573,9 @@ highlight PmenuSel ctermfg=black
 
 " Load extra vimrc
 let s:vimrc_patterns = [
-  \ '~/.vim/vimrc_?*',
-  \ '~/.vim/vimrc.local',
-  \ '~/.vim/private/vimrc*'
+  \ $VIM_CONFIG_HOME . '/vimrc_?*',
+  \ $VIM_CONFIG_HOME . '/vimrc.local',
+  \ $VIM_CONFIG_HOME . '/private/vimrc*'
   \ ]
 for s:vimrc_pattern in s:vimrc_patterns
   for s:vimrc_file in split(glob(s:vimrc_pattern, '\n'))
