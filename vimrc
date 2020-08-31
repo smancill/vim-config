@@ -65,7 +65,8 @@ call plug#begin($VIM_CONFIG_HOME . '/bundle')
 
 " Load bundles
 let s:bundle_patterns = [
-  \ $VIM_CONFIG_HOME . '/bundle*.vim',
+  \ $VIM_CONFIG_HOME . '/bundle.vim',
+  \ $VIM_CONFIG_HOME . '/bundle_?*.vim',
   \ $VIM_CONFIG_HOME . '/bundle.local',
   \ $VIM_CONFIG_HOME . '/private/bundle*.vim'
   \ ]
