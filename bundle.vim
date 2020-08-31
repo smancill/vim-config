@@ -359,22 +359,6 @@ let g:alternateExtensions_hpp = 'cpp,cxx,C,cc'
 let g:alternateExtensions_hxx = 'cpp,cxx,C,cc'
 " }}}
 
-" Clang Complete                            {{{2
-if $VIM_CONFIG_USE_COC == ''
-Plug 'https://github.com/Rip-Rip/clang_complete'
-" {{{
-let g:clang_auto_select = 1
-let g:clang_snippets = 1
-let g:clang_snippets_engine = 'ultisnips'
-let g:clang_complete_copen = 0
-let g:clang_jumpto_declaration_key = '<leader><C-]>'
-let g:clang_jumpto_back_key = '<leader><C-T>'
-let g:clang_jumpto_declaration_in_preview_key = '<leader><C-W>}'
-let g:clang_user_options = '-DCLANG -fcxx-exceptions'
-let g:clang_auto_user_options = 'compile_commands.json, .clang_complete, path'
-" }}}
-endif
-
 " jedi                                      {{{2
 if $VIM_CONFIG_USE_COC == ''
 Plug 'https://github.com/davidhalter/jedi-vim'

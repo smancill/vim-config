@@ -77,20 +77,6 @@ For shell script files, install *ShellCheck*:
     # macOS
     brew install shellcheck
 
-##### C/C++ omnicompletion
-
-The [clang_complete][clang_complete] plugin uses Clang for
-accurately completing C and C++ code:
-
-    # Ubuntu
-    sudo apt install libclang-dev
-
-It may be necessary to point to the location of the library:
-
-```vim
-let g:clang_library_path = '/usr/lib/llvm-10/lib'
-```
-
 ### Updating to the latest version
 
 Fetch any changes from the repository:
@@ -128,7 +114,6 @@ or `~/.vim/vimrc_local` (for a local-machine), and put extra settings in there:
 " vimrc_local: extra settings for dev machine
 
 " Override settings for plugins
-let g:clang_user_options = '-DCLANG -std=c++11 -fcxx-exceptions'
 let g:ale_cpp_gcc_options = '-std=c++11'
 
 " Override Vim settings
@@ -228,7 +213,6 @@ The following plugins are used (check `vimrc` for configuration details):
   (custom slim version)
 * [surround.vim][surround]: delete/change/add parentheses, quotes, tags, etc.
 * [repeat.vim][repeat]: repeat supported plugin maps with `.`.
-* [clang_complete][clang_complete]: omnicompletion for C/C++ files.
 * [alternate][alternate]: alternate C source/header files quickly
 * [jedi-vim][jedi-vim]: Python autocompletion with the Jedi library.
 * [Previm][previm]: realtime preview of markup languages
@@ -256,7 +240,6 @@ The following plugins are used (check `vimrc` for configuration details):
 [unimpaired]: https://github.com/smancill/vim-unimpaired-slim
 [surround]: https://github.com/tpope/vim-surround
 [repeat]: https://github.com/tpope/vim-repeat
-[clang_complete]: https://github.com/Rip-Rip/clang_complete
 [alternate]: https://github.com/vim-scripts/a.vim
 [jedi-vim]: https://github.com/davidhalter/jedi-vim
 [previm]: https://github.com/kannokanno/previm
