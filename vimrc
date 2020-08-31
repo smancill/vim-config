@@ -22,7 +22,9 @@ else
   let $VIM_CONFIG_HOME = $HOME . '/.vim'
 endif
 
-let g:vim_config_has_private_dir = isdirectory($VIM_CONFIG_HOME . '/private')
+if empty($VIM_CONFIG_LOAD_PRIVATE_RC)
+  let $VIM_CONFIG_LOAD_PRIVATE_RC = '1'
+endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -67,9 +69,13 @@ call plug#begin($VIM_CONFIG_HOME . '/bundle')
 let s:bundle_patterns = [
   \ $VIM_CONFIG_HOME . '/bundle.vim',
   \ $VIM_CONFIG_HOME . '/bundle_?*.vim',
-  \ $VIM_CONFIG_HOME . '/bundle.local',
-  \ $VIM_CONFIG_HOME . '/private/bundle*.vim'
   \ ]
+if $VIM_CONFIG_LOAD_PRIVATE_RC == '1'
+  let s:bundle_patterns += [
+    \ $VIM_CONFIG_HOME . '/bundle.local',
+    \ $VIM_CONFIG_HOME . '/private/bundle*.vim',
+    \ ]
+endif
 for s:bundle_pattern in s:bundle_patterns
   for s:bundle_file in split(glob(s:bundle_pattern, '\n'))
     execute 'source' s:bundle_file
@@ -82,7 +88,7 @@ delcom UnPlug
 
 
 " Support private directory
-if g:vim_config_has_private_dir
+if $VIM_CONFIG_LOAD_PRIVATE_RC == '1'
   set rtp-=$VIM_CONFIG_HOME
   set rtp^=$VIM_CONFIG_HOME/private
   set rtp^=$VIM_CONFIG_HOME
@@ -341,9 +347,13 @@ highlight PmenuSel ctermfg=black
 " Load extra vimrc
 let s:vimrc_patterns = [
   \ $VIM_CONFIG_HOME . '/vimrc_?*',
-  \ $VIM_CONFIG_HOME . '/vimrc.local',
-  \ $VIM_CONFIG_HOME . '/private/vimrc*'
   \ ]
+if $VIM_CONFIG_LOAD_PRIVATE_RC == '1'
+  let s:vimrc_patterns += [
+    \ $VIM_CONFIG_HOME . '/vimrc.local',
+    \ $VIM_CONFIG_HOME . '/private/vimrc*',
+    \ ]
+endif
 for s:vimrc_pattern in s:vimrc_patterns
   for s:vimrc_file in split(glob(s:vimrc_pattern, '\n'))
     execute 'source' s:vimrc_file

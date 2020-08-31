@@ -147,7 +147,7 @@ endif
 let g:UltiSnipsJumpForwardTrigger = '<TAB>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
 let g:UltiSnipsEditSplit = 'context'
-if g:vim_config_has_private_dir
+if $VIM_CONFIG_LOAD_PRIVATE_RC == '1' && isdirectory($VIM_CONFIG_HOME . '/private')
   let g:UltiSnipsSnippetsDir = $VIM_CONFIG_HOME . '/private/UltiSnips'
 endif
 " }}}
