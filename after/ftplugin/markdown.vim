@@ -3,7 +3,6 @@
 setlocal textwidth=78
 setlocal spell
 
-setlocal synmaxcol=256
 setlocal tabstop=4
 setlocal softtabstop=4
 setlocal shiftwidth=4

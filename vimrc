@@ -104,7 +104,7 @@ endif
 
 set history=500                             " How many lines of history
 set vb t_vb=                                " Disable beep
-set synmaxcol=128                           " Prevent lag with long lines
+set synmaxcol=256                           " Prevent lag with long lines
 set nrformats-=octal                        " Don't detect octal numbers
 
 if !has('nvim')
