@@ -230,9 +230,6 @@ cnoremap            <C-N>         <Down>
 nnoremap            <F1>          <nop>
 nnoremap            Q             gq
 
-" Write as sudo
-cnoremap            w!!           w !sudo tee % >/dev/null
-
 " Use <C-L> to clear the highlighting of :set hlsearch
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent>   <C-L>         :<C-U>nohlsearch<CR>:diffupdate<CR><C-L>
