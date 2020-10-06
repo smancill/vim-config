@@ -1,0 +1,5 @@
+--langdef=asciidoc
+--regex-asciidoc=/^==[ \t]+(.*)/\. \1/h,h1/
+--regex-asciidoc=/^===[ \t]+(.*)/\.\. \1/h,h2/
+--regex-asciidoc=/^====[ \t]+(.*)/\.\.\. \1/h,h3/
+--regex-asciidoc=/^=====[ \t]+(.*)/\.\.\.\. \1/h,h4/
