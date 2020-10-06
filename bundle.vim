@@ -291,8 +291,7 @@ let g:vimtex_compiler_latexmk = {
   \ 'continous': 0,
   \ }
 let g:vimtex_echo_ignore_wait = 1
-let g:vimtex_quickfix_ignore_all_warnings = 0
-let g:vimtex_quickfix_ignored_warnings = [
+let g:vimtex_quickfix_ignore_filters = [
   \ 'Underfull',
   \ 'Overfull',
   \ 'specifier changed to',
