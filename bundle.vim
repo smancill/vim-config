@@ -96,6 +96,8 @@ Plug 'https://github.com/mileszs/ack.vim'
 if g:vim_config_has_ag
   let g:ackprg = 'ag --hidden --ignore .git --vimgrep'
 endif
+
+nnoremap  <Leader>/     :Ack!<Space>
 " }}}
 
 " Airline                                   {{{2
