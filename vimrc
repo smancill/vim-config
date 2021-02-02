@@ -208,8 +208,8 @@ nnoremap ' `
 nnoremap ` '
 
 " Better navigation in long lines
-nnoremap j  gj
-nnoremap k  gk
+nnoremap <expr>     j             (v:count ? 'j' : 'gj')
+nnoremap <expr>     k             (v:count ? 'k' : 'gk')
 
 " Buffers
 nnoremap <silent>   <C-k>         :<C-U>b#<CR>
