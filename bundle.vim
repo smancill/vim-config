@@ -216,6 +216,90 @@ let g:ale_cpp_gcc_options = ''
 let g:ale_cpp_clang_options = ''
 " }}}
 
+" CoC                                       {{{2
+if $VIM_CONFIG_USE_COC != ''
+  Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
+  " {{{
+  " XXX: See plugin/coc.vim for CoC configuration
+
+  set signcolumn=auto
+
+  let g:coc_global_extensions = [
+    \ 'coc-omni',
+    \ 'coc-json',
+    \ 'coc-yaml',
+    \ 'coc-git',
+    \ 'coc-clangd',
+    \ 'coc-pyright',
+    \ ]
+  let g:coc_disable_transparent_cursor = 1
+  let g:coc_snippet_next = '<TAB>'
+  let g:coc_snippet_prev = '<S-TAB>'
+
+  let g:ale_disable_lsp = 1
+  let g:ale_linters = {
+    \ 'c': [],
+    \ 'cpp': [],
+    \ 'java': [],
+    \ 'javascript': [],
+    \ 'python': [],
+    \ }
+  let g:airline_extensions += ['coc']
+  let g:SuperTabMappingForward = '<nop>'
+  let g:UltiSnipsExpandTrigger = '<nop>'
+
+  function! s:expand_or_coc()
+    if !pumvisible()
+      call UltiSnips#ExpandSnippet()
+      if g:ulti_expand_res == 0
+        return coc#refresh()
+      endif
+    endif
+    return ""
+  endfunction
+
+  function! s:coc_overwrite_map(action, map)
+    if coc#rpc#ready() && CocAction('getCurrentFunctionSymbol') isnot v:null
+      call CocActionAsync(a:action)
+    else
+    call feedkeys(a:map, 'n')
+    endif
+  endfunction
+
+  if has('gui_running') || has('nvim')
+    inoremap <silent> <C-Space>   <C-r>=<SID>expand_or_coc()<CR>
+  else
+    inoremap <silent> <C-@>       <C-r>=<SID>expand_or_coc()<CR>
+  endif
+
+  nmap  <silent>  K           :<C-u>call <SID>coc_overwrite_map('doHover', 'K')<CR>
+
+  nmap  <silent>  <leader>ch  :<C-u>call CocAction('highlight')<CR>
+
+  nmap  <silent>  [w          <Plug>(coc-diagnostic-prev)
+  nmap  <silent>  ]w          <Plug>(coc-diagnostic-next)
+
+  nmap  <silent>  gd          :<C-u>call <SID>coc_overwrite_map('jumpDefinition', 'gd')<CR>
+  nmap  <silent>  <leader>ct  <Plug>(coc-type-definition)
+  nmap  <silent>  <leader>ci  <Plug>(coc-implementation)
+  nmap  <silent>  <leader>cd  :<C-u>CocDiagnostics<CR>
+
+  nmap  <silent>  <leader>cD  :<C-u>CocList diagnostics<CR>
+  nmap  <silent>  <leader>co  :<C-u>CocList outline<CR>
+  nmap  <silent>  <leader>cO  :<C-u>CocList -I symbols<CR>
+
+  nmap  <silent>  <leader>cr  <Plug>(coc-rename)
+  nmap  <silent>  <leader>cR  <Plug>(coc-references)
+
+  nmap  <silent>  <leader>ca  <Plug>(coc-codeaction)
+
+  xmap  <silent>  <leader>cF  <Plug>(coc-format-selected)
+  nmap  <silent>  <leader>cF  <Plug>(coc-format-selected)
+
+  command! -nargs=0 Format :call CocActionAsync('format')
+  " }}}
+endif
+
 " mundo                                     {{{2
 Plug 'https://github.com/simnalamburt/vim-mundo'
 " {{{
@@ -276,6 +360,7 @@ let g:alternateExtensions_hxx = 'cpp,cxx,C,cc'
 " }}}
 
 " Clang Complete                            {{{2
+if $VIM_CONFIG_USE_COC == ''
 Plug 'https://github.com/Rip-Rip/clang_complete'
 " {{{
 let g:clang_auto_select = 1
@@ -288,13 +373,16 @@ let g:clang_jumpto_declaration_in_preview_key = '<leader><C-W>}'
 let g:clang_user_options = '-DCLANG -fcxx-exceptions'
 let g:clang_auto_user_options = 'compile_commands.json, .clang_complete, path'
 " }}}
+endif
 
 " jedi                                      {{{2
+if $VIM_CONFIG_USE_COC == ''
 Plug 'https://github.com/davidhalter/jedi-vim'
 " {{{
 let g:jedi#auto_vim_configuration = 0
 let g:jedi#completions_command = ''
 " }}}
+endif
 
 " indentpython                              {{{2
 Plug 'https://github.com/vim-scripts/indentpython.vim'
