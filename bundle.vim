@@ -118,6 +118,7 @@ let g:airline_extensions = [
   \ 'whitespace',
   \ ]
 let g:airline#extensions#disable_rtp_load = 1
+let g:airline#extensions#ctrlp#show_adjacent_modes = 0
 " }}}
 
 " Surround                                  {{{2
