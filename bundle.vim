@@ -107,11 +107,17 @@ Plug 'https://github.com/vim-airline/vim-airline-themes'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_theme = 'powerlineish'
+let g:airline_highlighting_cache = 1
 let g:airline_detect_spell = 0
+let g:airline_extensions = [
+  \ 'ale',
+  \ 'ctrlp',
+  \ 'fugitiveline',
+  \ 'quickfix',
+  \ 'term',
+  \ 'whitespace',
+  \ ]
 let g:airline#extensions#disable_rtp_load = 1
-let g:airline#extensions#hunks#enabled = 0
-let g:airline#extensions#searchcount#enabled = 0
-let g:airline#extensions#vimtex#enabled = 0
 " }}}
 
 " Surround                                  {{{2
