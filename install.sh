@@ -12,6 +12,22 @@ EOF
     exit 1;
 fi
 
+# Check Vim version
+case "$(uname -s)" in
+    "Darwin")
+        case "$(command -v vim)" in
+            "/usr/bin/vim")
+                cat << EOF >&2
+Unsupported Vim version: /usr/bin/vim
+
+Install a version that supports Python 3 with 'brew install vim'.
+EOF
+                exit 1;
+                ;;
+        esac
+        ;;
+esac
+
 # Paths
 vimdir=${HOME}/.vim
 vimrc=${vimdir}/vimrc
