@@ -2,7 +2,7 @@
 
 " Prerequisites                             {{{2
 let g:vim_config_has_fd = executable('fd')
-let g:vim_config_has_ag = executable('ag')
+let g:vim_config_has_rg = executable('rg')
 
 " vim-addon-local-vimrc                     {{{2
 Plug 'https://github.com/MarcWeber/vim-addon-local-vimrc'
@@ -93,8 +93,8 @@ Plug 'https://github.com/tpope/vim-vinegar'
 " Ack                                       {{{2
 Plug 'https://github.com/mileszs/ack.vim'
 " {{{
-if g:vim_config_has_ag
-  let g:ackprg = 'ag --hidden --ignore .git --vimgrep'
+if g:vim_config_has_rg
+  let g:ackprg = 'rg --vimgrep --hidden --glob ''!.git'' --smart-case'
 endif
 
 nnoremap  <Leader>/     :Ack!<Space>
