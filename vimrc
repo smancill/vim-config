@@ -118,10 +118,14 @@ set fileencoding=utf-8                      " Default file encoding
 set fileformats=unix,dos,mac                " Support all EOLs by default
 set fileformat=unix                         " Default end of line
 
-set directory^=$XDG_CACHE_HOME/vim/swap//   " Location of swap files
-set backupdir^=$XDG_CACHE_HOME/vim/backup// " Location of backup files
+if !has('nvim')
+  set directory^=$XDG_CACHE_HOME/vim/swap//   " Location of swap files
+  set backupdir^=$XDG_CACHE_HOME/vim/backup// " Location of backup files
+endif
 if has('persistent_undo')
-  set undodir^=$XDG_CACHE_HOME/vim/undo//   " Location of undo files
+  if !has('nvim')
+    set undodir^=$XDG_CACHE_HOME/vim/undo//   " Location of undo files
+  endif
   set undofile                              " Active persistent undo
 endif
 
