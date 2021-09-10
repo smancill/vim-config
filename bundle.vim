@@ -342,6 +342,13 @@ let g:ledger_extra_options = '--explicit --pedantic --check-payees'
 let g:ledger_qf_register_format = '%(format_date(date))  %-36(payee) %-44(account) %15(scrub(amount)) %15(scrub(total))\n'
 let g:ledger_qf_reconcile_format = '%(format_date(date))  %-4(code) %-36(payee) %-44(account) %15(scrub(amount))\n'
 " }}}
+
+" FixCursorHold                             {{{2
+Plug 'https://github.com/antoinemadec/FixCursorHold.nvim'
+" {{{
+let g:cursorhold_updatetime = 200
+" }}}
+
 " }}}2
 
 " vim: foldmethod=marker foldlevel=2
