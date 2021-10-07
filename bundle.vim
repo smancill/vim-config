@@ -177,6 +177,13 @@ nnoremap <silent>   <leader>go    :<C-U>Gbrowse<CR>
 
 " }}}
 
+" mergetool
+Plug 'https://github.com/samoshkin/vim-mergetool'
+" {{{
+let g:mergetool_layout = 'lm'
+let g:mergetool_prefer_revision = 'remote'
+" }}}
+
 " Gist                                      {{{2
 Plug 'https://github.com/mattn/gist-vim'
 Plug 'https://github.com/mattn/webapi-vim'
