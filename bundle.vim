@@ -119,6 +119,7 @@ let g:airline_extensions = [
   \ ]
 let g:airline#extensions#disable_rtp_load = 1
 let g:airline#extensions#ctrlp#show_adjacent_modes = 0
+let g:airline#extensions#whitespace#mixed_indent_algo = 2
 " }}}
 
 " Surround                                  {{{2
