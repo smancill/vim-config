@@ -27,13 +27,13 @@ Some plugins need external programs to work properly.
 
 ##### Source code tags
 
-You need the *Exuberant Ctags* program:
+You need the *Universal Ctags* program:
 
     # Ubuntu
-    sudo apt install exuberant-ctags
+    sudo apt install universal-ctags
 
     # macOS
-    brew install ctags
+    brew install universal-ctags
 
 Press `<F8>` to [open a lateral window][tagbar]
 with the tags of the current buffer ordered by scope,
@@ -67,12 +67,7 @@ To add support for Python files install *flake8*:
     sudo apt install flake8
 
     # macOS
-    python -m pip install flake8
-
-To add support for LaTeX files install *LaCheck*:
-
-    # Ubuntu
-    sudo apt install lacheck
+    brew install flake8
 
 For shell script files, install *ShellCheck*:
 
@@ -93,7 +88,7 @@ accurately completing C and C++ code:
 It may be necessary to point to the location of the library:
 
 ```vim
-let g:clang_library_path = '/usr/lib/llvm-3.8/lib'
+let g:clang_library_path = '/usr/lib/llvm-10/lib'
 ```
 
 ### Updating to the latest version
@@ -220,6 +215,7 @@ The following plugins are used (check `vimrc` for configuration details):
   [EditorConfig](http://editorconfig.org) files.
 * [fugitive.vim][fugitive]: an awesome Git wrapper
   (see custom mappings with `:map <leader>g`).
+* [vim-mergetool][mergetool]: efficient way of using Vim as a Git mergetool.
 * [Gist][gist]: for creating [Gists][gist-web].
 * [ALE][ale]: Asynchronous linting/fixing.
 * [Mundo][mundo]: visualize the Vim undo tree (toggle with `<F5>`).
@@ -250,7 +246,7 @@ The following plugins are used (check `vimrc` for configuration details):
 [ultisnips]: https://github.com/sirver/ultisnips
 [editorconfig]: https://github.com/editorconfig/editorconfig-vim
 [fugitive]: https://github.com/tpope/vim-fugitive
-[gv]: https://github.com/junegunn/gv.vim
+[mergetool]: https://github.com/samoshkin/vim-mergetool
 [gist]: https://github.com/mattn/gist-vim
 [ale]: https://github.com/w0rp/ale
 [mundo]: https://github.com/simnalamburt/vim-mundo
