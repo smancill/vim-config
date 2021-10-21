@@ -231,7 +231,6 @@ The following plugins are used (check `vimrc` for configuration details):
 * [clang_complete][clang_complete]: omnicompletion for C/C++ files.
 * [alternate][alternate]: alternate C source/header files quickly
 * [jedi-vim][jedi-vim]: Python autocompletion with the Jedi library.
-* [vimtex][vimtex]: a modern plugin for editing LaTeX files.
 * [Previm][previm]: realtime preview of markup languages
   (open HTML on browser with `<F9>`).
 
@@ -260,7 +259,6 @@ The following plugins are used (check `vimrc` for configuration details):
 [clang_complete]: https://github.com/Rip-Rip/clang_complete
 [alternate]: https://github.com/vim-scripts/a.vim
 [jedi-vim]: https://github.com/davidhalter/jedi-vim
-[vimtex]: https://github.com/lervag/vimtex
 [previm]: https://github.com/kannokanno/previm
 
 [ack-web]: http://betterthangrep.com

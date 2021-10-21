@@ -299,22 +299,6 @@ let g:jedi#completions_command = ''
 " indentpython                              {{{2
 Plug 'https://github.com/vim-scripts/indentpython.vim'
 
-" vimtex                                    {{{2
-Plug 'https://github.com/lervag/vimtex'
-" {{{
-let g:tex_flavor = 'latex'            " filetype of *.tex
-let g:vimtex_compiler_latexmk = {
-  \ 'callback': 0,
-  \ 'continous': 0,
-  \ }
-let g:vimtex_echo_ignore_wait = 1
-let g:vimtex_quickfix_ignore_filters = [
-  \ 'Underfull',
-  \ 'Overfull',
-  \ 'specifier changed to',
-  \ ]
-" }}}
-
 " Previm                                    {{{2
 Plug 'https://github.com/kannokanno/previm'
 " {{{
