@@ -1,5 +1,6 @@
 " asciidoc.vim: settings for AsciiDoc markup files
 
+setlocal textwidth=78
 setlocal spell
 
 setlocal tabstop=2
