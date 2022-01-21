@@ -172,6 +172,7 @@ if v:version > 703 || v:version == 703 && has('patch541')
 endif
 set display+=lastline                       " If wrap set, display last line
 set virtualedit=block                       " Move freely in visual block
+set diffopt+=algorithm:histogram            " Set diff algorithm
 
 set incsearch                               " Search word while typing
 set ignorecase                              " Ignore case in search patterns
