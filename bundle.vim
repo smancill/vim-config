@@ -299,6 +299,17 @@ let g:jedi#completions_command = ''
 " indentpython                              {{{2
 Plug 'https://github.com/vim-scripts/indentpython.vim'
 
+" python-syntax
+Plug 'https://github.com/vim-python/python-syntax'
+" {{{
+let g:python_highlight_builtins = 1
+let g:python_highlight_string_format = 1
+let g:python_highlight_doctests = 1
+let g:python_highlight_func_calls = 1
+let g:python_highlight_class_vars = 1
+let g:python_highlight_file_headers_as_comments = 1
+" }}}
+
 " Previm                                    {{{2
 Plug 'https://github.com/kannokanno/previm'
 " {{{
