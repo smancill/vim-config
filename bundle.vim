@@ -212,8 +212,6 @@ let g:ale_linters = {
   \ }
 let g:ale_pattern_options = {}
 let g:ale_c_parse_compile_commands = 1
-let g:ale_cpp_gcc_options = ''
-let g:ale_cpp_clang_options = ''
 " }}}
 
 " CoC                                       {{{2
