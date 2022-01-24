@@ -23,6 +23,8 @@ augroup filetype_buffergator
   autocmd!
   autocmd FileType buffergator  nnoremap <buffer>   <C-j>   j
   autocmd FileType buffergator  nnoremap <buffer>   <C-k>   k
+  autocmd FileType qf           nnoremap <buffer>   <C-j>   j
+  autocmd FileType qf           nnoremap <buffer>   <C-k>   k
   autocmd FileType buffergator  nnoremap <buffer>   -       -
   autocmd BufEnter \[\[buffergator-buffers\]\]  unmap ds
   autocmd BufLeave \[\[buffergator-buffers\]\]  nmap  ds  <Plug>Dsurround
