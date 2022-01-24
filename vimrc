@@ -35,7 +35,7 @@ endif
 set nocompatible
 
 if has('vim_starting')
-  if empty($VIM_CONFIG_HOME . '/autoload/plug.vim')
+  if empty(glob($VIM_CONFIG_HOME . '/autoload/plug.vim'))
     echomsg 'Plugin manager "vim-plug" not found.'
     echomsg 'Run "./install.sh" in your $VIMHOME directory.'
     exit
