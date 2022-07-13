@@ -1,4 +1,8 @@
 " bundle.vim: register and configure plugins
+"
+" SPDX-FileCopyrightText: © 2012 Sebastián Mancilla <smancill@smancill.dev>
+"
+" SPDX-License-Identifier: MIT-0
 
 " Prerequisites                             {{{2
 let g:vim_config_has_fd = executable('fd')

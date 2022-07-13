@@ -1,4 +1,8 @@
 " asciidoc.vim: settings for AsciiDoc markup files
+"
+" SPDX-FileCopyrightText: © 2020 Sebastián Mancilla <smancill@smancill.dev>
+"
+" SPDX-License-Identifier: MIT-0
 
 setlocal textwidth=78
 setlocal spell

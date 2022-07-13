@@ -1,0 +1,16 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Vim configuration
+Upstream-Contact: Sebastián Mancilla <smancill@smancill.dev>
+Source: https://github.com/smancill/vim-config
+
+Files: README.md .gitignore
+Copyright: © 2012 Sebastián Mancilla <smancill@smancill.dev>
+License: MIT-0
+
+Files: .mailmap
+Copyright: © 2016 Sebastián Mancilla <smancill@smancill.dev>
+License: MIT-0
+
+Files: after/ftplugin/asciidoc/asciidoc.cnf
+Copyright: © 2020 Sebastián Mancilla <smancill@smancill.dev>
+License: MIT-0

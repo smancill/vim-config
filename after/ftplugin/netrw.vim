@@ -1,4 +1,8 @@
 " nertrw.vim: settings for netrw buffers
+"
+" SPDX-FileCopyrightText: © 2018 Sebastián Mancilla <smancill@smancill.dev>
+"
+" SPDX-License-Identifier: MIT-0
 
 setlocal bufhidden=delete
 

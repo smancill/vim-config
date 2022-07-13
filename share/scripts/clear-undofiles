@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+#
+# SPDX-FileCopyrightText: © 2018 Sebastián Mancilla <smancill@smancill.dev>
+#
+# SPDX-License-Identifier: MIT-0
 
 undo_dir=${XDG_CACHE_HOME:-$HOME/.cache}/vim/undo
 for undo_file in "$undo_dir"/*

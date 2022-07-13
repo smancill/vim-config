@@ -1,3 +1,7 @@
+" SPDX-FileCopyrightText: © 2021 Sebastián Mancilla <smancill@smancill.dev>
+"
+" SPDX-License-Identifier: MIT-0
+
 if $VIM_CONFIG_USE_COC != ''
   " coc                                       {{{2
   call coc#config('coc.preferences', {

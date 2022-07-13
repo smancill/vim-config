@@ -1,3 +1,7 @@
+" SPDX-FileCopyrightText: © 2018 Sebastián Mancilla <smancill@smancill.dev>
+"
+" SPDX-License-Identifier: MIT-0
+
 set nocompatible
 
 call plug#begin('~/.vim/bundle')
