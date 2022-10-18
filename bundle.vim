@@ -354,18 +354,6 @@ Plug 'https://github.com/editorconfig/editorconfig-vim'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', '.git/COMMIT']
 " }}}
 
-" Alternate                                 {{{2
-Plug 'https://github.com/vim-scripts/a.vim'
-" {{{
-let g:alternateExtensions_cc  = 'hh,h,hpp,hxx'
-let g:alternateExtensions_cpp = 'hpp,h,hh,hxx'
-let g:alternateExtensions_C   = 'h,H'
-let g:alternateExtensions_hh  = 'cc,cpp,cxx'
-let g:alternateExtensions_h   = 'c,cpp,cxx,cc,C'
-let g:alternateExtensions_hpp = 'cpp,cxx,C,cc'
-let g:alternateExtensions_hxx = 'cpp,cxx,C,cc'
-" }}}
-
 " jedi                                      {{{2
 if $VIM_CONFIG_USE_COC == ''
 Plug 'https://github.com/davidhalter/jedi-vim'

@@ -213,7 +213,6 @@ The following plugins are used (check `vimrc` for configuration details):
   (custom slim version)
 * [surround.vim][surround]: delete/change/add parentheses, quotes, tags, etc.
 * [repeat.vim][repeat]: repeat supported plugin maps with `.`.
-* [alternate][alternate]: alternate C source/header files quickly
 * [jedi-vim][jedi-vim]: Python autocompletion with the Jedi library.
 * [Previm][previm]: realtime preview of markup languages
   (open HTML on browser with `<F9>`).
@@ -240,7 +239,6 @@ The following plugins are used (check `vimrc` for configuration details):
 [unimpaired]: https://github.com/smancill/vim-unimpaired-slim
 [surround]: https://github.com/tpope/vim-surround
 [repeat]: https://github.com/tpope/vim-repeat
-[alternate]: https://github.com/vim-scripts/a.vim
 [jedi-vim]: https://github.com/davidhalter/jedi-vim
 [previm]: https://github.com/kannokanno/previm
 
