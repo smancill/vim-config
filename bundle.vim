@@ -7,6 +7,7 @@
 " Prerequisites                             {{{2
 let g:vim_config_has_fd = executable('fd')
 let g:vim_config_has_rg = executable('rg')
+let g:vim_config_has_ctags = executable('ctags')
 
 " vim-addon-local-vimrc                     {{{2
 Plug 'https://github.com/MarcWeber/vim-addon-local-vimrc'
@@ -328,6 +329,7 @@ let g:tagbar_singleclick = 1
 " }}}
 
 " Gutentangs                                {{{2
+if g:vim_config_has_ctags
 Plug 'https://github.com/ludovicchabant/vim-gutentags'
 " {{{
 let g:gutentags_ctags_tagfile = '.tags'
@@ -337,6 +339,7 @@ let g:gutentags_file_list_command = {
   \   },
   \ }
 " }}}
+endif
 
 " Sideways                                  {{{2
 Plug 'https://github.com/AndrewRadev/sideways.vim'
