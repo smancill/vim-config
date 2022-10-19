@@ -171,9 +171,7 @@ set autoindent                              " Indent new lines using previous
 set nojoinspaces                            " One space after sentences
 set wrap                                    " Softwrap long lines
 set linebreak                               " Wrap at spaces characters
-if v:version > 703 || v:version == 703 && has('patch541')
-  set formatoptions+=j                      " Delete comment when joining lines
-endif
+set formatoptions+=j                        " Delete comment when joining lines
 set display+=lastline                       " If wrap set, display last line
 set virtualedit=block                       " Move freely in visual block
 if has("patch-8.1.0360")
@@ -186,11 +184,7 @@ set smartcase                               " But override if uppercase used
 set hlsearch                                " Highlight search
 
 set complete-=i                             " Ignore include files
-if has('patch-7.4.775')                     " Completion menu options
-  set completeopt=menuone,preview,noinsert
-else
-  set completeopt=menuone,preview
-endif
+set completeopt=menuone,preview,noinsert    " Completion menu options
 set pumheight=10                            " Size of completion menu
 
 set spelllang=es,en                         " Spelling languages
