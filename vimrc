@@ -35,9 +35,11 @@ endif
 " PLUGINS                               {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Use vim-plug
-set nocompatible
+if &compatible
+  set nocompatible
+endif
 
+" Use vim-plug
 if has('vim_starting')
   if empty(glob($VIM_CONFIG_HOME . '/autoload/plug.vim'))
     echomsg 'Plugin manager "vim-plug" not found.'

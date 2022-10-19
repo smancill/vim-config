@@ -2,7 +2,9 @@
 "
 " SPDX-License-Identifier: MIT-0
 
-set nocompatible
+if &compatible
+  set nocompatible
+endif
 
 call plug#begin('~/.vim/bundle')
 
