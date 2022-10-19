@@ -377,16 +377,6 @@ let g:python_highlight_class_vars = 1
 let g:python_highlight_file_headers_as_comments = 1
 " }}}
 
-" Previm                                    {{{2
-Plug 'https://github.com/kannokanno/previm'
-" {{{
-if has('macunix')
-  let g:previm_open_cmd = 'open'
-else
-  let g:previm_open_cmd = 'xdg-open'
-endif
-" }}}
-
 " darkglass                                 {{{2
 Plug 'https://github.com/smancill/darkglass'
 

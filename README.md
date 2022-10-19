@@ -214,8 +214,6 @@ The following plugins are used (check `vimrc` for configuration details):
 * [surround.vim][surround]: delete/change/add parentheses, quotes, tags, etc.
 * [repeat.vim][repeat]: repeat supported plugin maps with `.`.
 * [jedi-vim][jedi-vim]: Python autocompletion with the Jedi library.
-* [Previm][previm]: realtime preview of markup languages
-  (open HTML on browser with `<F9>`).
 
 
 [vim-plug]: https://github.com/junegunn/vim-plug
@@ -240,7 +238,6 @@ The following plugins are used (check `vimrc` for configuration details):
 [surround]: https://github.com/tpope/vim-surround
 [repeat]: https://github.com/tpope/vim-repeat
 [jedi-vim]: https://github.com/davidhalter/jedi-vim
-[previm]: https://github.com/kannokanno/previm
 
 [ack-web]: http://betterthangrep.com
 [gist-web]: https://gist.github.com
