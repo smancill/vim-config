@@ -285,10 +285,8 @@ function! AutoRestoreWinView()
 endfunction
 
 " When switching buffers, preserve window view
-if v:version >= 700
-  autocmd BufLeave * call AutoSaveWinView()
-  autocmd BufEnter * call AutoRestoreWinView()
-endif
+autocmd BufLeave * call AutoSaveWinView()
+autocmd BufEnter * call AutoRestoreWinView()
 
 " Automatically close popup menu and preview window for omnicompletion
 autocmd CursorMovedI,InsertLeave *
