@@ -317,7 +317,7 @@ let g:mundo_verbose_graph = 0
 Plug 'https://github.com/tpope/vim-commentary'
 
 " matchit                                   {{{2
-Plug 'https://github.com/benjifisher/matchit.zip'
+packadd! matchit
 
 " Tagbar                                    {{{2
 Plug 'https://github.com/majutsushi/tagbar'
