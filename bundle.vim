@@ -407,6 +407,12 @@ let g:cursorhold_updatetime = 200
 " }}}
 endif
 
+" Distributed                               {{{2
+let g:loaded_getscriptPlugin = 1
+let g:loaded_logiPat = 1
+let g:loaded_spellfile_plugin = 1
+let g:loaded_2html_plugin = 1
+
 " }}}2
 
 " vim: foldmethod=marker foldlevel=2
