@@ -182,7 +182,6 @@ nnoremap <silent>   <leader>gd    :<C-U>Gdiff<CR>
 nnoremap <silent>   <leader>gu    :<C-U>Gedit :%<bar>Gdiff! @<CR>
 nnoremap <silent>   <leader>gb    :<C-U>terminal ++close tig blame +<C-r>=line('.')<CR> -- %<CR>
 nnoremap <silent>   <leader>go    :<C-U>Gbrowse<CR>
-
 " }}}
 
 " mergetool
@@ -225,7 +224,7 @@ let g:ale_c_parse_compile_commands = 1
 if $VIM_CONFIG_USE_COC != ''
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
 " {{{
-" XXX: See plugin/coc.vim for CoC configuration
+" XXX: See after/plugin/coc.vim for CoC configuration
 
 set signcolumn=auto
 
@@ -267,7 +266,7 @@ function! s:coc_overwrite_map(action, map)
   if coc#rpc#ready() && CocAction('getCurrentFunctionSymbol') isnot v:null
     call CocActionAsync(a:action)
   else
-  call feedkeys(a:map, 'n')
+    call feedkeys(a:map, 'n')
   endif
 endfunction
 
