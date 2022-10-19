@@ -191,17 +191,6 @@ let g:mergetool_layout = 'lm'
 let g:mergetool_prefer_revision = 'remote'
 " }}}
 
-" Gist                                      {{{2
-Plug 'https://github.com/mattn/gist-vim'
-Plug 'https://github.com/mattn/webapi-vim'
-" {{{
-if has('macunix')
-  let g:gist_clip_command = 'pbcopy'
-else
-  let g:gist_clip_command = 'xclip -selection clipboard'
-endif
-" }}}
-
 " ALE                                       {{{2
 Plug 'https://github.com/dense-analysis/ale'
 " {{{
