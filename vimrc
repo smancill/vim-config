@@ -324,17 +324,17 @@ augroup END
 " TERM AND COLORSCHEME                  {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-  let s:color_squeme = 'inkpot'
+if !empty($VIM_CONFIG_COLORSCHEME)
+  let s:colorscheme = $VIM_CONFIG_COLORSCHEME
+elseif $COLORTERM == 'gnome-terminal'
+  let s:colorscheme = 'inkpot'
 elseif $TERM =~ 'rxvt' || $TERM =~ '256color'
-  set t_Co=256
-  let s:color_squeme = 'darkglass'
+  let s:colorscheme = 'darkglass'
 endif
 
 try
-  if exists('s:color_squeme')
-    exe 'colorscheme ' . s:color_squeme
+  if exists('s:colorscheme')
+    exe 'colorscheme ' . s:colorscheme
   endif
 catch /^Vim\%((\a\+)\)\=:E185/
 endtry
