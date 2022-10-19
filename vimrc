@@ -108,7 +108,7 @@ endif
 " OPTIONS                               {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set history=500                             " How many lines of history
+set history=200                             " How many lines of history
 set vb t_vb=                                " Disable beep
 set synmaxcol=256                           " Prevent lag with long lines
 set nrformats-=octal                        " Don't detect octal numbers
@@ -197,6 +197,7 @@ set tags=./.tags;,./tags;                   " Use a dot tags file
 
 set viminfo^=!                              " Save uppercase variables
 set sessionoptions-=options                 " Options can corrupt sessions
+set viewoptions-=options                    " Options can corrupt views
 
 " Better unprintable characters
 if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
@@ -240,10 +241,12 @@ nnoremap            Q             gq
 " Use <C-L> to clear the highlighting of :set hlsearch
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent>   <C-L>         :<C-U>nohlsearch<CR>:diffupdate<CR><C-L>
+  nnoremap <silent>   <C-L>         :<C-U>nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
 
-" Break undo after CTRL-U
+" Break undo after CTRL-U and CTRL-W
 inoremap            <C-U>         <C-G>u<C-U>
+inoremap            <C-W>         <C-G>u<C-W>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
