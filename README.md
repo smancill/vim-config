@@ -11,12 +11,16 @@ The plugins are listed in `bundle.vim`, which is sourced by `vimrc`.
 
 Clone the repository:
 
-    git clone https://github.com/smancill/Vim_config.git ~/.vim
+``` sh
+$ git clone https://github.com/smancill/vim-config.git ~/.vim
+```
 
 Execute the installation script (curl is required):
 
-    cd ~/.vim
-    ./install.sh
+``` sh
+$ cd ~/.vim
+$ ./install.sh
+```
 
 This script installs the plugin manager ([vim-plug][vim-plug]), downloads
 and installs the plugins, and downloads spell files for English and Spanish.
@@ -29,11 +33,13 @@ Some plugins need external programs to work properly.
 
 You need the *Universal Ctags* program:
 
-    # Ubuntu
-    sudo apt install universal-ctags
+``` sh
+# Ubuntu
+$ sudo apt install universal-ctags
 
-    # macOS
-    brew install universal-ctags
+# macOS
+$ brew install universal-ctags
+```
 
 Press `<F8>` to [open a lateral window][tagbar]
 with the tags of the current buffer ordered by scope,
@@ -44,11 +50,13 @@ or use `g[` to fuzzy search for a tag within the buffer.
 Install *Ack* to use the `:Ack[!]` command inside Vim as a replacement for
 *grep*:
 
-    # Ubuntu
-    sudo apt install ack-grep
+``` sh
+# Ubuntu
+$ sudo apt install ack-grep
 
-    # macOS
-    brew install ack
+# macOS
+$ brew install ack
+```
 
 See the [webpage][ack-web] for more information.
 [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) is also
@@ -63,31 +71,37 @@ C/C++ files have automatic support with *GCC*.
 
 To add support for Python files install *flake8*:
 
-    # Ubuntu
-    sudo apt install flake8
+``` sh
+# Ubuntu
+$ sudo apt install flake8
 
-    # macOS
-    brew install flake8
+# macOS
+$ brew install flake8
+```
 
 For shell script files, install *ShellCheck*:
 
-    # Ubuntu
-    sudo apt install shellcheck
+``` sh
+# Ubuntu
+$ sudo apt install shellcheck
 
-    # macOS
-    brew install shellcheck
+# macOS
+$ brew install shellcheck
+```
 
 ### Updating to the latest version
 
 Fetch any changes from the repository:
 
-    cd ~/.vim
-    git pull origin master
-    ./install -u
+``` sh
+$ cd ~/.vim
+$ git pull origin master
+$ ./install -u
+```
 
-The script will start `vim` and run `:PlugUpdate` to install new plugins
-to update the existing ones. See [vim-plug][vim-plug] documentation for more
-details.
+The script will start `vim` and run `:PlugUpdate`
+to install new plugins and update the existing ones.
+See [vim-plug][vim-plug] documentation for more details.
 
 ### Overwrite and extends this configuration
 
@@ -201,7 +215,6 @@ The following plugins are used (check `vimrc` for configuration details):
 * [fugitive.vim][fugitive]: an awesome Git wrapper
   (see custom mappings with `:map <leader>g`).
 * [vim-mergetool][mergetool]: efficient way of using Vim as a Git mergetool.
-* [Gist][gist]: for creating [Gists][gist-web].
 * [ALE][ale]: Asynchronous linting/fixing.
 * [Mundo][mundo]: visualize the Vim undo tree (toggle with `<F5>`).
 * [Gutentags][gutentags]: automatically manage the tag files.
@@ -213,7 +226,6 @@ The following plugins are used (check `vimrc` for configuration details):
   (custom slim version)
 * [surround.vim][surround]: delete/change/add parentheses, quotes, tags, etc.
 * [repeat.vim][repeat]: repeat supported plugin maps with `.`.
-* [jedi-vim][jedi-vim]: Python autocompletion with the Jedi library.
 
 
 [vim-plug]: https://github.com/junegunn/vim-plug
@@ -237,7 +249,5 @@ The following plugins are used (check `vimrc` for configuration details):
 [unimpaired]: https://github.com/smancill/vim-unimpaired-slim
 [surround]: https://github.com/tpope/vim-surround
 [repeat]: https://github.com/tpope/vim-repeat
-[jedi-vim]: https://github.com/davidhalter/jedi-vim
 
 [ack-web]: http://betterthangrep.com
-[gist-web]: https://gist.github.com
