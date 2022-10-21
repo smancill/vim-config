@@ -58,7 +58,7 @@ $ brew install ack
 ```
 
 See the [webpage][ack-web] for more information.
-[The Silver Searcher](https://github.com/ggreer/the_silver_searcher) is also
+[ripgrep](https://github.com/BurntSushi/ripgrep) is also
 supported (and recommended) as a replacement for `ack` if installed.
 
 ##### Syntax checking
