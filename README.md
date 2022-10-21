@@ -1,9 +1,8 @@
-# Configuration for Vim 8.x
+# Configuration for Vim 8+
 
-This is a distribution of plugins and configurations to use Vim for development,
+This is a distribution of plugins and configuration to use Vim for development,
 on Linux and macOS.
-It uses [vim-plug][vim-plug] to have a well organized Vim directory and to
-manage the plugins automatically.
+It uses [vim-plug][vim-plug] to manage the plugins automatically.
 The plugins are listed in `bundle.vim`, which is sourced by `vimrc`.
 
 
