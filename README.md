@@ -102,15 +102,22 @@ The script will start `vim` and run `:PlugUpdate`
 to install new plugins and update the existing ones.
 See [vim-plug][vim-plug] documentation for more details.
 
-### Overwrite and extends this configuration
+### Override and extend this configuration
 
-To add or remove plugins, create a file named `~/.vim/bundle_fork.vim`
-(if the repository is forked) or `~/.vim/bundle_local.vim` (for a local-machine),
+To override settings,
+create a directory `~/.vim/vendor` (for shared company-wide settings)
+or a directory `~/.vim/private` (for private local settings).
+They will be added to the `runtimepath`.
+If both are used, the `private` settings will override those in `vendor`.
+
+#### Override plugins
+
+To add or remove plugins,
+create a file named `~/.vim/vendor/bundle.vim` (for shared company-wide plugins)
+or `~/.vim/private/bundle.vim` (for local-machine plugins),
 and put extra plugins in there:
 
 ```vim
-" bundle_local.vim: extra plugins for dev machine
-
 " Remove ctrlp (UnPlug is defined in vimrc, not in vim-plug)
 UnPlug 'kien/ctrlp.vim'
 
@@ -119,13 +126,14 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 ```
 
+#### Override global settings
+
 To extend or change the configuration of `vimrc`,
-create a file named `~/.vim/vimrc_fork` (if the repository is forked)
-or `~/.vim/vimrc_local` (for a local-machine), and put extra settings in there:
+create a file named `~/.vim/vendor/vimrc` (for shared company-wide configuration)
+or `~/.vim/private/vimrc` (for a local-machine configuration),
+and put extra settings in there:
 
 ```vim
-" vimrc_local: extra settings for dev machine
-
 " Override settings for plugins
 let g:ale_cpp_gcc_options = '-std=c++11'
 
@@ -135,8 +143,18 @@ set noexpandtab
 set tabstop=8
 ```
 
-Or `vimrc` and `bundle.vim` can be simply modified with the preferred
-configuration, and then merged with any further updates to the repository.
+#### Override filetype settings, etc
+
+Since `~/.vim/vendor` and `~/.vim/private` are added to the `runtimepath`,
+simply create the files in their expected locations,
+and they will be sourced by normal Vim initialization.
+
+Examples:
+
+- `~/.vim/vendor/after/ftplugin/javascript.vim` (company-wide JavaScript settings)
+- `~/.vim/private/after/ftplugin/html.vim` (local-machine HTML settings)
+- `~/.vim/vendor/autoload/company.vim` (company-wide Vim functions)
+- `~/.vim/private/plugin/plugin.vim` (local-machine custom plugin)
 
 
 ## Features

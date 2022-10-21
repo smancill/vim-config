@@ -26,10 +26,6 @@ else
   let $VIM_CONFIG_HOME = $HOME . '/.vim'
 endif
 
-if empty($VIM_CONFIG_LOAD_PRIVATE_RC)
-  let $VIM_CONFIG_LOAD_PRIVATE_RC = '1'
-endif
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS                               {{{1
@@ -72,20 +68,15 @@ command! -bar PlugSafeUpdate call s:plugins_update()
 call plug#begin($VIM_CONFIG_HOME . '/bundle')
 
 " Load bundles
-let s:bundle_patterns = [
+let s:bundle_files = [
   \ $VIM_CONFIG_HOME . '/bundle.vim',
-  \ $VIM_CONFIG_HOME . '/bundle_?*.vim',
+  \ $VIM_CONFIG_HOME . '/vendor/bundle.vim',
+  \ $VIM_CONFIG_HOME . '/private/bundle.vim',
   \ ]
-if $VIM_CONFIG_LOAD_PRIVATE_RC == '1'
-  let s:bundle_patterns += [
-    \ $VIM_CONFIG_HOME . '/bundle.local',
-    \ $VIM_CONFIG_HOME . '/private/bundle*.vim',
-    \ ]
-endif
-for s:bundle_pattern in s:bundle_patterns
-  for s:bundle_file in split(glob(s:bundle_pattern, '\n'))
+for s:bundle_file in s:bundle_files
+  if filereadable(s:bundle_file)
     execute 'source' s:bundle_file
-  endfor
+  endif
 endfor
 
 call plug#end()
@@ -93,13 +84,25 @@ call plug#end()
 delcom UnPlug
 
 
-" Support private directory
-if $VIM_CONFIG_LOAD_PRIVATE_RC == '1'
-  set rtp-=$VIM_CONFIG_HOME
-  set rtp^=$VIM_CONFIG_HOME/private
-  set rtp^=$VIM_CONFIG_HOME
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" OVERRIDES                             {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-  " Allow overriding settings in $VIM_CONFIG_HOME/after
+" Support vendor and private directory
+set rtp-=$VIM_CONFIG_HOME
+if isdirectory($VIM_CONFIG_HOME . '/private')
+  set rtp^=$VIM_CONFIG_HOME/private
+endif
+if isdirectory($VIM_CONFIG_HOME . '/vendor')
+  set rtp^=$VIM_CONFIG_HOME/vendor
+endif
+set rtp^=$VIM_CONFIG_HOME
+
+" Allow overriding settings in $VIM_CONFIG_HOME/after
+if isdirectory($VIM_CONFIG_HOME . '/vendor')
+  set rtp+=$VIM_CONFIG_HOME/vendor/after
+endif
+if isdirectory($VIM_CONFIG_HOME . '/private')
   set rtp+=$VIM_CONFIG_HOME/private/after
 endif
 
@@ -350,19 +353,14 @@ highlight PmenuSel ctermfg=black
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Load extra vimrc
-let s:vimrc_patterns = [
-  \ $VIM_CONFIG_HOME . '/vimrc_?*',
+let s:vimrc_files = [
+  \ $VIM_CONFIG_HOME . '/vendor/vimrc',
+  \ $VIM_CONFIG_HOME . '/private/vimrc',
   \ ]
-if $VIM_CONFIG_LOAD_PRIVATE_RC == '1'
-  let s:vimrc_patterns += [
-    \ $VIM_CONFIG_HOME . '/vimrc.local',
-    \ $VIM_CONFIG_HOME . '/private/vimrc*',
-    \ ]
-endif
-for s:vimrc_pattern in s:vimrc_patterns
-  for s:vimrc_file in split(glob(s:vimrc_pattern, '\n'))
+for s:vimrc_file in s:vimrc_files
+  if filereadable(s:vimrc_file)
     execute 'source' s:vimrc_file
-  endfor
+  endif
 endfor
 
 "}}}
