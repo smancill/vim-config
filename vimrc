@@ -243,8 +243,7 @@ nnoremap            Q             gq
 
 " Use <C-L> to clear the highlighting of :set hlsearch
 if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent>   <C-L>         :<C-U>nohlsearch<CR>:diffupdate<CR><C-L>
-  nnoremap <silent>   <C-L>         :<C-U>nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+  nnoremap <silent>   <C-L>         :<C-U>nohlsearch<Bar>diffupdate<CR><C-L>
 endif
 
 " Break undo after CTRL-U and CTRL-W
