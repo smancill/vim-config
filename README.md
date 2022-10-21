@@ -5,6 +5,10 @@ on Linux and macOS.
 It uses [vim-plug][vim-plug] to manage the plugins automatically.
 The plugins are listed in `bundle.vim`, which is sourced by `vimrc`.
 
+> Most development support is now handled with language servers via [coc.nvim].
+> To enable this experimental configuration, set the environment variable
+> `VIM_CONFIG_USE_COC`.
+
 
 ## Installation
 
@@ -246,6 +250,7 @@ The following plugins are used (check `vimrc` for configuration details):
 
 
 [vim-plug]: https://github.com/junegunn/vim-plug
+[coc.nvim]: https://github.com/neoclide/coc.nvim
 [buffergator]: https://github.com/jeetsukumaran/vim-buffergator
 [CtrlP]: http://kien.github.com/ctrlp.vim
 [nerdtree]: https://github.com/scrooloose/nerdtree
