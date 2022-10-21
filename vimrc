@@ -330,21 +330,25 @@ if !empty($VIM_CONFIG_COLORSCHEME)
   let s:colorscheme = $VIM_CONFIG_COLORSCHEME
 elseif $COLORTERM == 'gnome-terminal'
   let s:colorscheme = 'inkpot'
+  let s:pmenusel = 1
 elseif $TERM =~ 'rxvt' || $TERM =~ '256color'
   let s:colorscheme = 'darkglass'
+  let s:pmenusel = 1
 endif
 
 try
   if exists('s:colorscheme')
+    " Load the selected color scheme
     exe 'colorscheme ' . s:colorscheme
+
+    " Change color of completion menu
+    if exists('s:pmenusel') && &background == 'dark'
+      highlight PmenuSel ctermbg=white
+      highlight PmenuSel ctermfg=black
+    endif
   endif
 catch /^Vim\%((\a\+)\)\=:E185/
 endtry
-
-" Change color of completion menu according to the terminal and current
-" colorsqueme
-highlight PmenuSel ctermbg=white
-highlight PmenuSel ctermfg=black
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
