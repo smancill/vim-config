@@ -50,7 +50,7 @@ or use `g[` to fuzzy search for a tag within the buffer.
 
 ##### Better *grep*
 
-Install *Ack* to use the `:Ack[!]` command inside Vim as a replacement for
+Install *ack* to use the `:Ack[!]` command inside Vim as a replacement for
 *grep*:
 
 ``` sh
@@ -63,7 +63,7 @@ $ brew install ack
 
 See the [webpage][ack-web] for more information.
 [ripgrep](https://github.com/BurntSushi/ripgrep) is also
-supported (and recommended) as a replacement for `ack` if installed.
+supported (and recommended) as a replacement for *ack* if installed.
 
 ##### Syntax checking
 
@@ -163,7 +163,7 @@ Examples:
 
 ## Features
 
-The `.vimrc` file is well organized and folded by sections.  The options are:
+The `.vimrc` sets the following options:
 
 * Restore position of cursor when opening files.
 * Put swap, backup and undo files in `~/.cache/vim/{swap,backup,undo}`.
@@ -178,7 +178,9 @@ The `.vimrc` file is well organized and folded by sections.  The options are:
 * Do not backup files.
 * Spelling for English and Spanish.
 
-And several more, including configuration of used plugins.
+And several more.
+
+Configuration for used plugins can be found in `bundle.vim`.
 
 ### Navigating buffers
 
@@ -212,7 +214,7 @@ for a quick introduction to Vim features for editing multiple files.
 
 ## Plugins
 
-The following plugins are used (check `vimrc` for configuration details):
+The following plugins are used (check `bundle.vim` for configuration details):
 
 * [local-vimrc](https://github.com/MarcWeber/vim-addon-local-vimrc):
   simple local `vimrc` with hash protection (`.vimrc` and `.project.vim`
