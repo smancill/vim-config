@@ -242,9 +242,7 @@ nnoremap            <F1>          <nop>
 nnoremap            Q             gq
 
 " Use <C-L> to clear the highlighting of :set hlsearch
-if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent>   <C-L>         :<C-U>nohlsearch<Bar>diffupdate<CR><C-L>
-endif
+nnoremap <silent>   <C-L>         :<C-U>nohlsearch<Bar>diffupdate<CR><C-L>
 
 " Break undo after CTRL-U and CTRL-W
 inoremap            <C-U>         <C-G>u<C-U>
