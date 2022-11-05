@@ -36,15 +36,15 @@ call coc#config('suggest', {
   \ })
 
 call coc#config('list.insertMappings', {
-  \ '<C-c>': 'do:exit',
-  \ '<C-j>': 'do:next',
-  \ '<C-k>': 'do:previous',
+  \ '<C-C>': 'do:exit',
+  \ '<C-J>': 'do:next',
+  \ '<C-K>': 'do:previous',
   \ })
 
 call coc#config('list.normalMappings', {
-  \ '<C-c>': 'do:exit',
-  \ '<C-j>': 'do:next',
-  \ '<C-k>': 'do:previous',
+  \ '<C-C>': 'do:exit',
+  \ '<C-J>': 'do:next',
+  \ '<C-K>': 'do:previous',
   \ })
 
 " coc-git                                   {{{2

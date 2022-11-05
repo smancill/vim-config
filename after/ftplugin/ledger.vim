@@ -5,14 +5,14 @@
 " SPDX-License-Identifier: MIT-0
 
 if exists("*SuperTabSetDefaultCompletionType")
-  call SuperTabSetDefaultCompletionType("<C-x><C-o>")
+  call SuperTabSetDefaultCompletionType("<C-X><C-O>")
 endif
 
-nnoremap <buffer> <silent> <leader>ll   :<C-u>Ledger balance<CR>
-nnoremap <buffer> <silent> <leader>lr   :<C-u>Register<CR>
-nnoremap <buffer> <silent> <leader>la   :<C-u>LedgerAlign<CR>
-vnoremap <buffer> <silent> <leader>la   :<C-u>LedgerAlign<CR>
+nnoremap <buffer> <silent> <Leader>ll   :<C-U>Ledger balance<CR>
+nnoremap <buffer> <silent> <Leader>lr   :<C-U>Register<CR>
+nnoremap <buffer> <silent> <Leader>la   :<C-U>LedgerAlign<CR>
+vnoremap <buffer> <silent> <Leader>la   :<C-U>LedgerAlign<CR>
 
-nnoremap <buffer> <silent> <leader>le   :<C-u>call ledger#entry()<CR>:s#/#-#g<CR>j:LedgerAlign<CR>
-nnoremap <buffer> <silent> <leader>lx   :<C-u>call ledger#transaction_state_set(line('.'), '!')<CR>
-nnoremap <buffer> <silent> <leader>lc   :<C-u>call ledger#transaction_state_set(line('.'), '*')<CR>
+nnoremap <buffer> <silent> <Leader>le   :<C-U>call ledger#entry()<CR>:s#/#-#g<CR>j:LedgerAlign<CR>
+nnoremap <buffer> <silent> <Leader>lx   :<C-U>call ledger#transaction_state_set(line('.'), '!')<CR>
+nnoremap <buffer> <silent> <Leader>lc   :<C-U>call ledger#transaction_state_set(line('.'), '*')<CR>

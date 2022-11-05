@@ -30,4 +30,4 @@ endif
 
 " run the current buffer
 nnoremap <buffer> <silent>  <F9>          :<C-U>make<CR>
-nnoremap <buffer> <silent>  <leader><F9>  :<C-U>call <SID>run_file()<CR>
+nnoremap <buffer> <silent>  <Leader><F9>  :<C-U>call <SID>run_file()<CR>

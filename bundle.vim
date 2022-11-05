@@ -26,10 +26,10 @@ nnoremap <silent>   <C-J>         :<C-U>BuffergatorOpen<CR>
 nnoremap <silent>   <C-_>         :<C-U>BuffergatorTabsOpen<CR>
 augroup filetype_buffergator
   autocmd!
-  autocmd FileType buffergator  nnoremap <buffer>   <C-j>   j
-  autocmd FileType buffergator  nnoremap <buffer>   <C-k>   k
-  autocmd FileType qf           nnoremap <buffer>   <C-j>   j
-  autocmd FileType qf           nnoremap <buffer>   <C-k>   k
+  autocmd FileType buffergator  nnoremap <buffer>   <C-J>   j
+  autocmd FileType buffergator  nnoremap <buffer>   <C-K>   k
+  autocmd FileType qf           nnoremap <buffer>   <C-J>   j
+  autocmd FileType qf           nnoremap <buffer>   <C-K>   k
   autocmd FileType buffergator  nnoremap <buffer>   -       -
   autocmd BufEnter \[\[buffergator-buffers\]\]  unmap ds
   autocmd BufLeave \[\[buffergator-buffers\]\]  nmap  ds  <Plug>Dsurround
@@ -81,7 +81,7 @@ let g:netrw_dirhistmax = 0
 Plug 'https://github.com/scrooloose/nerdtree', { 'on':  [ 'NERDTreeToggle', 'NERDTreeFind' ] }
 " {{{
 nnoremap <silent>   <F3>          :<C-U>NERDTreeToggle<CR>
-nnoremap <silent>   <leader><F3>  :<C-U>NERDTreeFind<CR>
+nnoremap <silent>   <Leader><F3>  :<C-U>NERDTreeFind<CR>
 let NERDTreeHijackNetrw = 0
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeRespectWildIgnore = 1
@@ -143,7 +143,7 @@ Plug 'https://github.com/ervandew/supertab'
 " {{{
 if has('gui_running') || has('nvim')
   let g:SuperTabMappingForward = '<C-Space>'
-  let g:SuperTabMappingBackward = '<S-C-space>'
+  let g:SuperTabMappingBackward = '<S-C-Space>'
 else
   let g:SuperTabMappingForward = '<C-@>'
   let g:SuperTabMappingBackward = '<C-S-@>'
@@ -155,14 +155,14 @@ let g:SuperTabDefaultCompletionType = 'context'
 Plug 'https://github.com/SirVer/ultisnips'
 Plug 'https://github.com/honza/vim-snippets'
 " {{{
-inoremap <silent>   <C-@>         <nop>
+inoremap <silent>   <C-@>         <Nop>
 if has('gui_running') || has('nvim')
   let g:UltiSnipsExpandTrigger = '<C-Space>'
 else
   let g:UltiSnipsExpandTrigger = '<C-@>'
 endif
-let g:UltiSnipsJumpForwardTrigger = '<TAB>'
-let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
+let g:UltiSnipsJumpForwardTrigger = '<Tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
 let g:UltiSnipsEditSplit = 'context'
 if isdirectory($VIM_CONFIG_HOME . '/private')
   let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = $VIM_CONFIG_HOME . '/private/UltiSnips'
@@ -174,14 +174,14 @@ Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/tpope/vim-rhubarb'
 Plug 'https://github.com/shumphrey/fugitive-gitlab.vim'
 " {{{
-nnoremap <silent>   <leader>gs    :<C-U>Gstatus<CR>
-nnoremap <silent>   <leader>gc    :<C-U>Gcommit<CR>
-nnoremap <silent>   <leader>gl    :<C-U>terminal ++close tig -- %<CR>
-nnoremap <silent>   <leader>ge    :<C-U>Gedit<CR>
-nnoremap <silent>   <leader>gd    :<C-U>Gdiff<CR>
-nnoremap <silent>   <leader>gu    :<C-U>Gedit :%<bar>Gdiff! @<CR>
-nnoremap <silent>   <leader>gb    :<C-U>terminal ++close tig blame +<C-r>=line('.')<CR> -- %<CR>
-nnoremap <silent>   <leader>go    :<C-U>Gbrowse<CR>
+nnoremap <silent>   <Leader>gs    :<C-U>Gstatus<CR>
+nnoremap <silent>   <Leader>gc    :<C-U>Gcommit<CR>
+nnoremap <silent>   <Leader>gl    :<C-U>terminal ++close tig -- %<CR>
+nnoremap <silent>   <Leader>ge    :<C-U>Gedit<CR>
+nnoremap <silent>   <Leader>gd    :<C-U>Gdiff<CR>
+nnoremap <silent>   <Leader>gu    :<C-U>Gedit :%<Bar>Gdiff! @<CR>
+nnoremap <silent>   <Leader>gb    :<C-U>terminal ++close tig blame +<C-R>=line('.')<CR> -- %<CR>
+nnoremap <silent>   <Leader>go    :<C-U>Gbrowse<CR>
 " }}}
 
 " mergetool
@@ -226,8 +226,8 @@ let g:coc_global_extensions = [
   \ 'coc-pyright',
   \ ]
 let g:coc_disable_transparent_cursor = 1
-let g:coc_snippet_next = '<TAB>'
-let g:coc_snippet_prev = '<S-TAB>'
+let g:coc_snippet_next = '<Tab>'
+let g:coc_snippet_prev = '<S-Tab>'
 
 let g:ale_disable_lsp = 1
 let g:ale_linters = {
@@ -238,8 +238,8 @@ let g:ale_linters = {
   \ 'python': [],
   \ }
 let g:airline_extensions += ['coc']
-let g:SuperTabMappingForward = '<nop>'
-let g:UltiSnipsExpandTrigger = '<nop>'
+let g:SuperTabMappingForward = '<Nop>'
+let g:UltiSnipsExpandTrigger = '<Nop>'
 
 function! s:expand_or_coc()
   if !pumvisible()
@@ -260,34 +260,34 @@ function! s:coc_overwrite_map(action, map)
 endfunction
 
 if has('gui_running') || has('nvim')
-  inoremap <silent> <C-Space>   <C-r>=<SID>expand_or_coc()<CR>
+  inoremap <silent> <C-Space>   <C-R>=<SID>expand_or_coc()<CR>
 else
-  inoremap <silent> <C-@>       <C-r>=<SID>expand_or_coc()<CR>
+  inoremap <silent> <C-@>       <C-R>=<SID>expand_or_coc()<CR>
 endif
 
-nmap  <silent>  K           :<C-u>call <SID>coc_overwrite_map('doHover', 'K')<CR>
+nmap  <silent>  K           :<C-U>call <SID>coc_overwrite_map('doHover', 'K')<CR>
 
-nmap  <silent>  <leader>ch  :<C-u>call CocAction('highlight')<CR>
+nmap  <silent>  <Leader>ch  :<C-U>call CocAction('highlight')<CR>
 
 nmap  <silent>  [w          <Plug>(coc-diagnostic-prev)
 nmap  <silent>  ]w          <Plug>(coc-diagnostic-next)
 
-nmap  <silent>  gd          :<C-u>call <SID>coc_overwrite_map('jumpDefinition', 'gd')<CR>
-nmap  <silent>  <leader>ct  <Plug>(coc-type-definition)
-nmap  <silent>  <leader>ci  <Plug>(coc-implementation)
-nmap  <silent>  <leader>cd  :<C-u>CocDiagnostics<CR>
+nmap  <silent>  gd          :<C-U>call <SID>coc_overwrite_map('jumpDefinition', 'gd')<CR>
+nmap  <silent>  <Leader>ct  <Plug>(coc-type-definition)
+nmap  <silent>  <Leader>ci  <Plug>(coc-implementation)
+nmap  <silent>  <Leader>cd  :<C-U>CocDiagnostics<CR>
 
-nmap  <silent>  <leader>cD  :<C-u>CocList diagnostics<CR>
-nmap  <silent>  <leader>co  :<C-u>CocList outline<CR>
-nmap  <silent>  <leader>cO  :<C-u>CocList -I symbols<CR>
+nmap  <silent>  <Leader>cD  :<C-U>CocList diagnostics<CR>
+nmap  <silent>  <Leader>co  :<C-U>CocList outline<CR>
+nmap  <silent>  <Leader>cO  :<C-U>CocList -I symbols<CR>
 
-nmap  <silent>  <leader>cr  <Plug>(coc-rename)
-nmap  <silent>  <leader>cR  <Plug>(coc-references)
+nmap  <silent>  <Leader>cr  <Plug>(coc-rename)
+nmap  <silent>  <Leader>cR  <Plug>(coc-references)
 
-nmap  <silent>  <leader>ca  <Plug>(coc-codeaction)
+nmap  <silent>  <Leader>ca  <Plug>(coc-codeaction)
 
-xmap  <silent>  <leader>cF  <Plug>(coc-format-selected)
-nmap  <silent>  <leader>cF  <Plug>(coc-format-selected)
+xmap  <silent>  <Leader>cF  <Plug>(coc-format-selected)
+nmap  <silent>  <Leader>cF  <Plug>(coc-format-selected)
 
 command! -nargs=0 Format :call CocActionAsync('format')
 " }}}

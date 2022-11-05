@@ -191,9 +191,9 @@ Configuration for used plugins can be found in `bundle.vim`.
 Vim uses buffers (`:help buffers`) to edit multiple files.
 Use the following key mappings in normal mode to easily work with buffers.
 
-* `<C-k>` is custom mapped to jump back to the previously edited file
+* `<C-K>` is custom mapped to jump back to the previously edited file
   (see `:help alternate-file`).
-* `<C-j>` is custom mapped to see the list of buffers.
+* `<C-J>` is custom mapped to see the list of buffers.
   Navigate with the `j`/`k` keys, press `<Enter>` to open the buffer,
   or `d` to delete it (see [buffergator][buffergator]).
 * `]b` to go to the next buffer in buffer list (see [vim-unimpaired-slim][unimpaired]).
@@ -213,7 +213,7 @@ for a quick introduction to Vim features for editing multiple files.
 * ` ' ` and `` ` `` are exchanged for moving to marks.
 * ` - ` opens the Vim built in directory browser (see [vinegar][vinegar]).
 * `<F3>` toggles the NERDTree list of files (see [NERDtree][nerdtree]).
-* `<C-space>` on insert mode to start completion based on context.
+* `<C-Space>` on insert mode to start completion based on context.
 
 
 ## Plugins
@@ -224,23 +224,23 @@ The following plugins are used (check `bundle.vim` for configuration details):
   simple local `vimrc` with hash protection (`.vimrc` and `.project.vim`
   supported).
 * [Buffergator][buffergator]: list, select and switch between buffers
-  (custom mapped to `<C-j>`).
+  (custom mapped to `<C-J>`).
 * [ctrlp.vim][ctrlp]: full path fuzzy file, buffer, MRU and tag finder
-  (use `<C-p>` to search files and `<C-n>` to search MRU files).
+  (use `<C-P>` to search files and `<C-N>` to search MRU files).
 * [The NERD Tree][nerdtree]: a tree explorer (toggle with `<F3>` and find
-    current file with `<leader><F3>`).
+    current file with `<Leader><F3>`).
 * [vinegar.vim][vinegar]: enhances the built in directory browser (open with `-`).
 * [vim-airline][airline]: lean and mean status/tabline for Vim that's light as air.
 * [Supertab][supertab]: perform all Vim insert mode completions with a single key
-  (custom mapped to `<C-space>` instead of `<Tab>`).
+  (custom mapped to `<C-Space>` instead of `<Tab>`).
 * [UltiSnips][ultisnips]: the ultimate snippet solution
-  (custom mapped to trigger with `<C-space>` and jump forward with `<Tab>`).
+  (custom mapped to trigger with `<C-Space>` and jump forward with `<Tab>`).
 * [ack.vim](https://github.com/mileszs/ack.vim): front end for [ack][ack-web],
   a better grep.
 * [EditorConfig Vim][editorconfig]: adds support for
   [EditorConfig](http://editorconfig.org) files.
 * [fugitive.vim][fugitive]: an awesome Git wrapper
-  (see custom mappings with `:map <leader>g`).
+  (see custom mappings with `:map <Leader>g`).
 * [vim-mergetool][mergetool]: efficient way of using Vim as a Git mergetool.
 * [ALE][ale]: Asynchronous linting/fixing.
 * [Mundo][mundo]: visualize the Vim undo tree (toggle with `<F5>`).

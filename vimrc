@@ -223,22 +223,22 @@ nnoremap <expr>     j             (v:count ? 'j' : 'gj')
 nnoremap <expr>     k             (v:count ? 'k' : 'gk')
 
 " Buffers
-nnoremap <silent>   <C-k>         :<C-U>b#<CR>
+nnoremap <silent>   <C-K>         :<C-U>b#<CR>
 
 " Make Y consistent with C and D (see :help Y)
 nnoremap Y y$
 
 " Omnicompletion popup menu like IDE
-inoremap <expr>     <CR>          pumvisible() ? "\<C-y>" : "\<CR>"
-inoremap <expr>     <Down>        pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr>     <Up>          pumvisible() ? "\<C-p>" : "\<Up>"
+inoremap <expr>     <CR>          pumvisible() ? "\<C-Y>" : "\<CR>"
+inoremap <expr>     <Down>        pumvisible() ? "\<C-N>" : "\<Down>"
+inoremap <expr>     <Up>          pumvisible() ? "\<C-P>" : "\<Up>"
 
 " Command line history
 cnoremap            <C-P>         <Up>
 cnoremap            <C-N>         <Down>
 
 " Disable unwanted keys in normal mode
-nnoremap            <F1>          <nop>
+nnoremap            <F1>          <Nop>
 nnoremap            Q             gq
 
 " Use <C-L> to clear the highlighting of :set hlsearch

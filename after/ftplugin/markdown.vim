@@ -11,5 +11,5 @@ setlocal tabstop=4
 setlocal softtabstop=4
 setlocal shiftwidth=4
 
-nnoremap <buffer> <silent>  [[           :call search('\v^(#<bar>.+\n(\=+<bar>-+)$)', 'bW')<CR>
-nnoremap <buffer> <silent>  ]]           :call search('\v^(#<bar>.+\n(\=+<bar>-+)$)', 'W')<CR>
+nnoremap <buffer> <silent>  [[           :call search('\v^(#<Bar>.+\n(\=+<Bar>-+)$)', 'bW')<CR>
+nnoremap <buffer> <silent>  ]]           :call search('\v^(#<Bar>.+\n(\=+<Bar>-+)$)', 'W')<CR>

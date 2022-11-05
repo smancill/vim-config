@@ -15,8 +15,8 @@ if executable('fprettify')
   let &l:formatprg = 'fprettify --indent '.s:indent_size.' --silent'
 endif
 
-nnoremap <buffer> <silent> ]]  /\v\c^\s*%(<end)@!(subroutine<bar>((\w+<bar>\w+\s*\(\w+\))\s+)*function)\s+\zs\w+<CR>zt3<C-y>
-nnoremap <buffer> <silent> [[  ?\v\c^\s*%(<end)@!(subroutine<bar>((\w+<bar>\w+\s*\(\w+\))\s+)*function)\s+\zs\w+<CR>zt3<C-y>
+nnoremap <buffer> <silent> ]]  /\v\c^\s*%(<end)@!(subroutine<Bar>((\w+<Bar>\w+\s*\(\w+\))\s+)*function)\s+\zs\w+<CR>zt3<C-Y>
+nnoremap <buffer> <silent> [[  ?\v\c^\s*%(<end)@!(subroutine<Bar>((\w+<Bar>\w+\s*\(\w+\))\s+)*function)\s+\zs\w+<CR>zt3<C-Y>
 
-nnoremap <buffer> <silent> ][  /\v\c^\s*end\s*(subroutine<bar>function)\s+\zs\w+<CR>zt3<C-y>
-nnoremap <buffer> <silent> []  ?\v\c^\s*end\s*(subroutine<bar>function)\s+\zs\w+<CR>zt3<C-y>
+nnoremap <buffer> <silent> ][  /\v\c^\s*end\s*(subroutine<Bar>function)\s+\zs\w+<CR>zt3<C-Y>
+nnoremap <buffer> <silent> []  ?\v\c^\s*end\s*(subroutine<Bar>function)\s+\zs\w+<CR>zt3<C-Y>
