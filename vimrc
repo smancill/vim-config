@@ -179,7 +179,7 @@ set linebreak                               " Wrap at spaces characters
 set formatoptions+=j                        " Delete comment when joining lines
 set display+=lastline                       " If wrap set, display last line
 set virtualedit=block                       " Move freely in visual block
-if has("patch-8.1.0360")
+if has("patch-8.1.0360") && !(has('mac') && $VIM == "/usr/share/vim")
   set diffopt+=algorithm:histogram          " Set diff algorithm
 endif
 
