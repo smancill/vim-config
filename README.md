@@ -30,7 +30,9 @@ and installs the plugins, and downloads spell files for English and Spanish.
 
 ### Prerequisites
 
-Some plugins need external programs to work properly.
+<details>
+<summary>Some plugins need external programs to work properly
+<i>(click to expand/colapse)</i>.</summary>
 
 ##### Source code tags
 
@@ -91,6 +93,8 @@ $ sudo apt install shellcheck
 # macOS
 $ brew install shellcheck
 ```
+
+</details>
 
 ### Updating to the latest version
 
