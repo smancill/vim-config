@@ -329,7 +329,7 @@ if !empty($VIM_CONFIG_COLORSCHEME)
 elseif $COLORTERM == 'gnome-terminal'
   let s:colorscheme = 'inkpot'
   let s:pmenusel = 1
-elseif $TERM =~ 'rxvt' || $TERM =~ '256color'
+elseif $TERM =~ 'rxvt' || $TERM =~ '256color' || $TERM =~ 'kitty'
   let s:colorscheme = 'darkglass'
   let s:pmenusel = 1
 endif
