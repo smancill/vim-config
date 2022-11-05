@@ -152,6 +152,7 @@ let g:SuperTabDefaultCompletionType = 'context'
 " }}}
 
 " UltiSnips                                 {{{2
+if has('python3')
 Plug 'https://github.com/SirVer/ultisnips'
 Plug 'https://github.com/honza/vim-snippets'
 " {{{
@@ -168,6 +169,7 @@ if isdirectory($VIM_CONFIG_HOME . '/private')
 endif
 let b:did_after_plugin_ultisnips_after = 1
 " }}}
+endif
 
 " Fugitive                                  {{{2
 Plug 'https://github.com/tpope/vim-fugitive'
