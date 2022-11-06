@@ -4,8 +4,8 @@
 "
 " SPDX-License-Identifier: MIT-0
 
-if exists("*SuperTabSetDefaultCompletionType")
-  call SuperTabSetDefaultCompletionType("<C-X><C-O>")
+if exists('*SuperTabSetDefaultCompletionType')
+  call SuperTabSetDefaultCompletionType('<C-X><C-O>')
 endif
 
 nnoremap <buffer> <silent> <Leader>ll   :<C-U>Ledger balance<CR>

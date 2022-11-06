@@ -391,7 +391,7 @@ let g:ledger_qf_reconcile_format = '%(format_date(date))  %-4(code) %-36(payee) 
 " }}}
 
 " FixCursorHold                             {{{2
-if has("patch-8.2.2070")
+if has('patch-8.2.2070')
 Plug 'https://github.com/antoinemadec/FixCursorHold.nvim'
 " {{{
 let g:cursorhold_updatetime = 200

@@ -19,7 +19,7 @@ setlocal errorformat=
   \%-G%.%#
 
 
-if !exists("*s:run_file")
+if !exists('*s:run_file')
   function s:run_file()
     let l:cmd = " python3 " . expand("%") . "\<CR>"
     let l:bn = term_start(&shell, {'term_finish': 'close'})
