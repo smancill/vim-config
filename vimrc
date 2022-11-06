@@ -262,16 +262,14 @@ autocmd BufReadPost *
   \   exe "normal! g`\"" |
   \ endif
 
-" Save current view settings on a per-window, per-buffer basis
-function! AutoSaveWinView()
+function! s:AutoSaveWinView()
   if !exists('w:SavedBufView')
     let w:SavedBufView = {}
   endif
   let w:SavedBufView[bufnr('%')] = winsaveview()
 endfunction
 
-" Restore current view settings
-function! AutoRestoreWinView()
+function! s:AutoRestoreWinView()
   let buf = bufnr('%')
   if exists('w:SavedBufView') && has_key(w:SavedBufView, buf)
     let v = winsaveview()
@@ -284,8 +282,8 @@ function! AutoRestoreWinView()
 endfunction
 
 " When switching buffers, preserve window view
-autocmd BufLeave * call AutoSaveWinView()
-autocmd BufEnter * call AutoRestoreWinView()
+autocmd BufLeave * call s:AutoSaveWinView()
+autocmd BufEnter * call s:AutoRestoreWinView()
 
 " Automatically close popup menu and preview window for omnicompletion
 autocmd CursorMovedI,InsertLeave *
