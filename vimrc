@@ -228,10 +228,12 @@ nnoremap <silent>   <C-K>         :<C-U>b#<CR>
 " Make Y consistent with C and D (see :help Y)
 nnoremap Y y$
 
+if $VIM_CONFIG_USE_COC == ''
 " Omnicompletion popup menu like IDE
 inoremap <expr>     <CR>          pumvisible() ? "\<C-Y>" : "\<CR>"
 inoremap <expr>     <Down>        pumvisible() ? "\<C-N>" : "\<Down>"
 inoremap <expr>     <Up>          pumvisible() ? "\<C-P>" : "\<Up>"
+endif
 
 " Command line history
 cnoremap            <C-P>         <Up>

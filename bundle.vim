@@ -243,13 +243,23 @@ let g:airline_extensions += ['coc']
 let g:UltiSnipsExpandTrigger = '<Nop>'
 
 function! s:expand_or_coc()
-  if !pumvisible()
+  if !coc#pum#visible()
     call UltiSnips#ExpandSnippet()
     if g:ulti_expand_res == 0
       return coc#refresh()
     endif
   endif
   return ""
+endfunction
+
+function! s:coc_select_confirm()
+  if coc#pum#visible()
+    return coc#_select_confirm()
+  elseif pumvisible()
+    return "\<C-Y>"
+  else
+    return "\<CR>"
+  endif
 endfunction
 
 function! s:coc_overwrite_map(action, map)
@@ -265,6 +275,7 @@ if has('gui_running') || has('nvim')
 else
   inoremap <silent> <C-@>       <C-R>=<SID>expand_or_coc()<CR>
 endif
+inoremap <silent> <expr>    <CR>        <SID>coc_select_confirm()
 
 nmap  <silent>  K           :<C-U>call <SID>coc_overwrite_map('doHover', 'K')<CR>
 nmap  <silent>  gd          :<C-U>call <SID>coc_overwrite_map('jumpDefinition', 'gd')<CR>
@@ -303,6 +314,11 @@ endif
 
 command! -nargs=0 Format :call CocActionAsync('format')
 command! -nargs=0 OrgImports :call CocActionAsync('runCommand', 'editor.action.organizeImport')
+
+augroup coc_colors
+  autocmd!
+  autocmd ColorScheme darkglass highlight CocMenuSel ctermbg=240
+augroup END
 " }}}
 endif
 
