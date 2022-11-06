@@ -174,14 +174,14 @@ Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/tpope/vim-rhubarb'
 Plug 'https://github.com/shumphrey/fugitive-gitlab.vim'
 " {{{
-nnoremap <silent>   <Leader>gs    :<C-U>Gstatus<CR>
-nnoremap <silent>   <Leader>gc    :<C-U>Gcommit<CR>
+nnoremap <silent>   <Leader>gs    :<C-U>Git<CR>
+nnoremap <silent>   <Leader>gc    :<C-U>Git commit<CR>
 nnoremap <silent>   <Leader>gl    :<C-U>terminal ++close tig -- %<CR>
 nnoremap <silent>   <Leader>ge    :<C-U>Gedit<CR>
-nnoremap <silent>   <Leader>gd    :<C-U>Gdiff<CR>
-nnoremap <silent>   <Leader>gu    :<C-U>Gedit :%<Bar>Gdiff! @<CR>
+nnoremap <silent>   <Leader>gd    :<C-U>Gdiffsplit<CR>
+nnoremap <silent>   <Leader>gu    :<C-U>Gedit :%<Bar>Gdiffsplit! @<CR>
 nnoremap <silent>   <Leader>gb    :<C-U>terminal ++close tig blame +<C-R>=line('.')<CR> -- %<CR>
-nnoremap <silent>   <Leader>go    :<C-U>Gbrowse<CR>
+nnoremap <silent>   <Leader>go    :<C-U>GBrowse<CR>
 " }}}
 
 " mergetool
