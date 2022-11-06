@@ -151,11 +151,10 @@ endif
 let g:SuperTabDefaultCompletionType = 'context'
 " }}}
 
-" Ultisnips                                 {{{2
+" UltiSnips                                 {{{2
 Plug 'https://github.com/SirVer/ultisnips'
 Plug 'https://github.com/honza/vim-snippets'
 " {{{
-inoremap <silent>   <C-@>         <Nop>
 if has('gui_running') || has('nvim')
   let g:UltiSnipsExpandTrigger = '<C-Space>'
 else
@@ -167,6 +166,7 @@ let g:UltiSnipsEditSplit = 'context'
 if isdirectory($VIM_CONFIG_HOME . '/private')
   let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = $VIM_CONFIG_HOME . '/private/UltiSnips'
 endif
+let b:did_after_plugin_ultisnips_after = 1
 " }}}
 
 " Fugitive                                  {{{2
