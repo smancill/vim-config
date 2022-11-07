@@ -137,6 +137,7 @@ Plug 'https://github.com/tpope/vim-repeat'
 Plug 'https://github.com/smancill/vim-unimpaired-lite'
 
 " SuperTab                                  {{{2
+if $VIM_CONFIG_USE_COC == ''
 Plug 'https://github.com/ervandew/supertab'
 " {{{
 if has('gui_running') || has('nvim')
@@ -148,6 +149,7 @@ else
 endif
 let g:SuperTabDefaultCompletionType = 'context'
 " }}}
+endif
 
 " UltiSnips                                 {{{2
 if has('python3')
@@ -238,7 +240,6 @@ let g:ale_linters = {
   \ 'python': [],
   \ }
 let g:airline_extensions += ['coc']
-let g:SuperTabMappingForward = '<Nop>'
 let g:UltiSnipsExpandTrigger = '<Nop>'
 
 function! s:expand_or_coc()
