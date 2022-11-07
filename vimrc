@@ -334,9 +334,9 @@ augroup END
 
 if !empty($VIM_CONFIG_COLORSCHEME)
   let s:colorscheme = $VIM_CONFIG_COLORSCHEME
-elseif $COLORTERM == 'gnome-terminal'
+elseif $GNOME_TERMINAL_SCREEN != ''
   let s:colorscheme = 'inkpot'
-elseif $TERM =~ 'rxvt' || $TERM =~ '256color' || $TERM =~ 'kitty'
+elseif $TERM =~ '256color' || $TERM =~ 'kitty'
   let s:colorscheme = 'darkglass'
 endif
 
