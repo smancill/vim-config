@@ -167,7 +167,7 @@ Examples:
 
 ## Features
 
-The `.vimrc` sets the following options:
+The [`vimrc`](vimrc) sets the following options:
 
 * Restore position of cursor when opening files.
 * Put swap, backup and undo files in `~/.cache/vim/{swap,backup,undo}`.
@@ -184,15 +184,15 @@ The `.vimrc` sets the following options:
 
 And several more.
 
-Configuration for used plugins can be found in `bundle.vim`.
+Configuration for used plugins can be found in [`bundle.vim`](bundle.vim).
 
 ### Navigating buffers
 
-Vim uses buffers (`:help buffers`) to edit multiple files.
+Vim uses buffers ([`:help buffers`][h-buffers]) to edit multiple files.
 Use the following key mappings in normal mode to easily work with buffers.
 
 * `<C-K>` is custom mapped to jump back to the previously edited file
-  (see `:help alternate-file`).
+  (see [`:help alternate-file`][h-alternate]).
 * `<C-J>` is custom mapped to see the list of buffers.
   Navigate with the `j`/`k` keys, press `<Enter>` to open the buffer,
   or `d` to delete it (see [buffergator][buffergator]).
@@ -218,7 +218,7 @@ for a quick introduction to Vim features for editing multiple files.
 
 ## Plugins
 
-The following plugins are used (check `bundle.vim` for configuration details):
+The following plugins are used (check [`bundle.vim`](bundle.vim) for configuration details):
 
 * [local-vimrc](https://github.com/MarcWeber/vim-addon-local-vimrc):
   simple local `vimrc` with hash protection (`.vimrc` and `.project.vim`
@@ -279,3 +279,6 @@ The following plugins are used (check `bundle.vim` for configuration details):
 [repeat]: https://github.com/tpope/vim-repeat
 
 [ack-web]: http://betterthangrep.com
+
+[h-buffers]: https://vimhelp.org/windows.txt.html#buffers
+[h-alternate]: https://vimhelp.org/editing.txt.html#alternate-file
