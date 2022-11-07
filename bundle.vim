@@ -111,6 +111,10 @@ Plug 'https://github.com/vim-airline/vim-airline-themes'
 " {{{
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+let g:airline_symbols = {}
+let g:airline_symbols.linenr = ' ☰ '
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.colnr = ':'
 let g:airline_theme = 'powerlineish'
 let g:airline_highlighting_cache = 1
 let g:airline_detect_spell = 0
