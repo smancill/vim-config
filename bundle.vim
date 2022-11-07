@@ -133,8 +133,8 @@ Plug 'https://github.com/tpope/vim-surround'
 " Repeat                                    {{{2
 Plug 'https://github.com/tpope/vim-repeat'
 
-" Unimpaired (slim)                         {{{2
-Plug 'https://github.com/smancill/vim-unimpaired-slim'
+" Unimpaired (lite)                         {{{2
+Plug 'https://github.com/smancill/vim-unimpaired-lite'
 
 " SuperTab                                  {{{2
 Plug 'https://github.com/ervandew/supertab'
