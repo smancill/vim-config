@@ -5,6 +5,10 @@
 source $VIMRUNTIME/mswin.vim
 
 set vb t_vb=
+
+if has('mac')
+  set guifont=SF\ Mono
+endif
 set guioptions=irec
 
 colo darkglass
