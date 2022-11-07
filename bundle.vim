@@ -23,7 +23,6 @@ let g:local_vimrc = {
 Plug 'https://github.com/jeetsukumaran/vim-buffergator'
 " {{{
 nnoremap <silent>   <C-J>         :<C-U>BuffergatorOpen<CR>
-nnoremap <silent>   <C-_>         :<C-U>BuffergatorTabsOpen<CR>
 augroup filetype_buffergator
   autocmd!
   autocmd FileType buffergator  nnoremap <buffer>   <C-J>   j
@@ -49,7 +48,6 @@ else
   nnoremap <silent>   <C-@>         :<C-U>CtrlPBuffer<CR>
 endif
 nnoremap <silent>   <C-N>         :<C-U>CtrlPMRU<CR>
-nnoremap <silent>   g{            :<C-U>CtrlPTag<CR>
 nnoremap <silent>   g[            :<C-U>CtrlPBufTag<CR>
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_by_filename = 0
