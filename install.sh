@@ -78,7 +78,7 @@ if [ ${update} = false ]; then
     echo -e "\nInstalling plugins..."
     sleep 1
     vim -N -u "${vimrc}" -U NONE -i NONE \
-        -c "try | PlugInstall | finally | w ${log_file} | qall! | endtry" \
+        -c "try | PlugInstall | finally | w! ${log_file} | qall! | endtry" \
         -e
     cat "${log_file}"
     if grep -q '^x ' "${log_file}"; then
