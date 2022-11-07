@@ -267,30 +267,42 @@ else
 endif
 
 nmap  <silent>  K           :<C-U>call <SID>coc_overwrite_map('doHover', 'K')<CR>
-
-nmap  <silent>  <Leader>ch  :<C-U>call CocAction('highlight')<CR>
+nmap  <silent>  gd          :<C-U>call <SID>coc_overwrite_map('jumpDefinition', 'gd')<CR>
 
 nmap  <silent>  [w          <Plug>(coc-diagnostic-prev)
 nmap  <silent>  ]w          <Plug>(coc-diagnostic-next)
-
-nmap  <silent>  gd          :<C-U>call <SID>coc_overwrite_map('jumpDefinition', 'gd')<CR>
-nmap  <silent>  <Leader>ct  <Plug>(coc-type-definition)
-nmap  <silent>  <Leader>ci  <Plug>(coc-implementation)
+nmap  <silent>  <F10>       :<C-U>CocDiagnostics<CR>
 nmap  <silent>  <Leader>cd  :<C-U>CocDiagnostics<CR>
 
-nmap  <silent>  <Leader>cD  :<C-U>CocList diagnostics<CR>
-nmap  <silent>  <Leader>co  :<C-U>CocList outline<CR>
-nmap  <silent>  <Leader>cO  :<C-U>CocList -I symbols<CR>
-
-nmap  <silent>  <Leader>cr  <Plug>(coc-rename)
-nmap  <silent>  <Leader>cR  <Plug>(coc-references)
+nmap  <silent>  <Leader>js  <Plug>(coc-declaration)
+nmap  <silent>  <Leader>jd  <Plug>(coc-definition)
+nmap  <silent>  <Leader>jt  <Plug>(coc-type-definition)
+nmap  <silent>  <Leader>ji  <Plug>(coc-implementation)
+nmap  <silent>  <Leader>jr  <Plug>(coc-references)
 
 nmap  <silent>  <Leader>ca  <Plug>(coc-codeaction)
-
+nmap  <silent>  <Leader>cf  <Plug>(coc-fix-current)
+nmap  <silent>  <Leader>cr  <Plug>(coc-rename)
 xmap  <silent>  <Leader>cF  <Plug>(coc-format-selected)
 nmap  <silent>  <Leader>cF  <Plug>(coc-format-selected)
+nmap  <silent>  <Leader>ch  :<C-U>call CocAction('highlight')<CR>
+
+nmap  <silent>  <Leader>lc  :<C-U>CocList commands<CR>
+nmap  <silent>  <Leader>ld  :<C-U>CocList diagnostics<CR>
+nmap  <silent>  <Leader>lo  :<C-U>CocList outline<CR>
+nmap  <silent>  <Leader>ls  :<C-U>CocList --interactive symbols<CR>
+
+if has('patch-8.2.0750') || has('nvim-0.4.0')
+  nnoremap <silent> <nowait> <expr> <C-F> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-F>"
+  nnoremap <silent> <nowait> <expr> <C-B> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-B>"
+  inoremap <silent> <nowait> <expr> <C-F> coc#float#has_scroll() ? "\<C-R>=coc#float#scroll(1)\<CR>" : "\<C-F>"
+  inoremap <silent> <nowait> <expr> <C-B> coc#float#has_scroll() ? "\<C-R>=coc#float#scroll(0)\<CR>" : "\<C-B>"
+  vnoremap <silent> <nowait> <expr> <C-F> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-F>"
+  vnoremap <silent> <nowait> <expr> <C-B> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-B>"
+endif
 
 command! -nargs=0 Format :call CocActionAsync('format')
+command! -nargs=0 OrgImports :call CocActionAsync('runCommand', 'editor.action.organizeImport')
 " }}}
 endif
 
