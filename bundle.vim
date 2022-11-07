@@ -54,7 +54,7 @@ nnoremap <silent>   g[            :<C-U>CtrlPBufTag<CR>
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_by_filename = 0
 let g:ctrlp_match_window = 'results:40'
-let g:ctrlp_mruf_max = 50
+let g:ctrlp_mruf_max = 25
 let g:ctrlp_mruf_exclude = '\v(/private)?/var/folders/.*|\.git/.*|\.stgit-(new|edit)\.txt'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_open_new_file = 'r'
