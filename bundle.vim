@@ -5,9 +5,11 @@
 " SPDX-License-Identifier: MIT-0
 
 " Prerequisites                             {{{2
-let g:vim_config_has_fd = executable('fd')
-let g:vim_config_has_rg = executable('rg')
-let g:vim_config_has_ctags = executable('ctags')
+let g:vim_config_programs = {
+  \ 'has_fd': executable('fd'),
+  \ 'has_rg': executable('rg'),
+  \ 'has_ctags': executable('ctags'),
+  \ }
 
 " vim-addon-local-vimrc                     {{{2
 Plug 'https://github.com/MarcWeber/vim-addon-local-vimrc'
@@ -60,7 +62,7 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.?tags$',
   \ 'dir':  '\v\.(git|hg|svn|gradle)$|(_site|build)$'
   \ }
-if g:vim_config_has_fd
+if g:vim_config_programs.has_fd
   let g:ctrlp_user_command = "fd --hidden --exclude .git --type f '' %s"
   let g:ctrlp_use_caching = 0
 endif
@@ -98,7 +100,7 @@ Plug 'https://github.com/tpope/vim-vinegar'
 " Ack                                       {{{2
 Plug 'https://github.com/mileszs/ack.vim'
 " {{{
-if g:vim_config_has_rg
+if g:vim_config_programs.has_rg
   let g:ackprg = 'rg --vimgrep --hidden --glob ''!.git'' --smart-case'
 endif
 
@@ -350,7 +352,7 @@ let g:tagbar_singleclick = 1
 " }}}
 
 " Gutentangs                                {{{2
-if g:vim_config_has_ctags
+if g:vim_config_programs.has_ctags
 Plug 'https://github.com/ludovicchabant/vim-gutentags'
 " {{{
 let g:gutentags_ctags_tagfile = '.tags'
