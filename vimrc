@@ -326,10 +326,7 @@ augroup END
 
 augroup vimrc_colors
   autocmd!
-  autocmd ColorScheme darkglass
-    \ if &background == 'dark' |
-    \   highlight PmenuSel ctermbg=white ctermfg=black |
-    \ endif
+  autocmd ColorScheme darkglass highlight PmenuSel ctermbg=white ctermfg=black
 augroup END
 
 if !empty($VIM_CONFIG_COLORSCHEME)
