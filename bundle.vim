@@ -143,7 +143,7 @@ Plug 'https://github.com/tpope/vim-repeat'
 Plug 'https://github.com/smancill/vim-unimpaired-lite'
 
 " SuperTab                                  {{{2
-if $VIM_CONFIG_USE_COC == ''
+if !g:vim_config_options.use_coc
 Plug 'https://github.com/ervandew/supertab'
 " {{{
 if has('gui_running') || has('nvim')
@@ -170,7 +170,7 @@ endif
 let g:UltiSnipsJumpForwardTrigger = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
 let g:UltiSnipsEditSplit = 'context'
-if isdirectory($VIM_CONFIG_HOME . '/private')
+if g:vim_config_options.use_private
   let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = $VIM_CONFIG_HOME . '/private/UltiSnips'
 endif
 let b:did_after_plugin_ultisnips_after = 1
@@ -218,7 +218,7 @@ let g:ale_c_parse_compile_commands = 1
 " }}}
 
 " CoC                                       {{{2
-if $VIM_CONFIG_USE_COC != ''
+if g:vim_config_options.use_coc
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
 " {{{
 " XXX: See after/plugin/coc.vim for CoC configuration
@@ -378,7 +378,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', '.git/COMMIT']
 " }}}
 
 " jedi                                      {{{2
-if $VIM_CONFIG_USE_COC == ''
+if !g:vim_config_options.use_coc
 Plug 'https://github.com/davidhalter/jedi-vim'
 " {{{
 let g:jedi#auto_vim_configuration = 0

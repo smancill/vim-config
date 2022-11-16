@@ -32,6 +32,24 @@ endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SETUP                                 {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Default config options
+let g:vim_config_options = {
+  \ 'use_colorscheme': 1,
+  \ 'use_coc': 0,
+  \ 'use_vendor': isdirectory($VIM_CONFIG_HOME . '/vendor'),
+  \ 'use_private': isdirectory($VIM_CONFIG_HOME . '/private'),
+  \ }
+
+" Environment overrides
+if !empty($VIM_CONFIG_USE_COC)
+  let g:vim_config_options.use_coc = str2nr($VIM_CONFIG_USE_COC)
+endif
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS                               {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -90,19 +108,19 @@ delcom UnPlug
 
 " Support vendor and private directory
 set rtp-=$VIM_CONFIG_HOME
-if isdirectory($VIM_CONFIG_HOME . '/private')
+if g:vim_config_options.use_private
   set rtp^=$VIM_CONFIG_HOME/private
 endif
-if isdirectory($VIM_CONFIG_HOME . '/vendor')
+if g:vim_config_options.use_vendor
   set rtp^=$VIM_CONFIG_HOME/vendor
 endif
 set rtp^=$VIM_CONFIG_HOME
 
 " Allow overriding settings in $VIM_CONFIG_HOME/after
-if isdirectory($VIM_CONFIG_HOME . '/vendor')
+if g:vim_config_options.use_vendor
   set rtp+=$VIM_CONFIG_HOME/vendor/after
 endif
-if isdirectory($VIM_CONFIG_HOME . '/private')
+if g:vim_config_options.use_private
   set rtp+=$VIM_CONFIG_HOME/private/after
 endif
 
@@ -228,7 +246,7 @@ nnoremap <silent>   <C-K>         :<C-U>b#<CR>
 " Make Y consistent with C and D (see :help Y)
 nnoremap Y y$
 
-if $VIM_CONFIG_USE_COC == ''
+if !g:vim_config_options.use_coc
 " Omnicompletion popup menu like IDE
 inoremap <expr>     <CR>          pumvisible() ? "\<C-Y>" : "\<CR>"
 inoremap <expr>     <Down>        pumvisible() ? "\<C-N>" : "\<Down>"
@@ -324,14 +342,14 @@ augroup END
 " CUSTOM COLORSCHEME                    {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+if g:vim_config_options.use_colorscheme
+
 augroup vimrc_colors
   autocmd!
   autocmd ColorScheme darkglass highlight PmenuSel ctermbg=white ctermfg=black
 augroup END
 
-if !empty($VIM_CONFIG_COLORSCHEME)
-  let s:colorscheme = $VIM_CONFIG_COLORSCHEME
-elseif $TERM =~ '256color' || $TERM =~ 'kitty'
+if $TERM =~ '256color' || $TERM =~ 'kitty'
   let s:colorscheme = 'darkglass'
   if $GNOME_TERMINAL_SCREEN != ''
     let g:darkglass_black_background = 1
@@ -344,6 +362,8 @@ try
   endif
 catch /^Vim\%((\a\+)\)\=:E185/
 endtry
+
+endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

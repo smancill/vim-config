@@ -13,7 +13,7 @@ setlocal expandtab
 setlocal cinoptions+=g0
 
 
-if $VIM_CONFIG_USE_COC != ''
+if g:vim_config_options.use_coc
 
 " ALE customization
 if !filereadable('.project.vim')
