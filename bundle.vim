@@ -401,9 +401,6 @@ let g:python_highlight_file_headers_as_comments = 1
 " darkglass                                 {{{2
 Plug 'https://github.com/smancill/darkglass'
 
-" inkpot                                    {{{2
-Plug 'https://github.com/ciaranm/inkpot'
-
 " Conky                                     {{{2
 Plug 'https://github.com/smancill/conky-syntax.vim'
 

@@ -321,7 +321,7 @@ augroup END
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TERM AND COLORSCHEME                  {{{1
+" CUSTOM COLORSCHEME                    {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 augroup vimrc_colors
@@ -331,10 +331,11 @@ augroup END
 
 if !empty($VIM_CONFIG_COLORSCHEME)
   let s:colorscheme = $VIM_CONFIG_COLORSCHEME
-elseif $GNOME_TERMINAL_SCREEN != ''
-  let s:colorscheme = 'inkpot'
 elseif $TERM =~ '256color' || $TERM =~ 'kitty'
   let s:colorscheme = 'darkglass'
+  if $GNOME_TERMINAL_SCREEN != ''
+    let g:darkglass_black_background = 1
+  endif
 endif
 
 try

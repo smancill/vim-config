@@ -11,8 +11,6 @@ if has('mac')
 endif
 set guioptions=irec
 
-colo darkglass
-
 " Load extra gvimrc
 let s:gvimrc_files = [
   \ $VIM_CONFIG_HOME . '/vendor/gvimrc',

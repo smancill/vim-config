@@ -3,7 +3,7 @@
 " SPDX-License-Identifier: MIT-0
 
 let s:current_color = get(g:, 'colors_name', 'default')
-if s:current_color == 'darkglass' || s:current_color == 'inkpot'
+if s:current_color == 'darkglass'
   " default
   hi! link  markdownLinkText              Identifier
   hi! link  markdownUrl                   Statement
