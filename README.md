@@ -170,7 +170,7 @@ Examples:
 The [`vimrc`](vimrc) sets the following options:
 
 * Restore position of cursor when opening files.
-* Put swap, backup and undo files in `~/.cache/vim/{swap,backup,undo}`.
+* Put swap, backup and undo files in `$XDG_STATE_HOME/vim/{swap,backup,undo}`.
 * Set `hidden` to change between unsaved buffers.
 * Use indentation of four spaces, not tabs.
 * Backspace works in INSERT mode, and cursor moves to other lines.

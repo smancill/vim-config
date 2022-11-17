@@ -4,7 +4,7 @@
 #
 # SPDX-License-Identifier: MIT-0
 
-undo_dir=${XDG_CACHE_HOME:-$HOME/.cache}/vim/undo
+undo_dir=${XDG_STATE_HOME:-$HOME/.local/state}/vim/undo
 for undo_file in "$undo_dir"/*
 do
     [ -e "$undo_file" ] || continue

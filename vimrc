@@ -20,8 +20,8 @@ if empty($XDG_CONFIG_HOME)
   let $XDG_CONFIG_HOME = $HOME . '/.config'
 endif
 
-if empty($XDG_CACHE_HOME)
-  let $XDG_CACHE_HOME = $HOME . '/.cache'
+if empty($XDG_STATE_HOME)
+  let $XDG_STATE_HOME = $HOME . '/.local/state'
 endif
 
 if has('nvim')
@@ -152,12 +152,12 @@ set fileformats=unix,dos,mac                " Support all EOLs by default
 set fileformat=unix                         " Default end of line
 
 if !has('nvim')
-  set directory^=$XDG_CACHE_HOME/vim/swap//   " Location of swap files
-  set backupdir^=$XDG_CACHE_HOME/vim/backup// " Location of backup files
+  set directory^=$XDG_STATE_HOME/vim/swap//   " Location of swap files
+  set backupdir^=$XDG_STATE_HOME/vim/backup// " Location of backup files
 endif
 if has('persistent_undo')
   if !has('nvim')
-    set undodir^=$XDG_CACHE_HOME/vim/undo//   " Location of undo files
+    set undodir^=$XDG_STATE_HOME/vim/undo//   " Location of undo files
   endif
   set undofile                              " Active persistent undo
 endif

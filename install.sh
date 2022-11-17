@@ -20,6 +20,7 @@ fi
 vimdir=${HOME}/.vim
 vimrc=${vimdir}/vimrc
 cachedir=${XDG_CACHE_HOME:-$HOME/.cache}/vim
+statedir=${XDG_STATE_HOME:-$HOME/.local/state}/vim
 
 # Get user option
 force=false
@@ -49,7 +50,12 @@ mkdir -p "${vimdir}/bundle"
 mkdir -p "${vimdir}/autoload"
 
 # Create directory for swap/backup/undo files
-mkdir -p "${cachedir}"/{swap,backup,undo}
+# Try to migrate from $XDG_CACHE_HOME to $XDG_STATE_HOME first
+if [[ -d ${cachedir} && ! -d ${statedir} ]]; then
+    mkdir -p "$(dirname "${statedir}")"
+    mv -v "${cachedir}" "${statedir}"
+fi
+mkdir -p "${statedir}"/{swap,backup,undo}
 if [ ${dirs_only} = true ]; then
     exit
 fi

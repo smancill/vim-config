@@ -17,7 +17,7 @@ Plug 'https://github.com/MarcWeber/vim-addon-local-vimrc'
 let g:local_vimrc = {
   \ 'names': ['.project.vim', '.vimrc'],
   \ 'hash_fun': 'LVRHashOfFile',
-  \ 'cache_file': $XDG_CACHE_HOME . '/vim/local_rc_cache',
+  \ 'cache_file': $XDG_STATE_HOME . '/vim/local_rc_cache',
   \ }
 " }}}
 
