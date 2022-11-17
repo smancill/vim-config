@@ -59,6 +59,10 @@ mkdir -p "${statedir}"/{swap,backup,undo}
 if [ ${dirs_only} = true ]; then
     exit
 fi
+# Try to migrate viminfo to $XDG_STATE_HOME
+if [[ -f ${HOME}/.viminfo && ! -f ${statedir}/viminfo ]]; then
+    mv ${HOME}/.viminfo "${statedir}/viminfo"
+fi
 
 # Install package manager
 vimplug_url=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

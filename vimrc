@@ -152,6 +152,7 @@ set fileformats=unix,dos,mac                " Support all EOLs by default
 set fileformat=unix                         " Default end of line
 
 if !has('nvim')
+  set viminfo+=n$XDG_STATE_HOME/vim/viminfo   " Location of viminfo file
   set directory^=$XDG_STATE_HOME/vim/swap//   " Location of swap files
   set backupdir^=$XDG_STATE_HOME/vim/backup// " Location of backup files
 endif
