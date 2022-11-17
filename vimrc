@@ -56,8 +56,6 @@ endfunction
 let g:vim_config_options = {
   \ 'use_colorscheme': 1,
   \ 'use_coc': 0,
-  \ 'use_vendor': isdirectory($VIM_CONFIG_HOME . '/vendor'),
-  \ 'use_private': isdirectory($VIM_CONFIG_HOME . '/private'),
   \ }
 
 " User setup
@@ -67,6 +65,12 @@ call s:source_existing($VIM_CONFIG_HOME . '/private/setup.vim')
 if !empty($VIM_CONFIG_USE_COC)
   let g:vim_config_options.use_coc = str2nr($VIM_CONFIG_USE_COC)
 endif
+
+" User-overrides directories
+call extend(g:vim_config_options, {
+  \ 'has_vendor': isdirectory($VIM_CONFIG_HOME . '/vendor'),
+  \ 'has_private': isdirectory($VIM_CONFIG_HOME . '/private'),
+  \ })
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -126,19 +130,19 @@ delcom UnPlug
 
 " Support vendor and private directory
 set rtp-=$VIM_CONFIG_HOME
-if g:vim_config_options.use_private
+if g:vim_config_options.has_private
   set rtp^=$VIM_CONFIG_HOME/private
 endif
-if g:vim_config_options.use_vendor
+if g:vim_config_options.has_vendor
   set rtp^=$VIM_CONFIG_HOME/vendor
 endif
 set rtp^=$VIM_CONFIG_HOME
 
 " Allow overriding settings in $VIM_CONFIG_HOME/after
-if g:vim_config_options.use_vendor
+if g:vim_config_options.has_vendor
   set rtp+=$VIM_CONFIG_HOME/vendor/after
 endif
-if g:vim_config_options.use_private
+if g:vim_config_options.has_private
   set rtp+=$VIM_CONFIG_HOME/private/after
 endif
 

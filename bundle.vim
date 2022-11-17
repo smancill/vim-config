@@ -170,7 +170,7 @@ endif
 let g:UltiSnipsJumpForwardTrigger = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
 let g:UltiSnipsEditSplit = 'context'
-if g:vim_config_options.use_private
+if g:vim_config_options.has_private
   let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = $VIM_CONFIG_HOME . '/private/UltiSnips'
 endif
 let b:did_after_plugin_ultisnips_after = 1
