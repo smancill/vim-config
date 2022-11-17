@@ -6,6 +6,13 @@ if !exists('g:did_coc_loaded')
   finish
 endif
 
+" Not recommended to be used together with coc#config()
+command! -nargs=0 CocConfig
+  \ echohl WarningMsg |
+  \ echomsg "Use coc#config() in '<vim_dir>/after/plugin/coc.vim' to configure CoC" |
+  \ echohl None
+
+
 " coc                                       {{{2
 call coc#config('coc.preferences', {
   \ 'rootPatterns': [
