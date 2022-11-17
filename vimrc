@@ -151,14 +151,22 @@ set fileencoding=utf-8                      " Default file encoding
 set fileformats=unix,dos,mac                " Support all EOLs by default
 set fileformat=unix                         " Default end of line
 
+function! s:ensure_dir(dir)
+  if has('vim_starting') && !isdirectory(a:dir)
+    call mkdir(a:dir, 'p')
+  endif
+endfunction
+
 if !has('nvim')
   set viminfo+=n$XDG_STATE_HOME/vim/viminfo   " Location of viminfo file
   set directory^=$XDG_STATE_HOME/vim/swap//   " Location of swap files
   set backupdir^=$XDG_STATE_HOME/vim/backup// " Location of backup files
+  call s:ensure_dir($XDG_STATE_HOME . '/vim/swap')
 endif
 if has('persistent_undo')
   if !has('nvim')
     set undodir^=$XDG_STATE_HOME/vim/undo//   " Location of undo files
+    call s:ensure_dir($XDG_STATE_HOME . '/vim/undo')
   endif
   set undofile                              " Active persistent undo
 endif
