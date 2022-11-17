@@ -35,6 +35,12 @@ endif
 " HELPERS                               {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+function! s:source_existing(file)
+  if filereadable(a:file)
+    execute 'source' a:file
+  endif
+endfunction
+
 function! s:ensure_dir(dir)
   if has('vim_starting') && !isdirectory(a:dir)
     call mkdir(a:dir, 'p')
@@ -55,10 +61,7 @@ let g:vim_config_options = {
   \ }
 
 " User setup
-let s:setup_file = $VIM_CONFIG_HOME . '/private/setup.vim'
-if filereadable(s:setup_file)
-  execute 'source' s:setup_file
-endif
+call s:source_existing($VIM_CONFIG_HOME . '/private/setup.vim')
 
 " Environment setup
 if !empty($VIM_CONFIG_USE_COC)
@@ -109,9 +112,7 @@ let s:bundle_files = [
   \ $VIM_CONFIG_HOME . '/private/bundle.vim',
   \ ]
 for s:bundle_file in s:bundle_files
-  if filereadable(s:bundle_file)
-    execute 'source' s:bundle_file
-  endif
+  call s:source_existing(s:bundle_file)
 endfor
 
 call plug#end()
@@ -396,9 +397,7 @@ let s:vimrc_files = [
   \ $VIM_CONFIG_HOME . '/private/vimrc',
   \ ]
 for s:vimrc_file in s:vimrc_files
-  if filereadable(s:vimrc_file)
-    execute 'source' s:vimrc_file
-  endif
+  call s:source_existing(s:vimrc_file)
 endfor
 
 "}}}
