@@ -32,6 +32,17 @@ endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" HELPERS                               {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+function! s:ensure_dir(dir)
+  if has('vim_starting') && !isdirectory(a:dir)
+    call mkdir(a:dir, 'p')
+  endif
+endfunction
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SETUP                                 {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -150,12 +161,6 @@ set nobackup                                " Do not use backups (Git FTW)
 set fileencoding=utf-8                      " Default file encoding
 set fileformats=unix,dos,mac                " Support all EOLs by default
 set fileformat=unix                         " Default end of line
-
-function! s:ensure_dir(dir)
-  if has('vim_starting') && !isdirectory(a:dir)
-    call mkdir(a:dir, 'p')
-  endif
-endfunction
 
 if !has('nvim')
   set viminfo+=n$XDG_STATE_HOME/vim/viminfo   " Location of viminfo file
