@@ -9,6 +9,6 @@ for undo_file in "$undo_dir"/*
 do
     [ -e "$undo_file" ] || continue
     real_file=${undo_file//%/\/}
-    real_file=${real_file#$undo_dir/}
+    real_file=${real_file#"$undo_dir/"}
     [ -e "$real_file" ] || rm -v -- "$undo_file"
 done
