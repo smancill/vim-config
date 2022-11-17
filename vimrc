@@ -171,6 +171,7 @@ if !has('nvim')
   set viminfo+=n$XDG_STATE_HOME/vim/viminfo   " Location of viminfo file
   set directory^=$XDG_STATE_HOME/vim/swap//   " Location of swap files
   set backupdir^=$XDG_STATE_HOME/vim/backup// " Location of backup files
+  set viewdir=$XDG_STATE_HOME/vim/view        " Location of view files
   call s:ensure_dir($XDG_STATE_HOME . '/vim/swap')
 endif
 if has('persistent_undo')

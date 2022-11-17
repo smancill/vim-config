@@ -75,6 +75,7 @@ let g:ctrlp_buftag_types = {
 " {{{
 let g:netrw_altfile = 1
 let g:netrw_dirhistmax = 0
+let g:netrw_home = $XDG_STATE_HOME . '/vim'
 " }}}
 
 " NERDTree                                  {{{2
@@ -92,6 +93,7 @@ let NERDTreeIgnore = [
   \ '\.svn$[[dir]]',
   \ '\.\?tags\(\.\w*\)\?$[[file]]',
   \ ]
+let g:NERDTreeBookmarksFile = $XDG_DATA_HOME . '/vim/NERDTreeBookmarks'
 " }}}
 
 " Vinegar                                   {{{2
