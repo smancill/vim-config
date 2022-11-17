@@ -43,6 +43,12 @@ let g:vim_config_options = {
   \ 'use_private': isdirectory($VIM_CONFIG_HOME . '/private'),
   \ }
 
+" User overrides
+let s:setup_file = $VIM_CONFIG_HOME . '/private/setup.vim'
+if filereadable(s:setup_file)
+  execute 'source' s:setup_file
+endif
+
 " Environment overrides
 if !empty($VIM_CONFIG_USE_COC)
   let g:vim_config_options.use_coc = str2nr($VIM_CONFIG_USE_COC)
