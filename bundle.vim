@@ -194,13 +194,6 @@ nnoremap <silent>   <Leader>gb    :<C-U>terminal ++close tig blame +<C-R>=line('
 nnoremap <silent>   <Leader>go    :<C-U>GBrowse<CR>
 " }}}
 
-" mergetool
-Plug 'https://github.com/samoshkin/vim-mergetool'
-" {{{
-let g:mergetool_layout = 'lm'
-let g:mergetool_prefer_revision = 'remote'
-" }}}
-
 " ALE                                       {{{2
 Plug 'https://github.com/dense-analysis/ale'
 " {{{
