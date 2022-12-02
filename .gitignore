@@ -1,6 +1,7 @@
 /autoload/plug.vim
 /autoload/plug.vim.old
 /bundle/
+/pack/
 /spell/
 /tmp/
 /UltiSnips/
