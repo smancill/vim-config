@@ -83,10 +83,10 @@ Plug 'https://github.com/scrooloose/nerdtree', { 'on':  [ 'NERDTreeToggle', 'NER
 " {{{
 nnoremap <silent>   <F3>          :<C-U>NERDTreeToggle<CR>
 nnoremap <silent>   <Leader><F3>  :<C-U>NERDTreeFind<CR>
-let NERDTreeHijackNetrw = 0
-let NERDTreeCaseSensitiveSort = 1
-let NERDTreeRespectWildIgnore = 1
-let NERDTreeIgnore = [
+let g:NERDTreeHijackNetrw = 0
+let g:NERDTreeCaseSensitiveSort = 1
+let g:NERDTreeRespectWildIgnore = 1
+let g:NERDTreeIgnore = [
   \ '\.d$[[dir]]',
   \ '\.git$[[dir]]',
   \ '\.hg$[[dir]]',
