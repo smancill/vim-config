@@ -323,7 +323,7 @@ augroup END
 endif
 
 " mundo                                     {{{2
-Plug 'https://github.com/simnalamburt/vim-mundo'
+Plug 'https://github.com/simnalamburt/vim-mundo', {'on': ['MundoShow', 'MundoToggle']}
 " {{{
 nnoremap <silent>   <F5>          :<C-U>silent MundoToggle<CR>
 let g:mundo_preview_bottom = 1
@@ -337,7 +337,7 @@ Plug 'https://github.com/tpope/vim-commentary'
 packadd! matchit
 
 " Tagbar                                    {{{2
-Plug 'https://github.com/majutsushi/tagbar'
+Plug 'https://github.com/majutsushi/tagbar', {'on': ['TagbarOpen', 'TagbarToggle']}
 " {{{
 nnoremap <silent>   <F8>          :<C-U>TagbarToggle<CR>
 let g:tagbar_autofocus = 1
@@ -359,7 +359,7 @@ let g:gutentags_file_list_command = {
 endif
 
 " Sideways                                  {{{2
-Plug 'https://github.com/AndrewRadev/sideways.vim'
+Plug 'https://github.com/AndrewRadev/sideways.vim', {'on': ['SidewaysLeft', 'SidewaysRight']}
 " {{{
 nnoremap  <Leader><     :SidewaysLeft<CR>
 nnoremap  <Leader>>     :SidewaysRight<CR>
@@ -398,7 +398,7 @@ let g:python_highlight_file_headers_as_comments = 1
 Plug 'https://github.com/smancill/darkglass'
 
 " Ledger                                    {{{2
-Plug 'https://github.com/ledger/vim-ledger'
+Plug 'https://github.com/ledger/vim-ledger', {'for': 'ledger'}
 " {{{
 let g:ledger_maxwidth = 80
 let g:ledger_detailed_first = 1
