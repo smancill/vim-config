@@ -4,6 +4,8 @@
 "
 " SPDX-License-Identifier: MIT-0
 
+setlocal spell
+
 " Allow automatic formatting of bulleted lists
 setlocal comments+=fb:*
 setlocal comments+=fb:-
