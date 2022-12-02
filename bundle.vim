@@ -79,7 +79,7 @@ let g:netrw_home = $XDG_STATE_HOME . '/vim'
 " }}}
 
 " NERDTree                                  {{{2
-Plug 'https://github.com/scrooloose/nerdtree', { 'on':  [ 'NERDTreeToggle', 'NERDTreeFind' ] }
+Plug 'https://github.com/scrooloose/nerdtree', {'on': ['NERDTree', 'NERDTreeToggle', 'NERDTreeFind']}
 " {{{
 nnoremap <silent>   <F3>          :<C-U>NERDTreeToggle<CR>
 nnoremap <silent>   <Leader><F3>  :<C-U>NERDTreeFind<CR>
