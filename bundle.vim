@@ -87,7 +87,6 @@ let g:NERDTreeHijackNetrw = 0
 let g:NERDTreeCaseSensitiveSort = 1
 let g:NERDTreeRespectWildIgnore = 1
 let g:NERDTreeIgnore = [
-  \ '\.d$[[dir]]',
   \ '\.git$[[dir]]',
   \ '\.hg$[[dir]]',
   \ '\.svn$[[dir]]',
