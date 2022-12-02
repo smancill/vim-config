@@ -10,3 +10,6 @@ setlocal comments+=fb:-
 
 setlocal formatoptions+=c " Auto-wrap comments using textwidth
 setlocal formatoptions+=q " Allow formatting of comments with `gq`
+
+" disable whitespace check
+silent! call airline#extensions#whitespace#disable()
