@@ -268,6 +268,7 @@ nnoremap <expr>     k             (v:count ? 'k' : 'gk')
 
 " Buffers
 nnoremap <silent>   <C-K>         :<C-U>b#<CR>
+nnoremap <silent>   <Leader>bd    :<C-U>b#<Bar>bd#<CR>
 
 " Make Y consistent with C and D (see :help Y)
 nnoremap Y y$
