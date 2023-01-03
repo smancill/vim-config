@@ -35,6 +35,10 @@ call coc#config('diagnostic', {
   \ 'warningSign': '--',
   \ })
 
+call coc#config('inlayHint', {
+  \ 'display': v:false,
+  \ })
+
 call coc#config('suggest', {
   \ 'autoTrigger': 'trigger',
   \ 'minTriggerInputLength': 2,
@@ -60,9 +64,6 @@ call coc#config('git', {
   \ })
 
 " coc-pyright                               {{{2
-call coc#config('pyright.inlayHints.functionReturnTypes', v:false)
-call coc#config('pyright.inlayHints.variableTypes', v:false)
-
 call coc#config('python.formatting.provider', 'black')
 
 call coc#config('python.linting.enabled', v:true)
