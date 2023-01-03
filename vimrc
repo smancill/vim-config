@@ -220,6 +220,7 @@ set autoindent                              " Indent new lines using previous
 set nojoinspaces                            " One space after sentences
 set wrap                                    " Softwrap long lines
 set linebreak                               " Wrap at spaces characters
+set noshowmatch                             " Briefly jump to matching bracket
 set formatoptions+=j                        " Delete comment when joining lines
 set display+=lastline                       " If wrap set, display last line
 set virtualedit=block                       " Move freely in visual block
