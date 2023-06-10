@@ -241,7 +241,6 @@ The following plugins are used (check [`bundle.vim`](bundle.vim) for configurati
   [EditorConfig](http://editorconfig.org) files.
 * [fugitive.vim][fugitive]: an awesome Git wrapper
   (see custom mappings with `:map <Leader>g`).
-* [vim-mergetool][mergetool]: efficient way of using Vim as a Git mergetool.
 * [ALE][ale]: Asynchronous linting/fixing.
 * [Mundo][mundo]: visualize the Vim undo tree (toggle with `<F5>`).
 * [Gutentags][gutentags]: automatically manage the tag files.
@@ -258,7 +257,7 @@ The following plugins are used (check [`bundle.vim`](bundle.vim) for configurati
 [vim-plug]: https://github.com/junegunn/vim-plug
 [coc.nvim]: https://github.com/neoclide/coc.nvim
 [buffergator]: https://github.com/jeetsukumaran/vim-buffergator
-[CtrlP]: http://kien.github.com/ctrlp.vim
+[ctrlp]: https://github.com/ctrlpvim/ctrlp.vim
 [nerdtree]: https://github.com/scrooloose/nerdtree
 [vinegar]: https://github.com/tpope/vim-vinegar
 [airline]: https://github.com/vim-airline/vim-airline
@@ -266,7 +265,6 @@ The following plugins are used (check [`bundle.vim`](bundle.vim) for configurati
 [ultisnips]: https://github.com/sirver/ultisnips
 [editorconfig]: https://github.com/editorconfig/editorconfig-vim
 [fugitive]: https://github.com/tpope/vim-fugitive
-[mergetool]: https://github.com/samoshkin/vim-mergetool
 [gist]: https://github.com/mattn/gist-vim
 [ale]: https://github.com/w0rp/ale
 [mundo]: https://github.com/simnalamburt/vim-mundo
