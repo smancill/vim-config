@@ -187,7 +187,7 @@ nnoremap <silent>   <Leader>gs    :<C-U>Git<CR>
 nnoremap <silent>   <Leader>gc    :<C-U>Git commit<CR>
 nnoremap <silent>   <Leader>gl    :<C-U>terminal ++close tig -- %<CR>
 nnoremap <silent>   <Leader>ge    :<C-U>Gedit<CR>
-nnoremap <silent>   <Leader>gd    :<C-U>Gdiffsplit<CR>
+nnoremap <silent>   <Leader>gd    :<C-U>Gdiffsplit!<CR>
 nnoremap <silent>   <Leader>gu    :<C-U>Gedit :%<Bar>Gdiffsplit! @<CR>
 nnoremap <silent>   <Leader>gb    :<C-U>terminal ++close tig blame +<C-R>=line('.')<CR> -- %<CR>
 nnoremap <silent>   <Leader>go    :<C-U>GBrowse<CR>
