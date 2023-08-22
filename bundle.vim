@@ -223,6 +223,9 @@ Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
 " XXX: See after/plugin/coc.vim for CoC configuration
 
 set signcolumn=auto
+if has('8.1.1228')
+  set tagfunc=CocTagFunc
+endif
 
 let g:coc_global_extensions = [
   \ 'coc-omni',
