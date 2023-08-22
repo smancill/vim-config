@@ -122,7 +122,6 @@ let g:airline_theme = 'powerlineish'
 let g:airline_highlighting_cache = 1
 let g:airline_detect_spell = 0
 let g:airline_extensions = [
-  \ 'ale',
   \ 'ctrlp',
   \ 'fugitiveline',
   \ 'quickfix',
@@ -200,6 +199,8 @@ let g:ale_lint_on_enter = 1
 let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_open_list = 0
+let g:ale_set_quicklist = 0
+let g:ale_set_loclist = 0
 let g:ale_linters = {
   \ 'c': ['gcc'],
   \ 'cpp': ['gcc'],
@@ -210,6 +211,9 @@ let g:ale_linters = {
 let g:ale_pattern_options = {}
 let g:ale_c_parse_compile_commands = 1
 let g:ale_virtualtext_cursor = 0
+let g:ale_warn_about_trailing_whitespace = 0
+
+let g:airline_extensions += ['ale']
 " }}}
 
 " CoC                                       {{{2
