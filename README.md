@@ -143,7 +143,7 @@ and put extra settings in there:
 
 ```vim
 " Override settings for plugins
-let g:ale_cpp_gcc_options = '-std=c++11'
+let g:ale_cpp_cc_options = '-std=c++11'
 
 " Override Vim settings
 set nonumber

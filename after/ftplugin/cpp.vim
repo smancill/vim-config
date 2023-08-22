@@ -20,7 +20,7 @@ if !filereadable('.project.vim')
   " Better default options that do not interfere with compilation database
   if findfile('compile_commands.json', '.,build') == ''
     if !exists('g:ale_cpp_cc_options')
-      let g:ale_cpp_gcc_options = '-std=c++17 -Wall'
+      let g:ale_cpp_cc_options = '-std=c++17 -Wall'
     endif
   endif
 endif
