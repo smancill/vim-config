@@ -202,8 +202,8 @@ let g:ale_open_list = 0
 let g:ale_set_quicklist = 0
 let g:ale_set_loclist = 0
 let g:ale_linters = {
-  \ 'c': ['gcc'],
-  \ 'cpp': ['gcc'],
+  \ 'c': ['cc'],
+  \ 'cpp': ['cc'],
   \ 'java': [],
   \ 'javascript': ['eslint'],
   \ 'python': ['flake8'],
