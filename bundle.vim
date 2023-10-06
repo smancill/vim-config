@@ -63,7 +63,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v\.(git|hg|svn|gradle)$|(_site|build)$'
   \ }
 if g:vim_config_programs.has_fd
-  let g:ctrlp_user_command = "fd --hidden --exclude .git --type f '' %s"
+  let g:ctrlp_user_command = "fd --hidden --exclude .git --type f --base-directory '%s'"
   let g:ctrlp_use_caching = 0
 endif
 let g:ctrlp_buftag_types = {
