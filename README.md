@@ -211,7 +211,7 @@ for a quick introduction to Vim features for editing multiple files.
 ### Useful mappings
 
 * ` ' ` and `` ` `` are exchanged for moving to marks.
-* ` - ` opens the Vim built in directory browser (see [vinegar][vinegar]).
+* ` - ` opens the Vim built in directory browser (see [dirvish][dirvish]).
 * `<F3>` toggles the NERDTree list of files (see [NERDtree][nerdtree]).
 * `<C-Space>` on insert mode to start completion based on context.
 
@@ -229,7 +229,7 @@ The following plugins are used (check [`bundle.vim`](bundle.vim) for configurati
   (use `<C-P>` to search files and `<C-N>` to search MRU files).
 * [The NERD Tree][nerdtree]: a tree explorer (toggle with `<F3>` and find
     current file with `<Leader><F3>`).
-* [vinegar.vim][vinegar]: enhances the built in directory browser (open with `-`).
+* [dirvish.vim][dirvish]: enhances the built in directory browser (open with `-`).
 * [vim-airline][airline]: lean and mean status/tabline for Vim that's light as air.
 * [Supertab][supertab]: perform all Vim insert mode completions with a single key
   (custom mapped to `<C-Space>` instead of `<Tab>`).
@@ -259,7 +259,7 @@ The following plugins are used (check [`bundle.vim`](bundle.vim) for configurati
 [buffergator]: https://github.com/jeetsukumaran/vim-buffergator
 [ctrlp]: https://github.com/ctrlpvim/ctrlp.vim
 [nerdtree]: https://github.com/scrooloose/nerdtree
-[vinegar]: https://github.com/tpope/vim-vinegar
+[dirvish]: https://github.com/justinmk/vim-dirvish
 [airline]: https://github.com/vim-airline/vim-airline
 [supertab]: https://github.com/ervandew/supertab
 [ultisnips]: https://github.com/sirver/ultisnips

@@ -95,8 +95,11 @@ let g:NERDTreeIgnore = [
 let g:NERDTreeBookmarksFile = $XDG_DATA_HOME . '/vim/NERDTreeBookmarks'
 " }}}
 
-" Vinegar                                   {{{2
-Plug 'https://github.com/tpope/vim-vinegar'
+" Dirvish                                   {{{2
+Plug 'https://github.com/justinmk/vim-dirvish'
+" {{{
+let g:dirvish_mode = ':sort | :sort /^.*[/]/'
+" }}}
 
 " Ack                                       {{{2
 Plug 'https://github.com/mileszs/ack.vim'
