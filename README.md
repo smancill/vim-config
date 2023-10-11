@@ -74,14 +74,14 @@ when saving the file.
 
 C/C++ files have automatic support with *GCC*.
 
-To add support for Python files install *flake8*:
+To add support for Python files install *ruff*:
 
 ``` sh
 # Ubuntu
-$ sudo apt install flake8
+$ pip install ruff
 
 # macOS
-$ brew install flake8
+$ brew install ruff
 ```
 
 For shell script files, install *ShellCheck*:

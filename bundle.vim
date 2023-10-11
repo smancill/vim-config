@@ -209,7 +209,7 @@ let g:ale_linters = {
   \ 'cpp': ['cc'],
   \ 'java': [],
   \ 'javascript': ['eslint'],
-  \ 'python': ['flake8'],
+  \ 'python': ['ruff'],
   \ }
 let g:ale_pattern_options = {}
 let g:ale_c_parse_compile_commands = 1

@@ -67,7 +67,7 @@ call coc#config('git', {
 call coc#config('python.formatting.provider', 'black')
 
 call coc#config('python.linting.enabled', v:true)
-call coc#config('python.linting.flake8Enabled', v:true)
+call coc#config('python.linting.ruffEnabled', v:true)
 " }}}
 
 " vim: foldmethod=marker foldlevel=2
