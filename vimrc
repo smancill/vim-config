@@ -359,7 +359,9 @@ autocmd BufRead /private/var/folders/*,/var/folders/*,/tmp/*
   \ setlocal noundofile
 
 " Terminal buffers
-if exists('##TerminalOpen')
+if exists('##TerminalWinOpen')
+  autocmd TerminalWinOpen * if &buftype == 'terminal' | setlocal nonumber | endif
+elseif exists('##TerminalOpen')
   autocmd TerminalOpen * if &buftype == 'terminal' | setlocal nonumber | endif
 endif
 
