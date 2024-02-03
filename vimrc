@@ -204,6 +204,9 @@ endif
 
 set wildmenu                                " Better command-line completion
 set wildmode=longest:full,full              " Completion options
+if has('nvim')
+  set wildoptions-=pum                      " Do not use popup menu
+endif
 set wildignore+=*.bak,*~,*.swp              " Ignore these files
 set wildignore+=*.o,*.os,*.so,*.dylib,*.gch,*.mod,*.class
 set wildignore+=*.py[co],*.rb[co],__pycache__
