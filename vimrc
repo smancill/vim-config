@@ -236,6 +236,9 @@ set virtualedit=block                       " Move freely in visual block
 if has('patch-8.1.0360') && !(has('mac') && $VIM == '/usr/share/vim')
   set diffopt+=algorithm:histogram          " Set diff algorithm
 endif
+if exists('&jumpoptions')
+  set jumpoptions=stack                     " Stack-like jumplist
+endif
 
 set incsearch                               " Search word while typing
 set ignorecase                              " Ignore case in search patterns
