@@ -339,7 +339,7 @@ autocmd CursorMovedI,InsertLeave *
   \   silent! pclose |
   \ endif
 
-if v:version >= 801
+if exists('##CmdlineEnter')
   autocmd CmdlineEnter : set noignorecase
   autocmd CmdlineLeave : set ignorecase
 endif
@@ -359,7 +359,7 @@ autocmd BufRead /private/var/folders/*,/var/folders/*,/tmp/*
   \ setlocal noundofile
 
 " Terminal buffers
-if v:version >= 801
+if exists('##TerminalOpen')
   autocmd TerminalOpen * if &buftype == 'terminal' | setlocal nonumber | endif
 endif
 
