@@ -363,6 +363,8 @@ if exists('##TerminalWinOpen')
   autocmd TerminalWinOpen * if &buftype == 'terminal' | setlocal nonumber | endif
 elseif exists('##TerminalOpen')
   autocmd TerminalOpen * if &buftype == 'terminal' | setlocal nonumber | endif
+elseif exists('##TermOpen')
+  autocmd TermOpen * if &buftype == 'terminal' | setlocal nonumber | startinsert | endif
 endif
 
 augroup END
