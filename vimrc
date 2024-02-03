@@ -223,6 +223,12 @@ set autoindent                              " Indent new lines using previous
 set nojoinspaces                            " One space after sentences
 set wrap                                    " Softwrap long lines
 set linebreak                               " Wrap at spaces characters
+if exists('&breakindent')
+  set breakindent                           " Wrapped lines continue indented
+  if has('patch-8.2.3198')
+    set breakindentopt+=list:-1             " Wrapped lines use list indent
+  endif
+endif
 set noshowmatch                             " Briefly jump to matching bracket
 set formatoptions+=j                        " Delete comment when joining lines
 set display+=lastline                       " If wrap set, display last line
