@@ -7,6 +7,9 @@
 setlocal textwidth=78
 setlocal cindent
 setlocal nowrap
+if has('patch-8.2.4907')
+  setlocal formatoptions+=/
+endif
 
 setlocal tabstop=8
 setlocal softtabstop=8
