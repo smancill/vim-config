@@ -214,10 +214,10 @@ set wildignorecase                          " Ignore case in file completion
 
 set tabstop=4                               " Four spaces for a tab
 set softtabstop=4                           " Four spaces for a tab
+set shiftwidth=4                            " Default indent of four spaces
 set smarttab                                " Smart tabs at beginning of line
 set expandtab                               " Use spaces instead of tabs
 set shiftround                              " Indent to multiple of shiftwidth
-set shiftwidth=4                            " Default indent of four spaces
 
 set autoindent                              " Indent new lines using previous
 set nojoinspaces                            " One space after sentences
