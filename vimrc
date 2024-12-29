@@ -393,7 +393,7 @@ augroup vimrc_colors
   autocmd ColorScheme darkglass highlight PmenuSel ctermbg=white ctermfg=black
 augroup END
 
-if $TERM =~ '256color' || $TERM =~ 'kitty'
+if $TERM =~ '256color' || $TERM =~ 'ghostty'
   let s:colorscheme = 'darkglass'
   if $GNOME_TERMINAL_SCREEN != ''
     let g:darkglass_black_background = 1
