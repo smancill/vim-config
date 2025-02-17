@@ -372,8 +372,8 @@ endif
 " Sideways                                  {{{2
 Plug 'https://github.com/AndrewRadev/sideways.vim', {'on': ['SidewaysLeft', 'SidewaysRight']}
 " {{{
-nnoremap  <Leader><     :SidewaysLeft<CR>
-nnoremap  <Leader>>     :SidewaysRight<CR>
+nnoremap  <silent>  <Leader><     :<C-U>SidewaysLeft<CR>
+nnoremap  <silent>  <Leader>>     :<C-U>SidewaysRight<CR>
 " }}}
 
 " EditorConfig                              {{{2
