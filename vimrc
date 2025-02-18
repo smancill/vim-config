@@ -212,8 +212,8 @@ set wildignore+=*.o,*.os,*.so,*.dylib,*.gch,*.mod,*.class
 set wildignore+=*.py[co],*.rb[co],__pycache__
 set wildignorecase                          " Ignore case in file completion
 
-set tabstop=4                               " Four spaces for a tab
-set softtabstop=4                           " Four spaces for a tab
+set tabstop=8                               " Eight spaces for a tab character
+set softtabstop=4                           " Four spaces for a pressed tab
 set shiftwidth=4                            " Default indent of four spaces
 set smarttab                                " Smart tabs at beginning of line
 set expandtab                               " Use spaces instead of tabs
