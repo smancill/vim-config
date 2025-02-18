@@ -64,7 +64,7 @@ call coc#config('git', {
   \ })
 
 " coc-pyright                               {{{2
-call coc#config('python.formatting.provider', 'black')
+call coc#config('python.formatting.provider', 'ruff')
 
 call coc#config('python.linting.enabled', v:true)
 call coc#config('python.linting.ruffEnabled', v:true)
