@@ -182,7 +182,9 @@ if has('persistent_undo')
   set undofile                              " Active persistent undo
 endif
 
-set mouse=a                                 " Use mouse in all modes
+if has('mouse')
+  set mouse=a                               " Use mouse in all modes
+endif
 set backspace=indent,eol,start              " Backspace works in Insert mode
 set whichwrap=b,s,<,>,[,]                   " Move cursor to other lines
 
@@ -231,6 +233,9 @@ if exists('&breakindent')
 endif
 set noshowmatch                             " Briefly jump to matching bracket
 set formatoptions+=j                        " Delete comment when joining lines
+set scrolloff=1
+set sidescroll=1
+set sidescrolloff=2
 set display+=lastline                       " If wrap set, display last line
 set virtualedit=block                       " Move freely in visual block
 if has('patch-8.1.0360') && !(has('mac') && $VIM == '/usr/share/vim')
@@ -240,7 +245,9 @@ if exists('&jumpoptions')
   set jumpoptions=stack                     " Stack-like jumplist
 endif
 
+if has('reltime')
 set incsearch                               " Search word while typing
+endif
 set ignorecase                              " Ignore case in search patterns
 set smartcase                               " But override if uppercase used
 set hlsearch                                " Highlight search
@@ -258,6 +265,10 @@ set tags=./.tags;,./tags;                   " Use a dot tags file
 set viminfo^=!                              " Save uppercase variables
 set sessionoptions-=options                 " Options can corrupt sessions
 set viewoptions-=options                    " Options can corrupt views
+
+if has('langmap') && exists('+langremap')
+  set nolangremap                           " Disable legacy behavior
+endif
 
 " Better unprintable characters
 if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
