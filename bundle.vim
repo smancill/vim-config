@@ -108,7 +108,7 @@ if g:vim_config_programs.has_rg
   let g:ackprg = 'rg --vimgrep --hidden --glob ''!.git'' --smart-case'
 endif
 
-nnoremap  <Leader>/     :Ack!<Space>
+nnoremap  <Leader>/     :<C-U>Ack!<Space>
 " }}}
 
 " Airline                                   {{{2
