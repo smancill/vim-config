@@ -406,7 +406,7 @@ augroup END
 
 if $TERM =~ '256color' || $TERM =~ 'ghostty'
   let s:colorscheme = 'darkglass'
-  if $GNOME_TERMINAL_SCREEN != ''
+  if &background ==# 'light' || $GNOME_TERMINAL_SCREEN != ''
     let g:darkglass_black_background = 1
   endif
 endif
