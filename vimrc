@@ -394,6 +394,20 @@ augroup END
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" EXTRA CONFIGURATION                   {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Load extra vimrc
+let s:vimrc_files = [
+  \ $VIM_CONFIG_HOME . '/vendor/vimrc',
+  \ $VIM_CONFIG_HOME . '/private/vimrc',
+  \ ]
+for s:vimrc_file in s:vimrc_files
+  call s:source_existing(s:vimrc_file)
+endfor
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM COLORSCHEME                    {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -412,27 +426,13 @@ if $TERM =~ '256color' || $TERM =~ 'ghostty'
 endif
 
 try
-  if exists('s:colorscheme')
+  if exists('s:colorscheme') && !exists('g:colors_name')
     exe 'colorscheme ' . s:colorscheme
   endif
 catch /^Vim\%((\a\+)\)\=:E185/
 endtry
 
 endif
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" EXTRA CONFIGURATION                   {{{1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Load extra vimrc
-let s:vimrc_files = [
-  \ $VIM_CONFIG_HOME . '/vendor/vimrc',
-  \ $VIM_CONFIG_HOME . '/private/vimrc',
-  \ ]
-for s:vimrc_file in s:vimrc_files
-  call s:source_existing(s:vimrc_file)
-endfor
 
 "}}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
