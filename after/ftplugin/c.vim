@@ -16,4 +16,3 @@ setlocal softtabstop=8
 setlocal shiftwidth=8
 setlocal noexpandtab
 
-setlocal popt=left:8pc,right:3pc
