@@ -10,7 +10,3 @@ setlocal nowrap
 setlocal tabstop=8
 setlocal softtabstop=8
 setlocal shiftwidth=8
-
-" always open a block
-inoremap  <buffer>  {<CR>    {<CR>}<C-C>O
-vnoremap  <buffer>  {<CR>   S{<CR>}<C-C>Pk=iB

@@ -17,7 +17,3 @@ setlocal shiftwidth=8
 setlocal noexpandtab
 
 setlocal popt=left:8pc,right:3pc
-
-" always open a block
-inoremap  <buffer>  {<CR>    {<CR>}<C-C>O
-vnoremap  <buffer>  {<CR>   S{<CR>}<C-C>Pk=iB
