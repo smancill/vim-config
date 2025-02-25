@@ -241,6 +241,12 @@ set virtualedit=block                       " Move freely in visual block
 if has('patch-8.1.0360') && !(has('mac') && $VIM == '/usr/share/vim')
   set diffopt+=algorithm:histogram          " Set diff algorithm
 endif
+if has('patch-8.2.2490')
+  set diffopt+=followwrap                   " Keep wrap option
+endif
+if has('patch-9.1.1009')
+  set diffopt+=linematch:60                 " Align changes between buffers
+endif
 if exists('&jumpoptions')
   set jumpoptions=stack                     " Stack-like jumplist
 endif
