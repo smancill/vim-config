@@ -58,6 +58,9 @@ call coc#config('list.normalMappings', {
   \ '<C-K>': 'do:previous',
   \ })
 
+" coc-clangd
+call coc#config('clangd.fallbackFlags', ['-Wall', '-std=c++20'])
+
 " coc-git                                   {{{2
 call coc#config('git', {
   \ 'enableGlobalStatus': v:false,
