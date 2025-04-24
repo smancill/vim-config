@@ -44,11 +44,8 @@ let g:buffergator_sort_regime = 'mru'
 " ctrlp                                     {{{2
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 " {{{
-if has('gui_running') || has('nvim')
-  nnoremap <silent>   <C-Space>     :<C-U>CtrlPBuffer<CR>
-else
-  nnoremap <silent>   <C-@>         :<C-U>CtrlPBuffer<CR>
-endif
+nnoremap <silent>   <C-Space>     :<C-U>CtrlPBuffer<CR>
+nnoremap <silent>   <C-@>         :<C-U>CtrlPBuffer<CR>
 nnoremap <silent>   <C-N>         :<C-U>CtrlPMRU<CR>
 nnoremap <silent>   g[            :<C-U>CtrlPBufTag<CR>
 let g:ctrlp_working_path_mode = 0
@@ -150,14 +147,15 @@ Plug 'https://github.com/smancill/vim-unimpaired-lite'
 if !g:vim_config_options.use_coc
 Plug 'https://github.com/ervandew/supertab'
 " {{{
-if has('gui_running') || has('nvim')
-  let g:SuperTabMappingForward = '<C-Space>'
-  let g:SuperTabMappingBackward = '<S-C-Space>'
-else
-  let g:SuperTabMappingForward = '<C-@>'
-  let g:SuperTabMappingBackward = '<C-S-@>'
-endif
+let g:SuperTabMappingForward = '<Plug>(complete_forward)'
+let g:SuperTabMappingBackward = '<Plug>(complete_backward)'
 let g:SuperTabDefaultCompletionType = 'context'
+
+" Use CTRL+Space
+inoremap <silent>   <C-@>           <Plug>(complete_forward)
+inoremap <silent>   <C-Space>       <Plug>(complete_forward)
+inoremap <silent>   <C-S-@>         <Plug>(complete_backward)
+inoremap <silent>   <C-S-Space>     <Plug>(complete_backward)
 " }}}
 endif
 
@@ -166,11 +164,7 @@ if has('python3')
 Plug 'https://github.com/SirVer/ultisnips'
 Plug 'https://github.com/honza/vim-snippets'
 " {{{
-if has('gui_running') || has('nvim')
-  let g:UltiSnipsExpandTrigger = '<C-Space>'
-else
-  let g:UltiSnipsExpandTrigger = '<C-@>'
-endif
+let g:UltiSnipsExpandTrigger = '<Plug>(complete_forward)'
 let g:UltiSnipsJumpForwardTrigger = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
 let g:UltiSnipsEditSplit = 'context'
@@ -178,6 +172,10 @@ if g:vim_config_options.has_private
   let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = $VIM_CONFIG_HOME . '/private/UltiSnips'
 endif
 let b:did_after_plugin_ultisnips_after = 1
+
+" Visual mappings
+vnoremap <silent>   <C-@>           <Plug>(complete_forward)
+vnoremap <silent>   <C-Space>       <Plug>(complete_forward)
 " }}}
 endif
 
@@ -252,7 +250,6 @@ let g:ale_linters = {
   \ 'python': [],
   \ }
 let g:airline_extensions += ['coc']
-let g:UltiSnipsExpandTrigger = '<Nop>'
 
 function! s:expand_or_coc()
   if !coc#pum#visible()
@@ -282,12 +279,11 @@ function! s:coc_overwrite_map(action, map)
   endif
 endfunction
 
-if has('gui_running') || has('nvim')
-  inoremap <silent> <C-Space>   <C-R>=<SID>expand_or_coc()<CR>
-else
-  inoremap <silent> <C-@>       <C-R>=<SID>expand_or_coc()<CR>
-endif
-inoremap <silent> <expr>    <CR>        <SID>coc_select_confirm()
+inoremap <silent>   <Plug>(expand_or_coc)   <C-R>=<SID>expand_or_coc()<CR>
+inoremap <silent>   <expr>      <CR>        <SID>coc_select_confirm()
+
+inoremap <silent>   <C-@>       <Plug>(expand_or_coc)
+inoremap <silent>   <C-Space>   <Plug>(expand_or_coc)
 
 nmap  <silent>  K           :<C-U>call <SID>coc_overwrite_map('doHover', 'K')<CR>
 nmap  <silent>  gd          :<C-U>call <SID>coc_overwrite_map('jumpDefinition', 'gd')<CR>
