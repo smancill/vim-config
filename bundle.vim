@@ -285,13 +285,13 @@ inoremap <silent>   <expr>  <CR>    <SID>coc_select_confirm()
 inoremap <silent>   <C-@>           <Plug>(expand_or_coc)
 inoremap <silent>   <C-Space>       <Plug>(expand_or_coc)
 
-nmap     <silent>   K               :<C-U>call <SID>coc_overwrite_map('doHover', 'K')<CR>
-nmap     <silent>   gd              :<C-U>call <SID>coc_overwrite_map('jumpDefinition', 'gd')<CR>
+nnoremap <silent>   K               :<C-U>call <SID>coc_overwrite_map('doHover', 'K')<CR>
+nnoremap <silent>   gd              :<C-U>call <SID>coc_overwrite_map('jumpDefinition', 'gd')<CR>
 
 nmap     <silent>   [w              <Plug>(coc-diagnostic-prev)
 nmap     <silent>   ]w              <Plug>(coc-diagnostic-next)
-nmap     <silent>   <F10>           :<C-U>CocDiagnostics<CR>
-nmap     <silent>   <Leader>cd      :<C-U>CocDiagnostics<CR>
+nnoremap <silent>   <F10>           :<C-U>CocDiagnostics<CR>
+nnoremap <silent>   <Leader>cd      :<C-U>CocDiagnostics<CR>
 
 nmap     <silent>   <Leader>js      <Plug>(coc-declaration)
 nmap     <silent>   <Leader>jd      <Plug>(coc-definition)
@@ -304,12 +304,12 @@ nmap     <silent>   <Leader>cf      <Plug>(coc-fix-current)
 nmap     <silent>   <Leader>cr      <Plug>(coc-rename)
 xmap     <silent>   <Leader>cF      <Plug>(coc-format-selected)
 nmap     <silent>   <Leader>cF      <Plug>(coc-format-selected)
-nmap     <silent>   <Leader>ch      :<C-U>call CocAction('highlight')<CR>
+nnoremap <silent>   <Leader>ch      :<C-U>call CocAction('highlight')<CR>
 
-nmap     <silent>   <Leader>lc      :<C-U>CocList commands<CR>
-nmap     <silent>   <Leader>ld      :<C-U>CocList diagnostics<CR>
-nmap     <silent>   <Leader>lo      :<C-U>CocList outline<CR>
-nmap     <silent>   <Leader>ls      :<C-U>CocList --interactive symbols<CR>
+nnoremap <silent>   <Leader>lc      :<C-U>CocList commands<CR>
+nnoremap <silent>   <Leader>ld      :<C-U>CocList diagnostics<CR>
+nnoremap <silent>   <Leader>lo      :<C-U>CocList outline<CR>
+nnoremap <silent>   <Leader>ls      :<C-U>CocList --interactive symbols<CR>
 
 if has('patch-8.2.0750') || has('nvim-0.4.0')
   nnoremap <silent> <nowait> <expr>   <C-F>   coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-F>"
