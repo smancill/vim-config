@@ -24,7 +24,7 @@ let g:local_vimrc = {
 " Buffergator                               {{{2
 Plug 'https://github.com/jeetsukumaran/vim-buffergator'
 " {{{
-nnoremap <silent>   <C-J>         :<C-U>BuffergatorOpen<CR>
+nnoremap <silent>   <C-J>           :<C-U>BuffergatorOpen<CR>
 augroup filetype_buffergator
   autocmd!
   autocmd FileType buffergator  nnoremap <buffer>   <C-J>   j
@@ -44,10 +44,10 @@ let g:buffergator_sort_regime = 'mru'
 " ctrlp                                     {{{2
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 " {{{
-nnoremap <silent>   <C-Space>     :<C-U>CtrlPBuffer<CR>
-nnoremap <silent>   <C-@>         :<C-U>CtrlPBuffer<CR>
-nnoremap <silent>   <C-N>         :<C-U>CtrlPMRU<CR>
-nnoremap <silent>   g[            :<C-U>CtrlPBufTag<CR>
+nnoremap <silent>   <C-Space>       :<C-U>CtrlPBuffer<CR>
+nnoremap <silent>   <C-@>           :<C-U>CtrlPBuffer<CR>
+nnoremap <silent>   <C-N>           :<C-U>CtrlPMRU<CR>
+nnoremap <silent>   g[              :<C-U>CtrlPBufTag<CR>
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_by_filename = 0
 let g:ctrlp_match_window = 'results:40'
@@ -78,8 +78,8 @@ let g:netrw_home = $XDG_STATE_HOME . '/vim'
 " NERDTree                                  {{{2
 Plug 'https://github.com/scrooloose/nerdtree', {'on': ['NERDTree', 'NERDTreeToggle', 'NERDTreeFind']}
 " {{{
-nnoremap <silent>   <F3>          :<C-U>NERDTreeToggle<CR>
-nnoremap <silent>   <Leader><F3>  :<C-U>NERDTreeFind<CR>
+nnoremap <silent>   <F3>            :<C-U>NERDTreeToggle<CR>
+nnoremap <silent>   <Leader><F3>    :<C-U>NERDTreeFind<CR>
 let g:NERDTreeHijackNetrw = 0
 let g:NERDTreeCaseSensitiveSort = 1
 let g:NERDTreeRespectWildIgnore = 1
@@ -105,7 +105,7 @@ if g:vim_config_programs.has_rg
   let g:ackprg = 'rg --vimgrep --hidden --glob ''!.git'' --smart-case'
 endif
 
-nnoremap  <Leader>/     :<C-U>Ack!<Space>
+nnoremap            <Leader>/       :<C-U>Ack!<Space>
 " }}}
 
 " Airline                                   {{{2
@@ -184,14 +184,14 @@ Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/tpope/vim-rhubarb'
 Plug 'https://github.com/shumphrey/fugitive-gitlab.vim'
 " {{{
-nnoremap <silent>   <Leader>gs    :<C-U>Git<CR>
-nnoremap <silent>   <Leader>gc    :<C-U>Git commit<CR>
-nnoremap <silent>   <Leader>gl    :<C-U>terminal ++close tig -- %<CR>
-nnoremap <silent>   <Leader>ge    :<C-U>Gedit<CR>
-nnoremap <silent>   <Leader>gd    :<C-U>Gdiffsplit!<CR>
-nnoremap <silent>   <Leader>gu    :<C-U>Gedit :%<Bar>Gdiffsplit! @<CR>
-nnoremap <silent>   <Leader>gb    :<C-U>terminal ++close tig blame +<C-R>=line('.')<CR> -- %<CR>
-nnoremap <silent>   <Leader>go    :<C-U>GBrowse<CR>
+nnoremap <silent>   <Leader>gs      :<C-U>Git<CR>
+nnoremap <silent>   <Leader>gc      :<C-U>Git commit<CR>
+nnoremap <silent>   <Leader>gl      :<C-U>terminal ++close tig -- %<CR>
+nnoremap <silent>   <Leader>ge      :<C-U>Gedit<CR>
+nnoremap <silent>   <Leader>gd      :<C-U>Gdiffsplit!<CR>
+nnoremap <silent>   <Leader>gu      :<C-U>Gedit :%<Bar>Gdiffsplit! @<CR>
+nnoremap <silent>   <Leader>gb      :<C-U>terminal ++close tig blame +<C-R>=line('.')<CR> -- %<CR>
+nnoremap <silent>   <Leader>go      :<C-U>GBrowse<CR>
 " }}}
 
 " ALE                                       {{{2
@@ -280,44 +280,44 @@ function! s:coc_overwrite_map(action, map)
 endfunction
 
 inoremap <silent>   <Plug>(expand_or_coc)   <C-R>=<SID>expand_or_coc()<CR>
-inoremap <silent>   <expr>      <CR>        <SID>coc_select_confirm()
+inoremap <silent>   <expr>  <CR>    <SID>coc_select_confirm()
 
-inoremap <silent>   <C-@>       <Plug>(expand_or_coc)
-inoremap <silent>   <C-Space>   <Plug>(expand_or_coc)
+inoremap <silent>   <C-@>           <Plug>(expand_or_coc)
+inoremap <silent>   <C-Space>       <Plug>(expand_or_coc)
 
-nmap  <silent>  K           :<C-U>call <SID>coc_overwrite_map('doHover', 'K')<CR>
-nmap  <silent>  gd          :<C-U>call <SID>coc_overwrite_map('jumpDefinition', 'gd')<CR>
+nmap     <silent>   K               :<C-U>call <SID>coc_overwrite_map('doHover', 'K')<CR>
+nmap     <silent>   gd              :<C-U>call <SID>coc_overwrite_map('jumpDefinition', 'gd')<CR>
 
-nmap  <silent>  [w          <Plug>(coc-diagnostic-prev)
-nmap  <silent>  ]w          <Plug>(coc-diagnostic-next)
-nmap  <silent>  <F10>       :<C-U>CocDiagnostics<CR>
-nmap  <silent>  <Leader>cd  :<C-U>CocDiagnostics<CR>
+nmap     <silent>   [w              <Plug>(coc-diagnostic-prev)
+nmap     <silent>   ]w              <Plug>(coc-diagnostic-next)
+nmap     <silent>   <F10>           :<C-U>CocDiagnostics<CR>
+nmap     <silent>   <Leader>cd      :<C-U>CocDiagnostics<CR>
 
-nmap  <silent>  <Leader>js  <Plug>(coc-declaration)
-nmap  <silent>  <Leader>jd  <Plug>(coc-definition)
-nmap  <silent>  <Leader>jt  <Plug>(coc-type-definition)
-nmap  <silent>  <Leader>ji  <Plug>(coc-implementation)
-nmap  <silent>  <Leader>jr  <Plug>(coc-references)
+nmap     <silent>   <Leader>js      <Plug>(coc-declaration)
+nmap     <silent>   <Leader>jd      <Plug>(coc-definition)
+nmap     <silent>   <Leader>jt      <Plug>(coc-type-definition)
+nmap     <silent>   <Leader>ji      <Plug>(coc-implementation)
+nmap     <silent>   <Leader>jr      <Plug>(coc-references)
 
-nmap  <silent>  <Leader>ca  <Plug>(coc-codeaction)
-nmap  <silent>  <Leader>cf  <Plug>(coc-fix-current)
-nmap  <silent>  <Leader>cr  <Plug>(coc-rename)
-xmap  <silent>  <Leader>cF  <Plug>(coc-format-selected)
-nmap  <silent>  <Leader>cF  <Plug>(coc-format-selected)
-nmap  <silent>  <Leader>ch  :<C-U>call CocAction('highlight')<CR>
+nmap     <silent>   <Leader>ca      <Plug>(coc-codeaction)
+nmap     <silent>   <Leader>cf      <Plug>(coc-fix-current)
+nmap     <silent>   <Leader>cr      <Plug>(coc-rename)
+xmap     <silent>   <Leader>cF      <Plug>(coc-format-selected)
+nmap     <silent>   <Leader>cF      <Plug>(coc-format-selected)
+nmap     <silent>   <Leader>ch      :<C-U>call CocAction('highlight')<CR>
 
-nmap  <silent>  <Leader>lc  :<C-U>CocList commands<CR>
-nmap  <silent>  <Leader>ld  :<C-U>CocList diagnostics<CR>
-nmap  <silent>  <Leader>lo  :<C-U>CocList outline<CR>
-nmap  <silent>  <Leader>ls  :<C-U>CocList --interactive symbols<CR>
+nmap     <silent>   <Leader>lc      :<C-U>CocList commands<CR>
+nmap     <silent>   <Leader>ld      :<C-U>CocList diagnostics<CR>
+nmap     <silent>   <Leader>lo      :<C-U>CocList outline<CR>
+nmap     <silent>   <Leader>ls      :<C-U>CocList --interactive symbols<CR>
 
 if has('patch-8.2.0750') || has('nvim-0.4.0')
-  nnoremap <silent> <nowait> <expr> <C-F> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-F>"
-  nnoremap <silent> <nowait> <expr> <C-B> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-B>"
-  inoremap <silent> <nowait> <expr> <C-F> coc#float#has_scroll() ? "\<C-R>=coc#float#scroll(1)\<CR>" : "\<C-F>"
-  inoremap <silent> <nowait> <expr> <C-B> coc#float#has_scroll() ? "\<C-R>=coc#float#scroll(0)\<CR>" : "\<C-B>"
-  vnoremap <silent> <nowait> <expr> <C-F> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-F>"
-  vnoremap <silent> <nowait> <expr> <C-B> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-B>"
+  nnoremap <silent> <nowait> <expr>   <C-F>   coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-F>"
+  nnoremap <silent> <nowait> <expr>   <C-B>   coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-B>"
+  inoremap <silent> <nowait> <expr>   <C-F>   coc#float#has_scroll() ? "\<C-R>=coc#float#scroll(1)\<CR>" : "\<C-F>"
+  inoremap <silent> <nowait> <expr>   <C-B>   coc#float#has_scroll() ? "\<C-R>=coc#float#scroll(0)\<CR>" : "\<C-B>"
+  vnoremap <silent> <nowait> <expr>   <C-F>   coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-F>"
+  vnoremap <silent> <nowait> <expr>   <C-B>   coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-B>"
 endif
 
 command! -nargs=0 Format :call CocActionAsync('format')
@@ -333,7 +333,7 @@ endif
 " mundo                                     {{{2
 Plug 'https://github.com/simnalamburt/vim-mundo', {'on': ['MundoShow', 'MundoToggle']}
 " {{{
-nnoremap <silent>   <F5>          :<C-U>silent MundoToggle<CR>
+nnoremap <silent>   <F5>            :<C-U>silent MundoToggle<CR>
 let g:mundo_preview_bottom = 1
 let g:mundo_verbose_graph = 0
 " }}}
@@ -347,7 +347,7 @@ packadd! matchit
 " Tagbar                                    {{{2
 Plug 'https://github.com/majutsushi/tagbar', {'on': ['TagbarOpen', 'TagbarToggle']}
 " {{{
-nnoremap <silent>   <F8>          :<C-U>TagbarToggle<CR>
+nnoremap <silent>   <F8>            :<C-U>TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 let g:tagbar_singleclick = 1
@@ -369,8 +369,8 @@ endif
 " Sideways                                  {{{2
 Plug 'https://github.com/AndrewRadev/sideways.vim', {'on': ['SidewaysLeft', 'SidewaysRight']}
 " {{{
-nnoremap  <silent>  <Leader><     :<C-U>SidewaysLeft<CR>
-nnoremap  <silent>  <Leader>>     :<C-U>SidewaysRight<CR>
+nnoremap <silent>   <Leader><       :<C-U>SidewaysLeft<CR>
+nnoremap <silent>   <Leader>>       :<C-U>SidewaysRight<CR>
 " }}}
 
 " EditorConfig                              {{{2

@@ -293,37 +293,37 @@ nnoremap ' `
 nnoremap ` '
 
 " Better navigation in long lines
-nnoremap <expr>     j             (v:count ? 'j' : 'gj')
-nnoremap <expr>     k             (v:count ? 'k' : 'gk')
+nnoremap <expr>     j               (v:count ? 'j' : 'gj')
+nnoremap <expr>     k               (v:count ? 'k' : 'gk')
 
 " Buffers
-nnoremap <silent>   <C-K>         :<C-U>b#<CR>
-nnoremap <silent>   <Leader>bd    :<C-U>b#<Bar>bd#<CR>
+nnoremap <silent>   <C-K>           :<C-U>b#<CR>
+nnoremap <silent>   <Leader>bd      :<C-U>b#<Bar>bd#<CR>
 
 " Make Y consistent with C and D (see :help Y)
 nnoremap Y y$
 
 if !g:vim_config_options.use_coc
 " Omnicompletion popup menu like IDE
-inoremap <expr>     <CR>          pumvisible() ? "\<C-Y>" : "\<CR>"
-inoremap <expr>     <Down>        pumvisible() ? "\<C-N>" : "\<Down>"
-inoremap <expr>     <Up>          pumvisible() ? "\<C-P>" : "\<Up>"
+inoremap <expr>     <CR>            pumvisible() ? "\<C-Y>" : "\<CR>"
+inoremap <expr>     <Down>          pumvisible() ? "\<C-N>" : "\<Down>"
+inoremap <expr>     <Up>            pumvisible() ? "\<C-P>" : "\<Up>"
 endif
 
 " Command line history
-cnoremap            <C-P>         <Up>
-cnoremap            <C-N>         <Down>
+cnoremap            <C-P>           <Up>
+cnoremap            <C-N>           <Down>
 
 " Disable unwanted keys in normal mode
-nnoremap            <F1>          <Nop>
-nnoremap            Q             gq
+nnoremap            <F1>            <Nop>
+nnoremap            Q               gq
 
 " Use <C-L> to clear the highlighting of :set hlsearch
-nnoremap <silent>   <C-L>         :<C-U>nohlsearch<Bar>diffupdate<CR><C-L>
+nnoremap <silent>   <C-L>           :<C-U>nohlsearch<Bar>diffupdate<CR><C-L>
 
 " Break undo after CTRL-U and CTRL-W
-inoremap            <C-U>         <C-G>u<C-U>
-inoremap            <C-W>         <C-G>u<C-W>
+inoremap            <C-U>           <C-G>u<C-U>
+inoremap            <C-W>           <C-G>u<C-W>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
