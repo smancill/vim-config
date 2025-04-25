@@ -152,10 +152,10 @@ let g:SuperTabMappingBackward = '<Plug>(complete_backward)'
 let g:SuperTabDefaultCompletionType = 'context'
 
 " Use CTRL+Space
-inoremap <silent>   <C-@>           <Plug>(complete_forward)
-inoremap <silent>   <C-Space>       <Plug>(complete_forward)
-inoremap <silent>   <C-S-@>         <Plug>(complete_backward)
-inoremap <silent>   <C-S-Space>     <Plug>(complete_backward)
+imap     <silent>   <C-@>           <Plug>(complete_forward)
+imap     <silent>   <C-Space>       <Plug>(complete_forward)
+imap     <silent>   <C-S-@>         <Plug>(complete_backward)
+imap     <silent>   <C-S-Space>     <Plug>(complete_backward)
 " }}}
 endif
 
@@ -174,8 +174,8 @@ endif
 let b:did_after_plugin_ultisnips_after = 1
 
 " Visual mappings
-vnoremap <silent>   <C-@>           <Plug>(complete_forward)
-vnoremap <silent>   <C-Space>       <Plug>(complete_forward)
+vmap     <silent>   <C-@>           <Plug>(complete_forward)
+vmap     <silent>   <C-Space>       <Plug>(complete_forward)
 " }}}
 endif
 
@@ -282,8 +282,8 @@ endfunction
 inoremap <silent>   <Plug>(expand_or_coc)   <C-R>=<SID>expand_or_coc()<CR>
 inoremap <silent>   <expr>  <CR>    <SID>coc_select_confirm()
 
-inoremap <silent>   <C-@>           <Plug>(expand_or_coc)
-inoremap <silent>   <C-Space>       <Plug>(expand_or_coc)
+imap     <silent>   <C-@>           <Plug>(expand_or_coc)
+imap     <silent>   <C-Space>       <Plug>(expand_or_coc)
 
 nnoremap <silent>   K               :<C-U>call <SID>coc_overwrite_map('doHover', 'K')<CR>
 nnoremap <silent>   gd              :<C-U>call <SID>coc_overwrite_map('jumpDefinition', 'gd')<CR>
