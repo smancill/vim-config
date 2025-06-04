@@ -104,7 +104,7 @@ fi
 # Spell files
 echo -e "\nGetting spell files..."
 sleep 1
-spell_url=http://ftp.vim.org/vim/runtime/spell
+spell_url=https://ftp.nluug.nl/pub/vim/runtime/spell
 spell_dir=${vimdir}/spell
 mkdir -p "${spell_dir}"
 for idiom in es en; do
