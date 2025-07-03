@@ -14,3 +14,8 @@ License: MIT-0
 Files: after/ftplugin/asciidoc/asciidoc.cnf
 Copyright: © 2020 Sebastián Mancilla <smancill@smancill.dev>
 License: MIT-0
+
+Files: share/features.md
+Copyright: © 2025 Sebastián Mancilla <smancill@smancill.dev>
+License: MIT-0
+
