@@ -9,7 +9,7 @@ set vb t_vb=
 if has('mac')
   set guifont=SF\ Mono
 endif
-set guioptions=irec
+set guioptions=irec!
 
 if g:vim_config_options.use_colorscheme
 colorscheme darkglass
