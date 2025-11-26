@@ -6,6 +6,7 @@
 
 " Prerequisites                             {{{2
 let g:vim_config_programs = {
+  \ 'has_clangd': executable('clangd'),
   \ 'has_fd': executable('fd'),
   \ 'has_rg': executable('rg'),
   \ 'has_ctags': executable('ctags'),
@@ -208,11 +209,10 @@ let g:ale_set_quickfix = 0
 let g:ale_set_loclist = 0
 let g:ale_lsp_suggestions = 1
 let g:ale_linters = {
-  \ 'c': ['cc'],
-  \ 'cpp': ['cc'],
+  \ 'c': [g:vim_config_programs.has_clangd ? 'clangd' : 'cc'],
+  \ 'cpp': [g:vim_config_programs.has_clangd ? 'clangd' : 'cc'],
   \ 'java': [],
-  \ 'javascript': ['eslint'],
-  \ 'python': ['ruff'],
+  \ 'python': ['mypy', 'pylsp', 'pyright', 'ruff'],
   \ }
 let g:ale_pattern_options = {}
 let g:ale_c_parse_compile_commands = 1
