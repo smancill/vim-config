@@ -230,12 +230,14 @@ if has('8.1.1228')
 endif
 
 let g:coc_global_extensions = [
-  \ 'coc-omni',
-  \ 'coc-json',
-  \ 'coc-yaml',
-  \ 'coc-git',
   \ 'coc-clangd',
+  \ 'coc-git',
+  \ 'coc-java',
+  \ 'coc-json',
   \ 'coc-pyright',
+  \ 'coc-sh',
+  \ 'coc-sql',
+  \ 'coc-yaml',
   \ ]
 let g:coc_config_home = $XDG_CONFIG_HOME . '/coc'
 let g:coc_data_home = $XDG_DATA_HOME . '/coc'
