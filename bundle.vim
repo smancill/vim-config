@@ -105,7 +105,7 @@ let g:dirvish_mode = ':sort | :sort /^.*[/]/'
 Plug 'https://github.com/mileszs/ack.vim'
 " {{{
 if g:vim_config_programs.has_rg
-  let g:ackprg = 'rg --vimgrep --hidden --glob ''!.git'' --smart-case'
+  let g:ackprg = 'rg --vimgrep --hidden --glob ''!.git'' --smart-case --sort=path'
 
   cnoreabbrev <expr> gr       (getcmdtype() ==# ':' && getcmdline() ==# 'gr')       ? 'Ack'  : 'gr'
   cnoreabbrev <expr> grep     (getcmdtype() ==# ':' && getcmdline() ==# 'grep')     ? 'Ack'  : 'grep'
