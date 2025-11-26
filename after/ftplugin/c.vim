@@ -16,3 +16,6 @@ setlocal softtabstop=8
 setlocal shiftwidth=8
 setlocal noexpandtab
 
+if g:vim_config_options.use_ale
+  call ALEFileTypeConfig()
+endif

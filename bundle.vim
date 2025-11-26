@@ -206,6 +206,7 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_open_list = 0
 let g:ale_set_quickfix = 0
 let g:ale_set_loclist = 0
+let g:ale_lsp_suggestions = 1
 let g:ale_linters = {
   \ 'c': ['cc'],
   \ 'cpp': ['cc'],
@@ -215,10 +216,34 @@ let g:ale_linters = {
   \ }
 let g:ale_pattern_options = {}
 let g:ale_c_parse_compile_commands = 1
+let g:ale_hover_to_floating_preview = 1
 let g:ale_virtualtext_cursor = 0
 let g:ale_warn_about_trailing_whitespace = 0
 
 let g:airline_extensions += ['ale']
+
+nmap      <silent>  [w              <Plug>(ale_previous_wrap)
+nmap      <silent>  ]w              <Plug>(ale_next_wrap)
+nmap      <silent>  [W              <Plug>(ale_first)
+nmap      <silent>  ]W              <Plug>(ale_last)
+
+nmap      <silent>  <Leader>cd      <Plug>(ale_go_to_definition)
+nmap      <silent>  <Leader>cT      <Plug>(ale_go_to_type_definition)
+nmap      <silent>  <Leader>cI      <Plug>(ale_go_to_implementation)
+noremap   <silent>  <Leader>cx      :<C-U>ALEFindReferences -quickfix -relative<CR>
+
+nnoremap  <silent>  <Leader>ca      :<C-U>ALECodeAction<CR>
+nnoremap  <silent>  <Leader>cr      :<C-U>ALERename<CR>
+nmap      <silent>  <Leader>cm      <Plug>(ale_detail)
+
+nnoremap  <silent>  <Leader>cs      :<C-U>ALESymbolSearch<CR>
+
+function! ALEFileTypeConfig()
+  setlocal omnifunc=ale#completion#OmniFunc
+
+  nmap <buffer> <silent>  K       <Plug>(ale_hover)
+  nmap <buffer> <silent>  gd      <Plug>(ale_go_to_definition>
+endfunction
 " }}}
 endif
 

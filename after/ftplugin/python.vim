@@ -18,6 +18,9 @@ setlocal errorformat=
   \%Z%m,
   \%-G%.%#
 
+if g:vim_config_options.use_ale
+  call ALEFileTypeConfig()
+endif
 
 if !exists('*s:run_file')
   function s:run_file()

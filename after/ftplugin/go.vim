@@ -10,3 +10,7 @@ setlocal nowrap
 setlocal tabstop=8
 setlocal softtabstop=8
 setlocal shiftwidth=8
+
+if g:vim_config_options.use_ale
+  call ALEFileTypeConfig()
+endif
