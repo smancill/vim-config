@@ -4,6 +4,8 @@
 "
 " SPDX-License-Identifier: MIT-0
 
+setlocal nowrap
+
 if g:vim_config_options.use_ale
   call ALEFileTypeConfig()
 endif

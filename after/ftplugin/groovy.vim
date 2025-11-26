@@ -4,4 +4,6 @@
 "
 " SPDX-License-Identifier: MIT-0
 
+setlocal nowrap
+
 setlocal commentstring=//%s

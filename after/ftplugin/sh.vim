@@ -5,3 +5,4 @@
 " SPDX-License-Identifier: MIT-0
 
 setlocal formatoptions=croql
+setlocal nowrap

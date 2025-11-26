@@ -4,5 +4,7 @@
 "
 " SPDX-License-Identifier: MIT-0
 
+setlocal nowrap
+
 setlocal softtabstop=2
 setlocal shiftwidth=2
