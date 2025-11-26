@@ -403,15 +403,6 @@ Plug 'https://github.com/editorconfig/editorconfig-vim'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', '.git/COMMIT']
 " }}}
 
-" jedi                                      {{{2
-if !g:vim_config_options.use_coc
-Plug 'https://github.com/davidhalter/jedi-vim'
-" {{{
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#completions_command = ''
-" }}}
-endif
-
 " indentpython                              {{{2
 Plug 'https://github.com/vim-scripts/indentpython.vim'
 
