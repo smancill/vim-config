@@ -106,6 +106,13 @@ Plug 'https://github.com/mileszs/ack.vim'
 " {{{
 if g:vim_config_programs.has_rg
   let g:ackprg = 'rg --vimgrep --hidden --glob ''!.git'' --smart-case'
+
+  cnoreabbrev <expr> gr       (getcmdtype() ==# ':' && getcmdline() ==# 'gr')       ? 'Ack'  : 'gr'
+  cnoreabbrev <expr> grep     (getcmdtype() ==# ':' && getcmdline() ==# 'grep')     ? 'Ack'  : 'grep'
+  cnoreabbrev <expr> grepadd  (getcmdtype() ==# ':' && getcmdline() ==# 'grepadd')  ? 'Ack'  : 'grepadd'
+  cnoreabbrev <expr> lgr      (getcmdtype() ==# ':' && getcmdline() ==# 'lgr')      ? 'LAck' : 'lgr'
+  cnoreabbrev <expr> lgrep    (getcmdtype() ==# ':' && getcmdline() ==# 'lgrep')    ? 'LAck' : 'lgrep'
+  cnoreabbrev <expr> lgrepadd (getcmdtype() ==# ':' && getcmdline() ==# 'lgrepadd') ? 'LAck' : 'lgrepadd'
 endif
 " }}}
 
