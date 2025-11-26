@@ -140,6 +140,15 @@ let g:airline_extensions = [
 let g:airline#extensions#disable_rtp_load = 1
 let g:airline#extensions#ctrlp#show_adjacent_modes = 0
 let g:airline#extensions#whitespace#mixed_indent_algo = 2
+
+function! s:airline_sections()
+  let g:airline_section_a = airline#section#create_left(['mode', 'paste', 'spell'])
+endfunction
+
+augroup airline_custom
+  autocmd!
+  autocmd User AirlineAfterInit call <SID>airline_sections()
+augroup END
 " }}}
 
 " Surround                                  {{{2
