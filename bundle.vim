@@ -11,6 +11,8 @@ let g:vim_config_programs = {
   \ 'has_ctags': executable('ctags'),
   \ }
 
+let g:vim_config_options.use_ale = !g:vim_config_options.use_coc
+
 " vim-addon-local-vimrc                     {{{2
 Plug 'https://github.com/MarcWeber/vim-addon-local-vimrc'
 " {{{
@@ -195,6 +197,7 @@ nnoremap <silent>   <Leader>go      :<C-U>GBrowse<CR>
 " }}}
 
 " ALE                                       {{{2
+if g:vim_config_options.use_ale
 Plug 'https://github.com/dense-analysis/ale'
 " {{{
 let g:ale_lint_on_enter = 1
@@ -217,6 +220,7 @@ let g:ale_warn_about_trailing_whitespace = 0
 
 let g:airline_extensions += ['ale']
 " }}}
+endif
 
 " CoC                                       {{{2
 if g:vim_config_options.use_coc
@@ -245,14 +249,6 @@ let g:coc_disable_transparent_cursor = 1
 let g:coc_snippet_next = '<Tab>'
 let g:coc_snippet_prev = '<S-Tab>'
 
-let g:ale_disable_lsp = 1
-let g:ale_linters = {
-  \ 'c': [],
-  \ 'cpp': [],
-  \ 'java': [],
-  \ 'javascript': [],
-  \ 'python': [],
-  \ }
 let g:airline_extensions += ['coc']
 
 function! s:expand_or_coc()
