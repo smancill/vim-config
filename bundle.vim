@@ -237,6 +237,8 @@ let g:coc_global_extensions = [
   \ 'coc-clangd',
   \ 'coc-pyright',
   \ ]
+let g:coc_config_home = $XDG_CONFIG_HOME . '/coc'
+let g:coc_data_home = $XDG_DATA_HOME . '/coc'
 let g:coc_disable_transparent_cursor = 1
 let g:coc_snippet_next = '<Tab>'
 let g:coc_snippet_prev = '<S-Tab>'
