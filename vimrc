@@ -223,7 +223,7 @@ set shiftround                              " Indent to multiple of shiftwidth
 
 set autoindent                              " Indent new lines using previous
 set nojoinspaces                            " One space after sentences
-set wrap                                    " Softwrap long lines
+set nowrap                                  " Do not softwrap long lines
 set linebreak                               " Wrap at spaces characters
 if exists('&breakindent')
   set breakindent                           " Wrapped lines continue indented
