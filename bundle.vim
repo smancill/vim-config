@@ -256,7 +256,7 @@ function! ALEFileTypeConfig()
   setlocal omnifunc=ale#completion#OmniFunc
 
   nmap <buffer> <silent>  K       <Plug>(ale_hover)
-  nmap <buffer> <silent>  gd      <Plug>(ale_go_to_definition>
+  nmap <buffer> <silent>  gd      <Plug>(ale_go_to_definition)
 endfunction
 " }}}
 endif
